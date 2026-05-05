@@ -246,7 +246,7 @@ nav.scrolled .nav-logo img{height:32px;}
 .dl-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--yellow);font-weight:700;margin-bottom:4px;}
 .dl-date{font-family:'Manrope',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.02em;line-height:1.1;}
 .dl-cta{flex-shrink:0;}
-.timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:48px 0 64px;position:relative;}
+.timeline{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:48px 0 64px;position:relative;padding-left:0;}
 .timeline::before{content:'';position:absolute;top:18px;left:6%;right:6%;height:1px;background:linear-gradient(90deg,var(--yellow) 0%,var(--green) 35%,var(--cyan) 65%,var(--blue) 100%);opacity:.4;z-index:0;}
 @media(max-width:880px){.timeline{grid-template-columns:repeat(3,1fr);} .timeline::before{display:none;}}
 @media(max-width:520px){.timeline{grid-template-columns:repeat(2,1fr);}}
@@ -722,14 +722,14 @@ html[data-theme="light"] .logo-dark{display:none;}
       </div>
     </div>
 
-    <ol class="timeline fi" aria-label="Cronograma da chamada de trabalhos">
+    <ul class="timeline fi" aria-label="Cronograma da chamada de trabalhos">
       <li class="tl-step"><div class="tl-dot">1</div><div class="tl-when">Fase 1</div><div class="tl-what">Resumo + vídeo</div><div class="tl-when2">até 15/05/2026</div></li>
       <li class="tl-step"><div class="tl-dot">2</div><div class="tl-when">Resultado</div><div class="tl-what">Aprovação</div><div class="tl-when2">até 31/05/2026</div></li>
       <li class="tl-step"><div class="tl-dot">3</div><div class="tl-when">Programa</div><div class="tl-what">Definitivo</div><div class="tl-when2">25/06/2026</div></li>
       <li class="tl-step"><div class="tl-dot">4</div><div class="tl-when">Fase 2</div><div class="tl-what">Apresentação</div><div class="tl-when2">10/07 · NAB UFF</div></li>
       <li class="tl-step"><div class="tl-dot">5</div><div class="tl-when">Artigo</div><div class="tl-what">Versão final</div><div class="tl-when2">até 30/09/2026</div></li>
       <li class="tl-step"><div class="tl-dot">6</div><div class="tl-when">Livro</div><div class="tl-what">Anais ISBN</div><div class="tl-when2">dezembro/2026</div></li>
-    </ol>
+    </ul>
 
     <div class="eixos-head">
       <h3 class="eixos-h fi"><em>13</em> eixos temáticos</h3>
