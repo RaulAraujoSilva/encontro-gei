@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1° Encontro GEI — 08–10 Jul 2026 — Rio de Janeiro</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E1E3D;--blue:#1B4B8A;--mid:#2E6DB4;--sky:#5B9BD5;--gold:#C8A44A;--white:#FFFFFF;--off:#F7F9FC;--light:#EBF3FB;--text:#1A2B47;--muted:#6B82A0;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;transition:all .3s;}
+nav.scrolled{background:rgba(8,15,30,.96);backdrop-filter:blur(12px);padding:13px 48px;box-shadow:0 2px 24px rgba(0,0,0,.35);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--white);text-decoration:none;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--white);}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:7px 18px!important;border-radius:3px;font-weight:700!important;}
+@media(max-width:768px){.nav-links{display:none;}nav{padding:15px 24px;}}
+.hero{min-height:100vh;background:linear-gradient(140deg,#060E1C 0%,#0E1E3D 45%,#162B55 100%);position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 40px;overflow:hidden;text-align:center;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% 100%,rgba(27,75,138,.45) 0%,transparent 65%);pointer-events:none;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:64px 64px;}
+.hero>*{position:relative;z-index:1;}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,164,74,.12);border:1px solid rgba(200,164,74,.38);color:var(--gold);font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;padding:8px 22px;border-radius:100px;margin-bottom:26px;animation:fd .6s ease both;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,60px);font-weight:900;color:var(--white);line-height:1.08;max-width:860px;margin-bottom:20px;animation:fd .7s .1s ease both;}
+.hero h1 em{font-style:italic;color:var(--gold);}
+.h-sub{font-size:clamp(14px,1.7vw,18px);color:rgba(255,255,255,.6);max-width:620px;line-height:1.68;margin-bottom:42px;animation:fd .7s .2s ease both;}
+.h-meta{display:flex;flex-wrap:wrap;justify-content:center;margin-bottom:48px;animation:fd .7s .3s ease both;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;overflow:hidden;}
+.mi{padding:14px 24px;text-align:center;}
+.ml{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.38);font-weight:600;margin-bottom:3px;}
+.mv{font-size:14px;font-weight:700;color:var(--white);}
+.ms{width:1px;background:rgba(255,255,255,.1);}
+.h-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fd .7s .4s ease both;}
+.btn-p{background:var(--gold);color:var(--navy);font-size:14px;font-weight:700;padding:15px 38px;border:none;border-radius:3px;cursor:pointer;text-decoration:none;transition:all .2s;}
+.btn-p:hover{background:#DFB85A;transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,164,74,.35);}
+.btn-s{background:transparent;color:var(--white);font-size:14px;font-weight:500;padding:15px 38px;border:1px solid rgba(255,255,255,.28);border-radius:3px;cursor:pointer;text-decoration:none;transition:all .2s;}
+.btn-s:hover{background:rgba(255,255,255,.08);}
+.h-partners{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.28);backdrop-filter:blur(8px);padding:14px 48px;display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.08);}
+.pl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.32);}
+.pc{font-size:12px;font-weight:600;color:rgba(255,255,255,.7);padding:4px 12px;border:1px solid rgba(255,255,255,.14);border-radius:2px;}
+/* KEYNOTE */
+.kn{background:linear-gradient(135deg,#080F1E 0%,#0E2040 100%);padding:52px 48px;position:relative;overflow:hidden;}
+.kn::before{content:'';position:absolute;right:-80px;top:-60px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(200,164,74,.1) 0%,transparent 70%);}
+.kn-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;}
+@media(max-width:700px){.kn-inner{grid-template-columns:1fr;}}
+.kn-lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;}
+.kn-title{font-family:'Playfair Display',serif;font-size:clamp(20px,2.8vw,32px);font-weight:700;color:var(--white);line-height:1.15;margin-bottom:14px;}
+.kn-title em{font-style:italic;color:var(--gold);}
+.sp-name{font-size:19px;font-weight:700;color:var(--white);margin-bottom:2px;}
+.sp-role{font-size:12px;color:rgba(255,255,255,.52);}
+.sp-badge{background:rgba(200,164,74,.14);border:1px solid rgba(200,164,74,.32);color:var(--gold);font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-top:5px;display:inline-block;}
+.panel-row{display:flex;align-items:center;gap:10px;margin-top:20px;flex-wrap:wrap;}
+.panel-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.32);}
+.pan-tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.72);font-size:12px;font-weight:600;padding:4px 12px;border-radius:2px;}
+.kn-date{text-align:right;}
+.kd-n{font-family:'Playfair Display',serif;font-size:54px;font-weight:900;color:var(--gold);line-height:1;}
+.kd-i{font-size:12px;color:rgba(255,255,255,.45);margin-top:4px;line-height:1.5;}
+/* STATS */
+.stats{background:var(--light);padding:52px 48px;border-top:1px solid rgba(27,75,138,.1);border-bottom:1px solid rgba(27,75,138,.1);}
+.stats-g{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:36px;text-align:center;}
+.sn{font-family:'Playfair Display',serif;font-size:46px;font-weight:900;color:var(--navy);line-height:1;margin-bottom:6px;}
+.sl{font-size:12px;color:var(--muted);font-weight:500;line-height:1.4;}
+/* DIAS */
+.prog{padding:80px 48px;background:var(--white);}
+.prog-g{max-width:1100px;margin:0 auto;}
+.sec-lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--mid);font-weight:600;margin-bottom:10px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,42px);font-weight:700;color:var(--navy);line-height:1.12;margin-bottom:14px;}
+.sec-desc{font-size:16px;color:var(--muted);line-height:1.72;max-width:600px;margin-bottom:48px;}
+.days-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(14,30,61,.08);border-radius:5px;overflow:hidden;}
+@media(max-width:768px){.days-grid{grid-template-columns:1fr;}}
+.dc{background:var(--white);padding:36px 28px;position:relative;transition:background .22s;}
+.dc:hover{background:var(--off);}
+.dn{font-family:'Playfair Display',serif;font-size:66px;font-weight:900;color:rgba(27,75,138,.06);position:absolute;top:8px;right:16px;line-height:1;}
+.dd{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mid);font-weight:600;margin-bottom:9px;}
+.dt{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:7px;line-height:1.2;}
+.dl{font-size:12px;color:var(--gold);font-weight:600;margin-bottom:18px;}
+.di{list-style:none;}
+.di li{font-size:13px;color:var(--muted);padding:6px 0;border-bottom:1px solid rgba(0,0,0,.05);display:flex;gap:9px;align-items:flex-start;line-height:1.4;}
+.di li:last-child{border-bottom:none;}
+.di li::before{content:'→';color:var(--sky);font-weight:700;flex-shrink:0;}
+/* EVENTS */
+.ev-sec{background:var(--navy);padding:80px 48px;}
+.ev-in{max-width:1100px;margin:0 auto;}
+.ev-sec .sec-lbl{color:var(--gold);}
+.ev-sec .sec-title{color:var(--white);}
+.ev-sec .sec-desc{color:rgba(255,255,255,.5);}
+.ev-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+@media(max-width:1000px){.ev-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.ev-grid{grid-template-columns:1fr;}}
+.ec{border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:28px 20px;background:rgba(255,255,255,.04);transition:all .25s;position:relative;overflow:hidden;}
+.ec::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.ec:nth-child(1)::before{background:var(--gold);}
+.ec:nth-child(2)::before{background:var(--sky);}
+.ec:nth-child(3)::before{background:#7EC8A4;}
+.ec:nth-child(4)::before{background:#E07B70;}
+.ec:hover{background:rgba(255,255,255,.08);transform:translateY(-3px);}
+.en{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:12px;}
+.enm{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--white);margin-bottom:14px;line-height:1.2;}
+.et{list-style:none;}
+.et li{font-size:12px;color:rgba(255,255,255,.5);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;gap:7px;}
+.et li:last-child{border-bottom:none;}
+.et li::before{content:'·';color:var(--sky);font-weight:700;}
+/* VISITS */
+.vis-sec{padding:80px 48px;background:var(--off);}
+.vis-in{max-width:1100px;margin:0 auto;}
+.vis-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:900px){.vis-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.vis-grid{grid-template-columns:1fr;}}
+.vc{background:var(--white);border-radius:3px;padding:22px 18px;border-left:3px solid var(--mid);transition:all .2s;}
+.vc:hover{border-left-color:var(--gold);transform:translateX(3px);}
+.vn{font-size:9px;letter-spacing:2px;font-weight:700;color:var(--sky);margin-bottom:7px;}
+.vcn{font-weight:700;font-size:13px;color:var(--navy);margin-bottom:4px;}
+.vth{font-size:11px;color:var(--muted);line-height:1.42;}
+.vtg{display:inline-block;margin-top:8px;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--mid);background:var(--light);padding:2px 8px;border-radius:2px;}
+/* PARTNERS */
+.pt-sec{padding:72px 48px;background:var(--white);}
+.pt-in{max-width:1100px;margin:0 auto;}
+.pt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px;}
+@media(max-width:768px){.pt-grid{grid-template-columns:repeat(2,1fr);}}
+.ptc{padding:22px 18px;border:1px solid rgba(14,30,61,.1);border-radius:3px;text-align:center;transition:all .2s;}
+.ptc:hover{border-color:var(--mid);box-shadow:0 4px 14px rgba(27,75,138,.1);}
+.pa{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--navy);margin-bottom:5px;}
+.pf{font-size:11px;color:var(--muted);line-height:1.38;margin-bottom:8px;}
+.pr{font-size:10px;font-weight:600;color:var(--mid);background:var(--light);padding:2px 8px;border-radius:100px;}
+/* CERT */
+.cert{background:var(--white);padding:40px 48px;border-top:3px solid var(--gold);}
+.cert-i{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:24px;justify-content:space-between;}
+.ct{font-size:16px;color:var(--navy);font-weight:500;}
+.ct strong{color:var(--blue);}
+.cbg{display:flex;gap:10px;flex-wrap:wrap;}
+.cb{padding:8px 16px;border:1px solid rgba(27,75,138,.18);border-radius:3px;font-size:11px;font-weight:600;color:var(--blue);background:var(--light);}
+/* SUBMISSION */
+.sub-sec{padding:80px 48px;background:linear-gradient(135deg,#080F1E 0%,#0E2040 100%);position:relative;overflow:hidden;}
+.sub-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 75% at 85% 50%,rgba(91,155,213,.09) 0%,transparent 60%);}
+.sub-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1;}
+@media(max-width:768px){.sub-in{grid-template-columns:1fr;}}
+.sub-sec .sec-lbl{color:var(--gold);}
+.sub-sec .sec-title{color:var(--white);}
+.sub-sec .sec-desc{color:rgba(255,255,255,.52);}
+.trs{display:flex;flex-direction:column;gap:9px;}
+.tri{display:flex;align-items:flex-start;gap:12px;padding:11px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;}
+.trn{width:24px;height:24px;background:rgba(200,164,74,.18);color:var(--gold);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;}
+.trname{font-size:12px;color:rgba(255,255,255,.78);font-weight:500;line-height:1.35;}
+.dl-box{background:rgba(200,164,74,.1);border:1px solid rgba(200,164,74,.28);border-radius:3px;padding:20px 24px;margin-top:26px;}
+.dl-lbl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:5px;}
+.dl-date{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--white);}
+.dl-note{font-size:11px;color:rgba(255,255,255,.42);margin-top:3px;}
+/* FORM */
+.fm-sec{padding:80px 48px;}
+.fm-in{max-width:640px;margin:0 auto;text-align:center;}
+.fc{background:var(--off);border-radius:5px;padding:40px;border:1px solid rgba(27,75,138,.1);}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+@media(max-width:520px){.fr{grid-template-columns:1fr;}}
+.fg{display:flex;flex-direction:column;gap:4px;margin-bottom:12px;}
+.flb{font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);text-align:left;}
+.fi,.fse{padding:11px 13px;border:1px solid rgba(27,75,138,.14);border-radius:3px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text);background:var(--white);outline:none;-webkit-appearance:none;}
+.fi:focus,.fse:focus{border-color:var(--mid);box-shadow:0 0 0 3px rgba(46,109,180,.09);}
+.fsb{width:100%;background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;padding:16px;border:none;border-radius:3px;cursor:pointer;transition:all .2s;margin-top:6px;}
+.fsb:hover{background:var(--blue);transform:translateY(-2px);}
+.fn{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.55;}
+/* FOOTER */
+footer{background:#060E1C;padding:52px 48px;color:rgba(255,255,255,.36);text-align:center;}
+.fp{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:24px;}
+.fpt{font-size:12px;font-weight:700;color:rgba(255,255,255,.58);}
+footer p{font-size:11px;line-height:1.9;}
+/* ANIM */
+@keyframes fd{from{opacity:0;transform:translateY(-12px);}to{opacity:1;transform:translateY(0);}}
+.fi2{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
+.fi2.visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="#" class="nav-logo">1° Encontro <span>GEI</span></a>
+  <ul class="nav-links">
+    <li><a href="#prog">Programação</a></li>
+    <li><a href="#eventos">Eventos</a></li>
+    <li><a href="#visitas">Visitas</a></li>
+    <li><a href="#parceiros">Parceiros</a></li>
+    <li><a href="#trabalhos">Submissão</a></li>
+    <li><a href="#inscricao" class="nav-cta">Inscreva-se</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hg"></div>
+  <div class="h-badge">08, 09 e 10 de julho de 2026 · Rio de Janeiro</div>
+  <h1>1° Encontro de Governança,<br><em>Estratégia e Inovação</em><br>Governamental</h1>
+  <p class="h-sub">A primeira plataforma nacional a integrar excelência operacional, engenharia de produção, regulação de infraestrutura e inteligência governamental — quatro eventos oficiais, três dias, uma agenda de alto nível.</p>
+  <div class="h-meta">
+    <div class="mi"><div class="ml">Dias</div><div class="mv">3 consecutivos</div></div>
+    <div class="ms"></div>
+    <div class="mi"><div class="ml">Eventos</div><div class="mv">4 integrados</div></div>
+    <div class="ms"></div>
+    <div class="mi"><div class="ml">Visitas técnicas</div><div class="mv">8 em paralelo</div></div>
+    <div class="ms"></div>
+    <div class="mi"><div class="ml">Participantes</div><div class="mv">400+</div></div>
+    <div class="ms"></div>
+    <div class="mi"><div class="ml">Anais</div><div class="mv">Com ISBN</div></div>
+  </div>
+  <div class="h-cta">
+    <a href="#inscricao" class="btn-p">Inscreva-se agora</a>
+    <a href="#prog" class="btn-s">Ver programação</a>
+  </div>
+  <div class="h-partners">
+    <span class="pl">Realização</span>
+    <span class="pc">UFF</span><span class="pc">ABAR</span><span class="pc">PPGEP/UFF</span><span class="pc">Escola de Regulação</span>
+    <span class="pl" style="margin-left:10px;">Parceiros</span>
+    <span class="pc">Firjan</span><span class="pc">IBP</span><span class="pc">ANP</span><span class="pc">Agenersa</span><span class="pc">Fecomércio</span><span class="pc">CAU</span><span class="pc">CREA-RJ</span>
+  </div>
+</section>
+
+<!-- KEYNOTE -->
+<section class="kn">
+  <div class="kn-inner">
+    <div>
+      <div class="kn-lbl">Conferência magna de abertura · 08/07/2026</div>
+      <div class="kn-title"><em>Governança, Regulação e Inovação<br>Governamental</em> no Estado contemporâneo</div>
+      <div class="sp-name">Magda Chambriard</div>
+      <div class="sp-role">Presidente da Petrobras</div>
+      <span class="sp-badge">a confirmar</span>
+      <div class="panel-row">
+        <span class="panel-lbl">Moderador:</span>
+        <span class="pan-tag">Miguel (CREA)</span>
+        <span class="panel-lbl" style="margin-left:6px;">Painelistas:</span>
+        <span class="pan-tag">Prof. Callado</span><span class="pan-tag">Prof. Li Li Min</span><span class="pan-tag">Raul</span><span class="pan-tag">Vladimir</span>
+      </div>
+    </div>
+    <div class="kn-date">
+      <div class="kd-n">08</div>
+      <div class="kd-i">julho 2026<br>Local em definição<br>Rio de Janeiro</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-g">
+    <div class="fi2"><div class="sn">4</div><div class="sl">Eventos oficiais integrados</div></div>
+    <div class="fi2"><div class="sn">8</div><div class="sl">Visitas técnicas exclusivas</div></div>
+    <div class="fi2"><div class="sn">13</div><div class="sl">Eixos temáticos indexados aos ODS</div></div>
+    <div class="fi2"><div class="sn">400+</div><div class="sl">Participantes esperados</div></div>
+    <div class="fi2"><div class="sn">24h</div><div class="sl">Carga horária certificada</div></div>
+  </div>
+</div>
+
+<!-- DIAS -->
+<div class="prog" id="prog">
+  <div class="prog-g">
+    <p class="sec-lbl fi2">Programação</p>
+    <h2 class="sec-title fi2">Três dias de alto nível</h2>
+    <p class="sec-desc fi2">Cada dia tem identidade própria — da abertura estratégica à imersão técnica e à síntese propositiva.</p>
+    <div class="days-grid fi2">
+      <div class="dc">
+        <div class="dn">01</div>
+        <div class="dd">08 de julho · Quarta-feira</div>
+        <div class="dt">Abertura Institucional</div>
+        <div class="dl">📍 Local em definição — Rio de Janeiro</div>
+        <ul class="di">
+          <li>13h30 — Credenciamento digital (Eventtree) e recepção</li>
+          <li>14h15 — Mesa de abertura institucional</li>
+          <li>15h30 — Painel de apresentação do evento</li>
+          <li>16h10 — Conferência magna de abertura</li>
+          <li>17h00 — Coquetel de networking institucional</li>
+        </ul>
+      </div>
+      <div class="dc">
+        <div class="dn">02</div>
+        <div class="dd">09 de julho · Quinta-feira</div>
+        <div class="dt">Visitas Técnicas</div>
+        <div class="dl">📍 8 jornadas em paralelo — Rio de Janeiro e região</div>
+        <ul class="di">
+          <li>06h30 — Concentração e café da manhã no hub</li>
+          <li>07h00 — Primeira janela de partida (2 ônibus)</li>
+          <li>07h30 · 08h00 · 08h30 — Partidas escalonadas seguintes</li>
+          <li>09h–17h — Realização das visitas técnicas</li>
+          <li>Produto: Relato de Visita Técnica (2–3 páginas) para o livro</li>
+        </ul>
+      </div>
+      <div class="dc">
+        <div class="dn">03</div>
+        <div class="dd">10 de julho · Sexta-feira</div>
+        <div class="dt">Trilhas, Sessões e Encerramento</div>
+        <div class="dl">📍 NAB UFF — Niterói, Rio de Janeiro</div>
+        <ul class="di">
+          <li>09h00 — Painel plenário comum + painel de IA e soberania</li>
+          <li>10h30 — Trilhas A, B, C e D simultâneas</li>
+          <li>14h00 — Sessões técnicas e acadêmicas</li>
+          <li>16h30 — Premiação dos melhores trabalhos</li>
+          <li>18h00 — Encerramento institucional · 19h Coquetel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EVENTS -->
+<section class="ev-sec" id="eventos">
+  <div class="ev-in">
+    <p class="sec-lbl fi2">Quatro eventos oficiais</p>
+    <h2 class="sec-title fi2">Quatro eventos em uma plataforma</h2>
+    <p class="sec-desc fi2">Cada evento preserva sua identidade e comunidade. O encontro-matriz promove unidade conceitual e sinergia institucional. A ordem das trilhas segue o critério de antiguidade de cada evento.</p>
+    <div class="ev-grid">
+      <div class="ec fi2">
+        <div class="en">Trilha A · 13ª edição</div>
+        <div class="enm">Lean Six Sigma Congress</div>
+        <ul class="et">
+          <li>Gestão pública inovadora e GovTech</li>
+          <li>Saúde digital e dados conectados</li>
+          <li>Sustentabilidade e ESG em serviços públicos</li>
+          <li>Excelência operacional Lean Six Sigma</li>
+          <li>Regulação ágil e compliance</li>
+        </ul>
+      </div>
+      <div class="ec fi2">
+        <div class="en">Trilha B · 3ª edição</div>
+        <div class="enm">Seminário em Sistemas de Engenharia de Produção</div>
+        <ul class="et">
+          <li>Trabalho, ergonomia e segurança em sistemas produtivos</li>
+          <li>Modelagem no apoio à decisão e pesquisa operacional</li>
+          <li>Otimização, logística e analytics</li>
+          <li>Sistemas inteligentes aplicados ao setor público</li>
+          <li>EP aplicada à gestão pública e GovTech</li>
+        </ul>
+      </div>
+      <div class="ec fi2">
+        <div class="en">Trilha C · 2ª edição</div>
+        <div class="enm">Seminário de Regulação</div>
+        <ul class="et">
+          <li>Regulação de infraestrutura, energia e saneamento</li>
+          <li>Sandbox regulatório e inovação institucional</li>
+          <li>Transição energética e papel da regulação</li>
+          <li>Pesquisa aplicada em regulação</li>
+          <li>Regulação, mercado e interesse público</li>
+        </ul>
+      </div>
+      <div class="ec fi2">
+        <div class="en">Trilha D · 1ª edição</div>
+        <div class="enm">Seminário de Inteligência Governamental</div>
+        <ul class="et">
+          <li>Inteligência para decisão e monitoramento estratégico</li>
+          <li>Governança de dados e interoperabilidade</li>
+          <li>Capacidade analítica no setor público</li>
+          <li>Inteligência Artificial e soberania nacional</li>
+          <li>Uso de evidências e desenho institucional</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISITS -->
+<section class="vis-sec" id="visitas">
+  <div class="vis-in">
+    <p class="sec-lbl fi2">Dia 2 · 09 de julho</p>
+    <h2 class="sec-title fi2">8 jornadas técnicas exclusivas</h2>
+    <p class="sec-desc fi2">Acesso a empresas líderes do setor regulado e da indústria consumidora de gás no Rio de Janeiro. Três jornadas são integradas, combinando dois locais em uma mesma saída. Inscrição prévia obrigatória.</p>
+    <div class="vis-grid">
+      <div class="vc fi2"><div class="vn">JORNADA 01</div><div class="vcn">Petrobras</div><div class="vth">Regulação de energia e transformação digital em operações de E&P</div><span class="vtg">Energia · Regulação</span></div>
+      <div class="vc fi2"><div class="vn">JORNADA 02 · integrada</div><div class="vcn">Águas do Rio (CCO) + ETE/Biogás</div><div class="vth">Saneamento e regulação de infraestrutura seguido de sustentabilidade, ESG e inovação em saneamento</div><span class="vtg">Saneamento · ESG</span></div>
+      <div class="vc fi2"><div class="vn">JORNADA 03</div><div class="vcn">Guandu / Lameirão</div><div class="vth">Infraestrutura hídrica e governança ambiental</div><span class="vtg">Infraestrutura Hídrica</span></div>
+      <div class="vc fi2"><div class="vn">JORNADA 04</div><div class="vcn">Ternium — Santa Cruz</div><div class="vth">Indústria consumidora de gás, ESG e Lean Six Sigma</div><span class="vtg">Indústria · Lean · ESG</span></div>
+      <div class="vc fi2"><div class="vn">JORNADA 05</div><div class="vcn">Gerdau — Santa Cruz</div><div class="vth">Indústria consumidora de gás, transformação digital e ESG</div><span class="vtg">Indústria · Digital</span></div>
+      <div class="vc fi2"><div class="vn">JORNADA 06 · integrada</div><div class="vcn">Eneva + TAG</div><div class="vth">Regulação de energia e GovTech seguido de transporte de gás natural</div><span class="vtg">Energia · GovTech</span></div>
+      <div class="vc fi2"><div class="vn">JORNADA 07 · integrada</div><div class="vcn">IRM + AGENERSA</div><div class="vth">Inteligência governamental e saneamento seguido de sandbox regulatório</div><span class="vtg">Inteligência · Sandbox</span></div>
+      <div class="vc fi2"><div class="vn">JORNADA 08</div><div class="vcn">CSN</div><div class="vth">Indústria consumidora de gás, ESG e Lean Six Sigma</div><span class="vtg">Indústria · Lean · ESG</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="pt-sec" id="parceiros">
+  <div class="pt-in">
+    <p class="sec-lbl fi2">Realização e parceiros</p>
+    <h2 class="sec-title fi2">Uma rede institucional de alto nível</h2>
+    <div class="pt-grid">
+      <div class="ptc fi2"><div class="pa">UFF</div><div class="pf">Universidade Federal Fluminense</div><span class="pr">Realização</span></div>
+      <div class="ptc fi2"><div class="pa">ABAR</div><div class="pf">Assoc. Brasileira das Agências de Regulação</div><span class="pr">Realização</span></div>
+      <div class="ptc fi2"><div class="pa">PPGEP/UFF</div><div class="pf">Prog. de Pós-Graduação em Engenharia de Produção</div><span class="pr">Realização</span></div>
+      <div class="ptc fi2"><div class="pa">Escola de Regulação</div><div class="pf">Agências Reguladoras do Estado do RJ</div><span class="pr">Realização</span></div>
+      <div class="ptc fi2"><div class="pa">Firjan</div><div class="pf">Federação das Indústrias do Estado do RJ</div><span class="pr">Parceiro Institucional</span></div>
+      <div class="ptc fi2"><div class="pa">IBP</div><div class="pf">Instituto Brasileiro de Petróleo e Gás</div><span class="pr">Parceiro Estratégico</span></div>
+      <div class="ptc fi2"><div class="pa">ANP</div><div class="pf">Agência Nacional do Petróleo</div><span class="pr">Parceiro Institucional</span></div>
+      <div class="ptc fi2"><div class="pa">Agenersa</div><div class="pf">Agência Reguladora de Energia e Saneamento · RJ</div><span class="pr">Parceiro Regulatório</span></div>
+      <div class="ptc fi2"><div class="pa">Fecomércio</div><div class="pf">Federação do Comércio do Estado do RJ</div><span class="pr">Parceiro Institucional</span></div>
+      <div class="ptc fi2"><div class="pa">CAU</div><div class="pf">Conselho de Arquitetura e Urbanismo</div><span class="pr">Parceiro Institucional</span></div>
+      <div class="ptc fi2"><div class="pa">CREA-RJ</div><div class="pf">Conselho Regional de Engenharia e Agronomia · RJ</div><span class="pr">Parceiro Profissional</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERT -->
+<div class="cert fi2">
+  <div class="cert-i">
+    <div class="ct">Certificação emitida por <strong>UFF, ABAR, PPGEP/UFF e Escola de Regulação</strong> · válida para o Currículo Lattes (CNPq)</div>
+    <div class="cbg">
+      <div class="cb">✓ Certificado de participação</div>
+      <div class="cb">✓ Certificado de apresentação</div>
+      <div class="cb">✓ Livro com ISBN (dezembro/2026)</div>
+      <div class="cb">✓ 24h complementares UFF</div>
+    </div>
+  </div>
+</div>
+
+<!-- SUBMISSION -->
+<section class="sub-sec" id="trabalhos">
+  <div class="sub-in">
+    <div>
+      <p class="sec-lbl">Chamada de trabalhos</p>
+      <h2 class="sec-title">Submeta sua pesquisa</h2>
+      <p class="sec-desc">Modelo faseado: resumo estendido de 2–4 páginas acompanhado de vídeo de 5 minutos na Fase 1. Apresentação presencial no Dia 3 na Fase 2. Artigo completo pós-evento publicado em livro consolidado com ISBN em dezembro/2026.</p>
+      <div class="dl-box">
+        <div class="dl-lbl">Prazo Fase 1 — Resumo + Vídeo</div>
+        <div class="dl-date">15 de maio de 2026</div>
+        <div class="dl-note">Resultado: até 31/05 · Artigo completo: até 30/09 · Programa definitivo: 25/06 · Livro com ISBN: dezembro/2026</div>
+      </div>
+      <br><a href="#inscricao" class="btn-p" style="display:inline-block;margin-top:8px;">Acessar formulário</a>
+    </div>
+    <div class="trs">
+      <div class="tri fi2"><div class="trn">1</div><div class="trname">Regulação de infraestrutura, energia e saneamento</div></div>
+      <div class="tri fi2"><div class="trn">2</div><div class="trname">Sandbox regulatório e inovação institucional</div></div>
+      <div class="tri fi2"><div class="trn">3</div><div class="trname">Gestão pública inovadora e GovTech</div></div>
+      <div class="tri fi2"><div class="trn">4</div><div class="trname">Lean Six Sigma e excelência operacional em serviços públicos</div></div>
+      <div class="tri fi2"><div class="trn">5</div><div class="trname">Sustentabilidade e ESG em organizações reguladas</div></div>
+      <div class="tri fi2"><div class="trn">6</div><div class="trname">Inteligência governamental e apoio à decisão</div></div>
+      <div class="tri fi2"><div class="trn">7</div><div class="trname">Governança de dados e interoperabilidade</div></div>
+      <div class="tri fi2"><div class="trn">8</div><div class="trname">Transformação digital e inovação em serviços públicos</div></div>
+      <div class="tri fi2"><div class="trn">9</div><div class="trname">Capacidade analítica e uso de evidências no setor público</div></div>
+      <div class="tri fi2"><div class="trn">10</div><div class="trname">Saúde digital e dados conectados</div></div>
+      <div class="tri fi2"><div class="trn">11</div><div class="trname">Inteligência artificial e soberania nacional</div></div>
+      <div class="tri fi2"><div class="trn">12</div><div class="trname">Trabalho, ergonomia e segurança em sistemas produtivos</div></div>
+      <div class="tri fi2"><div class="trn">13</div><div class="trname">Pesquisa operacional, otimização e logística</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="fm-sec" id="inscricao">
+  <div class="fm-in">
+    <p class="sec-lbl" style="text-align:center;">Inscrições</p>
+    <h2 class="sec-title" style="text-align:center;">Garanta sua vaga</h2>
+    <p class="sec-desc" style="margin:0 auto 36px;text-align:center;">Preencha o formulário abaixo. Visitas técnicas têm vagas limitadas por grupo.</p>
+    <div class="fc">
+      <div class="fr">
+        <div class="fg"><label class="flb">Nome completo</label><input type="text" class="fi" placeholder="Seu nome"></div>
+        <div class="fg"><label class="flb">E-mail</label><input type="email" class="fi" placeholder="email@instituicao.br"></div>
+      </div>
+      <div class="fr">
+        <div class="fg"><label class="flb">Instituição</label><input type="text" class="fi" placeholder="Nome da instituição"></div>
+        <div class="fg"><label class="flb">Cargo / Vínculo</label><input type="text" class="fi" placeholder="Pesquisador, Gestor, Técnico..."></div>
+      </div>
+      <div class="fg"><label class="flb">Modalidade de participação</label>
+        <select class="fse">
+          <option>Participante presencial completo (3 dias)</option>
+          <option>Participante presencial Dias 1 e 3</option>
+          <option>Participante remoto (online)</option>
+          <option>Visitante técnico (apenas Dia 2)</option>
+        </select>
+      </div>
+      <div class="fg"><label class="flb">Jornada técnica de interesse (Dia 2)</label>
+        <select class="fse">
+          <option>Jornada 01 — Petrobras</option>
+          <option>Jornada 02 — Águas do Rio (CCO) + ETE/Biogás · integrada</option>
+          <option>Jornada 03 — Guandu / Lameirão</option>
+          <option>Jornada 04 — Ternium · Santa Cruz</option>
+          <option>Jornada 05 — Gerdau · Santa Cruz</option>
+          <option>Jornada 06 — Eneva + TAG · integrada</option>
+          <option>Jornada 07 — IRM + AGENERSA · integrada</option>
+          <option>Jornada 08 — CSN</option>
+          <option>Não vou participar do Dia 2</option>
+        </select>
+      </div>
+      <button class="fsb">Realizar inscrição</button>
+      <p class="fn">Evento gratuito mediante inscrição prévia obrigatória, com vagas limitadas. Pré-inscrição prioritária para UFF, ABAR, PPGEP/UFF e instituições parceiras (janela de ~15 dias antes da abertura geral).<br>Certificação emitida por UFF, ABAR, PPGEP/UFF e Escola de Regulação em até 15 dias úteis após o evento.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fp">
+    <div class="fpt">UFF — Universidade Federal Fluminense</div>
+    <div class="fpt">ABAR — Assoc. Brasileira das Agências de Regulação</div>
+    <div class="fpt">PPGEP/UFF · Escola de Regulação — RJ</div>
+    <div class="fpt">Firjan · IBP · ANP · Agenersa · Fecomércio · CAU · CREA-RJ</div>
+  </div>
+  <p>1° Encontro de Governança, Estratégia e Inovação Governamental<br>
+  08, 09 e 10 de julho de 2026 · Rio de Janeiro / RJ · Niterói / RJ<br>
+  Conferência magna de abertura: Magda Chambriard, Presidente da Petrobras (a confirmar)<br><br>
+  Contato: [e-mail institucional do evento] · Site: [endereço a definir]</p>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});},{threshold:.1});
+document.querySelectorAll('.fi2').forEach(el=>obs.observe(el));
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60));
+</script>
+</body>
+</html>

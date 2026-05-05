@@ -97,7 +97,7 @@ nav.scrolled{background:rgba(9,17,54,.92);backdrop-filter:blur(14px);padding:11p
 .hero::after{content:'';position:absolute;left:-200px;top:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(245,200,66,.08) 0%,transparent 60%);pointer-events:none;}
 .hero>*{position:relative;z-index:1;}
 
-.hero-logo{width:min(600px,82vw);height:auto;margin-bottom:38px;animation:floatIn 1s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 20px 60px rgba(0,0,0,.4));border-radius:8px;}
+.hero-logo{width:min(720px,90vw);height:auto;margin-bottom:42px;animation:floatIn 1s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 20px 60px rgba(0,0,0,.5));}
 
 .h-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(91,198,229,.1);border:1px solid rgba(91,198,229,.34);color:var(--cyan);font-size:11px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;padding:9px 22px;border-radius:100px;margin-bottom:30px;animation:fd .7s .15s ease both;}
 .h-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);}
@@ -299,9 +299,10 @@ nav.scrolled{background:rgba(9,17,54,.92);backdrop-filter:blur(14px);padding:11p
 @media(max-width:480px){.pt-grid{grid-template-columns:1fr;}}
 .ptc{padding:26px 22px;border:1px solid var(--line);border-radius:10px;text-align:center;transition:all .3s;background:rgba(255,255,255,.02);min-height:130px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;gap:10px;}
 .ptc:hover{border-color:rgba(91,198,229,.3);transform:translateY(-2px);background:rgba(91,198,229,.04);}
-.ptc-logo{height:46px;display:flex;align-items:center;justify-content:center;}
-.ptc-logo img{max-height:46px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.92;transition:opacity .25s;}
-.ptc:hover .ptc-logo img{opacity:1;}
+.ptc-logo{height:64px;display:flex;align-items:center;justify-content:center;width:100%;background:#fff;border-radius:8px;padding:10px 14px;box-sizing:border-box;}
+.ptc-logo img{max-height:44px;max-width:160px;width:auto;height:auto;object-fit:contain;transition:transform .25s;}
+.ptc:hover .ptc-logo img{transform:scale(1.04);}
+.ptc-logo.txt{background:linear-gradient(135deg,var(--bg-3) 0%,var(--bg-2) 100%);font-family:'Manrope',sans-serif;font-weight:800;font-size:22px;color:var(--white);letter-spacing:.02em;}
 .pf{font-size:11.5px;color:rgba(255,255,255,.5);line-height:1.4;}
 
 /* === COINS === */
@@ -678,7 +679,7 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
       <div class="pt-grid">
         <div class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/uff.svg" alt="UFF — Universidade Federal Fluminense"></div><div class="pf">Universidade Federal Fluminense</div></div>
         <div class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/abar.png" alt="ABAR — Assoc. Brasileira das Agências de Regulação"></div><div class="pf">Assoc. Brasileira das Agências de Regulação</div></div>
-        <div class="ptc fi d2"><div class="ptc-logo" style="font-family:'Manrope',sans-serif;font-weight:800;font-size:24px;color:var(--white);letter-spacing:.02em;">PPGEP</div><div class="pf">Pós-Graduação em Engenharia de Produção · UFF</div></div>
+        <div class="ptc fi d2"><div class="ptc-logo txt">PPGEP</div><div class="pf">Pós-Graduação em Engenharia de Produção · UFF</div></div>
         <div class="ptc fi d3"><div class="ptc-logo"><img src="/assets/logos/escola-regulacao.png" alt="Escola de Regulação"></div><div class="pf">Escola de Regulação · Agências Reguladoras RJ</div></div>
       </div>
     </div>
