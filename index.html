@@ -18,7 +18,7 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -62,6 +62,12 @@
   --line-2:rgba(255,255,255,.16);
   --muted:rgba(255,255,255,.62);
   --muted-2:rgba(255,255,255,.45);
+  --mono:'JetBrains Mono', ui-monospace, monospace;
+  /* Cores de setor para visitas técnicas */
+  --sector-energia:#4DA8E0;
+  --sector-saneamento:#5BA833;
+  --sector-industria:#F58F4E;
+  --sector-inteligencia:#A95CB7;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}
 html{scroll-behavior:smooth;}
@@ -73,17 +79,24 @@ a{color:inherit;text-decoration:none;}
 /* === NAV === */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 36px;display:flex;align-items:center;justify-content:space-between;transition:background .3s,padding .3s,border-color .3s;border-bottom:1px solid transparent;}
 nav.scrolled{background:rgba(9,17,54,.92);backdrop-filter:blur(14px);padding:11px 36px;border-bottom-color:var(--line);}
-.nav-logo{display:flex;align-items:center;font-weight:700;font-size:14px;letter-spacing:.2px;}
+.nav-logo{display:flex;align-items:center;gap:14px;font-weight:700;font-size:14px;letter-spacing:.2px;}
 .nav-logo img{height:38px;width:auto;display:block;}
 nav.scrolled .nav-logo img{height:32px;}
+.nav-meta{display:none;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);line-height:1.4;border-left:1px solid var(--line-2);padding-left:14px;max-width:160px;}
+@media(min-width:1100px){.nav-meta{display:block;}}
+.nav-deadline{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);padding:6px 12px;border:1px solid rgba(245,143,78,.32);border-radius:100px;background:rgba(245,143,78,.06);}
+.nav-deadline .pulse{width:6px;height:6px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(245,143,78,.55);animation:pulse 2s infinite;}
+.nav-deadline[hidden]{display:none;}
+@media(max-width:1000px){.nav-deadline{display:none;}}
 .nav-links{display:flex;gap:24px;list-style:none;align-items:center;}
 .nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.65);transition:color .15s;}
 .nav-links a:hover{color:var(--white);}
 .nav-cta{background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 70%) !important;color:var(--bg) !important;padding:9px 20px;border-radius:100px;font-weight:700 !important;font-size:12.5px !important;letter-spacing:.3px;}
 .nav-cta:hover{filter:brightness(1.08);}
-.theme-toggle{background:transparent;border:1px solid var(--line-2);color:var(--white);cursor:pointer;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:7px 14px;border-radius:100px;transition:all .18s;display:inline-flex;align-items:center;gap:7px;}
-.theme-toggle:hover{border-color:var(--cyan);color:var(--cyan);}
-.theme-toggle .ico{width:14px;height:14px;display:inline-block;}
+.theme-toggle{background:transparent;border:1px solid var(--line-2);color:var(--white);cursor:pointer;width:34px;height:34px;border-radius:50%;transition:all .18s;display:inline-flex;align-items:center;justify-content:center;}
+.theme-toggle:hover{border-color:var(--cyan);color:var(--cyan);transform:rotate(20deg);}
+.theme-toggle .ico{width:15px;height:15px;display:block;}
+.theme-toggle .lbl{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 .menu-toggle{display:none;background:none;border:none;color:var(--white);cursor:pointer;font-size:22px;}
 @media(max-width:880px){
   .nav-links{display:none;position:fixed;top:62px;left:0;right:0;flex-direction:column;background:rgba(9,17,54,.97);backdrop-filter:blur(14px);padding:24px;border-top:1px solid var(--line);}
@@ -101,8 +114,12 @@ nav.scrolled .nav-logo img{height:32px;}
 
 .hero-logo{width:min(720px,90vw);height:auto;margin-bottom:42px;animation:floatIn 1s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 20px 60px rgba(0,0,0,.5));}
 
-.h-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(91,198,229,.1);border:1px solid rgba(91,198,229,.34);color:var(--cyan);font-size:11px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;padding:9px 22px;border-radius:100px;margin-bottom:30px;animation:fd .7s .15s ease both;}
+.h-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(91,198,229,.1);border:1px solid rgba(91,198,229,.34);color:var(--cyan);font-size:11px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;padding:9px 22px;border-radius:100px;margin-bottom:18px;animation:fd .7s .15s ease both;}
 .h-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);}
+.urgency-pill{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);background:rgba(245,143,78,.08);border:1px solid rgba(245,143,78,.32);padding:8px 16px;border-radius:100px;margin-bottom:30px;animation:fd .7s .2s ease both;}
+.urgency-pill .pulse{width:6px;height:6px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(245,143,78,.55);animation:pulse 2s infinite;}
+.urgency-pill[hidden]{display:none;}
+.urgency-pill .sep{opacity:.4;margin:0 4px;}
 
 .h-tag{font-family:'Manrope',sans-serif;font-size:clamp(20px,3vw,30px);font-weight:300;color:rgba(255,255,255,.78);max-width:880px;margin-bottom:28px;animation:fd .8s .25s ease both;line-height:1.32;letter-spacing:-.01em;}
 .h-tag em{color:var(--yellow);font-style:normal;font-weight:600;}
@@ -229,9 +246,14 @@ nav.scrolled .nav-logo img{height:32px;}
 .vis-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 @media(max-width:1000px){.vis-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.vis-grid{grid-template-columns:1fr;}}
-.vc{padding:24px 20px;border:1px solid var(--line);border-radius:10px;transition:all .3s;background:rgba(255,255,255,.02);}
-.vc:hover{transform:translateY(-3px);border-color:rgba(122,199,79,.32);background:rgba(122,199,79,.03);}
-.vn{font-size:10px;letter-spacing:1.6px;font-weight:700;color:var(--green);margin-bottom:10px;}
+.vc{padding:24px 20px;border:1px solid var(--line);border-radius:10px;transition:all .3s;background:rgba(255,255,255,.02);position:relative;border-top:3px solid var(--sector-color,var(--green));}
+.vc[data-sector="energia"]{--sector-color:var(--sector-energia);}
+.vc[data-sector="saneamento"]{--sector-color:var(--sector-saneamento);}
+.vc[data-sector="industria"]{--sector-color:var(--sector-industria);}
+.vc[data-sector="inteligencia"]{--sector-color:var(--sector-inteligencia);}
+.vc:hover{transform:translateY(-3px);border-color:var(--sector-color);background:color-mix(in srgb,var(--sector-color) 5%,transparent);}
+.vc-sector{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--sector-color);position:absolute;top:14px;right:18px;padding:3px 8px;border-radius:100px;background:color-mix(in srgb,var(--sector-color) 12%,transparent);}
+.vn{font-size:10px;letter-spacing:1.6px;font-weight:700;color:var(--sector-color,var(--green));margin-bottom:10px;}
 .vn .integrated{background:rgba(245,143,78,.18);color:var(--orange);padding:1px 7px;border-radius:100px;margin-left:5px;font-size:8.5px;letter-spacing:.8px;text-transform:uppercase;}
 .vcn{font-family:'Manrope',sans-serif;font-size:17px;font-weight:700;margin-bottom:8px;line-height:1.18;letter-spacing:-.01em;}
 .vth{font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.5;margin-bottom:14px;}
@@ -530,15 +552,17 @@ html[data-theme="light"] .logo-dark{display:none;}
 <nav id="nav" aria-label="Navegação principal">
   <a href="#" class="nav-logo" aria-label="1° Encontro de Governança, Estratégia e Inovação Governamental — início">
     <img src="/assets/logo-nav.png" alt="1° Encontro de Governança, Estratégia e Inovação Governamental">
+    <span class="nav-meta">UFF · ABAR<br>PPGEP · Escola</span>
   </a>
   <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">☰</button>
   <ul class="nav-links" id="nav-menu">
-    <li><a href="#programacao">Programação</a></li>
+    <li><a href="#programacao">Programa</a></li>
     <li><a href="#eventos">Eventos</a></li>
     <li><a href="#visitas">Visitas</a></li>
-    <li><a href="#trabalhos">Submissão</a></li>
-    <li><a href="#parceiros">Parceiros</a></li>
-    <li><button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span id="themeLabel">Claro</span></button></li>
+    <li><a href="#trabalhos">Submeter</a></li>
+    <li><a href="#parceiros">Apoio</a></li>
+    <li><a href="#submeter" class="nav-deadline" id="navDeadline" hidden><span class="pulse" aria-hidden="true"></span><span id="navDeadlineText">Submissão até 15/05</span></a></li>
+    <li><button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span class="lbl" id="themeLabel">Tema claro</span></button></li>
     <li><a href="#inscricao" class="nav-cta">Inscreva-se →</a></li>
   </ul>
 </nav>
@@ -550,6 +574,7 @@ html[data-theme="light"] .logo-dark{display:none;}
   <img src="/assets/logo-claro.jpg?v=2" alt="" aria-hidden="true" class="hero-logo logo-light" width="600">
   <h1 id="hero-title" class="sr-only">1° Encontro de Governança, Estratégia e Inovação Governamental</h1>
   <div class="h-badge"><span class="dot" aria-hidden="true"></span>08, 09 e 10 de julho de 2026 · Rio de Janeiro</div>
+  <a href="#submeter" class="urgency-pill" id="urgencyPill" hidden><span class="pulse" aria-hidden="true"></span><span id="urgencyPillText">Fase 1 encerra em — dias</span><span class="sep">·</span><span>15.05.2026 · 23h59 BRT</span></a>
   <p class="h-tag">A primeira plataforma nacional que integra <em>academia, regulação, gestão pública,<br>engenharia de produção e setor produtivo</em>.</p>
   <p class="h-sub">Quatro eventos oficiais em três dias: 13ª Lean Six Sigma Congress, 4º Seminário SSEP, 2º Seminário de Regulação e 1º Seminário de Inteligência Governamental — sob uma só agenda de alto nível.</p>
   <div class="h-meta" role="list">
@@ -689,14 +714,14 @@ html[data-theme="light"] .logo-dark{display:none;}
     <h2 class="sec-title fi" id="vs-title">Oito jornadas técnicas <em>exclusivas</em></h2>
     <p class="sec-desc fi">Acesso a empresas líderes do setor regulado e da indústria consumidora de gás no Rio de Janeiro. Três jornadas são integradas, combinando dois locais em uma mesma saída. <strong style="color:var(--white)">Inscrição prévia obrigatória — vagas limitadas por ônibus.</strong></p>
     <div class="vis-grid">
-      <article class="vc fi"><div class="vn">Jornada 01</div><h3 class="vcn">Petrobras</h3><p class="vth">Regulação de energia e transformação digital em operações de E&P</p><span class="vtg">Energia · Regulação</span></article>
-      <article class="vc fi d1"><div class="vn">Jornada 02 <span class="integrated">integrada</span></div><h3 class="vcn">Águas do Rio (CCO) + ETE/Biogás</h3><p class="vth">Saneamento e regulação de infraestrutura, seguido de sustentabilidade, ESG e inovação em saneamento</p><span class="vtg">Saneamento · ESG</span></article>
-      <article class="vc fi d2"><div class="vn">Jornada 03</div><h3 class="vcn">Guandu / Lameirão</h3><p class="vth">Infraestrutura hídrica e governança ambiental no maior sistema de abastecimento da AMRJ</p><span class="vtg">Infraestrutura Hídrica</span></article>
-      <article class="vc fi d3"><div class="vn">Jornada 04</div><h3 class="vcn">Ternium · Santa Cruz</h3><p class="vth">Indústria consumidora de gás natural, ESG e Lean Six Sigma</p><span class="vtg">Indústria · Lean</span></article>
-      <article class="vc fi"><div class="vn">Jornada 05</div><h3 class="vcn">Gerdau · Santa Cruz</h3><p class="vth">Indústria consumidora de gás, transformação digital e ESG</p><span class="vtg">Indústria · Digital</span></article>
-      <article class="vc fi d1"><div class="vn">Jornada 06 <span class="integrated">integrada</span></div><h3 class="vcn">Eneva + TAG</h3><p class="vth">Regulação de energia e GovTech, seguido de transporte de gás natural</p><span class="vtg">Energia · GovTech</span></article>
-      <article class="vc fi d2"><div class="vn">Jornada 07 <span class="integrated">integrada</span></div><h3 class="vcn">IRM + AGENERSA</h3><p class="vth">Inteligência governamental e saneamento, seguido de sandbox regulatório</p><span class="vtg">Inteligência · Sandbox</span></article>
-      <article class="vc fi d3"><div class="vn">Jornada 08</div><h3 class="vcn">CSN</h3><p class="vth">Indústria consumidora de gás, ESG e Lean Six Sigma</p><span class="vtg">Indústria · Lean</span></article>
+      <article class="vc fi" data-sector="energia"><span class="vc-sector">Energia</span><div class="vn">Jornada 01</div><h3 class="vcn">Petrobras</h3><p class="vth">Regulação de energia e transformação digital em operações de E&P</p><span class="vtg">Energia · Regulação</span></article>
+      <article class="vc fi d1" data-sector="saneamento"><span class="vc-sector">Saneamento</span><div class="vn">Jornada 02 <span class="integrated">integrada</span></div><h3 class="vcn">Águas do Rio (CCO) + ETE/Biogás</h3><p class="vth">Saneamento e regulação de infraestrutura, seguido de sustentabilidade, ESG e inovação em saneamento</p><span class="vtg">Saneamento · ESG</span></article>
+      <article class="vc fi d2" data-sector="saneamento"><span class="vc-sector">Saneamento</span><div class="vn">Jornada 03</div><h3 class="vcn">Guandu / Lameirão</h3><p class="vth">Infraestrutura hídrica e governança ambiental no maior sistema de abastecimento da AMRJ</p><span class="vtg">Infraestrutura Hídrica</span></article>
+      <article class="vc fi d3" data-sector="industria"><span class="vc-sector">Indústria</span><div class="vn">Jornada 04</div><h3 class="vcn">Ternium · Santa Cruz</h3><p class="vth">Indústria consumidora de gás natural, ESG e Lean Six Sigma</p><span class="vtg">Indústria · Lean</span></article>
+      <article class="vc fi" data-sector="industria"><span class="vc-sector">Indústria</span><div class="vn">Jornada 05</div><h3 class="vcn">Gerdau · Santa Cruz</h3><p class="vth">Indústria consumidora de gás, transformação digital e ESG</p><span class="vtg">Indústria · Digital</span></article>
+      <article class="vc fi d1" data-sector="energia"><span class="vc-sector">Energia</span><div class="vn">Jornada 06 <span class="integrated">integrada</span></div><h3 class="vcn">Eneva + TAG</h3><p class="vth">Regulação de energia e GovTech, seguido de transporte de gás natural</p><span class="vtg">Energia · GovTech</span></article>
+      <article class="vc fi d2" data-sector="inteligencia"><span class="vc-sector">Inteligência</span><div class="vn">Jornada 07 <span class="integrated">integrada</span></div><h3 class="vcn">IRM + AGENERSA</h3><p class="vth">Inteligência governamental e saneamento, seguido de sandbox regulatório</p><span class="vtg">Inteligência · Sandbox</span></article>
+      <article class="vc fi d3" data-sector="industria"><span class="vc-sector">Indústria</span><div class="vn">Jornada 08</div><h3 class="vcn">CSN</h3><p class="vth">Indústria consumidora de gás, ESG e Lean Six Sigma</p><span class="vtg">Indústria · Lean</span></article>
     </div>
   </div>
 </section>
@@ -979,7 +1004,9 @@ html[data-theme="light"] .logo-dark{display:none;}
   const update = () => {
     const t = root.getAttribute('data-theme');
     const lbl = document.getElementById('themeLabel');
-    if (lbl) lbl.textContent = t === 'light' ? 'Escuro' : 'Claro';
+    const btn = document.getElementById('themeToggle');
+    if (lbl) lbl.textContent = t === 'light' ? 'Tema escuro' : 'Tema claro';
+    btn?.setAttribute('aria-label', t === 'light' ? 'Mudar para tema escuro' : 'Mudar para tema claro');
   };
   update();
   document.getElementById('themeToggle')?.addEventListener('click', () => {
@@ -988,6 +1015,28 @@ html[data-theme="light"] .logo-dark{display:none;}
     localStorage.setItem('gei-theme', cur);
     update();
   });
+})();
+
+// Countdown para Fase 1 (15/05/2026 23h59 BRT) — atualiza nav + hero pill
+(function(){
+  const deadline = new Date('2026-05-15T23:59:00-03:00');
+  const now = new Date();
+  const diffMs = deadline - now;
+  const diffDays = Math.ceil(diffMs / 86400000);
+  const navEl = document.getElementById('navDeadline');
+  const navTxt = document.getElementById('navDeadlineText');
+  const pill = document.getElementById('urgencyPill');
+  const pillTxt = document.getElementById('urgencyPillText');
+  if (diffDays > 0 && diffDays <= 60) {
+    if (navEl && navTxt) {
+      navEl.hidden = false;
+      navTxt.textContent = diffDays === 1 ? 'Submissão · último dia' : `Submissão · ${diffDays} dias`;
+    }
+    if (pill && pillTxt) {
+      pill.hidden = false;
+      pillTxt.textContent = diffDays === 1 ? 'Fase 1 encerra hoje' : `Fase 1 encerra em ${diffDays} dias`;
+    }
+  }
 })();
 
 const fiEls = document.querySelectorAll('.fi');
