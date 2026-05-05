@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apoio Institucional — 1° Encontro GEI</title>
+<meta name="description" content="As Quatro Moedas — modelo de apoio institucional cumulativo e não-exclusivo do 1° Encontro de Governança, Estratégia e Inovação Governamental.">
+<meta name="theme-color" content="#06090F">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#06090F;--navy:#0A1628;--lime:#B8E839;--lime-2:#9FD41F;--lime-soft:#D7F176;--orange:#F4B23E;--coral:#E97A5C;--magenta:#A95CB7;--teal-soft:#5FB6C9;--white:#FFFFFF;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.14);}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',system-ui,sans-serif;color:var(--white);background:var(--ink);line-height:1.6;}
+::selection{background:var(--lime);color:var(--navy);}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+
+nav{position:sticky;top:0;background:rgba(6,9,15,.92);backdrop-filter:blur(14px);padding:14px 36px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);z-index:50;}
+.nav-logo{display:flex;align-items:center;gap:11px;font-weight:700;font-size:14px;}
+.nav-logo img{width:32px;height:32px;}
+.nav-logo span strong{color:var(--lime);}
+.nav-back{font-size:13px;color:rgba(255,255,255,.65);font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:color .15s;}
+.nav-back:hover{color:var(--white);}
+
+.hero-pat{padding:140px 36px 80px;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse 60% 50% at 50% 30%,rgba(184,232,57,.08) 0%,transparent 60%),linear-gradient(180deg,#06090F 0%,#0A1628 100%);}
+.h-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(184,232,57,.1);border:1px solid rgba(184,232,57,.3);color:var(--lime-soft);font-size:11px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;padding:9px 22px;border-radius:100px;margin-bottom:30px;}
+.h-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 8px var(--lime);}
+h1{font-family:'Fraunces',serif;font-size:clamp(34px,5.5vw,68px);font-weight:600;line-height:1.04;letter-spacing:-.02em;max-width:880px;margin:0 auto 22px;}
+h1 em{font-style:italic;font-weight:400;background:linear-gradient(120deg,var(--lime) 30%,var(--lime-soft) 70%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.lead{font-size:clamp(16px,1.7vw,19px);color:rgba(255,255,255,.62);max-width:720px;margin:0 auto 40px;line-height:1.65;}
+
+.intro{padding:72px 36px;border-top:1px solid var(--line);}
+.intro-in{max-width:920px;margin:0 auto;}
+.intro p{font-size:17px;color:rgba(255,255,255,.78);line-height:1.78;margin-bottom:20px;}
+.intro p strong{color:var(--lime);font-weight:700;}
+.intro blockquote{margin:36px 0;padding:24px 32px;border-left:3px solid var(--lime);background:rgba(184,232,57,.05);font-family:'Fraunces',serif;font-style:italic;font-size:20px;line-height:1.5;color:var(--lime-soft);}
+
+.coins{padding:80px 36px;background:linear-gradient(180deg,#0A1422 0%,var(--ink) 100%);}
+.coins-in{max-width:1180px;margin:0 auto;}
+.sec-lbl{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:14px;display:inline-flex;align-items:center;gap:10px;}
+.sec-lbl::before{content:'';width:24px;height:1.5px;background:var(--lime);}
+.sec-title{font-family:'Fraunces',serif;font-size:clamp(28px,4vw,46px);font-weight:600;line-height:1.06;letter-spacing:-.02em;margin-bottom:48px;max-width:780px;}
+.sec-title em{font-style:italic;color:var(--lime-soft);font-weight:400;}
+
+.coin-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+@media(max-width:780px){.coin-grid{grid-template-columns:1fr;}}
+.coin-card{padding:38px 32px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.018);transition:all .3s;position:relative;overflow:hidden;}
+.coin-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);}
+.coin-card[data-c="1"]{--accent:var(--lime);}
+.coin-card[data-c="2"]{--accent:var(--teal-soft);}
+.coin-card[data-c="3"]{--accent:var(--orange);}
+.coin-card[data-c="4"]{--accent:var(--coral);}
+.coin-card:hover{border-color:var(--accent);transform:translateY(-4px);}
+.coin-num{font-family:'Fraunces',serif;font-size:72px;font-weight:600;line-height:.95;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px var(--accent);margin-bottom:10px;}
+.coin-cat{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px;}
+.coin-t{font-family:'Fraunces',serif;font-size:26px;font-weight:600;line-height:1.15;margin-bottom:12px;letter-spacing:-.01em;}
+.coin-d{font-size:14.5px;color:rgba(255,255,255,.62);line-height:1.65;margin-bottom:22px;}
+.coin-list{list-style:none;}
+.coin-list li{font-size:13px;color:rgba(255,255,255,.78);padding:8px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;}
+.coin-list li:last-child{border:none;}
+.coin-list li::before{content:'';flex-shrink:0;width:5px;height:5px;border-radius:50%;background:var(--accent);margin-top:7px;}
+.coin-list li strong{color:var(--white);font-weight:600;}
+
+.bonus{padding:80px 36px;background:var(--ink);}
+.bonus-in{max-width:920px;margin:0 auto;padding:46px 44px;border:1px solid rgba(169,92,183,.3);border-radius:10px;background:linear-gradient(135deg,rgba(169,92,183,.08) 0%,rgba(184,232,57,.03) 100%);}
+.bonus-lbl{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--magenta);font-weight:700;margin-bottom:12px;}
+.bonus h3{font-family:'Fraunces',serif;font-size:28px;font-weight:600;margin-bottom:14px;line-height:1.2;letter-spacing:-.01em;}
+.bonus h3 em{font-style:italic;color:var(--magenta);font-weight:400;}
+.bonus p{font-size:15px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:14px;}
+.bonus-points{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px;}
+@media(max-width:680px){.bonus-points{grid-template-columns:1fr;}}
+.bonus-pt{padding:18px;border:1px solid var(--line-2);border-radius:6px;font-size:13px;color:rgba(255,255,255,.78);line-height:1.55;}
+.bonus-pt strong{color:var(--magenta);font-weight:600;display:block;margin-bottom:4px;}
+
+.cta{padding:100px 36px;text-align:center;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(184,232,57,.08) 0%,transparent 60%),linear-gradient(180deg,#0A1422 0%,var(--ink) 100%);}
+.cta h2{font-family:'Fraunces',serif;font-size:clamp(30px,4.5vw,52px);font-weight:600;line-height:1.05;letter-spacing:-.02em;margin-bottom:20px;}
+.cta h2 em{font-style:italic;color:var(--lime-soft);font-weight:400;}
+.cta p{font-size:17px;color:rgba(255,255,255,.6);max-width:600px;margin:0 auto 36px;line-height:1.65;}
+.btn-p{display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:var(--ink);font-weight:700;padding:16px 38px;border-radius:100px;font-size:14.5px;transition:all .2s;}
+.btn-p:hover{background:var(--lime-2);transform:translateY(-2px);box-shadow:0 12px 32px rgba(184,232,57,.22);}
+.btn-s{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--white);font-weight:500;padding:16px 36px;border:1px solid rgba(255,255,255,.22);border-radius:100px;font-size:14.5px;margin-left:10px;transition:all .2s;}
+.btn-s:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.4);}
+
+footer{background:#04060A;padding:48px 36px;color:rgba(255,255,255,.4);text-align:center;font-size:12.5px;line-height:1.7;border-top:1px solid var(--line);}
+footer a{color:var(--lime);}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo" aria-label="Voltar à página inicial">
+    <img src="/assets/logo-swirl.png" alt="" aria-hidden="true">
+    <span>1° Encontro <strong>GEI</strong></span>
+  </a>
+  <a href="/" class="nav-back">← Voltar à página principal</a>
+</nav>
+
+<section class="hero-pat">
+  <div class="h-badge"><span class="dot" aria-hidden="true"></span>Apoio Institucional</div>
+  <h1>As <em>Quatro Moedas</em><br>de apoio ao Encontro</h1>
+  <p class="lead">Modelo cumulativo e não-exclusivo de apoio institucional. Em vez de patrocínio monetário tradicional, instituições contribuem em quatro dimensões estratégicas — preservando autonomia e maximizando alcance.</p>
+</section>
+
+<section class="intro">
+  <div class="intro-in">
+    <p>O <strong>1° Encontro de Governança, Estratégia e Inovação Governamental</strong> nasce com a premissa de que parcerias institucionais robustas são mais valiosas que qualquer aporte financeiro pontual. A rede formada por <strong>UFF, ABAR, PPGEP/UFF e Escola de Regulação</strong> propõe um modelo de apoio em que cada instituição participa nas dimensões que melhor se alinham aos seus objetivos.</p>
+    <blockquote>
+      Quatro moedas, quatro formas de transformar conhecimento em política pública — sem perder identidade, sem renunciar a autonomia.
+    </blockquote>
+    <p>Cada uma das quatro moedas é independente e cumulativa. Uma mesma instituição pode contribuir em uma, duas, três ou nas quatro modalidades, ampliando proporcionalmente sua presença e visibilidade no programa, no livro de anais com ISBN e nas peças de comunicação do evento.</p>
+  </div>
+</section>
+
+<section class="coins">
+  <div class="coins-in">
+    <p class="sec-lbl">Modalidades de apoio</p>
+    <h2 class="sec-title">Quatro dimensões, <em>uma rede de propósito</em></h2>
+    <div class="coin-grid">
+
+      <article class="coin-card" data-c="1">
+        <div class="coin-num">01</div>
+        <div class="coin-cat">Moeda de capital intelectual</div>
+        <h3 class="coin-t">Indicação de palestrantes</h3>
+        <p class="coin-d">Sua instituição indica nomes de alto nível para painéis, mesas-redondas e conferências, ampliando o repertório técnico e político do encontro.</p>
+        <ul class="coin-list">
+          <li><strong>Visibilidade:</strong>logo no programa oficial e materiais</li>
+          <li><strong>Reconhecimento:</strong>menção dedicada nas peças de divulgação</li>
+          <li><strong>Anais ISBN:</strong>citação institucional no prefácio do livro</li>
+          <li><strong>Networking:</strong>convite para coquetéis institucionais</li>
+        </ul>
+      </article>
+
+      <article class="coin-card" data-c="2">
+        <div class="coin-num">02</div>
+        <div class="coin-cat">Moeda de alcance</div>
+        <h3 class="coin-t">Divulgação institucional</h3>
+        <p class="coin-d">Mobilize seus canais oficiais — listas, redes sociais, intranets e WhatsApp Business — para amplificar o evento ao seu público qualificado.</p>
+        <ul class="coin-list">
+          <li><strong>Co-branding:</strong>logo nas peças oficiais do evento</li>
+          <li><strong>Co-menção:</strong>presença em UFF/ABAR e canais oficiais</li>
+          <li><strong>Kit divulgação:</strong>artes prontas, copy editorial e vídeos curtos</li>
+          <li><strong>Métricas:</strong>relatório pós-evento com alcance consolidado</li>
+        </ul>
+      </article>
+
+      <article class="coin-card" data-c="3">
+        <div class="coin-num">03</div>
+        <div class="coin-cat">Moeda de hospedagem técnica</div>
+        <h3 class="coin-t">Visita técnica · Dia 2</h3>
+        <p class="coin-d">Receba uma das oito jornadas técnicas paralelas do dia 09/07/2026 em sua planta, agência ou sede. Imersão de campo de alto valor científico.</p>
+        <ul class="coin-list">
+          <li><strong>Naming rights:</strong>jornada com identidade institucional</li>
+          <li><strong>Capítulo no livro:</strong>capítulo dedicado no anais ISBN</li>
+          <li><strong>Relato técnico:</strong>2-3 páginas autorais sobre a operação</li>
+          <li><strong>Visibilidade dirigida:</strong>público qualificado e segmentado</li>
+        </ul>
+      </article>
+
+      <article class="coin-card" data-c="4">
+        <div class="coin-num">04</div>
+        <div class="coin-cat">Moeda de premiação</div>
+        <h3 class="coin-t">Patrocínio de categoria</h3>
+        <p class="coin-d">Apoie financeiramente uma das categorias da premiação dos melhores trabalhos do Dia 3. Brand association de valor acadêmico permanente.</p>
+        <ul class="coin-list">
+          <li><strong>Cerimônia:</strong>presença na entrega da premiação</li>
+          <li><strong>Categoria nominal:</strong>"Prêmio [Sua Instituição] de [Tema]"</li>
+          <li><strong>Conexão acadêmica:</strong>contato direto com pesquisadores</li>
+          <li><strong>Anais ISBN:</strong>menção nominal nos trabalhos premiados</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="bonus">
+  <div class="bonus-in">
+    <div class="bonus-lbl">Moeda Bônus · Equidade de Gênero</div>
+    <h3>Parceria pela <em>equidade de gênero</em> nos painéis</h3>
+    <p>Comprometemo-nos a entregar pelo menos 40% de paridade nos painéis e mesas, com moderação feminina alternada. O kit do participante será confeccionado por uma cooperativa de mulheres pescadoras do litoral fluminense — ecobag e caneca reutilizável.</p>
+    <p>Instituições parceiras nesta dimensão têm reconhecimento específico em peça dedicada e selo "Apoio à Equidade" em todos os materiais.</p>
+    <div class="bonus-points">
+      <div class="bonus-pt"><strong>40% paridade</strong>Mínimo em painéis e mesas-redondas</div>
+      <div class="bonus-pt"><strong>Cooperativa</strong>Mulheres pescadoras · kit do participante</div>
+      <div class="bonus-pt"><strong>Selo dedicado</strong>"Apoio à Equidade" em peças oficiais</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Vamos conversar sobre <em>como apoiar</em>?</h2>
+  <p>O contato direto com a Secretaria do Encontro é o caminho mais rápido. Em até 48h enviamos uma proposta personalizada às modalidades do seu interesse.</p>
+  <a href="mailto:contato@encontrogei.com.br?subject=Apoio Institucional — 1º Encontro GEI" class="btn-p">Falar com a secretaria <span aria-hidden="true">→</span></a>
+  <a href="/" class="btn-s">Voltar ao site principal</a>
+</section>
+
+<footer>
+  © 2026 1° Encontro GEI · UFF · ABAR · PPGEP/UFF · Escola de Regulação<br>
+  08, 09 e 10 de julho de 2026 · Rio de Janeiro / Niterói, RJ<br>
+  <a href="/">Página principal</a> · <a href="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/" target="_blank" rel="noopener">Página Even3</a>
+</footer>
+
+</body>
+</html>

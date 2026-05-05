@@ -1,0 +1,13 @@
+{
+  "name": "encontro-gei",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page do 1º Encontro de Governança, Estratégia e Inovação Governamental — 08-10/07/2026",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

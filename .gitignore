@@ -1,0 +1,33 @@
+# Material de referência (não versionar)
+*.docx
+*.pptx
+*.pdf
+*.jpeg
+*.jpg
+!assets/*.jpg
+!assets/*.jpeg
+!assets/*.png
+
+# Esboço temporário (PNGs gerados a partir do PDF)
+assets/esboco-full.png
+assets/esboco-img*.png
+
+# Secrets
+.env
+.env.local
+.env*.local
+
+# Node
+node_modules/
+.next/
+.vercel/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
