@@ -25,13 +25,13 @@ export default async function handler(req, res) {
   }
 
   try {
-    const r = await fetch(`https://api.even3.com.br/v1/attendees/${eventId}`, {
+    const r = await fetch('https://www.even3.com.br/api/v1/attendees', {
       headers: { 'Authorization-Token': token, 'Accept': 'application/json' }
     });
     if (!r.ok) throw new Error(`even3 ${r.status}`);
-    const data = await r.json();
-    const count = Array.isArray(data) ? data.length : (data.total ?? data.count ?? 0);
-    const payload = { count, updatedAt: new Date().toISOString() };
+    const json = await r.json();
+    const arr = Array.isArray(json?.data) ? json.data : (Array.isArray(json) ? json : []);
+    const payload = { count: arr.length, eventId, updatedAt: new Date().toISOString() };
     cache = { value: payload, expires: now + 300_000 };
     return res.status(200).json(payload);
   } catch (e) {
