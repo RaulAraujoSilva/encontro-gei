@@ -107,15 +107,17 @@ nav.scrolled{background:rgba(9,17,54,.92);backdrop-filter:blur(14px);padding:11p
 
 .h-sub{font-size:clamp(15px,1.7vw,17px);color:var(--muted);max-width:680px;line-height:1.7;margin-bottom:42px;animation:fd .8s .3s ease both;}
 
-.h-meta{display:flex;flex-wrap:wrap;justify-content:center;margin-bottom:46px;animation:fd .8s .4s ease both;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;overflow:hidden;backdrop-filter:blur(8px);}
-.mi{padding:14px 22px;text-align:center;}
-.ml{font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.36);font-weight:600;margin-bottom:4px;}
-.mv{font-size:14px;font-weight:700;color:var(--white);}
-.mv strong{color:var(--yellow);}
+.h-meta{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;backdrop-filter:blur(10px);margin-bottom:46px;max-width:880px;width:100%;animation:fd .8s .4s ease both;}
+.mi{padding:22px 12px;text-align:center;background:rgba(255,255,255,.025);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;}
+.ml{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:600;}
+.mv{font-family:'Manrope',sans-serif;font-size:22px;font-weight:800;color:var(--white);line-height:1;letter-spacing:-.02em;}
+.mv strong{color:var(--yellow);font-weight:800;}
 .mv .gr{color:var(--green);}
 .mv .bl{color:var(--blue);}
-.ms{width:1px;background:var(--line);}
-@media(max-width:600px){.ms{display:none;}.mi{flex:1 0 50%;border-bottom:1px solid var(--line);}}
+.mv-sub{font-size:11px;color:rgba(255,255,255,.55);font-weight:500;}
+.ms{display:none;}
+@media(max-width:780px){.h-meta{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:380px){.h-meta{grid-template-columns:1fr;}}
 
 .h-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;animation:fd .8s .5s ease both;}
 .btn-p{background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 100%);color:var(--bg);font-size:14.5px;font-weight:700;padding:16px 38px;border:none;border-radius:100px;cursor:pointer;transition:all .2s;letter-spacing:.2px;display:inline-flex;align-items:center;gap:10px;}
@@ -160,14 +162,14 @@ nav.scrolled{background:rgba(9,17,54,.92);backdrop-filter:blur(14px);padding:11p
 .kd-i{font-size:12px;color:rgba(255,255,255,.5);margin-top:6px;line-height:1.55;}
 
 /* === STATS STRIP === */
-.stats{background:var(--bg);padding:64px 36px;border-bottom:1px solid var(--line);}
-.stats-g{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:28px;text-align:center;}
-.stat{position:relative;padding:0 14px;}
-.stat:not(:last-child)::after{content:'';position:absolute;right:0;top:10%;bottom:10%;width:1px;background:var(--line);}
-@media(max-width:600px){.stat::after{display:none !important;}}
-.sn{font-family:'Manrope',sans-serif;font-size:54px;font-weight:800;line-height:1;margin-bottom:7px;letter-spacing:-.04em;color:var(--white);}
+.stats{background:var(--bg);padding:72px 36px;border-bottom:1px solid var(--line);}
+.stats-g{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:36px;text-align:center;}
+.stat{position:relative;padding:0 16px;display:flex;flex-direction:column;align-items:center;gap:8px;}
+.stat:not(:last-child)::after{content:'';position:absolute;right:0;top:18%;bottom:18%;width:1px;background:var(--line);}
+@media(max-width:780px){.stat::after{display:none !important;}}
+.sn{font-family:'Manrope',sans-serif;font-size:42px;font-weight:800;line-height:1;letter-spacing:-.035em;color:var(--white);}
 .sn.y{color:var(--yellow);}.sn.g{color:var(--green);}.sn.b{color:var(--blue);}.sn.c{color:var(--cyan);}
-.sl{font-size:11.5px;color:rgba(255,255,255,.55);font-weight:500;line-height:1.45;letter-spacing:.2px;}
+.sl{font-size:14px;color:rgba(255,255,255,.78);font-weight:500;line-height:1.4;letter-spacing:.05px;max-width:170px;}
 
 /* === SECTION SHARED === */
 .sec{padding:120px 36px;position:relative;}
@@ -277,17 +279,16 @@ nav.scrolled{background:rgba(9,17,54,.92);backdrop-filter:blur(14px);padding:11p
 .mod-d{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:14px;min-height:62px;}
 .mod-vagas{font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:.4px;}
 
-/* === EVEN3 EMBED WRAPPER === */
-.embed-wrap{background:var(--white);border-radius:12px;padding:6px;min-height:560px;position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45);}
-.embed-loading{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:var(--bg);z-index:1;}
-.embed-loading .spinner{width:32px;height:32px;border:2.5px solid rgba(9,17,54,.14);border-top-color:var(--bg);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 14px;}
-.embed-loading p{font-size:13px;color:#6B82A0;}
-.embed-target{position:relative;z-index:2;min-height:548px;}
-.embed-target iframe{width:100% !important;border:0 !important;border-radius:8px;}
-.embed-fallback{padding:36px;text-align:center;}
-.embed-fallback h3{font-family:'Manrope',sans-serif;color:var(--bg);margin-bottom:10px;font-size:22px;font-weight:700;letter-spacing:-.01em;}
-.embed-fallback p{color:#6B82A0;font-size:14px;margin-bottom:18px;line-height:1.6;}
-.embed-fallback a{display:inline-block;background:var(--bg);color:var(--white);padding:13px 30px;border-radius:100px;font-weight:700;font-size:13.5px;}
+/* === EVEN3 IFRAME EMBED === */
+.embed-wrap{background:var(--white);border-radius:12px;position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45);}
+.embed-bar{display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,#091136,#142469);color:#fff;padding:10px 16px;font-size:12px;font-weight:500;letter-spacing:.2px;border-bottom:1px solid rgba(255,255,255,.08);}
+.embed-bar .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(122,199,79,.2);}
+.embed-bar .grow{flex:1;}
+.embed-bar a{color:var(--lime-soft,#A5DD7E);font-weight:600;text-decoration:underline;text-underline-offset:2px;}
+.embed-iframe{width:100%;height:780px;border:0;display:block;}
+@media(max-width:600px){.embed-iframe{height:680px;}}
+.embed-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:780px;background:#fff;color:var(--bg);text-align:center;padding:24px;}
+.embed-loading .spinner{width:32px;height:32px;border:2.5px solid rgba(9,17,54,.14);border-top-color:var(--bg);border-radius:50%;animation:spin .8s linear infinite;margin-bottom:14px;}
 
 /* === PARTNERS === */
 .partners{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);}
@@ -395,15 +396,11 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
   <p class="h-tag">A primeira plataforma nacional que integra <em>academia, regulação, gestão pública,<br>engenharia de produção e setor produtivo</em>.</p>
   <p class="h-sub">Quatro eventos oficiais em três dias: 13ª Lean Six Sigma Congress, 4º Seminário SSEP, 2º Seminário de Regulação e 1º Seminário de Inteligência Governamental — sob uma só agenda de alto nível.</p>
   <div class="h-meta" role="list">
-    <div class="mi" role="listitem"><div class="ml">Dias</div><div class="mv"><strong>3</strong> consecutivos</div></div>
-    <div class="ms" aria-hidden="true"></div>
-    <div class="mi" role="listitem"><div class="ml">Eventos</div><div class="mv"><span class="gr">4</span> integrados</div></div>
-    <div class="ms" aria-hidden="true"></div>
-    <div class="mi" role="listitem"><div class="ml">Visitas</div><div class="mv"><span class="bl">8</span> em paralelo</div></div>
-    <div class="ms" aria-hidden="true"></div>
-    <div class="mi" role="listitem"><div class="ml">Eixos</div><div class="mv"><strong>13</strong> indexados aos ODS</div></div>
-    <div class="ms" aria-hidden="true"></div>
-    <div class="mi" role="listitem"><div class="ml">Anais</div><div class="mv">com <span class="gr">ISBN</span></div></div>
+    <div class="mi" role="listitem"><div class="mv"><strong>3</strong></div><div class="ml">Dias</div><div class="mv-sub">consecutivos</div></div>
+    <div class="mi" role="listitem"><div class="mv"><span class="gr">4</span></div><div class="ml">Eventos</div><div class="mv-sub">integrados</div></div>
+    <div class="mi" role="listitem"><div class="mv"><span class="bl">8</span></div><div class="ml">Visitas</div><div class="mv-sub">em paralelo</div></div>
+    <div class="mi" role="listitem"><div class="mv"><strong>13</strong></div><div class="ml">Eixos</div><div class="mv-sub">indexados ODS</div></div>
+    <div class="mi" role="listitem"><div class="mv">ISBN</div><div class="ml">Anais</div><div class="mv-sub">dezembro/26</div></div>
   </div>
   <div class="h-cta">
     <a href="#inscricao" class="btn-p">Inscreva-se agora <span class="arrow" aria-hidden="true">→</span></a>
@@ -581,7 +578,7 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
         <div class="tl-row"><span class="tl-mark">Artigo</span><span class="tl-text"><strong>Versão final do artigo</strong>até 30/09/2026</span></div>
         <div class="tl-row"><span class="tl-mark">Livro</span><span class="tl-text"><strong>Anais com ISBN</strong>dezembro/2026</span></div>
       </div>
-      <a href="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/submissao" class="btn-p" style="margin-top:30px;" target="_blank" rel="noopener">Submeter trabalho na Even3 <span class="arrow" aria-hidden="true">→</span></a>
+      <a href="#submeter" class="btn-p" style="margin-top:30px;">Submeter trabalho agora <span class="arrow" aria-hidden="true">↓</span></a>
     </div>
     <div>
       <p class="sec-lbl fi">13 eixos temáticos</p>
@@ -625,6 +622,22 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
   </div>
 </section>
 
+<!-- SUBMISSÃO (EMBED EVEN3) -->
+<section class="sec" id="submeter" style="background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);" aria-labelledby="sm-title">
+  <div class="sec-in" style="text-align:center;">
+    <p class="sec-lbl fi" style="margin-left:auto;margin-right:auto;">Formulário de submissão</p>
+    <h2 class="sec-title fi" id="sm-title" style="margin-left:auto;margin-right:auto;">Envie seu <em>trabalho</em></h2>
+    <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Submissão direta pelo formulário oficial da Even3 (resumo estendido + URL do vídeo). Prazo Fase 1: <strong style="color:var(--white)">15/05/2026 23h59</strong>. Áreas temáticas e cronograma já configurados.</p>
+  </div>
+  <div class="sec-in" style="max-width:920px;margin-top:20px;">
+    <div class="embed-wrap fi">
+      <div class="embed-bar"><span class="dot" aria-hidden="true"></span><span>Submissão científica · Even3</span><span class="grow"></span><a href="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/#submissoes" target="_blank" rel="noopener">Abrir em nova aba ↗</a></div>
+      <iframe class="embed-iframe" src="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/#submissoes" loading="lazy" title="Submissão de trabalhos — Even3" sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
+    </div>
+    <p style="text-align:center;margin-top:24px;font-size:12.5px;color:var(--muted-2);line-height:1.7;">Login Even3 obrigatório. Avaliação por comissão científica · resultado até 31/05/2026.</p>
+  </div>
+</section>
+
 <!-- INSCRIÇÃO (EMBED EVEN3) -->
 <section class="sec" id="inscricao" style="background:linear-gradient(180deg,var(--bg-2) 0%,var(--bg) 100%);" aria-labelledby="ins-title">
   <div class="sec-in" style="text-align:center;">
@@ -632,19 +645,10 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
     <h2 class="sec-title fi" id="ins-title" style="margin-left:auto;margin-right:auto;">Garanta sua <em>vaga</em></h2>
     <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Evento <strong style="color:var(--white)">gratuito</strong> mediante inscrição prévia obrigatória, com vagas limitadas. Pré-inscrição prioritária (~15 dias) para UFF, ABAR, PPGEP/UFF e instituições parceiras.</p>
   </div>
-  <div class="sec-in" style="max-width:780px;margin-top:20px;">
+  <div class="sec-in" style="max-width:920px;margin-top:20px;">
     <div class="embed-wrap fi">
-      <div class="embed-loading" id="embed-loading-ins">
-        <div class="spinner" aria-hidden="true"></div>
-        <p>Carregando formulário Even3…</p>
-      </div>
-      <div class="embed-target" id="even3-inscricao-target">
-        <div class="embed-fallback">
-          <h3>Inscrição via Even3</h3>
-          <p>O formulário oficial é hospedado pela Even3. A inscrição será disponibilizada aqui assim que os ingressos forem ativados — enquanto isso, acesse a página oficial do evento.</p>
-          <a href="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/" target="_blank" rel="noopener">Abrir página oficial Even3 →</a>
-        </div>
-      </div>
+      <div class="embed-bar"><span class="dot" aria-hidden="true"></span><span>Formulário oficial · Even3</span><span class="grow"></span><a href="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/#inscricoes" target="_blank" rel="noopener">Abrir em nova aba ↗</a></div>
+      <iframe class="embed-iframe" src="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/#inscricoes" loading="lazy" title="Inscrição Even3 — 1° Encontro GEI" sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
     </div>
     <p style="text-align:center;margin-top:24px;font-size:12.5px;color:var(--muted-2);line-height:1.7;">Certificação emitida por <strong style="color:var(--green)">UFF, ABAR, PPGEP/UFF e Escola de Regulação</strong>, válida para o Currículo Lattes (CNPq). <strong style="color:var(--white)">Requer 75% de presença</strong> rastreada via QR Code no credenciamento. Emissão em até 15 dias úteis após o evento.</p>
   </div>
