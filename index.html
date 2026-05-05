@@ -674,13 +674,16 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
 </footer>
 
 <script>
-// Scroll fade-in
+// Scroll fade-in (com rootMargin generoso e fallback de segurança)
+const fiEls = document.querySelectorAll('.fi');
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
   });
-}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+}, { threshold: 0.01, rootMargin: '200px 0px 200px 0px' });
+fiEls.forEach(el => obs.observe(el));
+// Failsafe: se em 2.5s algum elemento ainda não foi marcado, marca tudo
+setTimeout(() => fiEls.forEach(el => el.classList.add('visible')), 2500);
 
 // Nav scrolled state
 const nav = document.getElementById('nav');
