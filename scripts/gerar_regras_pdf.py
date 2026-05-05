@@ -15,7 +15,7 @@ from reportlab.platypus import (
 from reportlab.pdfgen import canvas
 
 ROOT = Path(__file__).resolve().parent.parent
-LOGO = ROOT / "assets" / "logo-completo.png"
+LOGO = ROOT / "assets" / "logo-fundo-branco.png"
 OUT = ROOT / "assets" / "regras"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -127,7 +127,7 @@ def eixos_box():
 def build_header(story):
     """Header reutilizável: logo + nome do evento."""
     if LOGO.exists():
-        img = Image(str(LOGO), width=14*cm, height=14*cm * 354/1266)
+        img = Image(str(LOGO), width=14*cm, height=14*cm * 480/1392)
         img.hAlign = "CENTER"
         story.append(img)
     story.append(Spacer(1, 6))

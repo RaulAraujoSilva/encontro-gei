@@ -193,7 +193,8 @@ nav.scrolled .nav-logo img{height:32px;}
 .dn{font-family:'Manrope',sans-serif;font-size:140px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px var(--accent);position:absolute;top:-18px;right:-4px;line-height:1;letter-spacing:-.06em;opacity:.6;}
 .dd{font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent,var(--cyan));font-weight:700;margin-bottom:11px;position:relative;}
 .dt{font-family:'Manrope',sans-serif;font-size:25px;font-weight:700;line-height:1.18;margin-bottom:8px;letter-spacing:-.015em;position:relative;}
-.dl{font-size:12.5px;color:rgba(255,255,255,.55);margin-bottom:22px;display:flex;align-items:center;gap:6px;position:relative;}
+.dl{font-size:12.5px;color:rgba(255,255,255,.55);margin-bottom:22px;display:flex;align-items:center;gap:8px;position:relative;}
+.dl::before{content:'';width:14px;height:1.5px;background:var(--accent,var(--cyan));flex-shrink:0;}
 .di{list-style:none;position:relative;}
 .di li{font-size:13.5px;color:rgba(255,255,255,.74);padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;gap:11px;align-items:flex-start;line-height:1.45;}
 .di li:last-child{border:none;}
@@ -270,7 +271,7 @@ nav.scrolled .nav-logo img{height:32px;}
 .regra-card:nth-child(2){--accent:var(--green);}
 .regra-card:nth-child(3){--accent:var(--cyan);}
 .regra-card:nth-child(4){--accent:var(--blue);}
-.regra-icon{width:42px;height:42px;border-radius:10px;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;font-family:'Manrope',sans-serif;}
+.regra-icon{width:46px;height:46px;border-radius:10px;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;font-family:'Manrope',sans-serif;letter-spacing:.5px;}
 .regra-t{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;line-height:1.22;letter-spacing:-.01em;color:var(--white);}
 .regra-d{font-size:12.5px;color:var(--muted);line-height:1.5;flex:1;}
 .regra-cta{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:6px;margin-top:auto;}
@@ -508,7 +509,7 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
         <div class="dn" aria-hidden="true">01</div>
         <div class="dd">Quarta · 08 de julho</div>
         <h3 class="dt">Abertura Institucional</h3>
-        <div class="dl">📍 Local em definição · Rio de Janeiro</div>
+        <div class="dl">Local em definição · Rio de Janeiro</div>
         <ul class="di">
           <li><strong>13h30</strong> — Credenciamento digital e recepção</li>
           <li><strong>14h15</strong> — Mesa de abertura institucional</li>
@@ -521,7 +522,7 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
         <div class="dn" aria-hidden="true">02</div>
         <div class="dd">Quinta · 09 de julho</div>
         <h3 class="dt">Visitas Técnicas</h3>
-        <div class="dl">📍 8 jornadas paralelas · Região metropolitana</div>
+        <div class="dl">8 jornadas paralelas · Região metropolitana</div>
         <ul class="di">
           <li><strong>06h30</strong> — Concentração e café da manhã no hub</li>
           <li><strong>07h00</strong> — Primeira janela de partida</li>
@@ -534,7 +535,7 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
         <div class="dn" aria-hidden="true">03</div>
         <div class="dd">Sexta · 10 de julho</div>
         <h3 class="dt">Trilhas, Sessões e Encerramento</h3>
-        <div class="dl">📍 NAB UFF · Campus Gragoatá · Niterói</div>
+        <div class="dl">NAB UFF · Campus Gragoatá · Niterói</div>
         <ul class="di">
           <li><strong>09h00</strong> — Plenária + Painel "IA e soberania"<br><span style="font-size:11px;color:var(--muted-2)">tema central proposto por Prof. Li Li Min</span></li>
           <li><strong>10h30</strong> — Trilhas A, B, C e D simultâneas</li>
@@ -616,11 +617,11 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
 
     <ol class="timeline fi" aria-label="Cronograma da chamada de trabalhos">
       <li class="tl-step"><div class="tl-dot">1</div><div class="tl-when">Fase 1</div><div class="tl-what">Resumo + vídeo</div><div class="tl-when2">até 15/05/2026</div></li>
-      <li class="tl-step"><div class="tl-dot">✓</div><div class="tl-when">Resultado</div><div class="tl-what">Aprovação</div><div class="tl-when2">até 31/05/2026</div></li>
-      <li class="tl-step"><div class="tl-dot">★</div><div class="tl-when">Programa</div><div class="tl-what">Definitivo</div><div class="tl-when2">25/06/2026</div></li>
-      <li class="tl-step"><div class="tl-dot">2</div><div class="tl-when">Fase 2</div><div class="tl-what">Apresentação</div><div class="tl-when2">10/07 · NAB UFF</div></li>
-      <li class="tl-step"><div class="tl-dot">📄</div><div class="tl-when">Artigo</div><div class="tl-what">Versão final</div><div class="tl-when2">até 30/09/2026</div></li>
-      <li class="tl-step"><div class="tl-dot">📚</div><div class="tl-when">Livro</div><div class="tl-what">Anais ISBN</div><div class="tl-when2">dezembro/2026</div></li>
+      <li class="tl-step"><div class="tl-dot">2</div><div class="tl-when">Resultado</div><div class="tl-what">Aprovação</div><div class="tl-when2">até 31/05/2026</div></li>
+      <li class="tl-step"><div class="tl-dot">3</div><div class="tl-when">Programa</div><div class="tl-what">Definitivo</div><div class="tl-when2">25/06/2026</div></li>
+      <li class="tl-step"><div class="tl-dot">4</div><div class="tl-when">Fase 2</div><div class="tl-what">Apresentação</div><div class="tl-when2">10/07 · NAB UFF</div></li>
+      <li class="tl-step"><div class="tl-dot">5</div><div class="tl-when">Artigo</div><div class="tl-what">Versão final</div><div class="tl-when2">até 30/09/2026</div></li>
+      <li class="tl-step"><div class="tl-dot">6</div><div class="tl-when">Livro</div><div class="tl-what">Anais ISBN</div><div class="tl-when2">dezembro/2026</div></li>
     </ol>
 
     <div class="eixos-head">
@@ -649,25 +650,25 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
     </div>
     <div class="regras-grid">
       <a class="regra-card fi" href="/assets/regras/resumo-expandido.pdf" download target="_blank" rel="noopener">
-        <div class="regra-icon">📄</div>
+        <div class="regra-icon">RE</div>
         <div class="regra-t">Resumo Expandido</div>
         <div class="regra-d">Fase 1 · 2-4 páginas · até 700 palavras + vídeo de 5 min</div>
         <div class="regra-cta">Baixar PDF</div>
       </a>
       <a class="regra-card fi d1" href="/assets/regras/poster.pdf" download target="_blank" rel="noopener">
-        <div class="regra-icon">🖼</div>
+        <div class="regra-icon">PA</div>
         <div class="regra-t">Pôster A3</div>
         <div class="regra-d">Diagramação visual A3 · Sessão dedicada no Dia 3 do evento</div>
         <div class="regra-cta">Baixar PDF</div>
       </a>
       <a class="regra-card fi d2" href="/assets/regras/relatorio-a3.pdf" download target="_blank" rel="noopener">
-        <div class="regra-icon">📊</div>
+        <div class="regra-icon">R3</div>
         <div class="regra-t">Relatório A3</div>
         <div class="regra-d">Modelo DMAIC · 1 página A3 · trabalhos aplicados de melhoria</div>
         <div class="regra-cta">Baixar PDF</div>
       </a>
       <a class="regra-card fi d3" href="/assets/regras/artigo-completo.pdf" download target="_blank" rel="noopener">
-        <div class="regra-icon">📑</div>
+        <div class="regra-icon">AC</div>
         <div class="regra-t">Artigo Completo</div>
         <div class="regra-d">Fase 2 · 8-15 páginas · ABNT · publicado nos anais ISBN</div>
         <div class="regra-cta">Baixar PDF</div>
