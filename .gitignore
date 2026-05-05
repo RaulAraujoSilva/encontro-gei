@@ -9,9 +9,10 @@
 !assets/*.jpeg
 !assets/*.png
 
-# Esboço temporário (PNGs gerados a partir do PDF)
-assets/esboco-full.png
-assets/esboco-img*.png
+# Pastas inteiras de referência/intermediários
+_referencia/
+_scratch/
+.claude-docs/screenshots/
 
 # Secrets
 .env
@@ -32,5 +33,3 @@ desktop.ini
 .vscode/
 .idea/
 *.swp
-
-.vercel
