@@ -1,173 +1,233 @@
-# Handoff — Configuração Even3 (manual, ~20 min)
+# Handoff Even3 — Status atual + Scripts JS para console
 
-> Os campos de data da Even3 não cooperaram com o Chrome MCP (máscara dd/mm/aaaa truncou os valores). Como já estamos logados na sua janela do Chrome controlado pelo MCP, **complete os passos abaixo manualmente** — todos os dados estão prontos pra colar.
->
-> **Já feito por mim:**
-> - ✅ Datas do evento: 08/07/2026 09:00 → 10/07/2026 20:00
-> - ✅ Carga horária: 24h
-> - ✅ Evento já está publicado e público
+> **Atualizado:** 2026-05-05 · Boa parte foi configurada via Chrome MCP usando truque de JS dispatch (bypassa máscara dd/mm).
 
----
+## ✅ Já configurado pelo Claude
 
-## 1. Configuração > Evento — completar (URL: `/organizador/configuracao/evento`)
+- **Datas do evento:** 08/07/2026 09:00 → 10/07/2026 20:00
+- **Carga horária:** 24h
+- **Inscrições (4 modalidades, todas gratuitas):**
+  - Presencial Completo (300 vagas) — você adicionou
+  - Presencial Dias 1 e 3 (300 vagas) — você adicionou
+  - Remoto / Online (ilimitado) — Claude via MCP
+  - Visitante Técnico Dia 2 (200 vagas) — Claude via MCP
+- **Cronograma de submissões:** Início 06/05/2026 → Fim 15/05/2026
 
-### Bloco "Divulgação"
-- **Tipo:** alterar para `Científico - Congresso/Simpósio`
-- **Assunto principal:** alterar para `Engenharias`
-- **Palavras-chaves** (uma a uma, com Enter ou botão Adicionar):
-  ```
-  governança pública
-  regulação
-  inovação governamental
-  GovTech
-  engenharia de produção
-  Lean Six Sigma
-  inteligência governamental
-  sandbox regulatório
-  ```
-- **Descrição curta:** colar exatamente:
-  ```
-  A primeira plataforma nacional a integrar excelência operacional, engenharia de produção, regulação de infraestrutura e inteligência governamental. 4 eventos oficiais, 8 visitas técnicas, 3 dias. 08–10 de julho de 2026, Rio de Janeiro / Niterói. Realização: UFF, ABAR, PPGEP/UFF, Escola de Regulação. Anais com ISBN.
-  ```
-- → Clicar **Salvar informações de divulgação**
+## ⚠️ Ajustes recomendados
 
-### Bloco "Local"
-- **Estado:** `Rio de Janeiro`
-- **Cidade:** `Rio de Janeiro` (a maior parte do evento — Niterói entra como observação)
-- **Local (texto livre):** `Rio de Janeiro / Niterói — RJ (locais a confirmar)`
-- → Clicar **Salvar informações do local**
+### 1. Áreas temáticas — substituir as 14 atuais pelos 13 do projeto executivo
 
-### Bloco "Organizado por"
-- **Responsável:** `Secretaria do 1º Encontro GEI`
-- **E-mail:** `contato@encontrogei.com.br` *(ou seu e-mail institucional)*
-- **Telefone:** `(21) XXXXX-XXXX` *(opcional)*
-- **Logo:** clicar "Anexar logo" → upload do arquivo `assets/logo-swirl.png` da pasta do projeto
-- → Clicar **Salvar informações do organizador**
+URL: `https://www.even3.com.br/organizador/trabalhocientifico/submissaogeral?tab=Áreas%20Temáticas`
 
----
+As áreas atuais (com typo "Sis Sigma" + áreas não previstas como "ODS no Ensino") parecem de outro evento. Para alinhar ao projeto executivo:
 
-## 2. Inscrições — 4 modalidades (URL: `/organizador/registration/`)
-
-Para cada uma: clicar **+ Adicionar entrada**, escolher **Gratuita**, preencher e Salvar.
-
-| # | Categoria | Quantidade | Válido de | Válido até |
-|---|---|---|---|---|
-| 1 | `Participante Presencial Completo (3 dias)` | `400` | `05/05/2026` | `07/07/2026` |
-| 2 | `Participante Presencial Dias 1 e 3` | `200` | `05/05/2026` | `07/07/2026` |
-| 3 | `Participante Remoto / Online` | (deixar ilimitado) | `05/05/2026` | `09/07/2026` |
-| 4 | `Visitante Técnico — Apenas Dia 2` | `200` | `05/05/2026` | `07/07/2026` |
-
----
-
-## 3. Programação — 3 dias + 8 jornadas (URL: `/organizador/programacao/`)
-
-### Atividades agrupadas por Dia
-
-**Dia 1 — 08/07/2026 (Quarta) · Abertura Institucional · Rio de Janeiro**
-- 13h30–14h15 — Credenciamento digital e recepção
-- 14h15–15h30 — Mesa de abertura institucional
-- 15h30–16h10 — Painel de apresentação do evento
-- 16h10–17h00 — **Conferência magna**: Magda Chambriard (Petrobras) — Moderador: Miguel (CREA-RJ)
-- 17h00–19h00 — Coquetel de networking institucional
-
-**Dia 2 — 09/07/2026 (Quinta) · Visitas Técnicas (8 jornadas paralelas)**
-
-Cadastrar como **8 atividades simultâneas, com vagas limitadas e inscrição obrigatória**:
-
-| Jornada | Local | Vagas | Tags |
-|---|---|---|---|
-| 01 | Petrobras | 25 | Energia · Regulação |
-| 02 *(integrada)* | Águas do Rio (CCO) + ETE/Biogás | 25 | Saneamento · ESG |
-| 03 | Guandu / Lameirão | 25 | Infraestrutura Hídrica |
-| 04 | Ternium · Santa Cruz | 25 | Indústria · Lean |
-| 05 | Gerdau · Santa Cruz | 25 | Indústria · Digital |
-| 06 *(integrada)* | Eneva + TAG | 25 | Energia · GovTech |
-| 07 *(integrada)* | IRM + AGENERSA | 25 | Inteligência · Sandbox |
-| 08 | CSN | 25 | Indústria · Lean |
-
-Horário: 06h30 concentração no hub · 07h00–08h30 partidas escalonadas · 09h–17h visita · 18h retorno
-
-**Dia 3 — 10/07/2026 (Sexta) · Trilhas, Sessões e Encerramento · NAB UFF Niterói**
-- 09h00–10h30 — Plenária + Painel "IA e soberania nacional"
-- 10h30–12h30 — **Trilhas A, B, C, D simultâneas** (criar 4 atividades)
-- 12h30–14h00 — Almoço
-- 14h00–16h00 — Sessões técnicas e acadêmicas (apresentação de trabalhos aprovados)
-- 16h30–17h30 — Premiação dos melhores trabalhos
-- 18h00 — Encerramento institucional
-- 19h00 — Coquetel de encerramento
-
----
-
-## 4. Submissões — Configurações + Áreas + Modalidades (URL: `/organizador/trabalhocientifico/submissaogeral?tab=settings`)
-
-### Cronograma (Configurações)
-- **Início submissão:** 06/05/2026
-- **Fim submissão Fase 1:** 15/05/2026 23:59
-- **Início avaliação:** 16/05/2026
-- **Fim avaliação:** 31/05/2026
-- **Resultado:** 31/05/2026
-- **Fim submissão Fase 2 (artigo final):** 30/09/2026 23:59
-
-### Áreas Temáticas (13 eixos — adicionar uma por uma na aba "Áreas Temáticas")
+**Apagar todas e recriar:**
 1. Regulação de infraestrutura, energia e saneamento
 2. Sandbox regulatório e inovação institucional
 3. Gestão pública inovadora e GovTech
-4. Lean Six Sigma e excelência operacional em serviços públicos
+4. Lean Six Sigma e excelência operacional
 5. Sustentabilidade e ESG em organizações reguladas
 6. Inteligência governamental e apoio à decisão
 7. Governança de dados e interoperabilidade
-8. Transformação digital e inovação em serviços públicos
-9. Capacidade analítica e uso de evidências no setor público
+8. Transformação digital e serviços públicos
+9. Capacidade analítica e uso de evidências
 10. Saúde digital e dados conectados
 11. Inteligência artificial e soberania nacional
-12. Trabalho, ergonomia e segurança em sistemas produtivos
+12. Trabalho, ergonomia e segurança
 13. Pesquisa operacional, otimização e logística
 
-### Modalidades de submissão (aba "Modalidades")
-1. **Resumo Estendido + Vídeo (Fase 1)** — 2 a 4 páginas + vídeo de até 5 min (URL YouTube/Vimeo)
-2. **Artigo Completo (Fase 2)** — pós-evento, 8–15 páginas para os Anais com ISBN
-3. **Relato de Visita Técnica** — 2 a 3 páginas, exclusivo para participantes do Dia 2
+### 2. Configurações > Modalidades de submissão
+
+URL: `/organizador/trabalhocientifico/submissaogeral?tab=Modalidades`
+
+Adicionar 3 modalidades:
+- **Resumo Estendido + Vídeo (Fase 1)** — 2-4pp + URL vídeo até 5min · prazo 15/05/2026
+- **Artigo Completo (Fase 2)** — 8-15pp · prazo 30/09/2026
+- **Relato de Visita Técnica** — 2-3pp · exclusivo participantes Dia 2
+
+### 3. Comissão Científica
+
+URL: `/organizador/trabalhocientifico/submissaogeral?tab=Configurações` → "Editar comissão"
+
+- Responsável: a definir (Prof. Callado?)
+- E-mail: contato@encontrogei.com.br
+- Membros 4º Seminário SSEP: Ana, Flavia, Gabriella, Jucileia, Kelly, Pompilio, Silvia Cristina Rufino
 
 ---
 
-## 5. Página do Evento — CSS custom (opcional, URL: `/organizador/hotsite/`)
+## 🤖 Scripts JS — cole no console (F12) do navegador
 
-Se quiser que o hotsite Even3 tenha a mesma identidade da landing externa, em "Configuração avançada" cole:
+### Pré-requisito
+Abra o console do navegador na página da Even3 (F12 → Console) e cole o helper antes de qualquer script:
 
-```css
-:root{ --gei-navy:#0A1628; --gei-lime:#B8E839; --gei-ink:#06090F; }
-body, .even3-hotsite { background:var(--gei-ink) !important; color:#fff !important; }
-.btn-primary, .btn-success { background:var(--gei-lime) !important; color:var(--gei-ink) !important; border-radius:100px !important; font-weight:700 !important; }
-h1, h2, h3 { font-family:'Fraunces',serif !important; letter-spacing:-.01em !important; }
+```js
+// Helper universal para forçar valor em inputs mascarados
+window.setVal = (el, v) => {
+  const s = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set;
+  s.call(el, v);
+  el.dispatchEvent(new Event('input', { bubbles: true }));
+  el.dispatchEvent(new Event('change', { bubbles: true }));
+  el.dispatchEvent(new Event('blur', { bubbles: true }));
+};
+window.click = sel => Array.from(document.querySelectorAll('button, a')).find(b => b.innerText.trim().match(sel))?.click();
+```
+
+### Script A — Adicionar 13 áreas temáticas em batch
+
+Cole na página `https://www.even3.com.br/organizador/trabalhocientifico/submissaogeral?tab=Áreas%20Temáticas` (depois de apagar as 14 atuais):
+
+```js
+const eixos = [
+  'Regulação de infraestrutura, energia e saneamento',
+  'Sandbox regulatório e inovação institucional',
+  'Gestão pública inovadora e GovTech',
+  'Lean Six Sigma e excelência operacional',
+  'Sustentabilidade e ESG em organizações reguladas',
+  'Inteligência governamental e apoio à decisão',
+  'Governança de dados e interoperabilidade',
+  'Transformação digital e serviços públicos',
+  'Capacidade analítica e uso de evidências',
+  'Saúde digital e dados conectados',
+  'Inteligência artificial e soberania nacional',
+  'Trabalho, ergonomia e segurança',
+  'Pesquisa operacional, otimização e logística'
+];
+(async () => {
+  for (const e of eixos) {
+    click(/Adicionar área/i); await new Promise(r => setTimeout(r, 800));
+    const inp = document.querySelector('.modal-dialog input[type="text"]');
+    if (!inp) { console.warn('input não encontrado'); break; }
+    setVal(inp, e); await new Promise(r => setTimeout(r, 200));
+    click(/^Salvar/i); await new Promise(r => setTimeout(r, 1500));
+    console.log('✓', e);
+  }
+})();
+```
+
+### Script B — Adicionar 8 jornadas técnicas como atividades do Dia 2
+
+URL: `https://www.even3.com.br/organizador/programacao/`
+
+```js
+const jornadas = [
+  { tit: 'Jornada 01 — Petrobras', desc: 'Visita técnica: Regulação de energia e transformação digital em operações de E&P' },
+  { tit: 'Jornada 02 — Águas do Rio (CCO) + ETE/Biogás (integrada)', desc: 'Saneamento e regulação de infraestrutura, seguido de sustentabilidade e ESG' },
+  { tit: 'Jornada 03 — Guandu / Lameirão', desc: 'Infraestrutura hídrica e governança ambiental' },
+  { tit: 'Jornada 04 — Ternium · Santa Cruz', desc: 'Indústria consumidora de gás natural, ESG e Lean Six Sigma' },
+  { tit: 'Jornada 05 — Gerdau · Santa Cruz', desc: 'Indústria consumidora de gás, transformação digital e ESG' },
+  { tit: 'Jornada 06 — Eneva + TAG (integrada)', desc: 'Regulação de energia e GovTech, seguido de transporte de gás natural' },
+  { tit: 'Jornada 07 — IRM + AGENERSA (integrada)', desc: 'Inteligência governamental e saneamento, seguido de sandbox regulatório' },
+  { tit: 'Jornada 08 — CSN', desc: 'Indústria consumidora de gás, ESG e Lean Six Sigma' }
+];
+(async () => {
+  for (const j of jornadas) {
+    click(/Adicionar atividade/i); await new Promise(r => setTimeout(r, 1200));
+    setVal(document.querySelector('input[name="titulo"]'), j.tit);
+    const tx = document.querySelector('textarea[name="descricao"]');
+    if (tx) { tx.value = j.desc; tx.dispatchEvent(new Event('input', {bubbles:true})); }
+    // Manter os outros campos default (você pode editar depois)
+    await new Promise(r => setTimeout(r, 400));
+    click(/^Salvar/i); await new Promise(r => setTimeout(r, 2000));
+    console.log('✓', j.tit);
+  }
+})();
+```
+*(Após o batch, edite cada uma para adicionar data 09/07/2026, horário 09:00–17:00, vagas 25, e marcar como visita técnica.)*
+
+### Script C — Adicionar atividades do Dia 1
+
+```js
+const dia1 = [
+  { tit: 'Credenciamento digital e recepção', h: '13:30' },
+  { tit: 'Mesa de abertura institucional', h: '14:15' },
+  { tit: 'Painel de apresentação do evento', h: '15:30' },
+  { tit: 'Conferência magna — Magda Chambriard (Petrobras)', h: '16:10' },
+  { tit: 'Coquetel de networking institucional', h: '17:00' }
+];
+(async () => {
+  for (const a of dia1) {
+    click(/Adicionar atividade/i); await new Promise(r => setTimeout(r, 1200));
+    setVal(document.querySelector('input[name="titulo"]'), a.tit);
+    await new Promise(r => setTimeout(r, 400));
+    click(/^Salvar/i); await new Promise(r => setTimeout(r, 2000));
+    console.log('✓', a.tit);
+  }
+})();
+```
+
+### Script D — Adicionar atividades do Dia 3
+
+```js
+const dia3 = [
+  { tit: 'Plenária + Painel "IA e soberania nacional" (Prof. Li Li Min)', h: '09:00' },
+  { tit: 'Trilha A — Lean Six Sigma Congress (13ª edição)', h: '10:30' },
+  { tit: 'Trilha B — Seminário SSEP (4ª edição)', h: '10:30' },
+  { tit: 'Trilha C — Seminário de Regulação (2ª edição)', h: '10:30' },
+  { tit: 'Trilha D — Seminário de Inteligência Governamental (1ª edição)', h: '10:30' },
+  { tit: 'Sessões técnicas e acadêmicas (apresentação de trabalhos)', h: '14:00' },
+  { tit: 'Premiação dos melhores trabalhos', h: '16:30' },
+  { tit: 'Encerramento institucional', h: '18:00' },
+  { tit: 'Coquetel de encerramento', h: '19:00' }
+];
+(async () => {
+  for (const a of dia3) {
+    click(/Adicionar atividade/i); await new Promise(r => setTimeout(r, 1200));
+    setVal(document.querySelector('input[name="titulo"]'), a.tit);
+    await new Promise(r => setTimeout(r, 400));
+    click(/^Salvar/i); await new Promise(r => setTimeout(r, 2000));
+    console.log('✓', a.tit);
+  }
+})();
 ```
 
 ---
 
-## 6. Coletar embeds (após config 1-5) — URL: `/organizador/integrations/` ou `/organizador/tools/`
+## 🔧 Configuração > Evento — completar manualmente
 
-Procurar **"Incluir Even3 no meu site"**. Copiar 4 snippets:
+URL: `https://www.even3.com.br/organizador/configuracao/evento`
 
-- ☐ Embed: **Inscrição** (botão ou aba completa)
-- ☐ Embed: **Submissão de trabalhos**
-- ☐ Embed: **Programação**
-- ☐ Embed: **Convidados/Palestrantes**
+### Bloco "Divulgação"
+- **Tipo:** alterar para `Científico - Congresso/Simpósio`
+- **Assunto principal:** `Engenharias`
+- **Palavras-chaves**: `governança pública, regulação, inovação governamental, GovTech, engenharia de produção, Lean Six Sigma, inteligência governamental, sandbox regulatório`
+- **Descrição curta:**
+  > A primeira plataforma nacional a integrar excelência operacional, engenharia de produção, regulação de infraestrutura e inteligência governamental. 4 eventos oficiais, 8 visitas técnicas, 3 dias. 08–10/07/2026, Rio/Niterói. Anais com ISBN.
 
-E me cole aqui no chat ou salve em `embeds.txt` na raiz do projeto.
+### Bloco "Local"
+- **Estado:** Rio de Janeiro
+- **Cidade:** Rio de Janeiro
+- **Local:** "Rio de Janeiro / Niterói — RJ (locais a confirmar)"
+
+### Bloco "Organizado por"
+- Responsável: `Secretaria do 1º Encontro GEI`
+- E-mail: `contato@encontrogei.com.br`
+- Logo: upload de `assets/logo-completo.jpg` (fundo navy + lockup)
 
 ---
 
-## 7. API Token (para contador ao vivo)
+## 📊 Coleta final (depois de tudo configurado)
 
-Em `/organizador/integrations/` → procurar **API REST** → "Gerar token" → copiar o `Authorization-Token`.
+### Embed codes — colar em `embeds.txt` na raiz
+URL: `https://www.even3.com.br/organizador/integrations/` ou `/organizador/tools/`
 
-Salvar em `.env.local` (que já vai para `.gitignore`):
-```
-EVEN3_API_TOKEN=cole_aqui_o_token
+Procurar **"Incluir Even3 no meu site"**:
+- ☐ Embed Inscrição
+- ☐ Embed Submissão
+- ☐ Embed Programação
+- ☐ Embed Convidados/Palestrantes
+
+### API Token — salvar em `.env.local` (já no .gitignore)
+URL: `/organizador/integrations/` → "API REST" → "Gerar token"
+
+```env
+EVEN3_API_TOKEN=cole_aqui
 EVEN3_EVENT_ID=722003
 ```
 
+Depois de configurar essas duas variáveis no Vercel (`vercel env add`), o contador "X profissionais já inscritos" do hero ativa automaticamente.
+
 ---
 
-## Quando terminar, me avise:
-- "embeds prontos" → eu plugo na landing e faço o deploy
-- "qualquer dúvida" → eu volto pelo Chrome MCP em pontos específicos
+## Quando terminar
+- Me cole `embeds.txt` aqui no chat → eu plugo na landing e faço novo deploy.
+- Me passe o `EVEN3_API_TOKEN` em mensagem privada → eu adiciono no Vercel via CLI.
