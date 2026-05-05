@@ -330,6 +330,17 @@ nav.scrolled .nav-logo img{height:32px;}
 .embed-bar a{color:var(--lime-soft,#A5DD7E);font-weight:600;text-decoration:underline;text-underline-offset:2px;}
 .embed-iframe{width:100%;height:780px;border:0;display:block;}
 @media(max-width:600px){.embed-iframe{height:680px;}}
+.embed-cta{padding:48px 36px;text-align:center;color:var(--bg);background:#fff;border-radius:0 0 12px 12px;}
+.embed-cta h3{font-family:'Manrope',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.015em;color:var(--bg);margin-bottom:10px;}
+.embed-cta > p{font-size:14.5px;color:#5C6781;line-height:1.6;max-width:520px;margin:0 auto 26px;}
+.embed-steps{list-style:none;text-align:left;max-width:480px;margin:0 auto 30px;display:flex;flex-direction:column;gap:10px;padding:0;}
+.embed-steps li{display:flex;align-items:flex-start;gap:14px;padding:14px 16px;background:#F4F6FB;border-radius:8px;font-size:14px;color:var(--bg);line-height:1.5;}
+.embed-steps li span{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 100%);color:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;font-family:'Manrope',sans-serif;}
+.embed-steps li strong{color:var(--bg);font-weight:700;}
+.embed-cta .btn-p{display:inline-flex;}
+.embed-meta{font-size:12.5px;color:#5C6781;margin-top:18px;}
+.embed-meta strong{color:var(--bg);}
+@media(max-width:600px){.embed-cta{padding:36px 22px;}}
 .embed-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:780px;background:#fff;color:var(--bg);text-align:center;padding:24px;}
 .embed-loading .spinner{width:32px;height:32px;border:2.5px solid rgba(9,17,54,.14);border-top-color:var(--bg);border-radius:50%;animation:spin .8s linear infinite;margin-bottom:14px;}
 
@@ -815,8 +826,19 @@ html[data-theme="light"] .logo-dark{display:none;}
   </div>
   <div class="sec-in" style="max-width:920px;margin-top:20px;">
     <div class="embed-wrap fi">
-      <div class="embed-bar"><span class="dot" aria-hidden="true"></span><span>Submissão científica · Even3</span><span class="grow"></span><a href="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/#submissoes" target="_blank" rel="noopener">Abrir em nova aba ↗</a></div>
-      <iframe class="embed-iframe" src="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/#submissoes" loading="lazy" title="Submissão de trabalhos — Even3" sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
+      <div class="embed-bar"><span class="dot" aria-hidden="true"></span><span>Submissão científica · Even3</span><span class="grow"></span><a href="https://www.even3.com.br/evento/login?evento=1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003&ReturnUrl=%2fparticipante%2ftrabalhocientifico%2f" target="_blank" rel="noopener">Abrir em nova aba ↗</a></div>
+      <div class="embed-cta">
+        <h3>Acesse sua área de submissão</h3>
+        <p>O envio do trabalho é feito direto na sua área pessoal da Even3 — basta entrar com sua conta (Google, Facebook ou e-mail).</p>
+        <ul class="embed-steps">
+          <li><span>1</span>Selecione a <strong>modalidade</strong> (Resumo, Pôster, Relatório A3 ou Artigo)</li>
+          <li><span>2</span>Escolha a <strong>área temática</strong> (entre os 13 eixos do evento)</li>
+          <li><span>3</span>Faça <strong>upload do arquivo</strong> + URL do vídeo de 5 min</li>
+          <li><span>4</span>Confirme e acompanhe o status pela mesma área</li>
+        </ul>
+        <a href="https://www.even3.com.br/evento/login?evento=1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003&ReturnUrl=%2fparticipante%2ftrabalhocientifico%2f" target="_blank" rel="noopener" class="btn-p"><span>Acessar área de submissão</span><span class="arrow" aria-hidden="true">→</span></a>
+        <p class="embed-meta">Prazo Fase 1: <strong>15/05/2026 · 23h59</strong> · Login Even3 obrigatório</p>
+      </div>
     </div>
     <p style="text-align:center;margin-top:24px;font-size:12.5px;color:var(--muted-2);line-height:1.7;">Login Even3 obrigatório. Avaliação por comissão científica · resultado até 31/05/2026.</p>
   </div>
