@@ -81,6 +81,9 @@ nav.scrolled .nav-logo img{height:32px;}
 .nav-links a:hover{color:var(--white);}
 .nav-cta{background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 70%) !important;color:var(--bg) !important;padding:9px 20px;border-radius:100px;font-weight:700 !important;font-size:12.5px !important;letter-spacing:.3px;}
 .nav-cta:hover{filter:brightness(1.08);}
+.theme-toggle{background:transparent;border:1px solid var(--line-2);color:var(--white);cursor:pointer;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:7px 14px;border-radius:100px;transition:all .18s;display:inline-flex;align-items:center;gap:7px;}
+.theme-toggle:hover{border-color:var(--cyan);color:var(--cyan);}
+.theme-toggle .ico{width:14px;height:14px;display:inline-block;}
 .menu-toggle{display:none;background:none;border:none;color:var(--white);cursor:pointer;font-size:22px;}
 @media(max-width:880px){
   .nav-links{display:none;position:fixed;top:62px;left:0;right:0;flex-direction:column;background:rgba(9,17,54,.97);backdrop-filter:blur(14px);padding:24px;border-top:1px solid var(--line);}
@@ -399,6 +402,108 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
 :focus-visible{outline:2px solid var(--yellow);outline-offset:3px;border-radius:3px;}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 
+/* === LIGHT THEME OVERRIDES === */
+html[data-theme="light"]{color-scheme:light;}
+html[data-theme="light"] body{background:#FAFBFD;color:#091136;}
+html[data-theme="light"]{
+  --bg:#FFFFFF; --bg-2:#F4F6FB; --bg-3:#E9EEF7; --bg-4:#DCE3EF; --ink:#FAFBFD;
+  --white:#091136;
+  --line:rgba(9,17,54,.10); --line-2:rgba(9,17,54,.18);
+  --muted:rgba(9,17,54,.65); --muted-2:rgba(9,17,54,.45);
+}
+html[data-theme="light"] ::selection{background:var(--yellow);color:#091136;}
+html[data-theme="light"] nav{}
+html[data-theme="light"] nav.scrolled{background:rgba(255,255,255,.94);border-bottom-color:var(--line);}
+html[data-theme="light"] .nav-links a{color:rgba(9,17,54,.65);}
+html[data-theme="light"] .nav-links a:hover{color:#091136;}
+html[data-theme="light"] .nav-links{background:rgba(255,255,255,.97);}
+html[data-theme="light"] .theme-toggle{color:#091136;border-color:rgba(9,17,54,.18);}
+html[data-theme="light"] .theme-toggle:hover{border-color:#2479B8;color:#2479B8;}
+html[data-theme="light"] .menu-toggle{color:#091136;}
+html[data-theme="light"] .hero{background:radial-gradient(ellipse 70% 55% at 30% 30%,rgba(77,168,224,.10) 0%,transparent 60%),radial-gradient(ellipse 55% 50% at 80% 70%,rgba(122,199,79,.08) 0%,transparent 65%),linear-gradient(180deg,#FFFFFF 0%,#F1F5FB 60%,#FFFFFF 100%);}
+html[data-theme="light"] .hero::before{background-image:linear-gradient(rgba(9,17,54,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(9,17,54,.025) 1px,transparent 1px);}
+html[data-theme="light"] .h-tag{color:#3A4862;}
+html[data-theme="light"] .h-tag em{color:#C99300;}
+html[data-theme="light"] .h-sub, html[data-theme="light"] .sec-desc, html[data-theme="light"] .foot-text{color:rgba(9,17,54,.62);}
+html[data-theme="light"] .h-meta{background:rgba(9,17,54,.025);border-color:var(--line);}
+html[data-theme="light"] .mi{background:#FFFFFF;}
+html[data-theme="light"] .mv{color:#091136;}
+html[data-theme="light"] .mv-sub, html[data-theme="light"] .ml{color:rgba(9,17,54,.55);}
+html[data-theme="light"] .h-counter{color:rgba(9,17,54,.55);}
+html[data-theme="light"] .h-partners{background:rgba(9,17,54,.04);border-top-color:var(--line);}
+html[data-theme="light"] .pl{color:rgba(9,17,54,.45);}
+html[data-theme="light"] .pc{color:rgba(9,17,54,.78);border-color:var(--line-2);}
+html[data-theme="light"] .kn{background:linear-gradient(135deg,#F4F6FB 0%,#E9EEF7 100%);border-color:var(--line);}
+html[data-theme="light"] .kn-title, html[data-theme="light"] .sp-name, html[data-theme="light"] .sec-title, html[data-theme="light"] .dt, html[data-theme="light"] .enm, html[data-theme="light"] .vcn, html[data-theme="light"] .mod-t, html[data-theme="light"] .regra-t, html[data-theme="light"] .coin-t, html[data-theme="light"] .eixos-h, html[data-theme="light"] .regras-h, html[data-theme="light"] .cta-final h2, html[data-theme="light"] .dl-date, html[data-theme="light"] .tl-what, html[data-theme="light"] .tl-text strong{color:#091136;}
+html[data-theme="light"] .sp-role{color:rgba(9,17,54,.6);}
+html[data-theme="light"] .pan-tag{color:rgba(9,17,54,.78);background:rgba(9,17,54,.04);border-color:var(--line-2);}
+html[data-theme="light"] .panel-lbl, html[data-theme="light"] .tl-when2{color:rgba(9,17,54,.45);}
+html[data-theme="light"] .stats{background:#FFFFFF;}
+html[data-theme="light"] .sn{color:#091136;}
+html[data-theme="light"] .sl{color:rgba(9,17,54,.65);}
+html[data-theme="light"] .days{background:linear-gradient(180deg,#FFFFFF 0%,#F4F6FB 100%);}
+html[data-theme="light"] .events{background:#FFFFFF;}
+html[data-theme="light"] .visits{background:linear-gradient(180deg,#F4F6FB 0%,#FFFFFF 100%);}
+html[data-theme="light"] .sub{background:#FFFFFF;}
+html[data-theme="light"] .modal{background:#FFFFFF;}
+html[data-theme="light"] .normas{background:#F4F6FB;}
+html[data-theme="light"] .partners{background:linear-gradient(180deg,#FFFFFF 0%,#F4F6FB 100%);}
+html[data-theme="light"] .coins{background:#FFFFFF;}
+html[data-theme="light"] .cta-final{background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(122,199,79,.10) 0%,transparent 60%),linear-gradient(180deg,#F4F6FB 0%,#FFFFFF 100%);}
+html[data-theme="light"] footer{background:#091136;color:rgba(255,255,255,.5);}
+html[data-theme="light"] footer .foot-col h4{color:var(--cyan);}
+html[data-theme="light"] footer a{color:rgba(255,255,255,.65);}
+html[data-theme="light"] footer a:hover{color:#FFFFFF;}
+html[data-theme="light"] footer .foot-text{color:rgba(255,255,255,.55);}
+html[data-theme="light"] footer .foot-bot{color:rgba(255,255,255,.4);border-top-color:rgba(255,255,255,.1);}
+html[data-theme="light"] .dc, html[data-theme="light"] .ec, html[data-theme="light"] .vc, html[data-theme="light"] .mod-card, html[data-theme="light"] .coin, html[data-theme="light"] .ptc, html[data-theme="light"] .tri, html[data-theme="light"] .regra-card, html[data-theme="light"] .normas-list li{background:#FFFFFF;border-color:var(--line);box-shadow:0 1px 2px rgba(9,17,54,.04);}
+html[data-theme="light"] .dc:hover, html[data-theme="light"] .ec:hover, html[data-theme="light"] .vc:hover, html[data-theme="light"] .mod-card:hover, html[data-theme="light"] .coin:hover, html[data-theme="light"] .ptc:hover, html[data-theme="light"] .regra-card:hover{box-shadow:0 12px 28px rgba(9,17,54,.10);}
+html[data-theme="light"] .dn{-webkit-text-stroke-color:rgba(9,17,54,.18);}
+html[data-theme="light"] .di li, html[data-theme="light"] .et li, html[data-theme="light"] .vth, html[data-theme="light"] .coin-d, html[data-theme="light"] .mod-d, html[data-theme="light"] .regra-d, html[data-theme="light"] .pf, html[data-theme="light"] .trname, html[data-theme="light"] .ct, html[data-theme="light"] .cta-final p, html[data-theme="light"] .tl-text{color:rgba(9,17,54,.78);}
+html[data-theme="light"] .di li{border-bottom-color:rgba(9,17,54,.06);}
+html[data-theme="light"] .et li{border-bottom-color:rgba(9,17,54,.05);}
+html[data-theme="light"] .di li strong{color:#091136;}
+html[data-theme="light"] .ptc-logo{background:#F4F6FB;}
+html[data-theme="light"] .ptc-logo.txt{background:linear-gradient(135deg,#091136 0%,#142469 100%);color:#FFFFFF;}
+html[data-theme="light"] .normas-list li strong{color:#091136;}
+html[data-theme="light"] .tl-dot{background:#FFFFFF;color:var(--accent);border-color:var(--accent);}
+html[data-theme="light"] .timeline::before{opacity:.7;}
+html[data-theme="light"] .dl-box{background:linear-gradient(135deg,rgba(245,200,66,.18) 0%,rgba(122,199,79,.08) 100%);border-color:rgba(245,200,66,.5);}
+html[data-theme="light"] .dl-lbl{color:#9A7D14;}
+html[data-theme="light"] .cb{color:#091136;border-color:var(--line-2);background:#FFFFFF;}
+html[data-theme="light"] .cert{background:linear-gradient(135deg,#F4F6FB 0%,#E9EEF7 100%);border-top-color:var(--green);}
+html[data-theme="light"] .cert .ct strong{color:#5BA833;}
+html[data-theme="light"] .embed-bar{background:linear-gradient(90deg,#091136,#142469);color:#FFFFFF;}
+html[data-theme="light"] .pr.partner{color:#2479B8;background:rgba(36,121,184,.10);}
+html[data-theme="light"] .pr{color:#091136;background:rgba(9,17,54,.06);}
+html[data-theme="light"] .sec-title em, html[data-theme="light"] .cta-final h2 em, html[data-theme="light"] .h-tag em, html[data-theme="light"] .kn-title em, html[data-theme="light"] .eixos-h em, html[data-theme="light"] .regras-h em{background:linear-gradient(120deg,#C99300 0%,#5BA833 60%,#2479B8 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+html[data-theme="light"] .hero::after{background:radial-gradient(circle,rgba(245,200,66,.12) 0%,transparent 60%);}
+html[data-theme="light"] .h-badge{background:rgba(36,121,184,.08);border-color:rgba(36,121,184,.32);color:#2479B8;}
+html[data-theme="light"] .h-badge .dot{background:#2479B8;box-shadow:0 0 8px #2479B8;}
+html[data-theme="light"] .sec-lbl{color:#2479B8;}
+html[data-theme="light"] .sec-lbl::before{background:#2479B8;}
+html[data-theme="light"] .pt-tier-lbl{color:#2479B8;}
+html[data-theme="light"] .pt-tier-lbl::after{background:var(--line);}
+html[data-theme="light"] .dd, html[data-theme="light"] .vn, html[data-theme="light"] .dl{color:var(--accent,#2479B8);}
+html[data-theme="light"] .dl::before{background:var(--accent,#2479B8);}
+html[data-theme="light"] .vn .integrated{color:#C26B22;background:rgba(245,143,78,.16);}
+html[data-theme="light"] .vtg{color:#2479B8;background:rgba(36,121,184,.08);}
+html[data-theme="light"] .en{color:var(--ec-color,#2479B8);}
+html[data-theme="light"] .et li::before{color:var(--ec-color,#2479B8);}
+html[data-theme="light"] .mod-tag{background:rgba(9,17,54,.06);color:#091136;border-color:var(--line-2);}
+html[data-theme="light"] .mod-vagas{color:#2479B8;}
+html[data-theme="light"] .tl-when{color:var(--accent);}
+html[data-theme="light"] .tl-mark{color:#2479B8;}
+html[data-theme="light"] .trn{background:rgba(36,121,184,.12);color:#2479B8;}
+html[data-theme="light"] .tri:hover{background:rgba(36,121,184,.06);border-color:rgba(36,121,184,.28);}
+html[data-theme="light"] .regra-icon{color:#FFFFFF;}
+html[data-theme="light"] .regra-cta{color:var(--accent);}
+html[data-theme="light"] .embed-loading p{color:rgba(9,17,54,.6);}
+
+/* Logo source switching */
+html[data-theme="dark"] .logo-light, html:not([data-theme="light"]) .logo-light{display:none;}
+html[data-theme="light"] .logo-dark{display:none;}
+
 /* === REDUCED MOTION === */
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;}
@@ -421,6 +526,7 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
     <li><a href="#visitas">Visitas</a></li>
     <li><a href="#trabalhos">Submissão</a></li>
     <li><a href="#parceiros">Parceiros</a></li>
+    <li><button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span id="themeLabel">Claro</span></button></li>
     <li><a href="#inscricao" class="nav-cta">Inscreva-se →</a></li>
   </ul>
 </nav>
@@ -428,7 +534,8 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
 <main id="main">
 
 <section class="hero" aria-labelledby="hero-title">
-  <img src="/assets/logo-completo.png" alt="1° Encontro de Governança, Estratégia e Inovação Governamental" class="hero-logo" width="600">
+  <img src="/assets/logo-completo.png" alt="1° Encontro de Governança, Estratégia e Inovação Governamental" class="hero-logo logo-dark" width="600">
+  <img src="/assets/logo-fundo-branco.png" alt="" aria-hidden="true" class="hero-logo logo-light" width="600">
   <h1 id="hero-title" class="sr-only">1° Encontro de Governança, Estratégia e Inovação Governamental</h1>
   <div class="h-badge"><span class="dot" aria-hidden="true"></span>08, 09 e 10 de julho de 2026 · Rio de Janeiro</div>
   <p class="h-tag">A primeira plataforma nacional que integra <em>academia, regulação, gestão pública,<br>engenharia de produção e setor produtivo</em>.</p>
@@ -770,7 +877,7 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
         <div class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/firjan.png" alt="Firjan"></div><div class="pf">Federação das Indústrias do Estado do RJ</div></div>
         <div class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/ibp.svg" alt="IBP"></div><div class="pf">Instituto Brasileiro de Petróleo e Gás</div></div>
         <div class="ptc fi d2"><div class="ptc-logo"><img src="/assets/logos/anp.png" alt="ANP"></div><div class="pf">Agência Nacional do Petróleo</div></div>
-        <div class="ptc fi d3"><div class="ptc-logo"><img src="/assets/logos/agenersa.png" alt="AGENERSA"></div><div class="pf">Agência Reguladora de Energia e Saneamento · RJ</div></div>
+        <div class="ptc fi d3"><div class="ptc-logo"><img src="/assets/logos/agenersa.png?v=3" alt="AGENERSA"></div><div class="pf">Agência Reguladora de Energia e Saneamento · RJ</div></div>
         <div class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/fecomercio.png" alt="Fecomércio RJ"></div><div class="pf">Federação do Comércio do Estado do RJ</div></div>
         <div class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/cau-rj.png" alt="CAU/RJ"></div><div class="pf">Conselho de Arquitetura e Urbanismo · RJ</div></div>
         <div class="ptc fi d2"><div class="ptc-logo"><img src="/assets/logos/crea-rj.png" alt="CREA-RJ"></div><div class="pf">Conselho Regional de Engenharia · RJ</div></div>
@@ -840,6 +947,26 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
 </footer>
 
 <script>
+// Theme toggle (light/dark) com persistência
+(function(){
+  const root = document.documentElement;
+  const saved = localStorage.getItem('gei-theme');
+  const theme = saved || 'dark';
+  root.setAttribute('data-theme', theme);
+  const update = () => {
+    const t = root.getAttribute('data-theme');
+    const lbl = document.getElementById('themeLabel');
+    if (lbl) lbl.textContent = t === 'light' ? 'Escuro' : 'Claro';
+  };
+  update();
+  document.getElementById('themeToggle')?.addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', cur);
+    localStorage.setItem('gei-theme', cur);
+    update();
+  });
+})();
+
 const fiEls = document.querySelectorAll('.fi');
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
