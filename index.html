@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>1° Encontro de Governança, Estratégia e Inovação Governamental — 08, 09 e 10 de julho de 2026 · Rio de Janeiro</title>
 <meta name="description" content="A primeira plataforma nacional que integra governança pública, regulação, engenharia de produção e inteligência governamental. 4 eventos oficiais, 8 visitas técnicas, 3 dias. 08–10 de julho de 2026.">
-<meta name="theme-color" content="#06090F">
+<meta name="theme-color" content="#091136">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="1° Encontro de Governança, Estratégia e Inovação Governamental">
@@ -18,7 +18,7 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -29,11 +29,7 @@
   "endDate": "2026-07-10T20:00:00-03:00",
   "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
-  "location": [{
-    "@type": "Place",
-    "name": "Rio de Janeiro / Niterói — RJ",
-    "address": "Rio de Janeiro, RJ, Brasil"
-  }],
+  "location": [{"@type":"Place","name":"Rio de Janeiro / Niterói — RJ","address":"Rio de Janeiro, RJ, Brasil"}],
   "organizer": [
     {"@type":"Organization","name":"UFF — Universidade Federal Fluminense"},
     {"@type":"Organization","name":"ABAR — Associação Brasileira das Agências de Regulação"},
@@ -46,45 +42,49 @@
 
 <style>
 :root{
-  --ink:#06090F;
-  --navy:#0A1628;
-  --navy-2:#0F1F38;
-  --navy-3:#142B4E;
-  --teal:#3D8FA6;
-  --teal-soft:#5FB6C9;
-  --lime:#B8E839;
-  --lime-2:#9FD41F;
-  --lime-soft:#D7F176;
-  --orange:#F4B23E;
-  --coral:#E97A5C;
-  --magenta:#A95CB7;
+  /* Paleta extraída da arte oficial do logo */
+  --bg:#091136;          /* fundo principal, navy profundo */
+  --bg-2:#0E1A4A;        /* navy médio */
+  --bg-3:#142469;        /* navy claro p/ cards */
+  --bg-4:#1B2D85;        /* navy ainda mais claro p/ hover */
+  --ink:#06091F;         /* mais escuro p/ contraste */
+  --yellow:#F5C842;      /* "Governança" no logo */
+  --yellow-soft:#FBE186;
+  --green:#7AC74F;       /* "Estratégia" no logo */
+  --green-soft:#A5DD7E;
+  --blue:#4DA8E0;        /* "Inovação" no logo */
+  --blue-soft:#7BC1EB;
+  --cyan:#5BC6E5;        /* linhas decorativas no logo */
+  --orange:#F58F4E;      /* dot laranja no logo */
+  --magenta:#A95CB7;     /* dot roxo no logo */
   --white:#FFFFFF;
-  --off:#F4F6F9;
-  --muted-l:#7E8AA0;
   --line:rgba(255,255,255,.08);
-  --line-2:rgba(255,255,255,.14);
+  --line-2:rgba(255,255,255,.16);
+  --muted:rgba(255,255,255,.62);
+  --muted-2:rgba(255,255,255,.45);
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}
 html{scroll-behavior:smooth;}
-body{font-family:'Outfit',system-ui,sans-serif;font-weight:400;color:var(--white);background:var(--ink);overflow-x:hidden;line-height:1.55;}
-::selection{background:var(--lime);color:var(--navy);}
+body{font-family:'Outfit',system-ui,sans-serif;font-weight:400;color:var(--white);background:var(--bg);overflow-x:hidden;line-height:1.55;}
+::selection{background:var(--yellow);color:var(--bg);}
 img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
 
 /* === NAV === */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 36px;display:flex;align-items:center;justify-content:space-between;transition:background .3s,padding .3s,border-color .3s;border-bottom:1px solid transparent;}
-nav.scrolled{background:rgba(6,9,15,.88);backdrop-filter:blur(14px);padding:11px 36px;border-bottom-color:var(--line);}
+nav.scrolled{background:rgba(9,17,54,.92);backdrop-filter:blur(14px);padding:11px 36px;border-bottom-color:var(--line);}
 .nav-logo{display:flex;align-items:center;gap:11px;font-weight:700;font-size:14px;letter-spacing:.2px;}
-.nav-logo img{width:34px;height:34px;}
-.nav-logo span{color:var(--lime);font-weight:800;}
-.nav-links{display:flex;gap:26px;list-style:none;align-items:center;}
+.nav-logo img{width:36px;height:36px;}
+.nav-logo span{color:var(--white);}
+.nav-logo span b{color:var(--yellow);font-weight:800;}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center;}
 .nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.65);transition:color .15s;}
 .nav-links a:hover{color:var(--white);}
-.nav-cta{background:var(--lime)!important;color:var(--ink)!important;padding:9px 20px;border-radius:100px;font-weight:700!important;font-size:12.5px!important;letter-spacing:.3px;}
-.nav-cta:hover{background:var(--lime-2)!important;}
+.nav-cta{background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 70%) !important;color:var(--bg) !important;padding:9px 20px;border-radius:100px;font-weight:700 !important;font-size:12.5px !important;letter-spacing:.3px;}
+.nav-cta:hover{filter:brightness(1.08);}
 .menu-toggle{display:none;background:none;border:none;color:var(--white);cursor:pointer;font-size:22px;}
 @media(max-width:880px){
-  .nav-links{display:none;position:fixed;top:62px;left:0;right:0;flex-direction:column;background:rgba(6,9,15,.97);backdrop-filter:blur(14px);padding:24px;border-top:1px solid var(--line);}
+  .nav-links{display:none;position:fixed;top:62px;left:0;right:0;flex-direction:column;background:rgba(9,17,54,.97);backdrop-filter:blur(14px);padding:24px;border-top:1px solid var(--line);}
   .nav-links.open{display:flex;}
   .menu-toggle{display:block;}
   nav{padding:14px 22px;}
@@ -92,223 +92,262 @@ nav.scrolled{background:rgba(6,9,15,.88);backdrop-filter:blur(14px);padding:11px
 }
 
 /* === HERO === */
-.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 32px 180px;overflow:hidden;text-align:center;background:radial-gradient(ellipse 60% 50% at 20% 30%,rgba(61,143,166,.32) 0%,transparent 60%),radial-gradient(ellipse 50% 45% at 80% 70%,rgba(95,182,201,.22) 0%,transparent 65%),linear-gradient(180deg,#06090F 0%,#0A1628 70%,#06090F 100%);}
+.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 32px 180px;overflow:hidden;text-align:center;background:radial-gradient(ellipse 70% 55% at 30% 30%,rgba(77,168,224,.18) 0%,transparent 60%),radial-gradient(ellipse 55% 50% at 80% 70%,rgba(122,199,79,.12) 0%,transparent 65%),linear-gradient(180deg,#06091F 0%,#091136 60%,#06091F 100%);}
 .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:80px 80px;pointer-events:none;}
-.hero::after{content:'';position:absolute;left:-200px;top:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(184,232,57,.08) 0%,transparent 60%);pointer-events:none;}
+.hero::after{content:'';position:absolute;left:-200px;top:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(245,200,66,.08) 0%,transparent 60%);pointer-events:none;}
 .hero>*{position:relative;z-index:1;}
 
-.hero-logo{width:88px;height:88px;margin-bottom:26px;animation:floatIn .9s cubic-bezier(.2,.8,.2,1) both;}
-.h-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(184,232,57,.1);border:1px solid rgba(184,232,57,.3);color:var(--lime-soft);font-size:11px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;padding:9px 22px;border-radius:100px;margin-bottom:30px;animation:fd .7s .1s ease both;}
-.h-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 8px var(--lime);}
-.hero h1{font-family:'Fraunces',serif;font-size:clamp(34px,6vw,76px);font-weight:600;letter-spacing:-.02em;line-height:1.02;max-width:1000px;margin-bottom:24px;animation:fd .8s .2s ease both;}
-.hero h1 em{font-style:italic;font-weight:400;background:linear-gradient(120deg,var(--lime) 30%,var(--lime-soft) 70%);-webkit-background-clip:text;background-clip:text;color:transparent;}
-.hero h1 .gov{display:block;font-size:.55em;font-weight:300;color:rgba(255,255,255,.6);margin-top:6px;letter-spacing:.01em;}
-.h-sub{font-size:clamp(15px,1.7vw,18px);color:rgba(255,255,255,.62);max-width:660px;line-height:1.66;margin-bottom:46px;animation:fd .8s .3s ease both;}
+.hero-logo{width:min(600px,82vw);height:auto;margin-bottom:38px;animation:floatIn 1s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 20px 60px rgba(0,0,0,.4));border-radius:8px;}
 
-.h-meta{display:flex;flex-wrap:wrap;justify-content:center;margin-bottom:48px;animation:fd .8s .4s ease both;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:6px;overflow:hidden;backdrop-filter:blur(8px);}
+.h-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(91,198,229,.1);border:1px solid rgba(91,198,229,.34);color:var(--cyan);font-size:11px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;padding:9px 22px;border-radius:100px;margin-bottom:30px;animation:fd .7s .15s ease both;}
+.h-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);}
+
+.h-tag{font-family:'Manrope',sans-serif;font-size:clamp(20px,3vw,30px);font-weight:300;color:rgba(255,255,255,.78);max-width:880px;margin-bottom:28px;animation:fd .8s .25s ease both;line-height:1.32;letter-spacing:-.01em;}
+.h-tag em{color:var(--yellow);font-style:normal;font-weight:600;}
+
+.h-sub{font-size:clamp(15px,1.7vw,17px);color:var(--muted);max-width:680px;line-height:1.7;margin-bottom:42px;animation:fd .8s .3s ease both;}
+
+.h-meta{display:flex;flex-wrap:wrap;justify-content:center;margin-bottom:46px;animation:fd .8s .4s ease both;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;overflow:hidden;backdrop-filter:blur(8px);}
 .mi{padding:14px 22px;text-align:center;}
-.ml{font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);font-weight:600;margin-bottom:4px;}
+.ml{font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.36);font-weight:600;margin-bottom:4px;}
 .mv{font-size:14px;font-weight:700;color:var(--white);}
-.mv strong{color:var(--lime);}
+.mv strong{color:var(--yellow);}
+.mv .gr{color:var(--green);}
+.mv .bl{color:var(--blue);}
 .ms{width:1px;background:var(--line);}
 @media(max-width:600px){.ms{display:none;}.mi{flex:1 0 50%;border-bottom:1px solid var(--line);}}
 
 .h-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;animation:fd .8s .5s ease both;}
-.btn-p{background:var(--lime);color:var(--ink);font-size:14.5px;font-weight:700;padding:16px 38px;border:none;border-radius:100px;cursor:pointer;transition:all .2s;letter-spacing:.2px;display:inline-flex;align-items:center;gap:10px;}
-.btn-p:hover{background:var(--lime-2);transform:translateY(-2px);box-shadow:0 12px 32px rgba(184,232,57,.22);}
+.btn-p{background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 100%);color:var(--bg);font-size:14.5px;font-weight:700;padding:16px 38px;border:none;border-radius:100px;cursor:pointer;transition:all .2s;letter-spacing:.2px;display:inline-flex;align-items:center;gap:10px;}
+.btn-p:hover{filter:brightness(1.05);transform:translateY(-2px);box-shadow:0 12px 32px rgba(245,200,66,.2);}
 .btn-p .arrow{transition:transform .2s;}
 .btn-p:hover .arrow{transform:translateX(3px);}
 .btn-s{background:transparent;color:var(--white);font-size:14.5px;font-weight:500;padding:16px 36px;border:1px solid rgba(255,255,255,.22);border-radius:100px;cursor:pointer;transition:all .2s;}
 .btn-s:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.4);}
 
 .h-counter{margin-top:42px;display:inline-flex;align-items:center;gap:12px;font-size:12.5px;color:rgba(255,255,255,.5);animation:fd .8s .6s ease both;}
-.h-counter .pulse{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 rgba(184,232,57,.6);animation:pulse 2s infinite;}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(184,232,57,.55);}50%{box-shadow:0 0 0 8px rgba(184,232,57,0);}}
-#counter-num{color:var(--lime);font-weight:700;}
+.h-counter .pulse{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(122,199,79,.6);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(122,199,79,.55);}50%{box-shadow:0 0 0 8px rgba(122,199,79,0);}}
+#counter-num{color:var(--green);font-weight:700;}
 
-.h-partners{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.35);backdrop-filter:blur(10px);padding:14px 36px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);font-size:11.5px;}
-.pl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.32);font-weight:600;}
+.h-partners{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.36);backdrop-filter:blur(10px);padding:14px 36px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);font-size:11.5px;}
+.pl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.34);font-weight:600;}
 .pc{font-weight:600;color:rgba(255,255,255,.72);padding:5px 13px;border:1px solid var(--line-2);border-radius:100px;}
 
 @keyframes fd{from{opacity:0;transform:translateY(-14px);}to{opacity:1;transform:translateY(0);}}
-@keyframes floatIn{from{opacity:0;transform:translateY(20px) scale(.85);}to{opacity:1;transform:translateY(0) scale(1);}}
+@keyframes floatIn{from{opacity:0;transform:translateY(28px) scale(.9);}to{opacity:1;transform:translateY(0) scale(1);}}
 @keyframes spin{to{transform:rotate(360deg);}}
 
 /* === KEYNOTE STRIP === */
-.kn{background:linear-gradient(135deg,#0A1628 0%,#142B4E 100%);padding:46px 36px;position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-.kn::before{content:'';position:absolute;right:-100px;top:-80px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,232,57,.08) 0%,transparent 70%);}
+.kn{background:linear-gradient(135deg,var(--bg-2) 0%,var(--bg-3) 100%);padding:48px 36px;position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.kn::before{content:'';position:absolute;right:-100px;top:-80px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(245,200,66,.1) 0%,transparent 70%);}
 .kn-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;position:relative;}
 @media(max-width:780px){.kn-inner{grid-template-columns:1fr;}}
-.kn-lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--lime);font-weight:600;margin-bottom:12px;}
-.kn-title{font-family:'Fraunces',serif;font-size:clamp(22px,3vw,32px);font-weight:600;line-height:1.18;margin-bottom:22px;letter-spacing:-.01em;}
-.kn-title em{font-style:italic;font-weight:400;color:var(--lime-soft);}
+.kn-lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--yellow);font-weight:700;margin-bottom:12px;}
+.kn-title{font-family:'Manrope',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:600;line-height:1.18;margin-bottom:22px;letter-spacing:-.01em;}
+.kn-title em{font-style:normal;font-weight:600;color:var(--green);}
 .kn-spk{display:flex;align-items:center;gap:18px;margin-bottom:18px;}
-.kn-avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--lime) 0%,var(--teal-soft) 100%);display:flex;align-items:center;justify-content:center;color:var(--ink);font-weight:800;font-size:20px;font-family:'Fraunces',serif;flex-shrink:0;}
+.kn-avatar{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 50%,var(--blue) 100%);display:flex;align-items:center;justify-content:center;color:var(--bg);font-weight:800;font-size:22px;font-family:'Manrope',sans-serif;flex-shrink:0;}
 .sp-name{font-size:18px;font-weight:700;margin-bottom:2px;}
-.sp-role{font-size:13px;color:rgba(255,255,255,.55);}
-.sp-badge{display:inline-block;background:rgba(244,178,62,.15);border:1px solid rgba(244,178,62,.4);color:var(--orange);font-size:9.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-top:5px;}
+.sp-role{font-size:13px;color:rgba(255,255,255,.6);}
+.sp-badge{display:inline-block;background:rgba(245,143,78,.15);border:1px solid rgba(245,143,78,.4);color:var(--orange);font-size:9.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-top:5px;}
 .panel-row{display:flex;align-items:center;gap:8px;margin-top:18px;flex-wrap:wrap;font-size:11.5px;}
-.panel-lbl{font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.32);font-weight:600;}
-.pan-tag{background:rgba(255,255,255,.06);border:1px solid var(--line-2);color:rgba(255,255,255,.72);font-weight:500;padding:4px 11px;border-radius:100px;}
+.panel-lbl{font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.36);font-weight:600;}
+.pan-tag{background:rgba(255,255,255,.06);border:1px solid var(--line-2);color:rgba(255,255,255,.78);font-weight:500;padding:4px 11px;border-radius:100px;}
 .kn-date{text-align:right;}
 @media(max-width:780px){.kn-date{text-align:left;}}
-.kd-n{font-family:'Fraunces',serif;font-size:84px;font-weight:600;color:var(--lime);line-height:.95;letter-spacing:-.04em;}
-.kd-i{font-size:12px;color:rgba(255,255,255,.45);margin-top:6px;line-height:1.55;}
+.kd-n{font-family:'Manrope',sans-serif;font-size:90px;font-weight:800;line-height:.95;letter-spacing:-.04em;background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 50%,var(--blue) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.kd-i{font-size:12px;color:rgba(255,255,255,.5);margin-top:6px;line-height:1.55;}
 
 /* === STATS STRIP === */
-.stats{background:var(--ink);padding:64px 36px;border-bottom:1px solid var(--line);}
+.stats{background:var(--bg);padding:64px 36px;border-bottom:1px solid var(--line);}
 .stats-g{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:28px;text-align:center;}
 .stat{position:relative;padding:0 14px;}
 .stat:not(:last-child)::after{content:'';position:absolute;right:0;top:10%;bottom:10%;width:1px;background:var(--line);}
-@media(max-width:600px){.stat::after{display:none!important;}}
-.sn{font-family:'Fraunces',serif;font-size:54px;font-weight:600;color:var(--white);line-height:1;margin-bottom:7px;letter-spacing:-.03em;}
-.sn em{font-style:italic;color:var(--lime);}
-.sl{font-size:11.5px;color:rgba(255,255,255,.52);font-weight:500;line-height:1.45;letter-spacing:.2px;}
+@media(max-width:600px){.stat::after{display:none !important;}}
+.sn{font-family:'Manrope',sans-serif;font-size:54px;font-weight:800;line-height:1;margin-bottom:7px;letter-spacing:-.04em;color:var(--white);}
+.sn.y{color:var(--yellow);}.sn.g{color:var(--green);}.sn.b{color:var(--blue);}.sn.c{color:var(--cyan);}
+.sl{font-size:11.5px;color:rgba(255,255,255,.55);font-weight:500;line-height:1.45;letter-spacing:.2px;}
 
 /* === SECTION SHARED === */
 .sec{padding:120px 36px;position:relative;}
 .sec-in{max-width:1180px;margin:0 auto;}
-.sec-lbl{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:14px;display:inline-flex;align-items:center;gap:10px;}
-.sec-lbl::before{content:'';width:24px;height:1.5px;background:var(--lime);}
-.sec-title{font-family:'Fraunces',serif;font-size:clamp(28px,4.2vw,52px);font-weight:600;line-height:1.05;letter-spacing:-.02em;margin-bottom:20px;max-width:780px;}
-.sec-title em{font-style:italic;color:var(--lime-soft);font-weight:400;}
-.sec-desc{font-size:17px;color:rgba(255,255,255,.6);line-height:1.7;max-width:680px;margin-bottom:64px;}
+.sec-lbl{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:14px;display:inline-flex;align-items:center;gap:10px;}
+.sec-lbl::before{content:'';width:24px;height:1.5px;background:var(--cyan);}
+.sec-title{font-family:'Manrope',sans-serif;font-size:clamp(28px,4.2vw,52px);font-weight:700;line-height:1.05;letter-spacing:-.025em;margin-bottom:20px;max-width:820px;}
+.sec-title em{font-style:normal;font-weight:700;background:linear-gradient(120deg,var(--yellow) 0%,var(--green) 60%,var(--blue) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.sec-desc{font-size:17px;color:var(--muted);line-height:1.7;max-width:680px;margin-bottom:64px;}
 
 /* === DAYS === */
-.days{background:linear-gradient(180deg,var(--ink) 0%,#0A1422 100%);}
+.days{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);}
 .days-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
 @media(max-width:880px){.days-grid{grid-template-columns:1fr;}}
-.dc{position:relative;padding:38px 30px 34px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.018);transition:all .3s;overflow:hidden;}
-.dc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--lime),var(--teal-soft));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
-.dc:hover{border-color:rgba(184,232,57,.28);background:rgba(184,232,57,.025);}
+.dc{position:relative;padding:38px 30px 34px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.018);transition:all .3s;overflow:hidden;}
+.dc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent,linear-gradient(90deg,var(--yellow),var(--green),var(--blue)));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.dc:hover{border-color:rgba(91,198,229,.32);background:rgba(77,168,224,.04);}
 .dc:hover::before{transform:scaleX(1);}
-.dn{font-family:'Fraunces',serif;font-size:120px;font-weight:600;color:transparent;-webkit-text-stroke:1.5px rgba(184,232,57,.18);position:absolute;top:-12px;right:-4px;line-height:1;letter-spacing:-.05em;}
-.dd{font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:11px;position:relative;}
-.dt{font-family:'Fraunces',serif;font-size:24px;font-weight:600;line-height:1.18;margin-bottom:8px;letter-spacing:-.01em;position:relative;}
-.dl{font-size:12.5px;color:rgba(255,255,255,.52);margin-bottom:22px;display:flex;align-items:center;gap:6px;position:relative;}
+.dc:nth-child(1){--accent:var(--yellow);}
+.dc:nth-child(2){--accent:var(--green);}
+.dc:nth-child(3){--accent:var(--blue);}
+.dn{font-family:'Manrope',sans-serif;font-size:140px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px var(--accent);position:absolute;top:-18px;right:-4px;line-height:1;letter-spacing:-.06em;opacity:.6;}
+.dd{font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent,var(--cyan));font-weight:700;margin-bottom:11px;position:relative;}
+.dt{font-family:'Manrope',sans-serif;font-size:25px;font-weight:700;line-height:1.18;margin-bottom:8px;letter-spacing:-.015em;position:relative;}
+.dl{font-size:12.5px;color:rgba(255,255,255,.55);margin-bottom:22px;display:flex;align-items:center;gap:6px;position:relative;}
 .di{list-style:none;position:relative;}
-.di li{font-size:13.5px;color:rgba(255,255,255,.72);padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;gap:11px;align-items:flex-start;line-height:1.45;}
+.di li{font-size:13.5px;color:rgba(255,255,255,.74);padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;gap:11px;align-items:flex-start;line-height:1.45;}
 .di li:last-child{border:none;}
-.di li::before{content:'';flex-shrink:0;width:5px;height:5px;border-radius:50%;background:var(--lime);margin-top:7px;}
+.di li::before{content:'';flex-shrink:0;width:5px;height:5px;border-radius:50%;background:var(--accent,var(--cyan));margin-top:7px;}
 .di li strong{color:var(--white);font-weight:600;}
 
 /* === EVENTS === */
-.events{background:var(--ink);}
+.events{background:var(--bg);}
 .ev-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 @media(max-width:1000px){.ev-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.ev-grid{grid-template-columns:1fr;}}
-.ec{border:1px solid var(--line);border-radius:8px;padding:30px 24px 28px;background:rgba(255,255,255,.02);transition:all .3s;position:relative;overflow:hidden;}
-.ec::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
-.ec:nth-child(1)::before{background:var(--lime);}
-.ec:nth-child(2)::before{background:var(--teal-soft);}
-.ec:nth-child(3)::before{background:var(--orange);}
-.ec:nth-child(4)::before{background:var(--coral);}
+.ec{border:1px solid var(--line);border-radius:10px;padding:30px 24px 28px;background:rgba(255,255,255,.022);transition:all .3s;position:relative;overflow:hidden;}
+.ec::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--ec-color);}
+.ec:nth-child(1){--ec-color:var(--yellow);}
+.ec:nth-child(2){--ec-color:var(--green);}
+.ec:nth-child(3){--ec-color:var(--cyan);}
+.ec:nth-child(4){--ec-color:var(--blue);}
 .ec:hover{transform:translateY(-4px);background:rgba(255,255,255,.04);border-color:var(--line-2);}
-.en{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.42);font-weight:700;margin-bottom:14px;}
-.enm{font-family:'Fraunces',serif;font-size:20px;font-weight:600;margin-bottom:18px;line-height:1.2;letter-spacing:-.01em;}
+.en{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ec-color);font-weight:700;margin-bottom:14px;}
+.enm{font-family:'Manrope',sans-serif;font-size:20px;font-weight:700;margin-bottom:18px;line-height:1.2;letter-spacing:-.015em;}
 .et{list-style:none;}
-.et li{font-size:13px;color:rgba(255,255,255,.6);padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;gap:8px;line-height:1.45;}
+.et li{font-size:13px;color:rgba(255,255,255,.62);padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;gap:8px;line-height:1.45;}
 .et li:last-child{border:none;}
-.et li::before{content:'›';color:var(--lime);font-weight:700;}
+.et li::before{content:'›';color:var(--ec-color);font-weight:700;}
 
 /* === VISITS === */
-.visits{background:linear-gradient(180deg,#0A1422 0%,var(--ink) 100%);}
+.visits{background:linear-gradient(180deg,var(--bg-2) 0%,var(--bg) 100%);}
 .vis-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 @media(max-width:1000px){.vis-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.vis-grid{grid-template-columns:1fr;}}
-.vc{padding:24px 20px;border:1px solid var(--line);border-radius:8px;transition:all .3s;background:rgba(255,255,255,.018);}
-.vc:hover{transform:translateY(-3px);border-color:rgba(184,232,57,.28);background:rgba(184,232,57,.03);}
-.vn{font-size:10px;letter-spacing:1.6px;font-weight:700;color:var(--lime);margin-bottom:10px;}
-.vn .integrated{background:rgba(244,178,62,.18);color:var(--orange);padding:1px 7px;border-radius:100px;margin-left:5px;font-size:8.5px;letter-spacing:.8px;text-transform:uppercase;}
-.vcn{font-family:'Fraunces',serif;font-size:17px;font-weight:600;margin-bottom:8px;line-height:1.18;}
+.vc{padding:24px 20px;border:1px solid var(--line);border-radius:10px;transition:all .3s;background:rgba(255,255,255,.02);}
+.vc:hover{transform:translateY(-3px);border-color:rgba(122,199,79,.32);background:rgba(122,199,79,.03);}
+.vn{font-size:10px;letter-spacing:1.6px;font-weight:700;color:var(--green);margin-bottom:10px;}
+.vn .integrated{background:rgba(245,143,78,.18);color:var(--orange);padding:1px 7px;border-radius:100px;margin-left:5px;font-size:8.5px;letter-spacing:.8px;text-transform:uppercase;}
+.vcn{font-family:'Manrope',sans-serif;font-size:17px;font-weight:700;margin-bottom:8px;line-height:1.18;letter-spacing:-.01em;}
 .vth{font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.5;margin-bottom:14px;}
-.vtg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-soft);background:rgba(95,182,201,.1);padding:3px 9px;border-radius:100px;}
+.vtg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--cyan);background:rgba(91,198,229,.1);padding:3px 9px;border-radius:100px;}
 
 /* === SUBMISSION === */
-.sub{background:var(--ink);position:relative;}
+.sub{background:var(--bg);position:relative;}
 .sub-in{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;max-width:1180px;margin:0 auto;}
 @media(max-width:880px){.sub-in{grid-template-columns:1fr;gap:40px;}}
-.dl-box{background:linear-gradient(135deg,rgba(184,232,57,.08) 0%,rgba(184,232,57,.02) 100%);border:1px solid rgba(184,232,57,.25);border-radius:8px;padding:24px 26px;margin-bottom:30px;}
-.dl-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:6px;}
-.dl-date{font-family:'Fraunces',serif;font-size:30px;font-weight:600;letter-spacing:-.01em;line-height:1.1;}
-.dl-note{font-size:12px;color:rgba(255,255,255,.5);margin-top:8px;line-height:1.55;}
+.dl-box{background:linear-gradient(135deg,rgba(245,200,66,.1) 0%,rgba(122,199,79,.04) 100%);border:1px solid rgba(245,200,66,.32);border-radius:10px;padding:24px 26px;margin-bottom:30px;}
+.dl-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--yellow);font-weight:700;margin-bottom:6px;}
+.dl-date{font-family:'Manrope',sans-serif;font-size:30px;font-weight:700;letter-spacing:-.02em;line-height:1.1;}
 .timeline{display:flex;flex-direction:column;gap:14px;margin-top:8px;}
 .tl-row{display:flex;gap:14px;align-items:flex-start;font-size:13px;}
-.tl-mark{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--lime);font-weight:700;width:78px;flex-shrink:0;padding-top:2px;}
-.tl-text{color:rgba(255,255,255,.75);line-height:1.55;}
+.tl-mark{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);font-weight:700;width:88px;flex-shrink:0;padding-top:2px;}
+.tl-text{color:rgba(255,255,255,.78);line-height:1.55;}
 .tl-text strong{color:var(--white);font-weight:600;display:block;}
 .trs{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
 @media(max-width:600px){.trs{grid-template-columns:1fr;}}
-.tri{display:flex;align-items:flex-start;gap:11px;padding:11px 13px;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:6px;transition:all .2s;}
-.tri:hover{background:rgba(184,232,57,.04);border-color:rgba(184,232,57,.2);}
-.trn{width:24px;height:24px;background:rgba(184,232,57,.15);color:var(--lime);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;}
+.tri{display:flex;align-items:flex-start;gap:11px;padding:11px 13px;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:8px;transition:all .2s;}
+.tri:hover{background:rgba(91,198,229,.05);border-color:rgba(91,198,229,.22);}
+.trn{width:24px;height:24px;background:rgba(91,198,229,.16);color:var(--cyan);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;}
 .trname{font-size:12px;color:rgba(255,255,255,.78);font-weight:500;line-height:1.35;}
 
+/* === NORMAS === */
+.normas{background:var(--bg-2);padding:96px 36px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.normas-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;max-width:1180px;margin:0 auto;align-items:center;}
+@media(max-width:880px){.normas-grid{grid-template-columns:1fr;gap:32px;}}
+.normas-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:560px){.normas-list{grid-template-columns:1fr;}}
+.normas-list li{padding:14px 16px;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:8px;font-size:13px;line-height:1.5;display:flex;gap:11px;align-items:flex-start;}
+.normas-list li::before{content:'✓';color:var(--green);font-weight:800;flex-shrink:0;font-size:14px;line-height:1.4;}
+.normas-list li strong{display:block;color:var(--white);font-weight:600;margin-bottom:2px;}
+.normas-list li span{color:var(--muted);}
+
+/* === MODALIDADES === */
+.modal{background:var(--bg);padding:96px 36px;}
+.modal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px;}
+@media(max-width:880px){.modal-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.modal-grid{grid-template-columns:1fr;}}
+.mod-card{padding:26px 22px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.022);transition:all .3s;position:relative;}
+.mod-card:hover{border-color:var(--accent);background:rgba(255,255,255,.04);transform:translateY(-3px);}
+.mod-card:nth-child(1){--accent:rgba(245,200,66,.4);}
+.mod-card:nth-child(2){--accent:rgba(122,199,79,.4);}
+.mod-card:nth-child(3){--accent:rgba(91,198,229,.4);}
+.mod-card:nth-child(4){--accent:rgba(77,168,224,.4);}
+.mod-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--white);background:rgba(255,255,255,.08);border:1px solid var(--line-2);padding:4px 10px;border-radius:100px;margin-bottom:14px;}
+.mod-t{font-family:'Manrope',sans-serif;font-size:18px;font-weight:700;line-height:1.2;letter-spacing:-.01em;margin-bottom:8px;}
+.mod-d{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:14px;min-height:62px;}
+.mod-vagas{font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:.4px;}
+
 /* === EVEN3 EMBED WRAPPER === */
-.embed-wrap{background:var(--white);border-radius:10px;padding:6px;min-height:560px;position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.4);}
-.embed-wrap::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.97);z-index:0;pointer-events:none;}
-.embed-loading{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:var(--navy);z-index:1;}
-.embed-loading .spinner{width:32px;height:32px;border:2.5px solid rgba(10,22,40,.12);border-top-color:var(--navy);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 14px;}
-.embed-loading p{font-size:13px;color:var(--muted-l);}
+.embed-wrap{background:var(--white);border-radius:12px;padding:6px;min-height:560px;position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45);}
+.embed-loading{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:var(--bg);z-index:1;}
+.embed-loading .spinner{width:32px;height:32px;border:2.5px solid rgba(9,17,54,.14);border-top-color:var(--bg);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 14px;}
+.embed-loading p{font-size:13px;color:#6B82A0;}
 .embed-target{position:relative;z-index:2;min-height:548px;}
-.embed-target iframe{width:100%!important;border:0!important;border-radius:6px;}
+.embed-target iframe{width:100% !important;border:0 !important;border-radius:8px;}
 .embed-fallback{padding:36px;text-align:center;}
-.embed-fallback h3{font-family:'Fraunces',serif;color:var(--navy);margin-bottom:10px;font-size:22px;}
-.embed-fallback p{color:var(--muted-l);font-size:14px;margin-bottom:18px;line-height:1.6;}
-.embed-fallback a{display:inline-block;background:var(--navy);color:var(--white);padding:13px 30px;border-radius:100px;font-weight:700;font-size:13.5px;}
+.embed-fallback h3{font-family:'Manrope',sans-serif;color:var(--bg);margin-bottom:10px;font-size:22px;font-weight:700;letter-spacing:-.01em;}
+.embed-fallback p{color:#6B82A0;font-size:14px;margin-bottom:18px;line-height:1.6;}
+.embed-fallback a{display:inline-block;background:var(--bg);color:var(--white);padding:13px 30px;border-radius:100px;font-weight:700;font-size:13.5px;}
 
 /* === PARTNERS === */
-.partners{background:linear-gradient(180deg,var(--ink) 0%,#0A1422 100%);}
-.pt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px;}
+.partners{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);}
+.pt-tier{margin-top:30px;}
+.pt-tier-lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:14px;}
+.pt-tier-lbl::after{content:'';flex:1;height:1px;background:var(--line);}
+.pt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:36px;}
 @media(max-width:880px){.pt-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:480px){.pt-grid{grid-template-columns:1fr;}}
-.ptc{padding:24px 18px;border:1px solid var(--line);border-radius:8px;text-align:center;transition:all .3s;background:rgba(255,255,255,.018);}
-.ptc:hover{border-color:rgba(184,232,57,.28);transform:translateY(-2px);}
-.pa{font-family:'Fraunces',serif;font-size:26px;font-weight:600;margin-bottom:6px;letter-spacing:-.01em;}
-.pf{font-size:11.5px;color:rgba(255,255,255,.5);line-height:1.4;margin-bottom:10px;min-height:32px;}
-.pr{font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--lime);background:rgba(184,232,57,.1);padding:3px 10px;border-radius:100px;display:inline-block;}
-.pr.partner{color:var(--teal-soft);background:rgba(95,182,201,.1);}
+.ptc{padding:26px 22px;border:1px solid var(--line);border-radius:10px;text-align:center;transition:all .3s;background:rgba(255,255,255,.02);min-height:130px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;gap:10px;}
+.ptc:hover{border-color:rgba(91,198,229,.3);transform:translateY(-2px);background:rgba(91,198,229,.04);}
+.ptc-logo{height:46px;display:flex;align-items:center;justify-content:center;}
+.ptc-logo img{max-height:46px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.92;transition:opacity .25s;}
+.ptc:hover .ptc-logo img{opacity:1;}
+.pf{font-size:11.5px;color:rgba(255,255,255,.5);line-height:1.4;}
 
 /* === COINS === */
-.coins{background:var(--ink);padding:120px 36px;position:relative;overflow:hidden;}
-.coins::before{content:'';position:absolute;right:-200px;bottom:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(184,232,57,.05) 0%,transparent 70%);}
+.coins{background:var(--bg);padding:120px 36px;position:relative;overflow:hidden;}
+.coins::before{content:'';position:absolute;right:-200px;bottom:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(245,200,66,.06) 0%,transparent 70%);}
 .coins-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px;}
 @media(max-width:1000px){.coins-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:520px){.coins-grid{grid-template-columns:1fr;}}
-.coin{padding:30px 24px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.018);transition:all .3s;position:relative;}
-.coin:hover{border-color:rgba(184,232,57,.28);}
-.coin-num{font-family:'Fraunces',serif;font-size:48px;font-weight:600;line-height:1;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px var(--lime);margin-bottom:14px;}
-.coin-t{font-family:'Fraunces',serif;font-size:18px;font-weight:600;margin-bottom:10px;line-height:1.18;letter-spacing:-.01em;}
-.coin-d{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;}
+.coin{padding:30px 24px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.022);transition:all .3s;position:relative;}
+.coin:hover{border-color:var(--accent);}
+.coin:nth-child(1){--accent:var(--yellow);}
+.coin:nth-child(2){--accent:var(--green);}
+.coin:nth-child(3){--accent:var(--cyan);}
+.coin:nth-child(4){--accent:var(--orange);}
+.coin-num{font-family:'Manrope',sans-serif;font-size:48px;font-weight:800;line-height:1;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px var(--accent);margin-bottom:14px;}
+.coin-t{font-family:'Manrope',sans-serif;font-size:18px;font-weight:700;margin-bottom:10px;line-height:1.18;letter-spacing:-.01em;}
+.coin-d{font-size:13px;color:rgba(255,255,255,.6);line-height:1.55;}
 
 /* === CERT === */
-.cert{background:linear-gradient(135deg,#0A1628 0%,#142B4E 100%);padding:60px 36px;border-top:2px solid var(--lime);}
+.cert{background:linear-gradient(135deg,var(--bg-2) 0%,var(--bg-3) 100%);padding:60px 36px;border-top:2px solid var(--green);}
 .cert-i{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:30px;justify-content:space-between;}
 .ct{font-size:16px;color:var(--white);font-weight:400;line-height:1.55;max-width:560px;}
-.ct strong{color:var(--lime);font-weight:700;}
+.ct strong{color:var(--green);font-weight:700;}
 .cbg{display:flex;gap:8px;flex-wrap:wrap;}
 .cb{padding:9px 16px;border:1px solid var(--line-2);border-radius:100px;font-size:11.5px;font-weight:600;color:rgba(255,255,255,.85);}
-.cb::before{content:'✓';color:var(--lime);margin-right:6px;font-weight:800;}
+.cb::before{content:'✓';color:var(--green);margin-right:6px;font-weight:800;}
 
 /* === FORM CTA === */
-.cta-final{background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(184,232,57,.08) 0%,transparent 60%),linear-gradient(180deg,#0A1422 0%,var(--ink) 100%);padding:120px 36px;text-align:center;}
-.cta-final h2{font-family:'Fraunces',serif;font-size:clamp(34px,5vw,60px);font-weight:600;line-height:1.05;letter-spacing:-.02em;margin-bottom:20px;}
-.cta-final h2 em{font-style:italic;color:var(--lime-soft);font-weight:400;}
-.cta-final p{font-size:17px;color:rgba(255,255,255,.6);max-width:600px;margin:0 auto 40px;line-height:1.65;}
+.cta-final{background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(122,199,79,.07) 0%,transparent 60%),linear-gradient(180deg,var(--bg-2) 0%,var(--bg) 100%);padding:120px 36px;text-align:center;}
+.cta-final h2{font-family:'Manrope',sans-serif;font-size:clamp(34px,5vw,60px);font-weight:700;line-height:1.04;letter-spacing:-.025em;margin-bottom:20px;}
+.cta-final h2 em{font-style:normal;font-weight:700;background:linear-gradient(120deg,var(--yellow) 0%,var(--green) 60%,var(--blue) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.cta-final p{font-size:17px;color:var(--muted);max-width:600px;margin:0 auto 40px;line-height:1.65;}
 
 /* === FOOTER === */
-footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
+footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
 .foot-in{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px;}
 @media(max-width:780px){.foot-in{grid-template-columns:1fr;}}
 .foot-brand{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
-.foot-brand img{width:40px;height:40px;}
-.foot-brand strong{font-family:'Fraunces',serif;font-size:18px;color:var(--white);font-weight:600;}
-.foot-brand span{color:var(--lime);}
+.foot-brand img{width:42px;height:42px;}
+.foot-brand strong{font-family:'Manrope',sans-serif;font-size:18px;color:var(--white);font-weight:700;}
+.foot-brand strong b{color:var(--yellow);font-weight:800;}
 .foot-text{font-size:13px;line-height:1.65;color:rgba(255,255,255,.52);max-width:380px;}
-.foot-col h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:14px;}
+.foot-col h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:14px;}
 .foot-col a{display:block;font-size:13px;color:rgba(255,255,255,.55);padding:5px 0;transition:color .15s;}
 .foot-col a:hover{color:var(--white);}
-.foot-bot{max-width:1180px;margin:0 auto;padding-top:30px;border-top:1px solid var(--line);font-size:11.5px;line-height:1.7;color:rgba(255,255,255,.35);text-align:center;}
+.foot-bot{max-width:1180px;margin:0 auto;padding-top:30px;border-top:1px solid var(--line);font-size:11.5px;line-height:1.7;color:rgba(255,255,255,.36);text-align:center;}
 
 /* === SCROLL ANIM === */
 .fi{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
@@ -316,12 +355,12 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
 .fi.d1{transition-delay:.07s;}.fi.d2{transition-delay:.14s;}.fi.d3{transition-delay:.21s;}.fi.d4{transition-delay:.28s;}
 
 /* === A11Y === */
-:focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:3px;}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:3px;border-radius:3px;}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 
 /* === REDUCED MOTION === */
 @media(prefers-reduced-motion:reduce){
-  *{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;}
+  *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;}
   html{scroll-behavior:auto;}
 }
 </style>
@@ -332,8 +371,8 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
 
 <nav id="nav" aria-label="Navegação principal">
   <a href="#" class="nav-logo" aria-label="1° Encontro GEI — início">
-    <img src="/assets/logo-swirl.png" alt="" aria-hidden="true">
-    <span>1° Encontro <strong style="color:var(--lime)">GEI</strong></span>
+    <img src="/assets/favicon.png" alt="" aria-hidden="true">
+    <span>1° Encontro <b>GEI</b></span>
   </a>
   <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">☰</button>
   <ul class="nav-links" id="nav-menu">
@@ -349,20 +388,21 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
 <main id="main">
 
 <section class="hero" aria-labelledby="hero-title">
-  <img src="/assets/logo-swirl.png" alt="Logo do 1° Encontro de Governança, Estratégia e Inovação Governamental" class="hero-logo" width="88" height="88">
+  <img src="/assets/logo-completo.jpg" alt="1° Encontro de Governança, Estratégia e Inovação Governamental" class="hero-logo" width="600">
+  <h1 id="hero-title" class="sr-only">1° Encontro de Governança, Estratégia e Inovação Governamental</h1>
   <div class="h-badge"><span class="dot" aria-hidden="true"></span>08, 09 e 10 de julho de 2026 · Rio de Janeiro</div>
-  <h1 id="hero-title">1° Encontro de Governança,<br><em>Estratégia e Inovação</em><span class="gov">Governamental</span></h1>
-  <p class="h-sub">A primeira plataforma nacional a integrar excelência operacional, engenharia de produção, regulação de infraestrutura e inteligência governamental — quatro eventos oficiais, três dias, uma agenda de alto nível.</p>
+  <p class="h-tag">A primeira plataforma nacional que integra <em>academia, regulação, gestão pública,<br>engenharia de produção e setor produtivo</em>.</p>
+  <p class="h-sub">Quatro eventos oficiais em três dias: 13ª Lean Six Sigma Congress, 4º Seminário SSEP, 2º Seminário de Regulação e 1º Seminário de Inteligência Governamental — sob uma só agenda de alto nível.</p>
   <div class="h-meta" role="list">
     <div class="mi" role="listitem"><div class="ml">Dias</div><div class="mv"><strong>3</strong> consecutivos</div></div>
     <div class="ms" aria-hidden="true"></div>
-    <div class="mi" role="listitem"><div class="ml">Eventos</div><div class="mv"><strong>4</strong> integrados</div></div>
+    <div class="mi" role="listitem"><div class="ml">Eventos</div><div class="mv"><span class="gr">4</span> integrados</div></div>
     <div class="ms" aria-hidden="true"></div>
-    <div class="mi" role="listitem"><div class="ml">Visitas</div><div class="mv"><strong>8</strong> em paralelo</div></div>
+    <div class="mi" role="listitem"><div class="ml">Visitas</div><div class="mv"><span class="bl">8</span> em paralelo</div></div>
     <div class="ms" aria-hidden="true"></div>
-    <div class="mi" role="listitem"><div class="ml">Participantes</div><div class="mv"><strong>400+</strong></div></div>
+    <div class="mi" role="listitem"><div class="ml">Eixos</div><div class="mv"><strong>13</strong> indexados aos ODS</div></div>
     <div class="ms" aria-hidden="true"></div>
-    <div class="mi" role="listitem"><div class="ml">Anais</div><div class="mv">com <strong>ISBN</strong></div></div>
+    <div class="mi" role="listitem"><div class="ml">Anais</div><div class="mv">com <span class="gr">ISBN</span></div></div>
   </div>
   <div class="h-cta">
     <a href="#inscricao" class="btn-p">Inscreva-se agora <span class="arrow" aria-hidden="true">→</span></a>
@@ -374,9 +414,9 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
   </div>
   <div class="h-partners" aria-label="Realizadores e parceiros">
     <span class="pl">Realização</span>
-    <span class="pc">UFF</span><span class="pc">ABAR</span><span class="pc">PPGEP/UFF</span><span class="pc">Escola de Regulação</span>
-    <span class="pl" style="margin-left:14px;">Parceiros</span>
-    <span class="pc">Firjan</span><span class="pc">IBP</span><span class="pc">ANP</span><span class="pc">Agenersa</span><span class="pc">Fecomércio</span><span class="pc">CAU</span><span class="pc">CREA-RJ</span>
+    <span class="pc">UFF</span><span class="pc">ABAR</span><span class="pc">PPGEP/UFF</span><span class="pc">Escola de Regulação RJ</span>
+    <span class="pl" style="margin-left:14px;">Apoio</span>
+    <span class="pc">Firjan</span><span class="pc">IBP</span><span class="pc">ANP</span><span class="pc">AGENERSA</span><span class="pc">Fecomércio</span><span class="pc">CAU</span><span class="pc">CREA-RJ</span>
   </div>
 </section>
 
@@ -414,11 +454,11 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
 <!-- STATS -->
 <div class="stats" aria-label="Números do evento">
   <div class="stats-g">
-    <div class="stat fi"><div class="sn"><em>4</em></div><div class="sl">Eventos oficiais integrados</div></div>
-    <div class="stat fi d1"><div class="sn"><em>8</em></div><div class="sl">Visitas técnicas exclusivas</div></div>
-    <div class="stat fi d2"><div class="sn"><em>13</em></div><div class="sl">Eixos temáticos indexados aos ODS</div></div>
-    <div class="stat fi d3"><div class="sn"><em>400+</em></div><div class="sl">Participantes esperados</div></div>
-    <div class="stat fi d4"><div class="sn"><em>24h</em></div><div class="sl">Carga horária certificada</div></div>
+    <div class="stat fi"><div class="sn y">4</div><div class="sl">Eventos oficiais integrados</div></div>
+    <div class="stat fi d1"><div class="sn g">8</div><div class="sl">Visitas técnicas exclusivas</div></div>
+    <div class="stat fi d2"><div class="sn b">13</div><div class="sl">Eixos temáticos · indexados ODS</div></div>
+    <div class="stat fi d3"><div class="sn c">80+</div><div class="sl">Submissões esperadas (meta)</div></div>
+    <div class="stat fi d4"><div class="sn y">24h</div><div class="sl">Carga horária certificada</div></div>
   </div>
 </div>
 
@@ -427,7 +467,7 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
   <div class="sec-in">
     <p class="sec-lbl fi">Programação</p>
     <h2 class="sec-title fi" id="prog-title">Três dias de <em>alto nível</em></h2>
-    <p class="sec-desc fi">Cada dia tem identidade própria — da abertura estratégica à imersão técnica, encerrando com síntese acadêmica e propositiva.</p>
+    <p class="sec-desc fi">Cada dia tem identidade própria — da abertura estratégica à imersão técnica em campo, encerrando com síntese acadêmica e propositiva no <strong style="color:var(--white)">NAB UFF, Campus Gragoatá, Niterói</strong>.</p>
     <div class="days-grid">
       <article class="dc fi">
         <div class="dn" aria-hidden="true">01</div>
@@ -459,9 +499,9 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
         <div class="dn" aria-hidden="true">03</div>
         <div class="dd">Sexta · 10 de julho</div>
         <h3 class="dt">Trilhas, Sessões e Encerramento</h3>
-        <div class="dl">📍 NAB UFF · Niterói, RJ</div>
+        <div class="dl">📍 NAB UFF · Campus Gragoatá · Niterói</div>
         <ul class="di">
-          <li><strong>09h00</strong> — Plenária + Painel "IA e soberania"</li>
+          <li><strong>09h00</strong> — Plenária + Painel "IA e soberania"<br><span style="font-size:11px;color:var(--muted-2)">tema central proposto por Prof. Li Li Min</span></li>
           <li><strong>10h30</strong> — Trilhas A, B, C e D simultâneas</li>
           <li><strong>14h00</strong> — Sessões técnicas e acadêmicas</li>
           <li><strong>16h30</strong> — Premiação dos melhores trabalhos</li>
@@ -506,23 +546,38 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
   </div>
 </section>
 
+<!-- MODALIDADES -->
+<section class="modal" id="modalidades" aria-labelledby="md-title">
+  <div class="sec-in">
+    <p class="sec-lbl fi">Modalidades de participação</p>
+    <h2 class="sec-title fi" id="md-title">Quatro formas de <em>participar</em></h2>
+    <p class="sec-desc fi">Todas gratuitas, mediante inscrição prévia obrigatória. <strong style="color:var(--white)">Pré-inscrição prioritária</strong> para UFF, ABAR, PPGEP/UFF e instituições parceiras (janela de ~15 dias antes da abertura geral). Vagas limitadas por modalidade.</p>
+    <div class="modal-grid">
+      <article class="mod-card fi"><div class="mod-tag">Modalidade 1</div><h3 class="mod-t">Presencial Completo</h3><p class="mod-d">Os 3 dias completos, incluindo conferência magna, visita técnica e trilhas/sessões.</p><div class="mod-vagas">400 vagas</div></article>
+      <article class="mod-card fi d1"><div class="mod-tag">Modalidade 2</div><h3 class="mod-t">Presencial Dias 1 e 3</h3><p class="mod-d">Abertura institucional + trilhas e encerramento. Sem visita técnica do Dia 2.</p><div class="mod-vagas">200 vagas</div></article>
+      <article class="mod-card fi d2"><div class="mod-tag">Modalidade 3</div><h3 class="mod-t">Remoto / Online</h3><p class="mod-d">Acompanhamento das plenárias e painéis pela transmissão ao vivo. Acesso a anais.</p><div class="mod-vagas">Ilimitado</div></article>
+      <article class="mod-card fi d3"><div class="mod-tag">Modalidade 4</div><h3 class="mod-t">Visitante Técnico — Dia 2</h3><p class="mod-d">Apenas a visita técnica, escolhendo uma das 8 jornadas paralelas em campo.</p><div class="mod-vagas">200 vagas (~25/jornada)</div></article>
+    </div>
+  </div>
+</section>
+
 <!-- SUBMISSION -->
 <section class="sec sub" id="trabalhos" aria-labelledby="sub-title">
   <div class="sub-in">
     <div>
       <p class="sec-lbl fi">Chamada de trabalhos</p>
       <h2 class="sec-title fi" id="sub-title">Submeta sua <em>pesquisa</em></h2>
-      <p class="sec-desc fi">Modelo faseado: resumo estendido de 2–4 páginas acompanhado de vídeo de 5 minutos na <strong style="color:var(--white)">Fase 1</strong>. Apresentação presencial no Dia 3 na <strong style="color:var(--white)">Fase 2</strong>. Artigo completo pós-evento publicado em livro consolidado com ISBN em dezembro/2026.</p>
+      <p class="sec-desc fi" style="margin-bottom:24px;">Modelo faseado: resumo estendido de 2–4 páginas + vídeo de 5 minutos na <strong style="color:var(--white)">Fase 1</strong>. Apresentação presencial no Dia 3 na <strong style="color:var(--white)">Fase 2</strong>. Artigo completo pós-evento publicado em livro consolidado com ISBN em dezembro/2026.</p>
       <div class="dl-box fi">
         <div class="dl-lbl">Prazo Fase 1 — Resumo + Vídeo</div>
         <div class="dl-date">15 de maio de 2026</div>
       </div>
       <div class="timeline">
-        <div class="tl-row"><span class="tl-mark">Fase 1</span><span class="tl-text"><strong>Resumo + vídeo</strong>até 15/05/2026</span></div>
+        <div class="tl-row"><span class="tl-mark">Fase 1</span><span class="tl-text"><strong>Resumo + vídeo</strong>até 15/05/2026 · 23h59 (Brasília)</span></div>
         <div class="tl-row"><span class="tl-mark">Resultado</span><span class="tl-text"><strong>Aprovação</strong>até 31/05/2026</span></div>
         <div class="tl-row"><span class="tl-mark">Programa</span><span class="tl-text"><strong>Definitivo</strong>publicado em 25/06/2026</span></div>
-        <div class="tl-row"><span class="tl-mark">Fase 2</span><span class="tl-text"><strong>Apresentação presencial</strong>10 de julho de 2026</span></div>
-        <div class="tl-row"><span class="tl-mark">Artigo</span><span class="tl-text"><strong>Versão final</strong>até 30/09/2026</span></div>
+        <div class="tl-row"><span class="tl-mark">Fase 2</span><span class="tl-text"><strong>Apresentação presencial</strong>10 de julho de 2026 · NAB UFF Niterói</span></div>
+        <div class="tl-row"><span class="tl-mark">Artigo</span><span class="tl-text"><strong>Versão final do artigo</strong>até 30/09/2026</span></div>
         <div class="tl-row"><span class="tl-mark">Livro</span><span class="tl-text"><strong>Anais com ISBN</strong>dezembro/2026</span></div>
       </div>
       <a href="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/submissao" class="btn-p" style="margin-top:30px;" target="_blank" rel="noopener">Submeter trabalho na Even3 <span class="arrow" aria-hidden="true">→</span></a>
@@ -548,12 +603,33 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
   </div>
 </section>
 
+<!-- NORMAS DE SUBMISSÃO -->
+<section class="normas" aria-labelledby="nm-title">
+  <div class="normas-grid">
+    <div>
+      <p class="sec-lbl fi">Normas técnicas</p>
+      <h2 class="sec-title fi" id="nm-title" style="font-size:clamp(24px,3.4vw,38px);">Como preparar sua <em>submissão</em></h2>
+      <p class="sec-desc fi" style="margin-bottom:0;font-size:16px;">Padronização técnica para garantir consistência editorial nos anais com ISBN. Comissão científica do 4º Seminário SSEP: <strong style="color:var(--white)">Ana, Flavia, Gabriella, Jucileia, Kelly, Pompilio e Silvia Cristina Rufino</strong>.</p>
+    </div>
+    <ul class="normas-list">
+      <li class="fi"><div><strong>Formato</strong><span>.docx ou .pdf</span></div></li>
+      <li class="fi d1"><div><strong>Fonte</strong><span>Arial 12pt</span></div></li>
+      <li class="fi d2"><div><strong>Espaçamento</strong><span>1,5 entrelinhas</span></div></li>
+      <li class="fi d3"><div><strong>Margens</strong><span>2,5 cm em todos os lados</span></div></li>
+      <li class="fi"><div><strong>Páginas (Fase 1)</strong><span>2 a 4 páginas (resumo estendido)</span></div></li>
+      <li class="fi d1"><div><strong>Páginas (Fase 2)</strong><span>8 a 15 páginas (artigo completo)</span></div></li>
+      <li class="fi d2"><div><strong>Vídeo</strong><span>até 5 min · URL YouTube/Vimeo</span></div></li>
+      <li class="fi d3"><div><strong>Citações</strong><span>conformidade ABNT</span></div></li>
+    </ul>
+  </div>
+</section>
+
 <!-- INSCRIÇÃO (EMBED EVEN3) -->
-<section class="sec" id="inscricao" style="background:linear-gradient(180deg,#0A1422 0%,#06090F 100%);" aria-labelledby="ins-title">
+<section class="sec" id="inscricao" style="background:linear-gradient(180deg,var(--bg-2) 0%,var(--bg) 100%);" aria-labelledby="ins-title">
   <div class="sec-in" style="text-align:center;">
     <p class="sec-lbl fi" style="margin-left:auto;margin-right:auto;">Inscrições abertas</p>
     <h2 class="sec-title fi" id="ins-title" style="margin-left:auto;margin-right:auto;">Garanta sua <em>vaga</em></h2>
-    <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Evento <strong style="color:var(--white)">gratuito</strong> mediante inscrição prévia obrigatória, com vagas limitadas. Pré-inscrição prioritária para UFF, ABAR, PPGEP/UFF e instituições parceiras (janela de ~15 dias antes da abertura geral).</p>
+    <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Evento <strong style="color:var(--white)">gratuito</strong> mediante inscrição prévia obrigatória, com vagas limitadas. Pré-inscrição prioritária (~15 dias) para UFF, ABAR, PPGEP/UFF e instituições parceiras.</p>
   </div>
   <div class="sec-in" style="max-width:780px;margin-top:20px;">
     <div class="embed-wrap fi">
@@ -562,16 +638,14 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
         <p>Carregando formulário Even3…</p>
       </div>
       <div class="embed-target" id="even3-inscricao-target">
-        <!-- EVEN3 EMBED — INSCRIÇÃO -->
-        <!-- Substituir bloco abaixo pelo embed code oficial após criar o evento -->
         <div class="embed-fallback">
           <h3>Inscrição via Even3</h3>
-          <p>O formulário de inscrição é hospedado na plataforma Even3 e ficará disponível aqui assim que o evento for publicado. Enquanto isso, acesse direto pelo link.</p>
+          <p>O formulário oficial é hospedado pela Even3. A inscrição será disponibilizada aqui assim que os ingressos forem ativados — enquanto isso, acesse a página oficial do evento.</p>
           <a href="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/" target="_blank" rel="noopener">Abrir página oficial Even3 →</a>
         </div>
       </div>
     </div>
-    <p style="text-align:center;margin-top:24px;font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.7;">Certificação emitida por <strong style="color:var(--lime)">UFF, ABAR, PPGEP/UFF e Escola de Regulação</strong>, válida para o Currículo Lattes (CNPq), em até 15 dias úteis após o evento.</p>
+    <p style="text-align:center;margin-top:24px;font-size:12.5px;color:var(--muted-2);line-height:1.7;">Certificação emitida por <strong style="color:var(--green)">UFF, ABAR, PPGEP/UFF e Escola de Regulação</strong>, válida para o Currículo Lattes (CNPq). <strong style="color:var(--white)">Requer 75% de presença</strong> rastreada via QR Code no credenciamento. Emissão em até 15 dias úteis após o evento.</p>
   </div>
 </section>
 
@@ -598,30 +672,41 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
   <div class="sec-in">
     <p class="sec-lbl fi">Realização e parceiros</p>
     <h2 class="sec-title fi" id="pt-title">Uma rede institucional de <em>alto nível</em></h2>
-    <div class="pt-grid">
-      <div class="ptc fi"><div class="pa">UFF</div><div class="pf">Universidade Federal Fluminense</div><span class="pr">Realização</span></div>
-      <div class="ptc fi"><div class="pa">ABAR</div><div class="pf">Assoc. Brasileira das Agências de Regulação</div><span class="pr">Realização</span></div>
-      <div class="ptc fi"><div class="pa">PPGEP</div><div class="pf">Pós-Graduação em Engenharia de Produção · UFF</div><span class="pr">Realização</span></div>
-      <div class="ptc fi"><div class="pa">Escola</div><div class="pf">Escola de Regulação · Agências Reguladoras RJ</div><span class="pr">Realização</span></div>
-      <div class="ptc fi"><div class="pa">Firjan</div><div class="pf">Federação das Indústrias do Estado do RJ</div><span class="pr partner">Parceiro</span></div>
-      <div class="ptc fi"><div class="pa">IBP</div><div class="pf">Instituto Brasileiro de Petróleo e Gás</div><span class="pr partner">Parceiro</span></div>
-      <div class="ptc fi"><div class="pa">ANP</div><div class="pf">Agência Nacional do Petróleo</div><span class="pr partner">Parceiro</span></div>
-      <div class="ptc fi"><div class="pa">Agenersa</div><div class="pf">Agência Reguladora de Energia e Saneamento · RJ</div><span class="pr partner">Parceiro</span></div>
-      <div class="ptc fi"><div class="pa">Fecomércio</div><div class="pf">Federação do Comércio do Estado do RJ</div><span class="pr partner">Parceiro</span></div>
-      <div class="ptc fi"><div class="pa">CAU</div><div class="pf">Conselho de Arquitetura e Urbanismo</div><span class="pr partner">Parceiro</span></div>
-      <div class="ptc fi"><div class="pa">CREA-RJ</div><div class="pf">Conselho Regional de Engenharia · RJ</div><span class="pr partner">Parceiro</span></div>
-      <div class="ptc fi"><div class="pa">LabDGE</div><div class="pf">Laboratório de Dados, Governança e Estratégia</div><span class="pr partner">Apoio técnico</span></div>
+
+    <div class="pt-tier">
+      <p class="pt-tier-lbl fi">Realização</p>
+      <div class="pt-grid">
+        <div class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/uff.svg" alt="UFF — Universidade Federal Fluminense"></div><div class="pf">Universidade Federal Fluminense</div></div>
+        <div class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/abar.png" alt="ABAR — Assoc. Brasileira das Agências de Regulação"></div><div class="pf">Assoc. Brasileira das Agências de Regulação</div></div>
+        <div class="ptc fi d2"><div class="ptc-logo" style="font-family:'Manrope',sans-serif;font-weight:800;font-size:24px;color:var(--white);letter-spacing:.02em;">PPGEP</div><div class="pf">Pós-Graduação em Engenharia de Produção · UFF</div></div>
+        <div class="ptc fi d3"><div class="ptc-logo"><img src="/assets/logos/escola-regulacao.png" alt="Escola de Regulação"></div><div class="pf">Escola de Regulação · Agências Reguladoras RJ</div></div>
+      </div>
     </div>
+
+    <div class="pt-tier">
+      <p class="pt-tier-lbl fi">Parceiros institucionais e de apoio</p>
+      <div class="pt-grid">
+        <div class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/firjan.png" alt="Firjan"></div><div class="pf">Federação das Indústrias do Estado do RJ</div></div>
+        <div class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/ibp.svg" alt="IBP"></div><div class="pf">Instituto Brasileiro de Petróleo e Gás</div></div>
+        <div class="ptc fi d2"><div class="ptc-logo"><img src="/assets/logos/anp.png" alt="ANP"></div><div class="pf">Agência Nacional do Petróleo</div></div>
+        <div class="ptc fi d3"><div class="ptc-logo"><img src="/assets/logos/agenersa.png" alt="AGENERSA"></div><div class="pf">Agência Reguladora de Energia e Saneamento · RJ</div></div>
+        <div class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/fecomercio.png" alt="Fecomércio RJ"></div><div class="pf">Federação do Comércio do Estado do RJ</div></div>
+        <div class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/cau-rj.png" alt="CAU/RJ"></div><div class="pf">Conselho de Arquitetura e Urbanismo · RJ</div></div>
+        <div class="ptc fi d2"><div class="ptc-logo"><img src="/assets/logos/crea-rj.png" alt="CREA-RJ"></div><div class="pf">Conselho Regional de Engenharia · RJ</div></div>
+        <div class="ptc fi d3"><div class="ptc-logo"><img src="/assets/logos/labdge.png" alt="LabDGE"></div><div class="pf">Lab. Dados, Governança e Estratégia · UFF</div></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- CERT -->
 <aside class="cert" aria-label="Certificação">
   <div class="cert-i">
-    <p class="ct">Certificação emitida por <strong>UFF, ABAR, PPGEP/UFF e Escola de Regulação</strong> · válida para o Currículo Lattes (CNPq) e como horas complementares.</p>
+    <p class="ct">Certificação emitida por <strong>UFF, ABAR, PPGEP/UFF e Escola de Regulação</strong>, válida para o Currículo Lattes (CNPq) e como horas complementares.</p>
     <div class="cbg">
-      <span class="cb">Participação</span>
-      <span class="cb">Apresentação</span>
+      <span class="cb">Participação · 75% presença</span>
+      <span class="cb">Apresentação de trabalho</span>
       <span class="cb">Livro com ISBN</span>
       <span class="cb">24h complementares UFF</span>
     </div>
@@ -645,16 +730,17 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
   <div class="foot-in">
     <div>
       <div class="foot-brand">
-        <img src="/assets/logo-swirl.png" alt="" aria-hidden="true">
-        <strong>1° Encontro <span>GEI</span></strong>
+        <img src="/assets/favicon.png" alt="" aria-hidden="true">
+        <strong>1° Encontro <b>GEI</b></strong>
       </div>
-      <p class="foot-text">1° Encontro de Governança, Estratégia e Inovação Governamental — 08, 09 e 10 de julho de 2026, Rio de Janeiro / Niterói, RJ. Realização: UFF · ABAR · PPGEP/UFF · Escola de Regulação.</p>
+      <p class="foot-text">1° Encontro de Governança, Estratégia e Inovação Governamental — 08, 09 e 10 de julho de 2026, Rio de Janeiro / Niterói, RJ. Realização: UFF · ABAR · PPGEP/UFF · Escola de Regulação das Agências Reguladoras do Estado do RJ.</p>
     </div>
     <div class="foot-col">
       <h4>Site</h4>
       <a href="#programacao">Programação</a>
       <a href="#eventos">Eventos</a>
       <a href="#visitas">Visitas técnicas</a>
+      <a href="#modalidades">Modalidades</a>
       <a href="#trabalhos">Submissão</a>
       <a href="#inscricao">Inscrição</a>
       <a href="/patrocinadores/">Apoio institucional</a>
@@ -674,24 +760,18 @@ footer{background:#04060A;padding:60px 36px 40px;color:rgba(255,255,255,.4);}
 </footer>
 
 <script>
-// Scroll fade-in (com rootMargin generoso e fallback de segurança)
 const fiEls = document.querySelectorAll('.fi');
 const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-  });
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
 }, { threshold: 0.01, rootMargin: '200px 0px 200px 0px' });
 fiEls.forEach(el => obs.observe(el));
-// Failsafe: se em 2.5s algum elemento ainda não foi marcado, marca tudo
 setTimeout(() => fiEls.forEach(el => el.classList.add('visible')), 2500);
 
-// Nav scrolled state
 const nav = document.getElementById('nav');
 const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
-// Mobile menu
 const toggle = document.querySelector('.menu-toggle');
 const menu = document.getElementById('nav-menu');
 toggle?.addEventListener('click', () => {
@@ -703,7 +783,6 @@ menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   toggle?.setAttribute('aria-expanded', 'false');
 }));
 
-// Live counter (consulta /api/inscritos quando deployado na Vercel)
 (async () => {
   try {
     const r = await fetch('/api/inscritos', { cache: 'no-store' });
