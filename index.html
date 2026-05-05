@@ -258,6 +258,26 @@ nav.scrolled .nav-logo img{height:32px;}
 .tl-what{font-size:13.5px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:3px;}
 .tl-when2{font-size:11.5px;color:var(--muted);line-height:1.4;}
 
+.regras-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:64px 0 20px;}
+.regras-h{font-family:'Manrope',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.015em;}
+.regras-h em{font-style:normal;color:var(--yellow);font-weight:700;}
+.regras-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+@media(max-width:880px){.regras-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.regras-grid{grid-template-columns:1fr;}}
+.regra-card{padding:24px 22px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.025);transition:all .25s;display:flex;flex-direction:column;gap:14px;text-decoration:none;color:inherit;}
+.regra-card:hover{border-color:var(--accent);transform:translateY(-3px);background:rgba(255,255,255,.04);box-shadow:0 12px 28px rgba(0,0,0,.25);}
+.regra-card:nth-child(1){--accent:var(--yellow);}
+.regra-card:nth-child(2){--accent:var(--green);}
+.regra-card:nth-child(3){--accent:var(--cyan);}
+.regra-card:nth-child(4){--accent:var(--blue);}
+.regra-icon{width:42px;height:42px;border-radius:10px;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;font-family:'Manrope',sans-serif;}
+.regra-t{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;line-height:1.22;letter-spacing:-.01em;color:var(--white);}
+.regra-d{font-size:12.5px;color:var(--muted);line-height:1.5;flex:1;}
+.regra-cta{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:6px;margin-top:auto;}
+.regra-cta::after{content:'↓';font-size:14px;}
+.regra-card:hover .regra-cta::after{animation:bounce .6s;}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(3px);}}
+
 .eixos-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:20px;}
 .eixos-h{font-family:'Manrope',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.015em;}
 .eixos-h em{font-style:normal;color:var(--cyan);font-weight:700;}
@@ -621,6 +641,37 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
       <div class="tri fi"><div class="trn">11</div><div class="trname">Inteligência artificial e soberania nacional</div></div>
       <div class="tri fi"><div class="trn">12</div><div class="trname">Trabalho, ergonomia e segurança</div></div>
       <div class="tri fi"><div class="trn">13</div><div class="trname">Pesquisa operacional, otimização e logística</div></div>
+    </div>
+
+    <div class="regras-head">
+      <h3 class="regras-h fi">Normas <em>por modalidade</em></h3>
+      <span class="eixos-sub fi">Baixe o PDF com as regras técnicas detalhadas</span>
+    </div>
+    <div class="regras-grid">
+      <a class="regra-card fi" href="/assets/regras/resumo-expandido.pdf" download target="_blank" rel="noopener">
+        <div class="regra-icon">📄</div>
+        <div class="regra-t">Resumo Expandido</div>
+        <div class="regra-d">Fase 1 · 2-4 páginas · até 700 palavras + vídeo de 5 min</div>
+        <div class="regra-cta">Baixar PDF</div>
+      </a>
+      <a class="regra-card fi d1" href="/assets/regras/poster.pdf" download target="_blank" rel="noopener">
+        <div class="regra-icon">🖼</div>
+        <div class="regra-t">Pôster A3</div>
+        <div class="regra-d">Diagramação visual A3 · Sessão dedicada no Dia 3 do evento</div>
+        <div class="regra-cta">Baixar PDF</div>
+      </a>
+      <a class="regra-card fi d2" href="/assets/regras/relatorio-a3.pdf" download target="_blank" rel="noopener">
+        <div class="regra-icon">📊</div>
+        <div class="regra-t">Relatório A3</div>
+        <div class="regra-d">Modelo DMAIC · 1 página A3 · trabalhos aplicados de melhoria</div>
+        <div class="regra-cta">Baixar PDF</div>
+      </a>
+      <a class="regra-card fi d3" href="/assets/regras/artigo-completo.pdf" download target="_blank" rel="noopener">
+        <div class="regra-icon">📑</div>
+        <div class="regra-t">Artigo Completo</div>
+        <div class="regra-d">Fase 2 · 8-15 páginas · ABNT · publicado nos anais ISBN</div>
+        <div class="regra-cta">Baixar PDF</div>
+      </a>
     </div>
   </div>
 </section>
