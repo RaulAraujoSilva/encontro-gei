@@ -121,7 +121,8 @@ nav.scrolled .nav-logo img{height:32px;}
 @media(max-width:780px){.h-meta{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:380px){.h-meta{grid-template-columns:1fr;}}
 
-.h-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;animation:fd .8s .5s ease both;}
+.h-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fd .8s .5s ease both;row-gap:16px;}
+@media(max-width:600px){.h-cta{flex-direction:column;width:100%;max-width:340px;}.h-cta .btn-p,.h-cta .btn-s{width:100%;justify-content:center;}}
 .btn-p{background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 100%);color:var(--bg);font-size:14.5px;font-weight:700;padding:16px 38px;border:none;border-radius:100px;cursor:pointer;transition:all .2s;letter-spacing:.2px;display:inline-flex;align-items:center;gap:10px;}
 .btn-p:hover{filter:brightness(1.05);transform:translateY(-2px);box-shadow:0 12px 32px rgba(245,200,66,.2);}
 .btn-p .arrow{transition:transform .2s;}
@@ -581,7 +582,7 @@ html[data-theme="light"] .logo-dark{display:none;}
         <span class="panel-lbl">Moderação:</span>
         <span class="pan-tag">Miguel · CREA-RJ</span>
         <span class="panel-lbl" style="margin-left:8px;">Painelistas:</span>
-        <span class="pan-tag">Prof. Callado</span>
+        <span class="pan-tag">Prof. Calado</span>
         <span class="pan-tag">Prof. Li Li Min</span>
         <span class="pan-tag">Raul Araújo</span>
         <span class="pan-tag">Vladimir</span>
@@ -662,7 +663,7 @@ html[data-theme="light"] .logo-dark{display:none;}
     <h2 class="sec-title fi" id="ev-title">Quatro eventos em <em>uma plataforma</em></h2>
     <p class="sec-desc fi">Cada evento preserva sua identidade e comunidade. O encontro-matriz promove unidade conceitual e sinergia institucional. A ordem das trilhas segue o critério de antiguidade.</p>
     <div class="ev-grid">
-      <article class="ec fi"><div class="en">Trilha A · 13ª edição</div><h3 class="enm">Lean Six Sigma Congress</h3><ul class="et"><li>Gestão pública inovadora e GovTech</li><li>Saúde digital e dados conectados</li><li>Sustentabilidade e ESG em serviços públicos</li><li>Excelência operacional Lean Six Sigma</li><li>Regulação ágil e compliance</li></ul></article>
+      <article class="ec fi"><div class="en">Trilha A · 13ª edição</div><h3 class="enm">Lean Six Sigma Congress</h3><ul class="et"><li>Agilidade e Inovação Pública Enxuta</li><li>Saúde 4.0: Otimização e Estabilização de Processos</li><li>ESG Lean &amp; Green em organizações reguladas</li><li>Excelência operacional Lean Six Sigma</li><li>Regulação ágil e compliance</li></ul></article>
       <article class="ec fi d1"><div class="en">Trilha B · 4ª edição</div><h3 class="enm">Seminário em Sistemas de Engenharia de Produção</h3><ul class="et"><li>Trabalho, ergonomia e segurança em sistemas produtivos</li><li>Modelagem no apoio à decisão</li><li>Otimização, logística e analytics</li><li>Sistemas inteligentes no setor público</li><li>Engenharia de Produção aplicada à GovTech</li></ul></article>
       <article class="ec fi d2"><div class="en">Trilha C · 2ª edição</div><h3 class="enm">Seminário de Regulação</h3><ul class="et"><li>Regulação de infraestrutura, energia e saneamento</li><li>Sandbox regulatório e inovação institucional</li><li>Transição energética e papel da regulação</li><li>Pesquisa aplicada em regulação</li><li>Regulação, mercado e interesse público</li></ul></article>
       <article class="ec fi d3"><div class="en">Trilha D · 1ª edição</div><h3 class="enm">Seminário de Inteligência Governamental</h3><ul class="et"><li>Inteligência para decisão e monitoramento estratégico</li><li>Governança de dados e interoperabilidade</li><li>Capacidade analítica no setor público</li><li>Inteligência Artificial e soberania nacional</li><li>Uso de evidências e desenho institucional</li></ul></article>
@@ -864,24 +865,24 @@ html[data-theme="light"] .logo-dark{display:none;}
     <div class="pt-tier">
       <p class="pt-tier-lbl fi">Realização</p>
       <div class="pt-grid">
-        <div class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/uff.svg" alt="UFF — Universidade Federal Fluminense"></div><div class="pf">Universidade Federal Fluminense</div></div>
-        <div class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/abar.png" alt="ABAR — Assoc. Brasileira das Agências de Regulação"></div><div class="pf">Assoc. Brasileira das Agências de Regulação</div></div>
-        <div class="ptc fi d2"><div class="ptc-logo txt">PPGEP</div><div class="pf">Pós-Graduação em Engenharia de Produção · UFF</div></div>
-        <div class="ptc fi d3"><div class="ptc-logo"><img src="/assets/logos/escola-regulacao.png" alt="Escola de Regulação"></div><div class="pf">Escola de Regulação · Agências Reguladoras RJ</div></div>
+        <a href="https://www.uff.br" target="_blank" rel="noopener" class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/uff.svg" alt="UFF — Universidade Federal Fluminense"></div><div class="pf">Universidade Federal Fluminense</div></a>
+        <a href="https://abar.org.br" target="_blank" rel="noopener" class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/abar.png" alt="ABAR — Assoc. Brasileira das Agências de Regulação"></div><div class="pf">Assoc. Brasileira das Agências de Regulação</div></a>
+        <a href="http://www.uff.br/ppgep/" target="_blank" rel="noopener" class="ptc fi d2"><div class="ptc-logo txt">PPGEP</div><div class="pf">Pós-Graduação em Engenharia de Produção · UFF</div></a>
+        <a href="https://www.rj.gov.br/agenersa/escola-de-regulacao" target="_blank" rel="noopener" class="ptc fi d3"><div class="ptc-logo"><img src="/assets/logos/escola-regulacao.png" alt="Escola de Regulação"></div><div class="pf">Escola de Regulação · Agências Reguladoras RJ</div></a>
       </div>
     </div>
 
     <div class="pt-tier">
       <p class="pt-tier-lbl fi">Parceiros institucionais e de apoio</p>
       <div class="pt-grid">
-        <div class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/firjan.png" alt="Firjan"></div><div class="pf">Federação das Indústrias do Estado do RJ</div></div>
-        <div class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/ibp.svg" alt="IBP"></div><div class="pf">Instituto Brasileiro de Petróleo e Gás</div></div>
-        <div class="ptc fi d2"><div class="ptc-logo"><img src="/assets/logos/anp.png" alt="ANP"></div><div class="pf">Agência Nacional do Petróleo</div></div>
-        <div class="ptc fi d3"><div class="ptc-logo"><img src="/assets/logos/agenersa.png?v=3" alt="AGENERSA"></div><div class="pf">Agência Reguladora de Energia e Saneamento · RJ</div></div>
-        <div class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/fecomercio.png" alt="Fecomércio RJ"></div><div class="pf">Federação do Comércio do Estado do RJ</div></div>
-        <div class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/cau-rj.png" alt="CAU/RJ"></div><div class="pf">Conselho de Arquitetura e Urbanismo · RJ</div></div>
-        <div class="ptc fi d2"><div class="ptc-logo"><img src="/assets/logos/crea-rj.png" alt="CREA-RJ"></div><div class="pf">Conselho Regional de Engenharia · RJ</div></div>
-        <div class="ptc fi d3"><div class="ptc-logo txt">LabDGE</div><div class="pf">Lab. Dados, Governança e Estratégia · UFF</div></div>
+        <a href="https://www.firjan.com.br" target="_blank" rel="noopener" class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/firjan.png" alt="Firjan"></div><div class="pf">Federação das Indústrias do Estado do RJ</div></a>
+        <a href="https://www.ibp.org.br" target="_blank" rel="noopener" class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/ibp.svg" alt="IBP"></div><div class="pf">Instituto Brasileiro de Petróleo e Gás</div></a>
+        <a href="https://www.gov.br/anp/pt-br" target="_blank" rel="noopener" class="ptc fi d2"><div class="ptc-logo"><img src="/assets/logos/anp.png" alt="ANP"></div><div class="pf">Agência Nacional do Petróleo</div></a>
+        <a href="https://www.rj.gov.br/agenersa" target="_blank" rel="noopener" class="ptc fi d3"><div class="ptc-logo"><img src="/assets/logos/agenersa.png?v=3" alt="AGENERSA"></div><div class="pf">Agência Reguladora de Energia e Saneamento · RJ</div></a>
+        <a href="https://www.fecomercio-rj.org.br" target="_blank" rel="noopener" class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/fecomercio.png" alt="Fecomércio RJ"></div><div class="pf">Federação do Comércio do Estado do RJ</div></a>
+        <a href="https://www.caurj.gov.br" target="_blank" rel="noopener" class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/cau-rj.png" alt="CAU/RJ"></div><div class="pf">Conselho de Arquitetura e Urbanismo · RJ</div></a>
+        <a href="https://www.crea-rj.org.br" target="_blank" rel="noopener" class="ptc fi d2"><div class="ptc-logo"><img src="/assets/logos/crea-rj.png" alt="CREA-RJ"></div><div class="pf">Conselho Regional de Engenharia · RJ</div></a>
+        <a href="https://labdge.uff.br" target="_blank" rel="noopener" class="ptc fi d3"><div class="ptc-logo txt">LabDGE</div><div class="pf">Lab. Dados, Governança e Estratégia · UFF</div></a>
       </div>
     </div>
 

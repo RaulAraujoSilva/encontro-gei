@@ -110,7 +110,7 @@ URLs dos logos atuais: ver `assets/logos/` (12 arquivos).
 |---|---|
 | Magda Chambriard | Presidente da Petrobras *(a confirmar)* — palestra magna |
 | Miguel | CREA-RJ — moderação |
-| Prof. Callado | Painelista |
+| Prof. Calado | Painelista |
 | Prof. Li Li Min | Painelista — propositor do tema "IA e soberania" |
 | Raul Araújo | Painelista |
 | Vladimir | Painelista |

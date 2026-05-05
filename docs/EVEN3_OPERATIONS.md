@@ -40,7 +40,7 @@ Documentação operacional completa do evento `722003` na Even3. Cobre acesso, m
 | **Inscrições > Configurações** | `?tab=Configurações` | Default · não há cobrança |
 | **Página do Evento (hotsite)** | `/organizador/hotsite/` | ✅ CSS custom aplicado (paleta navy/yellow/green/blue + Manrope/Outfit) |
 | **Programação > Atividades** | `/organizador/programacao/` | ✅ 22 atividades (5 Dia 1 · 8 jornadas Dia 2 · 9 Dia 3) |
-| **Programação > Convidados** | `?tab=convidados` | ✅ 6 palestrantes (Magda, Miguel, Callado, Li Li Min, Raul, Vladimir) |
+| **Programação > Convidados** | `?tab=convidados` | ✅ 6 palestrantes (Magda, Miguel, Calado, Li Li Min, Raul, Vladimir) |
 | **Programação > Configurações** | `?tab=configuracao` | ✅ Cronograma 04/05–07/07 para visitas técnicas |
 | **Submissões > Recebimento > Modalidades** | `/organizador/trabalhocientifico/submissaogeral?tab=Modalidades` | ✅ 4 modalidades (Artigo, Pôster, Relatório A3, Resumo) com PDFs anexados |
 | **Submissões > Áreas Temáticas** | `?tab=Áreas%20Temáticas` | ✅ 13 eixos alinhados ao projeto executivo |
