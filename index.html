@@ -73,10 +73,9 @@ a{color:inherit;text-decoration:none;}
 /* === NAV === */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 36px;display:flex;align-items:center;justify-content:space-between;transition:background .3s,padding .3s,border-color .3s;border-bottom:1px solid transparent;}
 nav.scrolled{background:rgba(9,17,54,.92);backdrop-filter:blur(14px);padding:11px 36px;border-bottom-color:var(--line);}
-.nav-logo{display:flex;align-items:center;gap:11px;font-weight:700;font-size:14px;letter-spacing:.2px;}
-.nav-logo img{width:36px;height:36px;}
-.nav-logo span{color:var(--white);}
-.nav-logo span b{color:var(--yellow);font-weight:800;}
+.nav-logo{display:flex;align-items:center;font-weight:700;font-size:14px;letter-spacing:.2px;}
+.nav-logo img{height:38px;width:auto;display:block;}
+nav.scrolled .nav-logo img{height:32px;}
 .nav-links{display:flex;gap:24px;list-style:none;align-items:center;}
 .nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.65);transition:color .15s;}
 .nav-links a:hover{color:var(--white);}
@@ -235,22 +234,41 @@ nav.scrolled{background:rgba(9,17,54,.92);backdrop-filter:blur(14px);padding:11p
 
 /* === SUBMISSION === */
 .sub{background:var(--bg);position:relative;}
-.sub-in{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;max-width:1180px;margin:0 auto;}
-@media(max-width:880px){.sub-in{grid-template-columns:1fr;gap:40px;}}
-.dl-box{background:linear-gradient(135deg,rgba(245,200,66,.1) 0%,rgba(122,199,79,.04) 100%);border:1px solid rgba(245,200,66,.32);border-radius:10px;padding:24px 26px;margin-bottom:30px;}
-.dl-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--yellow);font-weight:700;margin-bottom:6px;}
-.dl-date{font-family:'Manrope',sans-serif;font-size:30px;font-weight:700;letter-spacing:-.02em;line-height:1.1;}
-.timeline{display:flex;flex-direction:column;gap:14px;margin-top:8px;}
-.tl-row{display:flex;gap:14px;align-items:flex-start;font-size:13px;}
-.tl-mark{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);font-weight:700;width:88px;flex-shrink:0;padding-top:2px;}
-.tl-text{color:rgba(255,255,255,.78);line-height:1.55;}
-.tl-text strong{color:var(--white);font-weight:600;display:block;}
-.trs{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
-@media(max-width:600px){.trs{grid-template-columns:1fr;}}
-.tri{display:flex;align-items:flex-start;gap:11px;padding:11px 13px;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:8px;transition:all .2s;}
-.tri:hover{background:rgba(91,198,229,.05);border-color:rgba(91,198,229,.22);}
+.sub .sec-in{max-width:1180px;margin:0 auto;}
+.sub-head{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:end;margin-bottom:48px;}
+@media(max-width:880px){.sub-head{grid-template-columns:1fr;gap:24px;}}
+.dl-box{background:linear-gradient(135deg,rgba(245,200,66,.12) 0%,rgba(122,199,79,.04) 100%);border:1px solid rgba(245,200,66,.34);border-radius:12px;padding:22px 26px;display:flex;align-items:center;gap:24px;}
+.dl-box-l{flex:1;}
+.dl-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--yellow);font-weight:700;margin-bottom:4px;}
+.dl-date{font-family:'Manrope',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.02em;line-height:1.1;}
+.dl-cta{flex-shrink:0;}
+.timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:48px 0 64px;position:relative;}
+.timeline::before{content:'';position:absolute;top:18px;left:6%;right:6%;height:1px;background:linear-gradient(90deg,var(--yellow) 0%,var(--green) 35%,var(--cyan) 65%,var(--blue) 100%);opacity:.4;z-index:0;}
+@media(max-width:880px){.timeline{grid-template-columns:repeat(3,1fr);} .timeline::before{display:none;}}
+@media(max-width:520px){.timeline{grid-template-columns:repeat(2,1fr);}}
+.tl-step{position:relative;text-align:center;padding-top:8px;z-index:1;}
+.tl-dot{width:36px;height:36px;border-radius:50%;background:var(--bg-2);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:13px;font-weight:800;color:var(--accent);font-family:'Manrope',sans-serif;}
+.tl-step:nth-child(1){--accent:var(--yellow);}
+.tl-step:nth-child(2){--accent:var(--orange);}
+.tl-step:nth-child(3){--accent:var(--green);}
+.tl-step:nth-child(4){--accent:var(--cyan);}
+.tl-step:nth-child(5){--accent:var(--blue);}
+.tl-step:nth-child(6){--accent:var(--magenta);}
+.tl-when{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:5px;}
+.tl-what{font-size:13.5px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:3px;}
+.tl-when2{font-size:11.5px;color:var(--muted);line-height:1.4;}
+
+.eixos-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:20px;}
+.eixos-h{font-family:'Manrope',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.015em;}
+.eixos-h em{font-style:normal;color:var(--cyan);font-weight:700;}
+.eixos-sub{font-size:12px;color:var(--muted);}
+.trs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+@media(max-width:880px){.trs{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.trs{grid-template-columns:1fr;}}
+.tri{display:flex;align-items:flex-start;gap:10px;padding:14px 14px;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:8px;transition:all .2s;}
+.tri:hover{background:rgba(91,198,229,.05);border-color:rgba(91,198,229,.28);transform:translateY(-1px);}
 .trn{width:24px;height:24px;background:rgba(91,198,229,.16);color:var(--cyan);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;}
-.trname{font-size:12px;color:rgba(255,255,255,.78);font-weight:500;line-height:1.35;}
+.trname{font-size:12.5px;color:rgba(255,255,255,.82);font-weight:500;line-height:1.4;}
 
 /* === NORMAS === */
 .normas{background:var(--bg-2);padding:96px 36px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
@@ -372,9 +390,8 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
 <a href="#main" class="sr-only">Pular para o conteúdo</a>
 
 <nav id="nav" aria-label="Navegação principal">
-  <a href="#" class="nav-logo" aria-label="1° Encontro GEI — início">
-    <img src="/assets/favicon.png" alt="" aria-hidden="true">
-    <span>1° Encontro <b>GEI</b></span>
+  <a href="#" class="nav-logo" aria-label="1° Encontro de Governança, Estratégia e Inovação Governamental — início">
+    <img src="/assets/logo-nav.png" alt="1° Encontro de Governança, Estratégia e Inovação Governamental">
   </a>
   <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">☰</button>
   <ul class="nav-links" id="nav-menu">
@@ -561,42 +578,49 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
 
 <!-- SUBMISSION -->
 <section class="sec sub" id="trabalhos" aria-labelledby="sub-title">
-  <div class="sub-in">
-    <div>
-      <p class="sec-lbl fi">Chamada de trabalhos</p>
-      <h2 class="sec-title fi" id="sub-title">Submeta sua <em>pesquisa</em></h2>
-      <p class="sec-desc fi" style="margin-bottom:24px;">Modelo faseado: resumo estendido de 2–4 páginas + vídeo de 5 minutos na <strong style="color:var(--white)">Fase 1</strong>. Apresentação presencial no Dia 3 na <strong style="color:var(--white)">Fase 2</strong>. Artigo completo pós-evento publicado em livro consolidado com ISBN em dezembro/2026.</p>
+  <div class="sec-in">
+    <div class="sub-head">
+      <div>
+        <p class="sec-lbl fi">Chamada de trabalhos</p>
+        <h2 class="sec-title fi" id="sub-title" style="margin-bottom:14px;">Submeta sua <em>pesquisa</em></h2>
+        <p class="sec-desc fi" style="margin-bottom:0;font-size:15.5px;">Modelo faseado: <strong style="color:var(--white)">Fase 1</strong> · resumo estendido (2–4 pp.) + vídeo de 5 min. <strong style="color:var(--white)">Fase 2</strong> · apresentação presencial Dia 3. <strong style="color:var(--white)">Artigo final</strong> publicado em livro com ISBN em dezembro/2026.</p>
+      </div>
       <div class="dl-box fi">
-        <div class="dl-lbl">Prazo Fase 1 — Resumo + Vídeo</div>
-        <div class="dl-date">15 de maio de 2026</div>
+        <div class="dl-box-l">
+          <div class="dl-lbl">Prazo Fase 1</div>
+          <div class="dl-date">15 de maio · 23h59</div>
+        </div>
+        <a href="#submeter" class="btn-p dl-cta" style="padding:13px 26px;font-size:13.5px;">Submeter agora <span class="arrow" aria-hidden="true">↓</span></a>
       </div>
-      <div class="timeline">
-        <div class="tl-row"><span class="tl-mark">Fase 1</span><span class="tl-text"><strong>Resumo + vídeo</strong>até 15/05/2026 · 23h59 (Brasília)</span></div>
-        <div class="tl-row"><span class="tl-mark">Resultado</span><span class="tl-text"><strong>Aprovação</strong>até 31/05/2026</span></div>
-        <div class="tl-row"><span class="tl-mark">Programa</span><span class="tl-text"><strong>Definitivo</strong>publicado em 25/06/2026</span></div>
-        <div class="tl-row"><span class="tl-mark">Fase 2</span><span class="tl-text"><strong>Apresentação presencial</strong>10 de julho de 2026 · NAB UFF Niterói</span></div>
-        <div class="tl-row"><span class="tl-mark">Artigo</span><span class="tl-text"><strong>Versão final do artigo</strong>até 30/09/2026</span></div>
-        <div class="tl-row"><span class="tl-mark">Livro</span><span class="tl-text"><strong>Anais com ISBN</strong>dezembro/2026</span></div>
-      </div>
-      <a href="#submeter" class="btn-p" style="margin-top:30px;">Submeter trabalho agora <span class="arrow" aria-hidden="true">↓</span></a>
     </div>
-    <div>
-      <p class="sec-lbl fi">13 eixos temáticos</p>
-      <div class="trs">
-        <div class="tri fi"><div class="trn">1</div><div class="trname">Regulação de infraestrutura, energia e saneamento</div></div>
-        <div class="tri fi"><div class="trn">2</div><div class="trname">Sandbox regulatório e inovação institucional</div></div>
-        <div class="tri fi"><div class="trn">3</div><div class="trname">Gestão pública inovadora e GovTech</div></div>
-        <div class="tri fi"><div class="trn">4</div><div class="trname">Lean Six Sigma e excelência operacional</div></div>
-        <div class="tri fi"><div class="trn">5</div><div class="trname">Sustentabilidade e ESG em organizações reguladas</div></div>
-        <div class="tri fi"><div class="trn">6</div><div class="trname">Inteligência governamental e apoio à decisão</div></div>
-        <div class="tri fi"><div class="trn">7</div><div class="trname">Governança de dados e interoperabilidade</div></div>
-        <div class="tri fi"><div class="trn">8</div><div class="trname">Transformação digital e serviços públicos</div></div>
-        <div class="tri fi"><div class="trn">9</div><div class="trname">Capacidade analítica e uso de evidências</div></div>
-        <div class="tri fi"><div class="trn">10</div><div class="trname">Saúde digital e dados conectados</div></div>
-        <div class="tri fi"><div class="trn">11</div><div class="trname">Inteligência artificial e soberania nacional</div></div>
-        <div class="tri fi"><div class="trn">12</div><div class="trname">Trabalho, ergonomia e segurança</div></div>
-        <div class="tri fi"><div class="trn">13</div><div class="trname">Pesquisa operacional, otimização e logística</div></div>
-      </div>
+
+    <ol class="timeline fi" aria-label="Cronograma da chamada de trabalhos">
+      <li class="tl-step"><div class="tl-dot">1</div><div class="tl-when">Fase 1</div><div class="tl-what">Resumo + vídeo</div><div class="tl-when2">até 15/05/2026</div></li>
+      <li class="tl-step"><div class="tl-dot">✓</div><div class="tl-when">Resultado</div><div class="tl-what">Aprovação</div><div class="tl-when2">até 31/05/2026</div></li>
+      <li class="tl-step"><div class="tl-dot">★</div><div class="tl-when">Programa</div><div class="tl-what">Definitivo</div><div class="tl-when2">25/06/2026</div></li>
+      <li class="tl-step"><div class="tl-dot">2</div><div class="tl-when">Fase 2</div><div class="tl-what">Apresentação</div><div class="tl-when2">10/07 · NAB UFF</div></li>
+      <li class="tl-step"><div class="tl-dot">📄</div><div class="tl-when">Artigo</div><div class="tl-what">Versão final</div><div class="tl-when2">até 30/09/2026</div></li>
+      <li class="tl-step"><div class="tl-dot">📚</div><div class="tl-when">Livro</div><div class="tl-what">Anais ISBN</div><div class="tl-when2">dezembro/2026</div></li>
+    </ol>
+
+    <div class="eixos-head">
+      <h3 class="eixos-h fi"><em>13</em> eixos temáticos</h3>
+      <span class="eixos-sub fi">indexados aos ODS</span>
+    </div>
+    <div class="trs">
+      <div class="tri fi"><div class="trn">1</div><div class="trname">Regulação de infraestrutura, energia e saneamento</div></div>
+      <div class="tri fi"><div class="trn">2</div><div class="trname">Sandbox regulatório e inovação institucional</div></div>
+      <div class="tri fi"><div class="trn">3</div><div class="trname">Gestão pública inovadora e GovTech</div></div>
+      <div class="tri fi"><div class="trn">4</div><div class="trname">Lean Six Sigma e excelência operacional</div></div>
+      <div class="tri fi"><div class="trn">5</div><div class="trname">Sustentabilidade e ESG em organizações reguladas</div></div>
+      <div class="tri fi"><div class="trn">6</div><div class="trname">Inteligência governamental e apoio à decisão</div></div>
+      <div class="tri fi"><div class="trn">7</div><div class="trname">Governança de dados e interoperabilidade</div></div>
+      <div class="tri fi"><div class="trn">8</div><div class="trname">Transformação digital e serviços públicos</div></div>
+      <div class="tri fi"><div class="trn">9</div><div class="trname">Capacidade analítica e uso de evidências</div></div>
+      <div class="tri fi"><div class="trn">10</div><div class="trname">Saúde digital e dados conectados</div></div>
+      <div class="tri fi"><div class="trn">11</div><div class="trname">Inteligência artificial e soberania nacional</div></div>
+      <div class="tri fi"><div class="trn">12</div><div class="trname">Trabalho, ergonomia e segurança</div></div>
+      <div class="tri fi"><div class="trn">13</div><div class="trname">Pesquisa operacional, otimização e logística</div></div>
     </div>
   </div>
 </section>
@@ -631,8 +655,8 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
   </div>
   <div class="sec-in" style="max-width:920px;margin-top:20px;">
     <div class="embed-wrap fi">
-      <div class="embed-bar"><span class="dot" aria-hidden="true"></span><span>Submissão científica · Even3</span><span class="grow"></span><a href="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/#submissoes" target="_blank" rel="noopener">Abrir em nova aba ↗</a></div>
-      <iframe class="embed-iframe" src="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/#submissoes" loading="lazy" title="Submissão de trabalhos — Even3" sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
+      <div class="embed-bar"><span class="dot" aria-hidden="true"></span><span>Submissão científica · Even3</span><span class="grow"></span><a href="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/submeter-trabalho" target="_blank" rel="noopener">Abrir em nova aba ↗</a></div>
+      <iframe class="embed-iframe" src="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/submeter-trabalho" loading="lazy" title="Submissão de trabalhos — Even3" sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
     </div>
     <p style="text-align:center;margin-top:24px;font-size:12.5px;color:var(--muted-2);line-height:1.7;">Login Even3 obrigatório. Avaliação por comissão científica · resultado até 31/05/2026.</p>
   </div>
@@ -647,8 +671,8 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
   </div>
   <div class="sec-in" style="max-width:920px;margin-top:20px;">
     <div class="embed-wrap fi">
-      <div class="embed-bar"><span class="dot" aria-hidden="true"></span><span>Formulário oficial · Even3</span><span class="grow"></span><a href="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/#inscricoes" target="_blank" rel="noopener">Abrir em nova aba ↗</a></div>
-      <iframe class="embed-iframe" src="https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/#inscricoes" loading="lazy" title="Inscrição Even3 — 1° Encontro GEI" sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
+      <div class="embed-bar"><span class="dot" aria-hidden="true"></span><span>Formulário oficial · Even3</span><span class="grow"></span><a href="https://www.even3.com.br/tickets/get/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003?even3_orig=get_tickets" target="_blank" rel="noopener">Abrir em nova aba ↗</a></div>
+      <iframe class="embed-iframe" src="https://www.even3.com.br/tickets/get/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003?even3_orig=get_tickets" loading="lazy" title="Inscrição Even3 — 1° Encontro GEI" sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
     </div>
     <p style="text-align:center;margin-top:24px;font-size:12.5px;color:var(--muted-2);line-height:1.7;">Certificação emitida por <strong style="color:var(--green)">UFF, ABAR, PPGEP/UFF e Escola de Regulação</strong>, válida para o Currículo Lattes (CNPq). <strong style="color:var(--white)">Requer 75% de presença</strong> rastreada via QR Code no credenciamento. Emissão em até 15 dias úteis após o evento.</p>
   </div>
@@ -698,7 +722,7 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
         <div class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/fecomercio.png" alt="Fecomércio RJ"></div><div class="pf">Federação do Comércio do Estado do RJ</div></div>
         <div class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/cau-rj.png" alt="CAU/RJ"></div><div class="pf">Conselho de Arquitetura e Urbanismo · RJ</div></div>
         <div class="ptc fi d2"><div class="ptc-logo"><img src="/assets/logos/crea-rj.png" alt="CREA-RJ"></div><div class="pf">Conselho Regional de Engenharia · RJ</div></div>
-        <div class="ptc fi d3"><div class="ptc-logo"><img src="/assets/logos/labdge.png" alt="LabDGE"></div><div class="pf">Lab. Dados, Governança e Estratégia · UFF</div></div>
+        <div class="ptc fi d3"><div class="ptc-logo txt">LabDGE</div><div class="pf">Lab. Dados, Governança e Estratégia · UFF</div></div>
       </div>
     </div>
 
@@ -735,8 +759,7 @@ footer{background:var(--ink);padding:60px 36px 40px;color:rgba(255,255,255,.4);}
   <div class="foot-in">
     <div>
       <div class="foot-brand">
-        <img src="/assets/favicon.png" alt="" aria-hidden="true">
-        <strong>1° Encontro <b>GEI</b></strong>
+        <img src="/assets/logo-nav.png" alt="1° Encontro GEI" style="height:50px;width:auto;">
       </div>
       <p class="foot-text">1° Encontro de Governança, Estratégia e Inovação Governamental — 08, 09 e 10 de julho de 2026, Rio de Janeiro / Niterói, RJ. Realização: UFF · ABAR · PPGEP/UFF · Escola de Regulação das Agências Reguladoras do Estado do RJ.</p>
     </div>
