@@ -8,6 +8,9 @@
 !assets/*.jpg
 !assets/*.jpeg
 !assets/*.png
+!assets/logos/*.jpg
+!assets/logos/*.jpeg
+!assets/logos/*.png
 
 # Pastas inteiras de referência/intermediários
 _referencia/
