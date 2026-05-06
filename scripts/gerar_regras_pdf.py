@@ -65,7 +65,7 @@ def header_footer(canv: canvas.Canvas, doc):
     canv.setFont("Helvetica", 7.5)
     canv.setFillColor(HexColor("#A5B0C8"))
     canv.drawCentredString(w/2, 6*mm,
-        "encontrogeig.org · contato@encontrogeig.org · submissoes@encontrogeig.org · UFF · ABAR · PPGEP/UFF · Escola de Regulação")
+        "encontrogeig.org · contato@encontrogeig.org · submissoes@encontrogeig.org · UFF · ABAR · PPGEP/UFF")
     canv.setFont("Helvetica", 7.5)
     canv.drawString(15*mm, 6*mm, f"Pág. {doc.page}")
     canv.restoreState()
@@ -147,7 +147,7 @@ def gerar_pdf(slug, titulo, intro, especificas, prazo_extra=""):
     story = []
     build_header(story)
     story.append(Paragraph(f"Normas de Submissão — {titulo}", H_TITLE))
-    story.append(Paragraph("Chamada de trabalhos · Realização: UFF · ABAR · PPGEP/UFF · Escola de Regulação", H_SUB))
+    story.append(Paragraph("Chamada de trabalhos · Realização: UFF · ABAR · PPGEP/UFF", H_SUB))
     story.append(deadline_box(
         f"Prazo Fase 1 — Resumo + Vídeo · até <font color='#9A7D14'>1 de junho de 2026</font> · 23h59 (Brasília)"
         + (f"<br/><font size='9' color='#5C6781'>{prazo_extra}</font>" if prazo_extra else "")

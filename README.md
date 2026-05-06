@@ -2,7 +2,7 @@
 
 Site oficial e configuração da plataforma de inscrição/submissão do **1° Encontro GEI** — 08, 09 e 10 de julho de 2026, Rio de Janeiro / Niterói.
 
-> **Realização:** UFF · ABAR · PPGEP/UFF · Escola de Regulação das Agências Reguladoras do Estado do RJ
+> **Realização:** UFF · ABAR · PPGEP/UFF
 > **Parceiros:** Firjan · IBP · ANP · AGENERSA · Fecomércio · CAU/RJ · CREA-RJ · LabDGE/UFF
 > **Conferência magna:** Magda Chambriard, Presidente da Petrobras (a confirmar)
 

@@ -22,14 +22,13 @@ Toda informação verificável usada no site e na configuração da Even3, com f
 
 ---
 
-## Realizadores (4)
+## Realizadores (3)
 
 | Sigla | Nome completo | Tipo |
 |---|---|---|
 | UFF | Universidade Federal Fluminense | Universidade pública federal |
 | ABAR | Associação Brasileira das Agências de Regulação | Associação nacional |
 | PPGEP/UFF | Programa de Pós-Graduação em Engenharia de Produção · UFF | Programa stricto sensu |
-| Escola de Regulação | Escola de Regulação das Agências Reguladoras do Estado do RJ | Escola institucional (AGETRANSP + AGENERSA) |
 
 ## Parceiros institucionais e de apoio (8)
 
@@ -234,7 +233,7 @@ Detalhes em `patrocinadores/index.html`.
 
 ## Certificações
 
-Emitidas por **UFF · ABAR · PPGEP/UFF · Escola de Regulação** · válidas para o Currículo Lattes (CNPq) e como horas complementares.
+Emitidas por **UFF · ABAR · PPGEP/UFF** · válidas para o Currículo Lattes (CNPq) e como horas complementares.
 
 | Tipo | Atribuição automática |
 |---|---|

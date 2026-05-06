@@ -33,8 +33,7 @@
   "organizer": [
     {"@type":"Organization","name":"UFF — Universidade Federal Fluminense"},
     {"@type":"Organization","name":"ABAR — Associação Brasileira das Agências de Regulação"},
-    {"@type":"Organization","name":"PPGEP/UFF"},
-    {"@type":"Organization","name":"Escola de Regulação das Agências Reguladoras do Estado do RJ"}
+    {"@type":"Organization","name":"PPGEP/UFF"}
   ],
   "offers": {"@type":"Offer","price":"0","priceCurrency":"BRL","availability":"https://schema.org/InStock"}
 }
@@ -84,6 +83,9 @@ nav.scrolled{background:rgba(9,17,54,.92);backdrop-filter:blur(14px);padding:11p
 nav.scrolled .nav-logo img{height:32px;}
 .nav-meta{display:none;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);line-height:1.4;border-left:1px solid var(--line-2);padding-left:14px;max-width:160px;}
 @media(min-width:1100px){.nav-meta{display:block;}}
+.nav-date{display:none;font-family:'Manrope',sans-serif;font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--yellow);line-height:1.2;border-left:1px solid var(--line-2);padding-left:14px;margin-left:4px;white-space:nowrap;}
+@media(min-width:780px){.nav-date{display:inline-flex;align-items:center;}}
+.prog-date{color:var(--yellow);font-family:'Manrope',sans-serif;font-size:clamp(16px,2.2vw,22px);font-weight:700;letter-spacing:.02em;text-transform:uppercase;margin-bottom:10px;display:block;}
 .nav-deadline{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);padding:6px 12px;border:1px solid rgba(245,143,78,.32);border-radius:100px;background:rgba(245,143,78,.06);}
 .nav-deadline .pulse{width:6px;height:6px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(245,143,78,.55);animation:pulse 2s infinite;}
 .nav-deadline[hidden]{display:none;}
@@ -119,7 +121,8 @@ nav.scrolled .nav-logo img{height:32px;}
 .hero-logo{width:min(560px,82vw);height:auto;margin-bottom:24px;animation:floatIn 1s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 20px 60px rgba(0,0,0,.5));}
 @media(max-width:1024px){.hero-logo{margin-left:auto;margin-right:auto;width:min(480px,82vw);}}
 
-.h-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(91,198,229,.1);border:1px solid rgba(91,198,229,.34);color:var(--cyan);font-size:11px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;padding:9px 22px;border-radius:100px;margin-bottom:18px;animation:fd .7s .15s ease both;}
+.h-badge{display:inline-flex;align-items:center;gap:12px;background:rgba(245,200,66,.1);border:1px solid rgba(245,200,66,.4);color:var(--yellow);font-family:'Manrope',sans-serif;font-size:clamp(15px,2vw,18px);font-weight:700;letter-spacing:.04em;padding:12px 26px;border-radius:100px;margin-bottom:18px;animation:fd .7s .15s ease both;}
+.h-badge .dot{background:var(--yellow)!important;box-shadow:0 0 10px var(--yellow)!important;}
 .h-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);}
 .urgency-pill{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);background:rgba(245,143,78,.08);border:1px solid rgba(245,143,78,.32);padding:8px 16px;border-radius:100px;margin-bottom:30px;animation:fd .7s .2s ease both;}
 .urgency-pill .pulse{width:6px;height:6px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(245,143,78,.55);animation:pulse 2s infinite;}
@@ -501,6 +504,7 @@ html[data-theme="light"] .sp-role{color:rgba(9,17,54,.6);}
 html[data-theme="light"] .pan-tag{color:rgba(9,17,54,.78);background:rgba(9,17,54,.04);border-color:var(--line-2);}
 html[data-theme="light"] .panel-lbl, html[data-theme="light"] .tl-when2, html[data-theme="light"] .kd-i, html[data-theme="light"] .kn-lbl{color:rgba(9,17,54,.55);}
 html[data-theme="light"] .nav-meta, html[data-theme="light"] .pl, html[data-theme="light"] .hc-eyebrow{color:rgba(9,17,54,.5);}
+html[data-theme="light"] .nav-date, html[data-theme="light"] .prog-date{color:#C99300;}
 html[data-theme="light"] .pc{color:rgba(9,17,54,.72);background:rgba(9,17,54,.04);}
 html[data-theme="light"] .h-partners{background:rgba(9,17,54,.04);}
 html[data-theme="light"] .sp-role, html[data-theme="light"] .sl, html[data-theme="light"] .vth, html[data-theme="light"] .et li, html[data-theme="light"] .di li, html[data-theme="light"] .dl, html[data-theme="light"] .pf, html[data-theme="light"] .coin-d, html[data-theme="light"] .foot-text{color:rgba(9,17,54,.7);}
@@ -587,8 +591,9 @@ html[data-theme="light"] .logo-dark{display:none;}
 <nav id="nav" aria-label="Navegação principal">
   <a href="#" class="nav-logo" aria-label="1° Encontro de Governança, Estratégia e Inovação Governamental — início">
     <img src="/assets/logo-nav.png?v=4" alt="1° Encontro de Governança, Estratégia e Inovação Governamental">
-    <span class="nav-meta">UFF · ABAR<br>PPGEP · Escola</span>
+    <span class="nav-meta">UFF · ABAR<br>PPGEP/UFF</span>
   </a>
+  <span class="nav-date" aria-label="Data do evento">08–10 jul · 2026</span>
   <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">☰</button>
   <ul class="nav-links" id="nav-menu">
     <li><a href="#programacao">Programa</a></li>
@@ -639,9 +644,11 @@ html[data-theme="light"] .logo-dark{display:none;}
   </div>
   <div class="h-partners" aria-label="Realizadores e parceiros">
     <span class="pl">Realização</span>
-    <span class="pc">UFF</span><span class="pc">ABAR</span><span class="pc">PPGEP/UFF</span><span class="pc">Escola de Regulação RJ</span>
+    <span class="pc">UFF</span><span class="pc">ABAR</span><span class="pc">PPGEP/UFF</span>
+    <!-- APOIO-OCULTO (reativar logos individualmente conforme confirmação)
     <span class="pl" style="margin-left:14px;">Apoio</span>
     <span class="pc">Firjan</span><span class="pc">IBP</span><span class="pc">ANP</span><span class="pc">AGENERSA</span><span class="pc">Fecomércio</span><span class="pc">CAU</span><span class="pc">CREA-RJ</span>
+    -->
   </div>
 </section>
 
@@ -691,6 +698,7 @@ html[data-theme="light"] .logo-dark{display:none;}
 <section class="sec days" id="programacao" aria-labelledby="prog-title">
   <div class="sec-in">
     <p class="sec-lbl fi">Programação</p>
+    <span class="prog-date fi">08–10 julho 2026</span>
     <h2 class="sec-title fi" id="prog-title">Três dias de <em>alto nível</em></h2>
     <p class="sec-desc fi">Cada dia tem identidade própria — da abertura estratégica à imersão técnica em campo, encerrando com síntese acadêmica e propositiva no <strong style="color:var(--white)">NAB UFF, Campus Gragoatá, Niterói</strong>.</p>
     <div class="days-grid">
@@ -780,7 +788,9 @@ html[data-theme="light"] .logo-dark{display:none;}
     <div class="modal-grid">
       <article class="mod-card fi"><div class="mod-tag">Modalidade 1</div><h3 class="mod-t">Presencial Completo</h3><p class="mod-d">Os 3 dias completos, incluindo conferência magna, visita técnica e trilhas/sessões.</p><div class="mod-vagas">400 vagas</div></article>
       <article class="mod-card fi d1"><div class="mod-tag">Modalidade 2</div><h3 class="mod-t">Presencial Dias 1 e 3</h3><p class="mod-d">Abertura institucional + trilhas e encerramento. Sem visita técnica do Dia 2.</p><div class="mod-vagas">200 vagas</div></article>
+      <!-- MOD-3 OCULTA (reativar se transmissão online for contratada)
       <article class="mod-card fi d2"><div class="mod-tag">Modalidade 3</div><h3 class="mod-t">Remoto / Online</h3><p class="mod-d">Acompanhamento das plenárias e painéis pela transmissão ao vivo. Acesso a anais.</p><div class="mod-vagas">Ilimitado</div></article>
+      -->
       <article class="mod-card fi d3"><div class="mod-tag">Modalidade 4</div><h3 class="mod-t">Visitante Técnico — Dia 2</h3><p class="mod-d">Apenas a visita técnica, escolhendo uma das 8 jornadas paralelas em campo.</p><div class="mod-vagas">200 vagas (~25/jornada)</div></article>
     </div>
   </div>
@@ -792,7 +802,7 @@ html[data-theme="light"] .logo-dark{display:none;}
     <div class="sub-head">
       <div>
         <p class="sec-lbl fi">Chamada de trabalhos</p>
-        <h2 class="sec-title fi" id="sub-title" style="margin-bottom:14px;">Submeta sua <em>pesquisa</em></h2>
+        <h2 class="sec-title fi" id="sub-title" style="margin-bottom:14px;">Envie seu <em>trabalho</em></h2>
         <p class="sec-desc fi" style="margin-bottom:0;font-size:15.5px;">Modelo faseado: <strong style="color:var(--white)">Fase 1</strong> · resumo estendido (2–4 pp.) + vídeo de 5 min. <strong style="color:var(--white)">Fase 2</strong> · apresentação presencial Dia 3. <strong style="color:var(--white)">Artigo final</strong> publicado em livro com ISBN em dezembro/2026.</p>
       </div>
       <div class="dl-box fi">
@@ -871,7 +881,7 @@ html[data-theme="light"] .logo-dark{display:none;}
   <div class="normas-grid">
     <div>
       <p class="sec-lbl fi">Normas técnicas</p>
-      <h2 class="sec-title fi" id="nm-title" style="font-size:clamp(24px,3.4vw,38px);">Como preparar sua <em>submissão</em></h2>
+      <h2 class="sec-title fi" id="nm-title" style="font-size:clamp(24px,3.4vw,38px);">Orientação aos <em>Autores</em></h2>
       <p class="sec-desc fi" style="margin-bottom:0;font-size:16px;">Padronização técnica para garantir consistência editorial nos anais com ISBN. Comissão científica do 4º Seminário SSEP: <strong style="color:var(--white)">Ana, Flavia, Gabriella, Jucileia, Kelly, Pompilio e Silvia Cristina Rufino</strong>.</p>
     </div>
     <ul class="normas-list">
@@ -926,7 +936,7 @@ html[data-theme="light"] .logo-dark{display:none;}
       <div class="embed-bar"><span class="dot" aria-hidden="true"></span><span>Formulário oficial · Even3</span><span class="grow"></span><a href="https://www.even3.com.br/tickets/get/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003?even3_orig=get_tickets" target="_blank" rel="noopener">Abrir em nova aba ↗</a></div>
       <iframe class="embed-iframe" src="https://www.even3.com.br/tickets/get/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003?even3_orig=get_tickets" loading="lazy" title="Inscrição Even3 — 1° Encontro GEI" sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
     </div>
-    <p style="text-align:center;margin-top:24px;font-size:12.5px;color:var(--muted-2);line-height:1.7;">Certificação emitida por <strong style="color:var(--green)">UFF, ABAR, PPGEP/UFF e Escola de Regulação</strong>, válida para o Currículo Lattes (CNPq). <strong style="color:var(--white)">Requer 75% de presença</strong> rastreada via QR Code no credenciamento. Emissão em até 15 dias úteis após o evento.</p>
+    <p style="text-align:center;margin-top:24px;font-size:12.5px;color:var(--muted-2);line-height:1.7;">Certificação emitida por <strong style="color:var(--green)">UFF, ABAR e PPGEP/UFF</strong>, válida para o Currículo Lattes (CNPq). <strong style="color:var(--white)">Requer 75% de presença</strong> rastreada via QR Code no credenciamento. Emissão em até 15 dias úteis após o evento.</p>
   </div>
 </section>
 
@@ -934,7 +944,7 @@ html[data-theme="light"] .logo-dark{display:none;}
 <section class="sec coins" id="apoio" aria-labelledby="cn-title">
   <div class="sec-in">
     <p class="sec-lbl fi">Modelo de apoio institucional</p>
-    <h2 class="sec-title fi" id="cn-title">As <em>quatro moedas</em> de apoio</h2>
+    <h2 class="sec-title fi" id="cn-title">As <em>quatro modalidades</em> de apoio</h2>
     <p class="sec-desc fi">Apoio não-exclusivo e cumulativo. Em vez de patrocínio monetário tradicional, instituições participam contribuindo em dimensões estratégicas — palestrantes, alcance, hospedagem técnica e premiação.</p>
     <div class="coins-grid">
       <article class="coin fi"><div class="coin-num">01</div><h3 class="coin-t">Palestrantes</h3><p class="coin-d">Indique nomes de alto nível para painéis e mesas. Ganha visibilidade em programa, livro e divulgação.</p></article>
@@ -960,10 +970,13 @@ html[data-theme="light"] .logo-dark{display:none;}
         <a href="https://www.uff.br" target="_blank" rel="noopener" class="ptc fi"><div class="ptc-logo"><img src="/assets/logos/uff.svg" alt="UFF — Universidade Federal Fluminense"></div><div class="pf">Universidade Federal Fluminense</div></a>
         <a href="https://abar.org.br" target="_blank" rel="noopener" class="ptc fi d1"><div class="ptc-logo"><img src="/assets/logos/abar.png" alt="ABAR — Assoc. Brasileira das Agências de Regulação"></div><div class="pf">Assoc. Brasileira das Agências de Regulação</div></a>
         <a href="http://www.uff.br/ppgep/" target="_blank" rel="noopener" class="ptc fi d2"><div class="ptc-logo txt">PPGEP</div><div class="pf">Pós-Graduação em Engenharia de Produção · UFF</div></a>
+        <!-- ESCOLA DE REGULACAO OCULTA (reativar se solicitado)
         <a href="https://www.rj.gov.br/agenersa/escola-de-regulacao" target="_blank" rel="noopener" class="ptc fi d3"><div class="ptc-logo"><img src="/assets/logos/escola-regulacao.png" alt="Escola de Regulação"></div><div class="pf">Escola de Regulação · Agências Reguladoras RJ</div></a>
+        -->
       </div>
     </div>
 
+    <!-- PARCEIROS-OCULTOS (reativar logos individualmente conforme confirmação)
     <div class="pt-tier">
       <p class="pt-tier-lbl fi">Parceiros institucionais e de apoio</p>
       <div class="pt-grid">
@@ -977,6 +990,7 @@ html[data-theme="light"] .logo-dark{display:none;}
         <a href="https://labdge.uff.br" target="_blank" rel="noopener" class="ptc fi d3"><div class="ptc-logo"><img src="/assets/logos/labdge.png?v=2" alt="LabDGE"></div><div class="pf">Lab. Design Thinking, Gestão e Engenharia Industrial · UFF</div></a>
       </div>
     </div>
+    -->
 
   </div>
 </section>
@@ -984,7 +998,7 @@ html[data-theme="light"] .logo-dark{display:none;}
 <!-- CERT -->
 <aside class="cert" aria-label="Certificação">
   <div class="cert-i">
-    <p class="ct">Certificação emitida por <strong>UFF, ABAR, PPGEP/UFF e Escola de Regulação</strong>, válida para o Currículo Lattes (CNPq) e como horas complementares.</p>
+    <p class="ct">Certificação emitida por <strong>UFF, ABAR e PPGEP/UFF</strong>, válida para o Currículo Lattes (CNPq) e como horas complementares.</p>
     <div class="cbg">
       <span class="cb">Participação · 75% presença</span>
       <span class="cb">Apresentação de trabalho</span>
@@ -1001,7 +1015,7 @@ html[data-theme="light"] .logo-dark{display:none;}
   <p class="fi">Pré-inscrições prioritárias estão abertas. Vagas limitadas para visitas técnicas e auditório do Dia 1.</p>
   <div class="h-cta fi" style="justify-content:center;">
     <a href="#inscricao" class="btn-p">Quero me inscrever <span class="arrow" aria-hidden="true">→</span></a>
-    <a href="#trabalhos" class="btn-s">Submeter trabalho</a>
+    <a href="#trabalhos" class="btn-s">Enviar seu trabalho</a>
   </div>
 </section>
 
@@ -1013,7 +1027,7 @@ html[data-theme="light"] .logo-dark{display:none;}
       <div class="foot-brand">
         <img src="/assets/logo-nav.png?v=4" alt="1° Encontro GEI" style="height:50px;width:auto;">
       </div>
-      <p class="foot-text">1° Encontro de Governança, Estratégia e Inovação Governamental — 08, 09 e 10 de julho de 2026, Rio de Janeiro / Niterói, RJ. Realização: UFF · ABAR · PPGEP/UFF · Escola de Regulação das Agências Reguladoras do Estado do RJ.</p>
+      <p class="foot-text">1° Encontro de Governança, Estratégia e Inovação Governamental — 08, 09 e 10 de julho de 2026, Rio de Janeiro / Niterói, RJ. Realização: UFF · ABAR · PPGEP/UFF.</p>
     </div>
     <div class="foot-col">
       <h4>Site</h4>
@@ -1036,7 +1050,7 @@ html[data-theme="light"] .logo-dark{display:none;}
     </div>
   </div>
   <div class="foot-bot">
-    © 2026 1° Encontro GEI · UFF · ABAR · PPGEP/UFF · Escola de Regulação<br>
+    © 2026 1° Encontro GEI · UFF · ABAR · PPGEP/UFF<br>
     Conferência magna de abertura: Magda Chambriard, Presidente da Petrobras (a confirmar)
   </div>
 </footer>
