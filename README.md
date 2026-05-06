@@ -113,5 +113,5 @@ Site do congresso/
 
 ## Contato
 
-Secretaria do Encontro: `contato@encontrogeig.org`
-Comissão Científica: `comissao.cientifica@encontrogeig.org`
+Secretaria do Encontro: `contato@encontrogei.com.br`
+Comissão Científica: `comissao.cientifica@encontrogei.com.br`

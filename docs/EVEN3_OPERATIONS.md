@@ -225,7 +225,7 @@ curl -s https://encontrogeig.org/api/inscritos
 
 ## 7. Conteúdo configurado · resumo
 
-- **Comissão Científica:** Profa. Silvia Cristina Rufino · `comissao.cientifica@encontrogeig.org`
+- **Comissão Científica:** Profa. Silvia Cristina Rufino · `comissao.cientifica@encontrogei.com.br`
 - **7 avaliadores** cadastrados (Ana, Flavia, Gabriella, Jucileia, Kelly, Pompilio, Silvia Cristina Rufino)
 - **13 áreas temáticas** alinhadas ao projeto executivo (não as 14 que vinham com typo "Sis Sigma")
 - **4 modalidades** com PDFs de regras adaptados (gerados por `scripts/gerar_regras_pdf.py`)
