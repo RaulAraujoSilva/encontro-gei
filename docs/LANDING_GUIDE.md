@@ -104,7 +104,7 @@ Wrapper `.embed-wrap` tem barra superior `.embed-bar` com link "Abrir em nova ab
 ### Trocar uma data
 Buscar a string da data antiga e usar `replace_all`:
 ```bash
-grep -n "15/05/2026" index.html
+grep -n "01/06/2026" index.html
 # Editar pontualmente os blocos que precisam mudar
 ```
 Cuidado: a data aparece em vários lugares (badge hero, timeline, dl-box, JSON-LD, footer).

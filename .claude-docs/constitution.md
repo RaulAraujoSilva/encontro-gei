@@ -2,7 +2,7 @@
 
 ## Princípios
 
-- **URGENTE até 15/05/2026**: deadline da submissão Fase 1. Site precisa estar no ar antes disso.
+- **Deadline submissão Fase 1: 01/06/2026 23h59** (movido de 15/05 em 06/05/2026).
 - **Identidade institucional sólida**: 4 realizadores (UFF, ABAR, PPGEP/UFF, Escola de Regulação) + 7 parceiros — design transmite seriedade acadêmica.
 - **Acessibilidade WCAG AA** desde o primeiro deploy.
 - **Backend Even3, frontend livre**: landing externa controla 100% do visual; Even3 cuida de inscrição, submissão, anais e certificados via embeds + API.
