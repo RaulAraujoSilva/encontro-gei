@@ -191,7 +191,7 @@ PDFs detalhados por modalidade: `assets/regras/{resumo-expandido,poster,relatori
 
 ## Comissão Científica (4º SSEP) · 7 avaliadores
 
-- **Responsável:** Profa. Silvia Cristina Rufino · `comissao.cientifica@encontrogei.com.br`
+- **Responsável:** Profa. Silvia Cristina Rufino · `comissao.cientifica@encontrogeig.org`
 - **Membros:** Ana, Flavia, Gabriella, Jucileia, Kelly, Pompilio, Silvia Cristina Rufino
 - **Avaliação:** por critérios · 2 avaliadores por trabalho (double-blind)
 - **Cronograma de avaliação:** 16/05 → 17/06/2026
@@ -251,7 +251,7 @@ Emissão em até 15 dias úteis após o evento. Anais com ISBN em dezembro/2026.
 
 ## Contatos
 
-- **Secretaria do Encontro:** `contato@encontrogei.com.br`
-- **Comissão Científica:** `comissao.cientifica@encontrogei.com.br`
+- **Secretaria do Encontro:** `contato@encontrogeig.org`
+- **Comissão Científica:** `comissao.cientifica@encontrogeig.org`
 - **Página oficial Even3:** https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003
 - **Site oficial:** https://encontrogeig.org
