@@ -111,7 +111,7 @@ nav.scrolled .nav-logo img{height:32px;}
 .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:80px 80px;pointer-events:none;}
 .hero::after{content:'';position:absolute;left:-200px;top:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(245,200,66,.08) 0%,transparent 60%);pointer-events:none;}
 .hero>*{position:relative;z-index:1;}
-.hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:64px;align-items:center;max-width:1280px;margin:0 auto;width:100%;}
+.hero-grid{display:grid;grid-template-columns:2fr 1fr;gap:56px;align-items:center;max-width:1280px;margin:0 auto;width:100%;}
 @media(max-width:1024px){.hero-grid{grid-template-columns:1fr;gap:36px;}}
 .hero-left{display:flex;flex-direction:column;align-items:flex-start;}
 @media(max-width:1024px){.hero-left{align-items:center;text-align:center;}}
@@ -138,19 +138,19 @@ nav.scrolled .nav-logo img{height:32px;}
 @media(max-width:600px){.h-cta{flex-direction:column;width:100%;max-width:340px;margin:0 auto;}.h-cta .btn-p,.h-cta .btn-s{width:100%;justify-content:center;}}
 
 /* CARD LATERAL (key facts + social proof + ISBN) */
-.hero-card{background:linear-gradient(180deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,.018) 100%);border:1px solid var(--line-2);border-radius:14px;padding:30px 28px;backdrop-filter:blur(14px);box-shadow:0 24px 60px rgba(0,0,0,.35);animation:fd 1s .5s ease both;}
+.hero-card{background:linear-gradient(180deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,.018) 100%);border:1px solid var(--line-2);border-radius:14px;padding:24px 22px;backdrop-filter:blur(14px);box-shadow:0 24px 60px rgba(0,0,0,.35);animation:fd 1s .5s ease both;}
 @media(max-width:1024px){.hero-card{max-width:520px;margin:0 auto;width:100%;}}
 .hc-eyebrow{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:18px;}
 .hc-list{display:flex;flex-direction:column;gap:0;}
-.hc-row{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line);}
+.hc-row{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line);}
 .hc-row:last-of-type{border-bottom:none;}
-.hc-n{font-family:'Manrope',sans-serif;font-size:32px;font-weight:800;line-height:1;letter-spacing:-.03em;color:var(--white);min-width:56px;}
+.hc-n{font-family:'Manrope',sans-serif;font-size:28px;font-weight:800;line-height:1;letter-spacing:-.03em;color:var(--white);min-width:46px;}
 .hc-n.y{color:var(--yellow);}
 .hc-n.g{color:var(--green);}
 .hc-n.b{color:var(--blue);}
 .hc-n.c{color:var(--cyan);}
-.hc-lbl{font-size:14px;font-weight:600;color:var(--white);line-height:1.25;}
-.hc-sub{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.4);text-align:right;white-space:nowrap;}
+.hc-lbl{font-size:13px;font-weight:600;color:var(--white);line-height:1.3;}
+.hc-sub{display:none;}
 .hc-isbn{display:flex;align-items:center;gap:14px;padding:14px 0 4px;margin-top:4px;border-top:1px dashed var(--line-2);}
 .hc-isbn-tag{font-family:'Manrope',sans-serif;font-size:13px;font-weight:800;letter-spacing:.06em;color:var(--bg);background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 100%);padding:5px 12px;border-radius:6px;}
 .hc-isbn-txt{font-size:12.5px;color:rgba(255,255,255,.7);line-height:1.4;}
@@ -622,10 +622,10 @@ html[data-theme="light"] .logo-dark{display:none;}
     <aside class="hero-card" aria-label="Resumo do evento">
       <div class="hc-eyebrow">O encontro em números</div>
       <div class="hc-list">
-        <div class="hc-row"><span class="hc-n y">04</span><span class="hc-lbl">Eventos oficiais integrados</span><span class="hc-sub">Lean · SSEP<br>Reg · Intel</span></div>
-        <div class="hc-row"><span class="hc-n g">08</span><span class="hc-lbl">Visitas técnicas em campo</span><span class="hc-sub">Petrobras · CSN<br>Eneva · TAG</span></div>
-        <div class="hc-row"><span class="hc-n b">13</span><span class="hc-lbl">Eixos temáticos · ODS</span><span class="hc-sub">Avaliação<br>científica</span></div>
-        <div class="hc-row"><span class="hc-n c">24h</span><span class="hc-lbl">Carga horária certificada</span><span class="hc-sub">UFF · ABAR<br>PPGEP · Escola</span></div>
+        <div class="hc-row"><span class="hc-n y">04</span><span class="hc-lbl">Eventos oficiais integrados</span></div>
+        <div class="hc-row"><span class="hc-n g">08</span><span class="hc-lbl">Visitas técnicas em campo</span></div>
+        <div class="hc-row"><span class="hc-n b">13</span><span class="hc-lbl">Eixos temáticos · ODS</span></div>
+        <div class="hc-row"><span class="hc-n c">24h</span><span class="hc-lbl">Carga horária certificada</span></div>
       </div>
       <div class="hc-isbn">
         <span class="hc-isbn-tag">ISBN</span>
