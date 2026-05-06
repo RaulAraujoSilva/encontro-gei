@@ -14,4 +14,5 @@
 | tema-claro-escuro | ✅ Completa | Toggle persistido em localStorage |
 | dominio-emails | ✅ Completa | encontrogeig.org + 3 emails Google Workspace |
 | copy-pos-reuniao | ✅ Completa (06/05) | Nav-date, hero badge, "trabalho" em vez de "submissão", "modalidades" em vez de "moedas" |
-| ocultacoes-reativaveis | 🟡 Em standby | Mod 3, Escola Regulação, Parceiros, Apoio inline — preservados em comentários HTML |
+| ocultacoes-reativaveis | 🟡 Em standby | Mod Remoto, Escola Regulação, Parceiros, Apoio inline — preservados em comentários HTML |
+| ajustes-pos-revisao-2 | ✅ Completa (06/05) | Modalidade 4→3, premiação+coquetel+encerramento unificados às 16h30 D3, GIGS/UNICAMP como 4ª realização, card PPGEP convertido em logo TEP/PPGEP com link tpp-uff.com.br |

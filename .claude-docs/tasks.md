@@ -11,9 +11,17 @@
 
 ## Pendentes — Decisões futuras (parar aqui, retomar quando solicitado)
 
-- [ ] TASK-1093: Reativar Modalidade Remoto/Online se transmissão for contratada — descomentar `<!-- MOD-3 OCULTA -->` (`index.html:783`)
+- [ ] TASK-1093: Reativar Modalidade Remoto/Online se transmissão for contratada — descomentar `<!-- MOD-3 OCULTA -->` (`index.html:783`); ATENÇÃO: o slot 3 visual hoje é ocupado pelo Visitante Técnico (TASK-1100). Renumerar para Modalidade 4 ao reativar.
 - [ ] TASK-1094: Reativar Escola de Regulação se solicitado — descomentar `<!-- ESCOLA DE REGULACAO OCULTA -->` (`index.html:963`)
 - [ ] TASK-1095: Adicionar foto/avatar real da Magda Chambriard quando confirmar
+- [ ] TASK-1103: Confirmar URL oficial do GIGS · UNICAMP e converter o `<div class="ptc">` em `<a href>` (card atual em `index.html` ~linha 973, sem href)
+
+## Completadas (sessão 06/05/2026 — segundo bloco)
+
+- [x] TASK-1100: Renumerar Modalidade 4 (Visitante Técnico Dia 2) → Modalidade 3; título da seção "Quatro formas" → "Três formas" (commit `221ce24`)
+- [x] TASK-1101: Programação Dia 3 — unificar premiação + coquetel + encerramento institucional em linha única às 16h30 (commit `221ce24`)
+- [x] TASK-1102: Adicionar GIGS · UNICAMP como 4ª instituição realizadora — logo `assets/logos/gigs-unicamp.jpg` + menções em nav, hero, certificações, footer e JSON-LD organizer (commit `221ce24`); .gitignore atualizado para permitir JPGs em `assets/logos/` (commit `221ce24`)
+- [x] TASK-1104: Substituir card PPGEP textual por logo TEP/PPGEP (`assets/logos/logo-eng-768x184.png`) com link `https://tpp-uff.com.br/`; aplicar `filter: invert()` no `<img>` para inverter logo branco sobre fundo branco do card (commit `d65f005`)
 
 ## Completadas (sessão 06/05/2026)
 

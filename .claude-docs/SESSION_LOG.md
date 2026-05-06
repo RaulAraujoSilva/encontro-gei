@@ -8,7 +8,27 @@
 **Evento:** 1° Encontro de Governança, Estratégia e Inovação Governamental
 **Datas:** 08, 09 e 10 de julho de 2026
 **Locais:** Rio de Janeiro (Dias 1 e 2) + Niterói/UFF Gragoatá (Dia 3)
-**Realização:** UFF · ABAR · PPGEP/UFF (Escola de Regulação ocultada em 06/05 — preservada em comentários)
+**Realização:** UFF · ABAR · PPGEP/UFF · GIGS/UNICAMP (Escola de Regulação ocultada em 06/05 — preservada em comentários; GIGS adicionado em 06/05 — segundo bloco)
+
+---
+
+## Sessão 06/05/2026 — segundo bloco (ajustes pós-revisão 2)
+
+Commits: `221ce24` e `d65f005` (push para `main`).
+
+**Mudanças no `index.html`:**
+1. **Modalidade 4 → 3** (card "Visitante Técnico — Dia 2"): a antiga Modalidade 3 (Remoto/Online) está oculta, então só existem 3 modalidades visíveis. Título da seção também ajustado: "Quatro formas" → "Três formas". Comentário `<!-- MOD-3 OCULTA -->` mantido — se reativada, deve virar Modalidade 4.
+2. **Programação Dia 3:** os dois `<li>` finais (16h30 premiação + 18h encerramento/19h coquetel) unificados em **linha única às 16h30**: "Premiação dos trabalhos, coquetel e encerramento institucional". Motivo: adiantar para participantes com voo à noite.
+3. **GIGS · UNICAMP** adicionado como 4ª instituição realizadora:
+   - Logo `assets/logos/gigs-unicamp.jpg` (cópia do `WhatsApp Image 2026-05-05 at 15.31.08.jpeg` — mantido JPEG original)
+   - `.gitignore` atualizado: `!assets/logos/*.jpg|jpeg|png` para liberar JPGs em logos
+   - Card no bloco Realização renderizado como `<div class="ptc fi d3">` (sem `<a href>` por ora — URL oficial pendente)
+   - Menções textuais atualizadas: nav-meta, hero h-lede, hero chips Realização, modalidades, inscrição, certificação (caixa central), certificação (aside), footer, copyright e JSON-LD organizer
+4. **Card PPGEP** (antes texto "PPGEP" estilizado) **substituído por logo** `assets/logos/logo-eng-768x184.png` com link `https://tpp-uff.com.br/`. Logo é branco; aplicado inline `style="filter:invert(1) brightness(.15);"` para exibir escuro sobre o fundo branco do `.ptc-logo`.
+
+**Pendências geradas:**
+- TASK-1103: confirmar URL oficial do GIGS e converter o `<div>` em `<a href>`.
+- TASK-1093 atualizada: ao reativar Modalidade Remoto, renumerar para Modalidade 4 (slot 3 hoje é Visitante Técnico).
 
 ---
 
