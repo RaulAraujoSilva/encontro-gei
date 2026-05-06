@@ -44,9 +44,9 @@ Documentação operacional completa do evento `722003` na Even3. Cobre acesso, m
 | **Programação > Configurações** | `?tab=configuracao` | ✅ Cronograma 04/05–07/07 para visitas técnicas |
 | **Submissões > Recebimento > Modalidades** | `/organizador/trabalhocientifico/submissaogeral?tab=Modalidades` | ✅ 4 modalidades (Artigo, Pôster, Relatório A3, Resumo) com PDFs anexados |
 | **Submissões > Áreas Temáticas** | `?tab=Áreas%20Temáticas` | ✅ 13 eixos alinhados ao projeto executivo |
-| **Submissões > Configurações** | `?tab=Configurações` | ✅ Cronograma 04/05–15/05 · Comissão: Profa. Silvia Cristina Rufino |
+| **Submissões > Configurações** | `?tab=Configurações` | ✅ Cronograma 04/05–01/06 · Comissão: Profa. Silvia Cristina Rufino |
 | **Avaliação > Avaliadores** | `/organizador/trabalhocientifico/avaliacaogeral?tab=Avaliadores` | ✅ 7 avaliadores cadastrados |
-| **Avaliação > Configurações** | `?tab=Configurações` | ✅ Cronograma 16/05–31/05 · Tipo: por critérios · Quantidade: 2 (double-blind) |
+| **Avaliação > Configurações** | `?tab=Configurações` | ✅ Cronograma 02/06–17/06 · Tipo: por critérios · Quantidade: 2 (double-blind) |
 
 ### EVENTO
 

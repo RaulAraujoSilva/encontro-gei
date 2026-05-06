@@ -93,8 +93,8 @@ Site do congresso/
 
 | Data | Marco |
 |---|---|
-| **15/05/2026 23h59** | Prazo Fase 1 (resumo + vídeo) |
-| **31/05/2026** | Resultado da avaliação |
+| **01/06/2026 23h59** | Prazo Fase 1 (resumo + vídeo) |
+| **17/06/2026** | Resultado da avaliação |
 | **25/06/2026** | Programa definitivo publicado |
 | **08-10/07/2026** | **Realização do evento** (3 dias) |
 | **30/09/2026** | Prazo Fase 2 (artigo completo) |

@@ -149,7 +149,7 @@ def gerar_pdf(slug, titulo, intro, especificas, prazo_extra=""):
     story.append(Paragraph(f"Normas de Submissão — {titulo}", H_TITLE))
     story.append(Paragraph("Chamada de trabalhos · Realização: UFF · ABAR · PPGEP/UFF · Escola de Regulação", H_SUB))
     story.append(deadline_box(
-        f"Prazo Fase 1 — Resumo + Vídeo · até <font color='#9A7D14'>15 de maio de 2026</font> · 23h59 (Brasília)"
+        f"Prazo Fase 1 — Resumo + Vídeo · até <font color='#9A7D14'>1 de junho de 2026</font> · 23h59 (Brasília)"
         + (f"<br/><font size='9' color='#5C6781'>{prazo_extra}</font>" if prazo_extra else "")
     ))
     story.append(Spacer(1, 12))
@@ -174,8 +174,8 @@ def gerar_pdf(slug, titulo, intro, especificas, prazo_extra=""):
 
     story.append(Paragraph("Cronograma da chamada de trabalhos", H1))
     cron = [
-        ("Fase 1 · Resumo + vídeo", "até 15/05/2026 · 23h59 (Brasília)"),
-        ("Resultado da Fase 1", "até 31/05/2026"),
+        ("Fase 1 · Resumo + vídeo", "até 01/06/2026 · 23h59 (Brasília)"),
+        ("Resultado da Fase 1", "até 17/06/2026"),
         ("Programa definitivo", "publicado em 25/06/2026"),
         ("Fase 2 · Apresentação presencial", "10/07/2026 · NAB UFF · Niterói"),
         ("Versão final do artigo", "até 30/09/2026"),
