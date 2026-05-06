@@ -4,7 +4,7 @@
 
 - **Repositório:** `RaulAraujoSilva/encontro-gei` (GitHub, branch `main`)
 - **Vercel project:** `encontro-gei` (scope `raularaujosilvas-projects`)
-- **URL produção:** https://encontro-gei.vercel.app
+- **URL produção:** https://encontrogeig.org
 - **Auto-deploy:** push para `main` dispara build automático no Vercel (~30s)
 
 ---
@@ -38,7 +38,7 @@ vercel deploy --prod --yes --token="$VERCEL_TOKEN" --scope raularaujosilvas-proj
 Saída típica:
 ```
 Production: https://encontro-XXXXXXX-raularaujosilvas-projects.vercel.app [14s]
-Aliased: https://encontro-gei.vercel.app
+Aliased: https://encontrogeig.org
 ```
 
 ---
@@ -72,7 +72,7 @@ Vercel + CDN da Vercel pode demorar a invalidar imagens. Truques:
 
 3. **Verificar HTML servido em produção:**
    ```bash
-   curl -s https://encontro-gei.vercel.app/ | grep -oE 'src="[^"]*"' | head
+   curl -s https://encontrogeig.org/ | grep -oE 'src="[^"]*"' | head
    ```
 
 ---

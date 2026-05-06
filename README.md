@@ -12,12 +12,12 @@ Site oficial e configuração da plataforma de inscrição/submissão do **1° E
 
 | O que | URL |
 |---|---|
-| **Site oficial** | https://encontro-gei.vercel.app |
-| **Página de apoio** | https://encontro-gei.vercel.app/patrocinadores/ |
+| **Site oficial** | https://encontrogeig.org |
+| **Página de apoio** | https://encontrogeig.org/patrocinadores/ |
 | **Plataforma Even3** | https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003 |
 | **Painel admin Even3** | https://www.even3.com.br/organizador/home/ |
 | **Repositório GitHub** | https://github.com/RaulAraujoSilva/encontro-gei |
-| **Contador inscritos (API)** | https://encontro-gei.vercel.app/api/inscritos |
+| **Contador inscritos (API)** | https://encontrogeig.org/api/inscritos |
 
 ---
 
@@ -83,7 +83,7 @@ Site do congresso/
 | **Regerar os 4 PDFs de regras** | `python scripts/gerar_regras_pdf.py` (sai em `assets/regras/`) |
 | **Configurar algo na Even3** | Veja `docs/EVEN3_OPERATIONS.md` (login, painel, JS dispatch trick) |
 | **Trocar logo de parceiro** | Substituir arquivo em `assets/logos/<nome>.png` (manter nome) |
-| **Verificar contador ao vivo** | `curl https://encontro-gei.vercel.app/api/inscritos` |
+| **Verificar contador ao vivo** | `curl https://encontrogeig.org/api/inscritos` |
 | **Ver inscritos via API** | `curl -H "Authorization-Token: $EVEN3_API_TOKEN" https://www.even3.com.br/api/v1/attendees` |
 | **Adicionar palestrante/atividade** | Painel Even3 (`/organizador/programacao`, `/organizador/convidados`) — ver `docs/EVEN3_OPERATIONS.md` |
 
@@ -113,5 +113,5 @@ Site do congresso/
 
 ## Contato
 
-Secretaria do Encontro: `contato@encontrogei.com.br`
-Comissão Científica: `comissao.cientifica@encontrogei.com.br`
+Secretaria do Encontro: `contato@encontrogeig.org`
+Comissão Científica: `comissao.cientifica@encontrogeig.org`

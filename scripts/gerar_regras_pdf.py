@@ -65,7 +65,7 @@ def header_footer(canv: canvas.Canvas, doc):
     canv.setFont("Helvetica", 7.5)
     canv.setFillColor(HexColor("#A5B0C8"))
     canv.drawCentredString(w/2, 6*mm,
-        "encontro-gei.vercel.app · contato@encontrogei.com.br · UFF · ABAR · PPGEP/UFF · Escola de Regulação")
+        "encontrogeig.org · contato@encontrogeig.org · UFF · ABAR · PPGEP/UFF · Escola de Regulação")
     canv.setFont("Helvetica", 7.5)
     canv.drawString(15*mm, 6*mm, f"Pág. {doc.page}")
     canv.restoreState()
@@ -202,7 +202,7 @@ def gerar_pdf(slug, titulo, intro, especificas, prazo_extra=""):
     story.append(Paragraph(
         "Submeta seu trabalho diretamente pela plataforma Even3 do evento: "
         "<b>https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003/</b>. "
-        "Dúvidas: contato@encontrogei.com.br.", P))
+        "Dúvidas: contato@encontrogeig.org.", P))
 
     doc.build(story, onFirstPage=header_footer, onLaterPages=header_footer)
     print(f"OK {out.name}: {out.stat().st_size//1024} KB")
