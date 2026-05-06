@@ -127,7 +127,7 @@ def eixos_box():
 def build_header(story):
     """Header reutilizável: logo + nome do evento."""
     if LOGO.exists():
-        img = Image(str(LOGO), width=14*cm, height=14*cm * 352/1373)
+        img = Image(str(LOGO), width=14*cm, height=14*cm * 369/1500)
         img.hAlign = "CENTER"
         story.append(img)
     story.append(Spacer(1, 6))
