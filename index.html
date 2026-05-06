@@ -107,12 +107,17 @@ nav.scrolled .nav-logo img{height:32px;}
 }
 
 /* === HERO === */
-.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 32px 180px;overflow:hidden;text-align:center;background:radial-gradient(ellipse 70% 55% at 30% 30%,rgba(77,168,224,.18) 0%,transparent 60%),radial-gradient(ellipse 55% 50% at 80% 70%,rgba(122,199,79,.12) 0%,transparent 65%),linear-gradient(180deg,#06091F 0%,#091136 60%,#06091F 100%);}
+.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;justify-content:center;padding:110px 36px 120px;overflow:hidden;background:radial-gradient(ellipse 70% 55% at 30% 30%,rgba(77,168,224,.18) 0%,transparent 60%),radial-gradient(ellipse 55% 50% at 80% 70%,rgba(122,199,79,.12) 0%,transparent 65%),linear-gradient(180deg,#06091F 0%,#091136 60%,#06091F 100%);}
 .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:80px 80px;pointer-events:none;}
 .hero::after{content:'';position:absolute;left:-200px;top:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(245,200,66,.08) 0%,transparent 60%);pointer-events:none;}
 .hero>*{position:relative;z-index:1;}
+.hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:64px;align-items:center;max-width:1280px;margin:0 auto;width:100%;}
+@media(max-width:1024px){.hero-grid{grid-template-columns:1fr;gap:36px;}}
+.hero-left{display:flex;flex-direction:column;align-items:flex-start;}
+@media(max-width:1024px){.hero-left{align-items:center;text-align:center;}}
 
-.hero-logo{width:min(720px,90vw);height:auto;margin-bottom:42px;animation:floatIn 1s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 20px 60px rgba(0,0,0,.5));}
+.hero-logo{width:min(560px,82vw);height:auto;margin-bottom:24px;animation:floatIn 1s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 20px 60px rgba(0,0,0,.5));}
+@media(max-width:1024px){.hero-logo{margin-left:auto;margin-right:auto;width:min(480px,82vw);}}
 
 .h-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(91,198,229,.1);border:1px solid rgba(91,198,229,.34);color:var(--cyan);font-size:11px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;padding:9px 22px;border-radius:100px;margin-bottom:18px;animation:fd .7s .15s ease both;}
 .h-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);}
@@ -121,25 +126,39 @@ nav.scrolled .nav-logo img{height:32px;}
 .urgency-pill[hidden]{display:none;}
 .urgency-pill .sep{opacity:.4;margin:0 4px;}
 
-.h-tag{font-family:'Manrope',sans-serif;font-size:clamp(20px,3vw,30px);font-weight:300;color:rgba(255,255,255,.78);max-width:880px;margin-bottom:28px;animation:fd .8s .25s ease both;line-height:1.32;letter-spacing:-.01em;}
-.h-tag em{color:var(--yellow);font-style:normal;font-weight:600;}
+.h1{font-family:'Manrope',sans-serif;font-size:clamp(34px,4.6vw,56px);font-weight:800;color:var(--white);line-height:1.04;letter-spacing:-.025em;margin-bottom:18px;animation:fd .8s .25s ease both;max-width:680px;}
+.h1 em{color:var(--yellow);font-style:normal;font-weight:800;}
+.h1 .br{display:block;}
 
-.h-sub{font-size:clamp(15px,1.7vw,17px);color:var(--muted);max-width:680px;line-height:1.7;margin-bottom:42px;animation:fd .8s .3s ease both;}
+.h-lede{font-size:15.5px;color:var(--muted);line-height:1.55;margin-bottom:34px;max-width:580px;animation:fd .8s .3s ease both;}
+.h-lede strong{color:var(--white);font-weight:600;}
 
-.h-meta{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;backdrop-filter:blur(10px);margin-bottom:46px;max-width:880px;width:100%;animation:fd .8s .4s ease both;}
-.mi{padding:22px 12px;text-align:center;background:rgba(255,255,255,.025);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;}
-.ml{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:600;}
-.mv{font-family:'Manrope',sans-serif;font-size:22px;font-weight:800;color:var(--white);line-height:1;letter-spacing:-.02em;}
-.mv strong{color:var(--yellow);font-weight:800;}
-.mv .gr{color:var(--green);}
-.mv .bl{color:var(--blue);}
-.mv-sub{font-size:11px;color:rgba(255,255,255,.55);font-weight:500;}
-.ms{display:none;}
-@media(max-width:780px){.h-meta{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:380px){.h-meta{grid-template-columns:1fr;}}
+.h-cta{display:flex;gap:14px;flex-wrap:wrap;animation:fd .8s .4s ease both;row-gap:16px;}
+@media(max-width:1024px){.h-cta{justify-content:center;}}
+@media(max-width:600px){.h-cta{flex-direction:column;width:100%;max-width:340px;margin:0 auto;}.h-cta .btn-p,.h-cta .btn-s{width:100%;justify-content:center;}}
 
-.h-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fd .8s .5s ease both;row-gap:16px;}
-@media(max-width:600px){.h-cta{flex-direction:column;width:100%;max-width:340px;}.h-cta .btn-p,.h-cta .btn-s{width:100%;justify-content:center;}}
+/* CARD LATERAL (key facts + social proof + ISBN) */
+.hero-card{background:linear-gradient(180deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,.018) 100%);border:1px solid var(--line-2);border-radius:14px;padding:30px 28px;backdrop-filter:blur(14px);box-shadow:0 24px 60px rgba(0,0,0,.35);animation:fd 1s .5s ease both;}
+@media(max-width:1024px){.hero-card{max-width:520px;margin:0 auto;width:100%;}}
+.hc-eyebrow{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:18px;}
+.hc-list{display:flex;flex-direction:column;gap:0;}
+.hc-row{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line);}
+.hc-row:last-of-type{border-bottom:none;}
+.hc-n{font-family:'Manrope',sans-serif;font-size:32px;font-weight:800;line-height:1;letter-spacing:-.03em;color:var(--white);min-width:56px;}
+.hc-n.y{color:var(--yellow);}
+.hc-n.g{color:var(--green);}
+.hc-n.b{color:var(--blue);}
+.hc-n.c{color:var(--cyan);}
+.hc-lbl{font-size:14px;font-weight:600;color:var(--white);line-height:1.25;}
+.hc-sub{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.4);text-align:right;white-space:nowrap;}
+.hc-isbn{display:flex;align-items:center;gap:14px;padding:14px 0 4px;margin-top:4px;border-top:1px dashed var(--line-2);}
+.hc-isbn-tag{font-family:'Manrope',sans-serif;font-size:13px;font-weight:800;letter-spacing:.06em;color:var(--bg);background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 100%);padding:5px 12px;border-radius:6px;}
+.hc-isbn-txt{font-size:12.5px;color:rgba(255,255,255,.7);line-height:1.4;}
+.hc-isbn-txt strong{color:var(--white);}
+.hc-counter{display:flex;align-items:center;gap:10px;margin-top:18px;padding-top:18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+.hc-counter .pulse{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(122,199,79,.6);animation:pulse 2s infinite;}
+.hc-counter[hidden]{display:none;}
+.hc-counter strong{color:var(--green);font-weight:600;}
 .btn-p{background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 100%);color:var(--bg);font-size:14.5px;font-weight:700;padding:16px 38px;border:none;border-radius:100px;cursor:pointer;transition:all .2s;letter-spacing:.2px;display:inline-flex;align-items:center;gap:10px;}
 .btn-p:hover{filter:brightness(1.05);transform:translateY(-2px);box-shadow:0 12px 32px rgba(245,200,66,.2);}
 .btn-p .arrow{transition:transform .2s;}
@@ -147,10 +166,7 @@ nav.scrolled .nav-logo img{height:32px;}
 .btn-s{background:transparent;color:var(--white);font-size:14.5px;font-weight:500;padding:16px 36px;border:1px solid rgba(255,255,255,.22);border-radius:100px;cursor:pointer;transition:all .2s;}
 .btn-s:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.4);}
 
-.h-counter{margin-top:42px;display:inline-flex;align-items:center;gap:12px;font-size:12.5px;color:rgba(255,255,255,.5);animation:fd .8s .6s ease both;}
-.h-counter .pulse{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(122,199,79,.6);animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(122,199,79,.55);}50%{box-shadow:0 0 0 8px rgba(122,199,79,0);}}
-#counter-num{color:var(--green);font-weight:700;}
 
 .h-partners{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.36);backdrop-filter:blur(10px);padding:14px 36px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);font-size:11.5px;}
 .pl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.34);font-weight:600;}
@@ -456,14 +472,26 @@ html[data-theme="light"] .theme-toggle:hover{border-color:#2479B8;color:#2479B8;
 html[data-theme="light"] .menu-toggle{color:#091136;}
 html[data-theme="light"] .hero{background:radial-gradient(ellipse 70% 55% at 30% 30%,rgba(77,168,224,.10) 0%,transparent 60%),radial-gradient(ellipse 55% 50% at 80% 70%,rgba(122,199,79,.08) 0%,transparent 65%),linear-gradient(180deg,#FFFFFF 0%,#F1F5FB 60%,#FFFFFF 100%);}
 html[data-theme="light"] .hero::before{background-image:linear-gradient(rgba(9,17,54,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(9,17,54,.025) 1px,transparent 1px);}
-html[data-theme="light"] .h-tag{color:#3A4862;}
-html[data-theme="light"] .h-tag em{color:#C99300;}
-html[data-theme="light"] .h-sub, html[data-theme="light"] .sec-desc, html[data-theme="light"] .foot-text{color:rgba(9,17,54,.62);}
-html[data-theme="light"] .h-meta{background:rgba(9,17,54,.025);border-color:var(--line);}
-html[data-theme="light"] .mi{background:#FFFFFF;}
-html[data-theme="light"] .mv{color:#091136;}
-html[data-theme="light"] .mv-sub, html[data-theme="light"] .ml{color:rgba(9,17,54,.55);}
-html[data-theme="light"] .h-counter{color:rgba(9,17,54,.55);}
+html[data-theme="light"] .h1{color:#091136;}
+html[data-theme="light"] .h1 em{color:#C99300;}
+html[data-theme="light"] .h-lede{color:rgba(9,17,54,.7);}
+html[data-theme="light"] .h-lede strong{color:#091136;}
+html[data-theme="light"] .sec-desc, html[data-theme="light"] .foot-text{color:rgba(9,17,54,.62);}
+html[data-theme="light"] .hero-card{background:linear-gradient(180deg,#FFFFFF 0%,#F4F6FB 100%);border-color:var(--line-2);box-shadow:0 24px 60px rgba(9,17,54,.10);}
+html[data-theme="light"] .hc-eyebrow{color:rgba(9,17,54,.5);}
+html[data-theme="light"] .hc-row{border-bottom-color:var(--line);}
+html[data-theme="light"] .hc-n{color:#091136;}
+html[data-theme="light"] .hc-n.y{color:#C99300;}
+html[data-theme="light"] .hc-n.g{color:#5BA833;}
+html[data-theme="light"] .hc-n.b{color:#2479B8;}
+html[data-theme="light"] .hc-n.c{color:#2A8DA0;}
+html[data-theme="light"] .hc-lbl{color:#091136;}
+html[data-theme="light"] .hc-sub{color:rgba(9,17,54,.5);}
+html[data-theme="light"] .hc-isbn{border-top-color:rgba(9,17,54,.18);}
+html[data-theme="light"] .hc-isbn-txt{color:rgba(9,17,54,.7);}
+html[data-theme="light"] .hc-isbn-txt strong{color:#091136;}
+html[data-theme="light"] .hc-counter{border-top-color:var(--line);color:rgba(9,17,54,.55);}
+html[data-theme="light"] .hc-counter strong{color:#5BA833;}
 html[data-theme="light"] .h-partners{background:rgba(9,17,54,.04);border-top-color:var(--line);}
 html[data-theme="light"] .pl{color:rgba(9,17,54,.45);}
 html[data-theme="light"] .pc{color:rgba(9,17,54,.78);border-color:var(--line-2);}
@@ -570,27 +598,37 @@ html[data-theme="light"] .logo-dark{display:none;}
 <main id="main">
 
 <section class="hero" aria-labelledby="hero-title">
-  <img src="/assets/logo-completo.png?v=4" alt="1° Encontro de Governança, Estratégia e Inovação Governamental" class="hero-logo logo-dark" width="600">
-  <img src="/assets/logo-claro.png?v=4" alt="" aria-hidden="true" class="hero-logo logo-light" width="600">
   <h1 id="hero-title" class="sr-only">1° Encontro de Governança, Estratégia e Inovação Governamental</h1>
-  <div class="h-badge"><span class="dot" aria-hidden="true"></span>08, 09 e 10 de julho de 2026 · Rio de Janeiro</div>
-  <a href="#submeter" class="urgency-pill" id="urgencyPill" hidden><span class="pulse" aria-hidden="true"></span><span id="urgencyPillText">Fase 1 encerra em — dias</span><span class="sep">·</span><span>15.05.2026 · 23h59 BRT</span></a>
-  <p class="h-tag">A primeira plataforma nacional que integra <em>academia, regulação, gestão pública,<br>engenharia de produção e setor produtivo</em>.</p>
-  <p class="h-sub">Quatro eventos oficiais em três dias: 13ª Lean Six Sigma Congress, 4º Seminário SSEP, 2º Seminário de Regulação e 1º Seminário de Inteligência Governamental — sob uma só agenda de alto nível.</p>
-  <div class="h-meta" role="list">
-    <div class="mi" role="listitem"><div class="mv"><strong>3</strong></div><div class="ml">Dias</div><div class="mv-sub">consecutivos</div></div>
-    <div class="mi" role="listitem"><div class="mv"><span class="gr">4</span></div><div class="ml">Eventos</div><div class="mv-sub">integrados</div></div>
-    <div class="mi" role="listitem"><div class="mv"><span class="bl">8</span></div><div class="ml">Visitas</div><div class="mv-sub">em paralelo</div></div>
-    <div class="mi" role="listitem"><div class="mv"><strong>13</strong></div><div class="ml">Eixos</div><div class="mv-sub">indexados ODS</div></div>
-    <div class="mi" role="listitem"><div class="mv">ISBN</div><div class="ml">Anais</div><div class="mv-sub">dezembro/26</div></div>
-  </div>
-  <div class="h-cta">
-    <a href="#inscricao" class="btn-p">Inscreva-se agora <span class="arrow" aria-hidden="true">→</span></a>
-    <a href="#programacao" class="btn-s">Ver programação</a>
-  </div>
-  <div class="h-counter" id="counter" hidden>
-    <span class="pulse" aria-hidden="true"></span>
-    <span><span id="counter-num">0</span> profissionais já inscritos · ao vivo</span>
+  <div class="hero-grid">
+    <div class="hero-left">
+      <img src="/assets/logo-completo.png?v=4" alt="1° Encontro de Governança, Estratégia e Inovação Governamental" class="hero-logo logo-dark" width="560">
+      <img src="/assets/logo-claro.png?v=4" alt="" aria-hidden="true" class="hero-logo logo-light" width="560">
+      <div class="h-badge"><span class="dot" aria-hidden="true"></span>08–10 julho 2026 · Rio + Niterói</div>
+      <a href="#submeter" class="urgency-pill" id="urgencyPill" hidden><span class="pulse" aria-hidden="true"></span><span id="urgencyPillText">Fase 1 encerra em — dias</span><span class="sep">·</span><span>15.05 · 23h59 BRT</span></a>
+      <h2 class="h1">Quatro eventos oficiais.<br><em>Três dias.</em><span class="br"> Uma agenda nacional.</span></h2>
+      <p class="h-lede"><strong>13ª Lean Six Sigma Congress · 4º SSEP · 2º Seminário de Regulação · 1º Seminário de Inteligência Governamental</strong> — UFF, ABAR, PPGEP/UFF e Escola de Regulação.</p>
+      <div class="h-cta">
+        <a href="#inscricao" class="btn-p">Inscreva-se agora <span class="arrow" aria-hidden="true">→</span></a>
+        <a href="#programacao" class="btn-s">Ver programa</a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="Resumo do evento">
+      <div class="hc-eyebrow">O encontro em números</div>
+      <div class="hc-list">
+        <div class="hc-row"><span class="hc-n y">04</span><span class="hc-lbl">Eventos oficiais integrados</span><span class="hc-sub">Lean · SSEP<br>Reg · Intel</span></div>
+        <div class="hc-row"><span class="hc-n g">08</span><span class="hc-lbl">Visitas técnicas em campo</span><span class="hc-sub">Petrobras · CSN<br>Eneva · TAG</span></div>
+        <div class="hc-row"><span class="hc-n b">13</span><span class="hc-lbl">Eixos temáticos · ODS</span><span class="hc-sub">Avaliação<br>científica</span></div>
+        <div class="hc-row"><span class="hc-n c">24h</span><span class="hc-lbl">Carga horária certificada</span><span class="hc-sub">UFF · ABAR<br>PPGEP · Escola</span></div>
+      </div>
+      <div class="hc-isbn">
+        <span class="hc-isbn-tag">ISBN</span>
+        <span class="hc-isbn-txt"><strong>Anais publicados</strong><br>em dezembro de 2026</span>
+      </div>
+      <div class="hc-counter" id="counter" hidden>
+        <span class="pulse" aria-hidden="true"></span>
+        <span><strong id="counter-num">0</strong> profissionais já inscritos</span>
+      </div>
+    </aside>
   </div>
   <div class="h-partners" aria-label="Realizadores e parceiros">
     <span class="pl">Realização</span>
