@@ -637,10 +637,13 @@ html[data-theme="light"] .logo-dark{display:none;}
         <span class="hc-isbn-tag">ISBN</span>
         <span class="hc-isbn-txt"><strong>Anais publicados</strong><br>em dezembro de 2026</span>
       </div>
+      <!-- COUNTER-OCULTO (reativar removendo este comentário)
       <div class="hc-counter" id="counter" hidden>
         <span class="pulse" aria-hidden="true"></span>
         <span><strong id="counter-num">0</strong> profissionais já inscritos</span>
       </div>
+      -->
+
     </aside>
   </div>
   <div class="h-partners" aria-label="Realizadores e parceiros">
@@ -882,7 +885,7 @@ html[data-theme="light"] .logo-dark{display:none;}
     <div>
       <p class="sec-lbl fi">Normas técnicas</p>
       <h2 class="sec-title fi" id="nm-title" style="font-size:clamp(24px,3.4vw,38px);">Orientação aos <em>Autores</em></h2>
-      <p class="sec-desc fi" style="margin-bottom:0;font-size:16px;">Padronização técnica para garantir consistência editorial nos anais com ISBN. Comissão científica do 4º Seminário SSEP: <strong style="color:var(--white)">Ana, Flavia, Gabriella, Jucileia, Kelly, Pompilio e Silvia Cristina Rufino</strong>.</p>
+      <p class="sec-desc fi" style="margin-bottom:0;font-size:16px;">Padronização técnica para garantir consistência editorial nos anais com ISBN.</p>
     </div>
     <ul class="normas-list">
       <li class="fi"><div><strong>Formato</strong><span>.docx ou .pdf</span></div></li>
@@ -891,7 +894,7 @@ html[data-theme="light"] .logo-dark{display:none;}
       <li class="fi d3"><div><strong>Margens</strong><span>2,5 cm em todos os lados</span></div></li>
       <li class="fi"><div><strong>Páginas (Fase 1)</strong><span>2 a 4 páginas (resumo estendido)</span></div></li>
       <li class="fi d1"><div><strong>Páginas (Fase 2)</strong><span>8 a 15 páginas (artigo completo)</span></div></li>
-      <li class="fi d2"><div><strong>Vídeo</strong><span>até 5 min · URL YouTube/Vimeo</span></div></li>
+      <li class="fi d2"><div><strong>Vídeo</strong><span>até 5 min · upload de arquivo</span></div></li>
       <li class="fi d3"><div><strong>Citações</strong><span>conformidade ABNT</span></div></li>
     </ul>
   </div>
@@ -902,7 +905,7 @@ html[data-theme="light"] .logo-dark{display:none;}
   <div class="sec-in" style="text-align:center;">
     <p class="sec-lbl fi" style="margin-left:auto;margin-right:auto;">Formulário de submissão</p>
     <h2 class="sec-title fi" id="sm-title" style="margin-left:auto;margin-right:auto;">Envie seu <em>trabalho</em></h2>
-    <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Submissão direta pelo formulário oficial da Even3 (resumo estendido + URL do vídeo). Prazo Fase 1: <strong style="color:var(--white)">01/06/2026 23h59</strong>. Áreas temáticas e cronograma já configurados.</p>
+    <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Submissão direta pelo formulário oficial da Even3 (resumo estendido + arquivo de vídeo). Prazo Fase 1: <strong style="color:var(--white)">01/06/2026 23h59</strong>. Áreas temáticas e cronograma já configurados.</p>
   </div>
   <div class="sec-in" style="max-width:920px;margin-top:20px;">
     <div class="embed-wrap fi">
@@ -913,7 +916,7 @@ html[data-theme="light"] .logo-dark{display:none;}
         <ul class="embed-steps">
           <li><span>1</span>Selecione a <strong>modalidade</strong> (Resumo, Pôster, Relatório A3 ou Artigo)</li>
           <li><span>2</span>Escolha a <strong>área temática</strong> (entre os 13 eixos do evento)</li>
-          <li><span>3</span>Faça <strong>upload do arquivo</strong> + URL do vídeo de 5 min</li>
+          <li><span>3</span>Faça <strong>upload do arquivo</strong> + vídeo de 5 min</li>
           <li><span>4</span>Confirme e acompanhe o status pela mesma área</li>
         </ul>
         <a href="https://www.even3.com.br/evento/login?evento=1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003&ReturnUrl=%2fparticipante%2ftrabalhocientifico%2f" target="_blank" rel="noopener" class="btn-p"><span>Acessar área de envio do trabalho</span><span class="arrow" aria-hidden="true">→</span></a>
@@ -1000,12 +1003,6 @@ html[data-theme="light"] .logo-dark{display:none;}
 <aside class="cert" aria-label="Certificação">
   <div class="cert-i">
     <p class="ct">Certificação emitida por <strong>UFF, ABAR, PPGEP/UFF e GIGS/UNICAMP</strong>, válida para o Currículo Lattes (CNPq) e como horas complementares.</p>
-    <div class="cbg">
-      <span class="cb">Participação · 75% presença</span>
-      <span class="cb">Apresentação de trabalho</span>
-      <span class="cb">Livro com ISBN</span>
-      <span class="cb">24h complementares UFF</span>
-    </div>
   </div>
 </aside>
 
@@ -1124,6 +1121,7 @@ menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   toggle?.setAttribute('aria-expanded', 'false');
 }));
 
+/* COUNTER-OCULTO (reativar removendo este comentário)
 (async () => {
   try {
     const r = await fetch('/api/inscritos', { cache: 'no-store' });
@@ -1135,6 +1133,7 @@ menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     }
   } catch {}
 })();
+*/
 </script>
 </body>
 </html>

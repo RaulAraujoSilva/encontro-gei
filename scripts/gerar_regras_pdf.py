@@ -241,8 +241,8 @@ def main():
             ]},
             {"h": "Vídeo de apresentação", "items": [
                 "Duração máxima: 5 minutos",
-                "Hospedado em YouTube/Vimeo (link público ou não-listado)",
-                "URL informada no formulário Even3 no momento da submissão"
+                "Arquivo de vídeo enviado pela plataforma Even3 no momento da submissão",
+                "Formatos aceitos: MP4 (recomendado), MOV ou WebM"
             ]}
         ]
     )
