@@ -418,6 +418,33 @@ nav.scrolled .nav-logo img{height:32px;}
 .coin-t{font-family:'Manrope',sans-serif;font-size:18px;font-weight:700;margin-bottom:10px;line-height:1.18;letter-spacing:-.01em;}
 .coin-d{font-size:13px;color:rgba(255,255,255,.6);line-height:1.55;}
 
+/* === FAQ === */
+.faq{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);position:relative;overflow:hidden;}
+.faq::before{content:'';position:absolute;left:-180px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(77,168,224,.06) 0%,transparent 70%);pointer-events:none;}
+.faq-grid{display:grid;grid-template-columns:1fr;gap:48px;margin-top:24px;position:relative;}
+.faq-group{display:flex;flex-direction:column;gap:10px;}
+.faq-group h3{font-family:'Manrope',sans-serif;font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px;display:inline-flex;align-items:center;gap:10px;}
+.faq-group h3::before{content:'';width:22px;height:1.5px;background:var(--cyan);}
+.faq-item{border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.022);transition:border-color .2s,background .2s;overflow:hidden;}
+.faq-item[open]{border-color:rgba(77,168,224,.42);background:rgba(77,168,224,.04);}
+.faq-item summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;align-items:center;gap:16px;font-family:'Manrope',sans-serif;font-size:15.5px;font-weight:600;line-height:1.4;color:var(--white);letter-spacing:-.005em;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:'+';margin-left:auto;font-family:'Manrope',sans-serif;font-size:24px;font-weight:300;color:var(--cyan);line-height:1;flex-shrink:0;transition:transform .25s;}
+.faq-item[open] summary::after{content:'−';transform:rotate(0deg);}
+.faq-item summary:hover{color:var(--cyan);}
+.faq-num{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--muted-2);letter-spacing:.05em;flex-shrink:0;min-width:22px;}
+.faq-item[open] .faq-num{color:var(--cyan);}
+.faq-a{padding:0 22px 20px 60px;font-size:14.5px;color:var(--muted);line-height:1.7;}
+@media(max-width:600px){.faq-item summary{padding:16px 18px;font-size:14.5px;gap:12px;}.faq-a{padding:0 18px 18px 48px;font-size:14px;}}
+html[data-theme="light"] .faq-item{background:rgba(9,17,54,.018);}
+html[data-theme="light"] .faq-item[open]{background:rgba(36,121,184,.05);border-color:rgba(36,121,184,.35);}
+html[data-theme="light"] .faq-item summary{color:#091136;}
+html[data-theme="light"] .faq-item summary::after{color:#2479B8;}
+html[data-theme="light"] .faq-num{color:rgba(9,17,54,.45);}
+html[data-theme="light"] .faq-item[open] .faq-num{color:#2479B8;}
+html[data-theme="light"] .faq-group h3{color:#2479B8;}
+html[data-theme="light"] .faq-group h3::before{background:#2479B8;}
+
 /* === CERT === */
 .cert{background:linear-gradient(135deg,var(--bg-2) 0%,var(--bg-3) 100%);padding:60px 36px;border-top:2px solid var(--green);}
 .cert-i{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:30px;justify-content:space-between;}
@@ -602,6 +629,7 @@ html[data-theme="light"] .logo-dark{display:none;}
     <li><a href="#visitas">Visitas</a></li>
     <li><a href="#trabalhos">Submeter</a></li>
     <li><a href="#parceiros">Apoio</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#submeter" class="nav-deadline" id="navDeadline" hidden><span class="pulse" aria-hidden="true"></span><span id="navDeadlineText">Submissão até 01/06</span></a></li>
     <li><button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span class="lbl" id="themeLabel">Tema claro</span></button></li>
     <li><a href="#inscricao" class="nav-cta">Inscreva-se →</a></li>
@@ -943,6 +971,54 @@ html[data-theme="light"] .logo-dark{display:none;}
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="sec faq" id="faq" aria-labelledby="faq-title">
+  <div class="sec-in">
+    <p class="sec-lbl fi">Dúvidas frequentes</p>
+    <h2 class="sec-title fi" id="faq-title">Antes de você <em>perguntar</em></h2>
+    <p class="sec-desc fi">Principais dúvidas sobre participação, inscrições, visitas técnicas, submissão de trabalhos, certificação e apoio institucional ao Encontro GEIG. Não encontrou o que procurava? Fale com a organização pelos canais oficiais.</p>
+
+    <div class="faq-grid">
+
+      <div class="faq-group fi">
+        <h3>Participação e inscrição</h3>
+        <details class="faq-item"><summary><span class="faq-num">01</span><span>O evento é gratuito?</span></summary><div class="faq-a">Sim. A participação no evento é gratuita, conforme as condições e modalidades divulgadas pela organização. Ainda assim, a inscrição é obrigatória e está sujeita à disponibilidade de vagas.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">02</span><span>A inscrição é obrigatória?</span></summary><div class="faq-a">Sim. Mesmo sendo gratuito, o evento exige inscrição prévia. A inscrição permite à organização controlar a capacidade dos espaços, organizar as atividades e administrar as modalidades de participação.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">03</span><span>Quais são as modalidades de participação?</span></summary><div class="faq-a">As modalidades de participação seguem aquelas informadas oficialmente no site e na plataforma de inscrição. Recomenda-se que o participante verifique atentamente a modalidade escolhida antes de concluir a inscrição, especialmente quando houver interesse em visitas técnicas ou atividades específicas.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">04</span><span>A inscrição garante participação em todas as atividades?</span></summary><div class="faq-a">Não necessariamente. Algumas atividades podem ter vagas limitadas, critérios específicos de seleção ou necessidade de confirmação posterior pela organização. O participante deve observar as regras indicadas para cada modalidade e atividade.</div></details>
+      </div>
+
+      <div class="faq-group fi">
+        <h3>Visitas técnicas</h3>
+        <details class="faq-item"><summary><span class="faq-num">05</span><span>Posso participar apenas das visitas técnicas?</span></summary><div class="faq-a">A possibilidade de participação em visitas técnicas depende da modalidade de inscrição e das regras definidas pela organização. Como as visitas possuem vagas limitadas, recomenda-se verificar as condições específicas antes de se inscrever.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">06</span><span>Como serão escolhidas as vagas para as visitas técnicas?</span></summary><div class="faq-a">As vagas para visitas técnicas poderão observar critérios definidos pela organização, como ordem de inscrição, modalidade selecionada, disponibilidade de vagas e eventuais prioridades institucionais. O critério final será confirmado nos canais oficiais do evento.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">07</span><span>A inscrição em uma modalidade garante vaga em visita técnica?</span></summary><div class="faq-a">Não necessariamente. A inscrição pode manifestar interesse ou habilitar o participante a concorrer à vaga, mas a confirmação dependerá das regras de capacidade e validação da organização.</div></details>
+      </div>
+
+      <div class="faq-group fi">
+        <h3>Submissão de trabalhos</h3>
+        <details class="faq-item"><summary><span class="faq-num">08</span><span>Quem pode submeter trabalhos?</span></summary><div class="faq-a">Podem submeter trabalhos os interessados que atendam às normas da chamada de trabalhos, observando os eixos temáticos, os prazos e os requisitos técnicos definidos pela comissão organizadora.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">09</span><span>Quais são as modalidades de submissão?</span></summary><div class="faq-a">As modalidades de submissão seguem a chamada oficial do evento. Antes de submeter, o autor deve conferir o formato exigido, os limites de extensão, os critérios de avaliação e as orientações técnicas disponíveis no site.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">10</span><span>Onde faço a submissão do trabalho?</span></summary><div class="faq-a">A submissão deve ser realizada pela plataforma oficial indicada pela organização, conforme link disponibilizado no site do evento. Recomenda-se que o autor finalize a submissão com antecedência para evitar problemas técnicos de última hora.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">11</span><span>Os trabalhos aprovados serão publicados?</span></summary><div class="faq-a">A publicação dos trabalhos aprovados seguirá as regras definidas na chamada oficial e nas normas técnicas do evento. Os autores devem consultar as condições de publicação, apresentação e eventual exigência de ajustes após avaliação.</div></details>
+      </div>
+
+      <div class="faq-group fi">
+        <h3>Certificação</h3>
+        <details class="faq-item"><summary><span class="faq-num">12</span><span>O evento emitirá certificado?</span></summary><div class="faq-a">Sim, desde que o participante cumpra os critérios estabelecidos pela organização. A emissão de certificado poderá depender de inscrição válida, presença registrada e atendimento à carga horária ou às condições específicas de cada atividade.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">13</span><span>Qual é o critério para receber o certificado?</span></summary><div class="faq-a">O critério de certificação observa as regras oficiais do evento. Recomenda-se que o participante acompanhe as orientações da organização sobre controle de presença, carga horária mínima e atividades elegíveis para certificação.</div></details>
+      </div>
+
+      <div class="faq-group fi">
+        <h3>Apoio institucional e contato</h3>
+        <details class="faq-item"><summary><span class="faq-num">14</span><span>Como uma instituição pode apoiar o evento?</span></summary><div class="faq-a">Instituições interessadas podem apoiar o evento por meio das modalidades de parceria institucional divulgadas pela organização, como apoio à divulgação, indicação de painelistas, colaboração técnica, fornecimento de prêmios ou outras formas de cooperação previamente alinhadas.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">15</span><span>Quem devo contatar em caso de dúvidas?</span></summary><div class="faq-a">As dúvidas devem ser encaminhadas aos canais oficiais de contato indicados no site do evento. Recomenda-se informar nome completo, instituição, modalidade de interesse e descrição objetiva da dúvida para agilizar o atendimento.</div></details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- COINS / PATROCINIO -->
 <section class="sec coins" id="apoio" aria-labelledby="cn-title">
   <div class="sec-in">
@@ -1035,6 +1111,7 @@ html[data-theme="light"] .logo-dark{display:none;}
       <a href="#modalidades">Modalidades</a>
       <a href="#trabalhos">Submissão</a>
       <a href="#inscricao">Inscrição</a>
+      <a href="#faq">Dúvidas frequentes</a>
       <a href="/patrocinadores/">Apoio institucional</a>
     </div>
     <div class="foot-col">

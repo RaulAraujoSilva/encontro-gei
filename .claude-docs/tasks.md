@@ -16,6 +16,10 @@
 - [ ] TASK-1095: Adicionar foto/avatar real da Magda Chambriard quando confirmar
 - [ ] TASK-1103: Confirmar URL oficial do GIGS · UNICAMP e converter o `<div class="ptc">` em `<a href>` (card atual em `index.html` ~linha 973, sem href)
 
+## Completadas (sessão 07/05/2026)
+
+- [x] TASK-1105: Criar seção FAQ com 15 perguntas em acordeão (`<details>/<summary>`), agrupadas em 5 blocos (Participação, Visitas, Submissão, Certificação, Apoio); inserida após `#inscricao` antes do `#apoio`; novo link "FAQ" no menu superior e "Dúvidas frequentes" no footer; CSS dedicado com tema claro/escuro
+
 ## Completadas (sessão 06/05/2026 — segundo bloco)
 
 - [x] TASK-1100: Renumerar Modalidade 4 (Visitante Técnico Dia 2) → Modalidade 3; título da seção "Quatro formas" → "Três formas" (commit `221ce24`)
