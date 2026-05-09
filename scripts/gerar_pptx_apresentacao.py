@@ -284,18 +284,19 @@ def build():
     add_color_stripe(s, SLIDE_H - Emu(76200), height=Emu(76200))
 
     # ===== Slides 2 a 6 — seções científicas =====
+    # Tempos calibrados para totalizar 5–10 min de apresentação (mín. 5'00" · máx. 9'45").
     secoes = [
         ("Introdução", YELLOW,
-         "[ Contextualize a pesquisa em ~60 segundos. Apresente o problema, "
-         "sua relevância prática (governança / regulação / inovação) e a lacuna "
-         "que o trabalho endereça. Use no máximo 3 bullets curtos. ]"),
+         "[ Contextualize a pesquisa: problema, relevância prática "
+         "(governança / regulação / inovação) e a lacuna que o trabalho endereça. "
+         "Use no máximo 3 bullets curtos. Falando entre 45 segundos e 1min30s. ]"),
         ("Objetivo", GREEN,
          "[ Enuncie em 1 frase o objetivo geral. Liste, opcionalmente, "
-         "2–3 objetivos específicos. Tempo de fala estimado: 45 segundos. ]"),
+         "2–3 objetivos específicos. Falando entre 30 e 45 segundos. ]"),
         ("Metodologia", BLUE,
          "[ Descreva a abordagem (qualitativa / quantitativa / mista), "
          "o desenho de pesquisa, fonte de dados, instrumentos e período. "
-         "Cite normas / frameworks utilizados. Tempo de fala: ~2 minutos. ]"),
+         "Cite normas / frameworks utilizados. Falando entre 1 e 2 minutos. ]"),
     ]
     for i, (tit, cor, instr) in enumerate(secoes, start=2):
         section_slide(prs, num=i, total=total, titulo=tit, cor_titulo=cor, instrucao=instr)
@@ -303,7 +304,8 @@ def build():
     section_slide(
         prs, num=5, total=total, titulo="Resultados e discussão", cor_titulo=BLUE,
         instrucao=("[ Apresente os principais resultados e discuta-os à luz da literatura. "
-                   "Inclua 1 figura ou tabela na área abaixo. Tempo de fala: ~3 minutos. ]"),
+                   "Inclua 1 figura ou tabela na área abaixo. "
+                   "Falando entre 2 e 4 minutos. ]"),
         extra_box=True,
     )
 
@@ -311,7 +313,7 @@ def build():
         prs, num=6, total=total, titulo="Considerações finais", cor_titulo=CYAN,
         instrucao=("[ Sintetize as conclusões, limitações da pesquisa e implicações "
                    "para a prática regulatória / inovação governamental. Indique "
-                   "trabalhos futuros. Tempo de fala: ~1 minuto. ]"),
+                   "trabalhos futuros. Falando entre 45 segundos e 1min30s. ]"),
     )
 
     # ===== Slide 7 — Encerramento =====
