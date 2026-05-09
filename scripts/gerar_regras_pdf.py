@@ -194,9 +194,8 @@ def gerar_pdf(slug, titulo, intro, especificas, prazo_extra=""):
 
     story.append(Paragraph("Comissão científica", H1))
     story.append(Paragraph(
-        "Membros da Comissão Científica do 4º Seminário em Sistemas de Engenharia de Produção (SSEP/UFF): "
-        "Ana, Flavia, Gabriella, Jucileia, Kelly, Pompilio e Silvia Cristina Rufino. "
-        "Avaliação científica conduzida em conjunto pelas instituições realizadoras.", P))
+        "A avaliação científica é conduzida em conjunto pelas instituições realizadoras "
+        "(UFF, ABAR, PPGEP - LabDGE/UFF e GIGS/UNICAMP), em regime de avaliação por pares.", P))
 
     story.append(Paragraph("Submissão e contato", H1))
     story.append(Paragraph(
@@ -225,7 +224,7 @@ def main():
             ]},
             {"h": "Estrutura visual", "items": [
                 "Título: caixa alta, fonte <b>Arial 12</b>, negrito, alinhamento centralizado",
-                "Autores: até 6, alinhados à esquerda, Arial 12",
+                "Autores: até 4, alinhados à esquerda, Arial 12",
                 "Instituição: nome completo de cada autor, Arial 12",
                 "Margens: superior e inferior 3 cm; esquerda e direita 2 cm",
                 "Espaçamento simples entre linhas, texto justificado, sem recuo de parágrafo no início"
@@ -262,7 +261,7 @@ def main():
             ]},
             {"h": "Estrutura visual", "items": [
                 "Título: Arial 12, centralizado, negrito, caixa alta, espaçamento simples",
-                "Autores e instituições: nome completo, e-mails e instituições, Arial 12",
+                "Autores: até 4, com nome completo, e-mails e instituições, Arial 12",
                 "Texto justificado, sem recuo de parágrafo"
             ]},
             {"h": "Conteúdo", "items": [
@@ -300,6 +299,7 @@ def main():
             ]},
             {"h": "Formatação visual", "items": [
                 "Título: Arial 12, caixa alta, negrito, centralizado",
+                "Autores: até 4 (nome completo, e-mail e instituição), Arial 12",
                 "Subtítulos das fases DMAIC: Arial 12, negrito, alinhados à esquerda da coluna",
                 "Texto: Arial 10, espaçamento simples, justificado",
                 "Figuras/gráficos: legendas em Arial 9, numeradas sequencialmente"
@@ -327,6 +327,7 @@ def main():
             ]},
             {"h": "Estrutura do artigo", "items": [
                 "Título: em português e inglês, até 120 caracteres, Arial 12, centralizado, negrito, caixa alta",
+                "Autores: até 4 (nome completo, e-mail e instituição), Arial 12",
                 "Resumo: até 150 palavras, em português e inglês, Arial 10, espaçamento simples",
                 "Palavras-chave: 3 a 5, separadas por ponto e vírgula, Arial 10",
                 "Corpo do texto: Arial 12, espaçamento 1,5, justificado, sem espaço entre parágrafos, recuo de 1,25 cm",
@@ -342,7 +343,7 @@ def main():
                 "Citações no corpo do texto: sistema autor-data"
             ]},
             {"h": "Avaliação", "items": [
-                "Dupla avaliação cega pela comissão científica do 4º SSEP",
+                "Dupla avaliação cega por pares conduzida pelas instituições realizadoras",
                 "Critérios: aderência ao eixo temático, originalidade, rigor metodológico, contribuição teórica/prática"
             ]}
         ],

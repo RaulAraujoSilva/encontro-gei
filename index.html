@@ -320,9 +320,14 @@ nav.scrolled .nav-logo img{height:32px;}
 .regra-icon{width:46px;height:46px;border-radius:10px;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;font-family:'Manrope',sans-serif;letter-spacing:.5px;}
 .regra-t{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;line-height:1.22;letter-spacing:-.01em;color:var(--white);}
 .regra-d{font-size:12.5px;color:var(--muted);line-height:1.5;flex:1;}
-.regra-cta{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:6px;margin-top:auto;}
+.regra-ctas{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:auto;align-items:center;}
+.regra-cta,.regra-cta-alt{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;text-decoration:none;}
+.regra-cta{color:var(--accent);}
 .regra-cta::after{content:'↓';font-size:14px;}
 .regra-card:hover .regra-cta::after{animation:bounce .6s;}
+.regra-cta-alt{color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:6px;transition:all .2s;}
+.regra-cta-alt:hover{color:var(--white);border-color:var(--accent);background:rgba(255,255,255,.04);}
+.regra-cta-alt::after{content:'↓';font-size:13px;}
 @keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(3px);}}
 
 .eixos-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:20px;}
@@ -879,30 +884,42 @@ html[data-theme="light"] .logo-dark{display:none;}
       <span class="eixos-sub fi">Baixe o PDF com as regras técnicas detalhadas</span>
     </div>
     <div class="regras-grid">
-      <a class="regra-card fi" href="/assets/regras/resumo-expandido.pdf" download target="_blank" rel="noopener">
+      <div class="regra-card fi">
         <div class="regra-icon">RE</div>
         <div class="regra-t">Resumo Expandido</div>
         <div class="regra-d">Fase 1 · 2-4 páginas · até 700 palavras + vídeo de 5 min</div>
-        <div class="regra-cta">Baixar PDF</div>
-      </a>
-      <a class="regra-card fi d1" href="/assets/regras/poster.pdf" download target="_blank" rel="noopener">
+        <div class="regra-ctas">
+          <a class="regra-cta" href="/assets/regras/resumo-expandido.pdf" download target="_blank" rel="noopener">Regras (PDF)</a>
+          <a class="regra-cta-alt" href="/assets/modelos/resumo-expandido.docx" download>Modelo Word</a>
+        </div>
+      </div>
+      <div class="regra-card fi d1">
         <div class="regra-icon">PA</div>
         <div class="regra-t">Pôster A3</div>
         <div class="regra-d">Diagramação visual A3 · Sessão dedicada no Dia 3 do evento</div>
-        <div class="regra-cta">Baixar PDF</div>
-      </a>
-      <a class="regra-card fi d2" href="/assets/regras/relatorio-a3.pdf" download target="_blank" rel="noopener">
+        <div class="regra-ctas">
+          <a class="regra-cta" href="/assets/regras/poster.pdf" download target="_blank" rel="noopener">Regras (PDF)</a>
+          <a class="regra-cta-alt" href="/assets/modelos/poster.docx" download>Modelo Word</a>
+        </div>
+      </div>
+      <div class="regra-card fi d2">
         <div class="regra-icon">R3</div>
         <div class="regra-t">Relatório A3</div>
         <div class="regra-d">Modelo DMAIC · 1 página A3 · trabalhos aplicados de melhoria</div>
-        <div class="regra-cta">Baixar PDF</div>
-      </a>
-      <a class="regra-card fi d3" href="/assets/regras/artigo-completo.pdf" download target="_blank" rel="noopener">
+        <div class="regra-ctas">
+          <a class="regra-cta" href="/assets/regras/relatorio-a3.pdf" download target="_blank" rel="noopener">Regras (PDF)</a>
+          <a class="regra-cta-alt" href="/assets/modelos/relatorio-a3.pptx" download>Modelo PowerPoint</a>
+        </div>
+      </div>
+      <div class="regra-card fi d3">
         <div class="regra-icon">AC</div>
         <div class="regra-t">Artigo Completo</div>
         <div class="regra-d">Fase 2 · 8-15 páginas · ABNT · publicado nos anais ISBN</div>
-        <div class="regra-cta">Baixar PDF</div>
-      </a>
+        <div class="regra-ctas">
+          <a class="regra-cta" href="/assets/regras/artigo-completo.pdf" download target="_blank" rel="noopener">Regras (PDF)</a>
+          <a class="regra-cta-alt" href="/assets/modelos/artigo-completo.docx" download>Modelo Word</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -917,6 +934,7 @@ html[data-theme="light"] .logo-dark{display:none;}
     </div>
     <ul class="normas-list">
       <li class="fi"><div><strong>Formato</strong><span>.docx ou .pdf</span></div></li>
+      <li class="fi"><div><strong>Autores</strong><span>até 4 por trabalho</span></div></li>
       <li class="fi d1"><div><strong>Fonte</strong><span>Arial 12pt</span></div></li>
       <li class="fi d2"><div><strong>Espaçamento</strong><span>1,5 entrelinhas</span></div></li>
       <li class="fi d3"><div><strong>Margens</strong><span>2,5 cm em todos os lados</span></div></li>
