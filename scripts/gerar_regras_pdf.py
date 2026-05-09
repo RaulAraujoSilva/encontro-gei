@@ -214,7 +214,7 @@ def main():
         "resumo-expandido",
         "Resumo Expandido (Fase 1)",
         intro=[
-            "O Resumo Expandido é a peça obrigatória da Fase 1 da chamada de trabalhos do 1° Encontro de Governança, Estratégia e Inovação Governamental, acompanhado de um vídeo de até 5 minutos contendo apresentação síntese da pesquisa.",
+            "O Resumo Expandido é a peça obrigatória da Fase 1 da chamada de trabalhos do 1° Encontro de Governança, Estratégia e Inovação Governamental, acompanhado de um vídeo de até 10 minutos contendo apresentação síntese da pesquisa.",
             "Os trabalhos aprovados nesta fase serão convidados para apresentação presencial no Dia 3 (10 de julho de 2026, NAB UFF, Niterói) e poderão evoluir para artigo completo a ser publicado no livro com ISBN do evento (Fase 2)."
         ],
         especificas=[
@@ -239,7 +239,7 @@ def main():
                 "Listadas ao final, fonte Arial 10"
             ]},
             {"h": "Vídeo de apresentação", "items": [
-                "Duração máxima: 5 minutos",
+                "Duração máxima: 10 minutos",
                 "Arquivo de vídeo enviado pela plataforma Even3 no momento da submissão",
                 "Formatos aceitos: MP4 (recomendado), MOV ou WebM"
             ]}

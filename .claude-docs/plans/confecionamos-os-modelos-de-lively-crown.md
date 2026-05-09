@@ -1,97 +1,83 @@
-# Plano — Modelos Word para download + Padronização de 4 autores
+# Plano — Modelo de apresentação (.pptx) para o vídeo de submissão
 
 ## Contexto
 
-Foram finalizados os modelos editáveis de submissão (Resumo Expandido, Pôster A3, Relatório A3, Artigo Completo) na pasta local `Modelos/`. Precisam estar disponíveis para download diretamente nos cards de "Normas por modalidade" do site.
+A Fase 1 da chamada exige, junto com o Resumo Expandido, um **vídeo de até 5 minutos** com a apresentação síntese da pesquisa (Even3 + regras). Como o conteúdo desse vídeo é **comum a várias modalidades** (todas as submissões com vídeo seguem a mesma estrutura científica do Resumo Expandido: Introdução → Objetivo → Metodologia → Discussão/Resultados → Considerações Finais), faz sentido oferecer um **template único** de apresentação no padrão visual do evento.
 
-Em paralelo, há duas regras a padronizar em **todas as fontes** de regulamento (PDFs gerados, site institucional, Even3):
+O arquivo deve ser gerado e colocado em pasta do projeto para validação do usuário antes de ser disponibilizado no site.
 
-1. **Remover a lista de nomes** dos membros da comissão científica do PDF (mantendo o conceito "comissão científica", o e-mail `comissao.cientifica@encontrogeig.org` e a citação genérica no site).
-2. **Padronizar limite de 4 autores** em todas as 4 modalidades (hoje só o Resumo Expandido cita explicitamente "até 6 autores"; as demais são omissas).
+## Identidade visual (extraída de `index.html` e `assets/`)
 
-## Mudanças
+**Paleta:**
+- Fundo navy: `#091136` (principal), `#0E1A4A`, `#142469` (cards)
+- Amarelo: `#F5C842` (Governança)
+- Verde: `#7AC74F` (Estratégia)
+- Azul: `#4DA8E0` (Inovação)
+- Ciano: `#5BC6E5` (decorativo)
+- Branco: `#FFFFFF`
 
-### 1. Templates Word — disponibilizar para download
+**Tipografia:** Manrope (headings) + Outfit (corpo) — não nativas no PowerPoint. **Fallback:** **Calibri** (ou Segoe UI) com pesos 800 / 400 para preservar contraste.
 
-**Origem:** `Modelos/` (raiz do repo)
-**Destino servido:** `assets/modelos/` (novo diretório)
+**Logos disponíveis (`assets/`):**
+- Evento: `assets/logo-completo.png`, `assets/logo-fundo-branco.png` (versão para slide claro)
+- Realizadoras (`assets/logos/`): `uff.svg`, `abar.png`, `labdge.png`, `gigs-unicamp.jpg`
+  - Obs.: SVG não é aceito por python-pptx; será usada conversão prévia para PNG (ou manualmente, ou via biblioteca cairosvg/cli).
 
-Renomear ao copiar (slugs alinhados com PDFs em `assets/regras/`):
+## Conteúdo dos slides (formato 16:9)
 
-| Origem | Destino |
-|---|---|
-| `Resumo Expandido_Template 1 Encontro de Governança, Estratégia e Inovação Governamental.docx` | `assets/modelos/resumo-expandido.docx` |
-| `POSTER Encontro de Governança, Estratégia e Inovação.docx` | `assets/modelos/poster.docx` |
-| `RELATÓRIO A3 Encontro de Governança, Estratégia e Inovação.pptx` | `assets/modelos/relatorio-a3.pptx` |
-| `ARTIGO COMPLETO_Template1_Encontro Governanaça, Estratgia e Inovação Governamental.docx` | `assets/modelos/artigo-completo.docx` |
+8 slides, 1280×720:
 
-**Index.html (linhas 882–905):** adicionar segundo botão dentro de cada `.regra-card`, abaixo do `.regra-cta` existente.
+| # | Slide | Conteúdo |
+|---|---|---|
+| 1 | **Capa** | Fundo navy, logo do evento centralizado no topo, título do trabalho (placeholder), autores, instituições. Faixa decorativa amarelo/verde/azul/ciano na base + tira institucional com 4 logos pequenos das realizadoras |
+| 2 | **Equipe e filiação** | Autores (até 4) e respectivas instituições, e-mails de contato. Logo do evento no canto |
+| 3 | **Introdução / Contexto** | Título "Introdução" (Manrope-style, 40pt), área de texto vazia (placeholder com instrução discreta sobre o que escrever) |
+| 4 | **Objetivo** | Mesma estrutura. Cor de destaque do título: amarelo |
+| 5 | **Metodologia** | Cor de destaque: verde |
+| 6 | **Resultados e discussão** | Cor de destaque: azul. Espaço para 1 figura/tabela |
+| 7 | **Considerações finais** | Cor de destaque: ciano |
+| 8 | **Encerramento** | "Obrigado(a)!" com logos das realizadoras + e-mail de contato + URL do evento |
 
-Mudança estrutural mínima: o card hoje é um `<a>` único (clique abre PDF). Para acomodar dois botões precisamos converter o card de `<a>` para `<div>` e mover os dois links para dentro como `.regra-cta` (PDF) + `.regra-cta-alt` (DOCX/PPTX). CSS adicional será adicionado em `<style>` (buscar bloco `.regra-card` no `<style>` do index.html) para layout horizontal dos dois CTAs e manter responsividade.
+Todos os slides (exceto capa e encerramento) terão **rodapé padronizado** com: logo mini do evento (esquerda), número/total de slides (direita), faixa decorativa fina nas 4 cores.
 
-Exemplo (Resumo Expandido):
-```html
-<div class="regra-card fi">
-  <div class="regra-icon">RE</div>
-  <div class="regra-t">Resumo Expandido</div>
-  <div class="regra-d">Fase 1 · 2-4 páginas · até 700 palavras + vídeo de 5 min</div>
-  <div class="regra-ctas">
-    <a class="regra-cta" href="/assets/regras/resumo-expandido.pdf" download target="_blank" rel="noopener">Regras (PDF)</a>
-    <a class="regra-cta-alt" href="/assets/modelos/resumo-expandido.docx" download>Modelo Word</a>
-  </div>
-</div>
-```
+## Geração do arquivo
 
-Para o Relatório A3 o segundo botão será "Modelo PowerPoint" → `relatorio-a3.pptx`.
+**Stack:** `python-pptx 1.0.2` (já disponível no ambiente).
 
-### 2. Padronização de 4 autores
+**Novo script:** `scripts/gerar_pptx_apresentacao.py`
+- Constrói a apresentação programaticamente (sem template binário); cores e textos definidos no código.
+- Embute logos a partir de `assets/logo-fundo-branco.png` e `assets/logos/{uff,abar,labdge,gigs-unicamp}.png`.
+- Para `uff.svg` (e `ibp.svg` que não será usado aqui): converter previamente para PNG via uma das opções:
+  1. `cairosvg` (Python) — preferida se disponível;
+  2. fallback: usar `assets/logo-completo.png` se `uff.svg` não for convertível.
+- Saída: `Modelos/Apresentacao_Video_Encontro_GEI.pptx` (pasta original onde os outros modelos foram entregues, para validação).
 
-**`scripts/gerar_regras_pdf.py`:**
-- Linha 228: `"Autores: até 6"` → `"Autores: até 4"`
-- Adicionar item `"Autores: até 4, alinhados à esquerda, Arial 12"` nas seções "Estrutura visual" das modalidades **Pôster A3** (após linha 265) e **Relatório A3** (na bloco "Formatação visual", após linha 302).
-- **Artigo Completo:** adicionar item `"Autores: até 4 (nome completo, e-mail e instituição)"` na seção "Estrutura do artigo" (após linha 334).
-- **Comissão científica (linhas 195–199):** remover a frase com os 7 nomes. Substituir por: `"A avaliação científica é conduzida em conjunto pelas instituições realizadoras (UFF, ABAR, PPGEP - LabDGE/UFF e GIGS/UNICAMP), em regime de avaliação por pares."`
-- Linha 345 ("Dupla avaliação cega pela comissão científica do 4º SSEP") → `"Dupla avaliação cega por pares conduzida pelas instituições realizadoras"`.
-
-Após editar, regenerar os 4 PDFs em `assets/regras/`:
+**Comando:**
 ```powershell
-python scripts/gerar_regras_pdf.py
+python scripts/gerar_pptx_apresentacao.py
 ```
 
-**`index.html`:**
-- Lista "Orientação aos Autores" (linhas 918–927): adicionar `<li class="fi"><div><strong>Autores</strong><span>até 4 por trabalho</span></div></li>`.
-- Linha 954: manter o texto atual "Avaliação por comissão científica" (conforme decisão — só remover nomes, não o conceito).
-- Linha 1122 (footer): manter o e-mail `comissao.cientifica@encontrogeig.org`.
+## Fora do escopo (próximo passo, após validação)
 
-### 3. Even3 (via Chrome DevTools MCP)
+Não exponho ainda no site. Quando o usuário aprovar:
+- copiar `.pptx` para `assets/modelos/apresentacao-video.pptx`
+- adicionar **bloco destacado** no `index.html` logo após a `regras-grid` (linha ~907), por ex. um card único centralizado:
+  > "Modelo de apresentação para o vídeo · usado em todas as modalidades com vídeo · [Baixar PowerPoint]"
 
-Ao executar:
-1. `mcp__chrome-devtools__new_page` para abrir `https://www.even3.com.br/`.
-2. Pedir ao usuário para fazer login interativo (credenciais não estão no escopo da automação).
-3. Navegar até a configuração de **Trabalhos científicos / Modalidades** do evento `1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003`.
-4. Para cada modalidade, ajustar campo "número máximo de autores" para **4** (se existir tal campo); caso o Even3 só permita texto livre nas instruções, atualizar a descrição da modalidade incluindo "Limite: até 4 autores por trabalho".
-5. Fazer screenshot final de cada tela como evidência.
-
-> Caveat: a estrutura exata do painel do Even3 só é conhecida após login. O passo a passo acima pode precisar ser ajustado em runtime.
+Esse bloco ficaria entre os cards de modalidades e a seção "Normas técnicas" (linha 911), aproveitando o espaço natural do fluxo.
 
 ## Arquivos críticos
 
-- `index.html` — linhas 877–906 (cards de regras), 918–927 (lista de normas).
-- `scripts/gerar_regras_pdf.py` — linhas 195–199, 228, 265, 302, 334, 345.
-- `assets/regras/*.pdf` — regenerados pelo script.
-- `assets/modelos/` — novo diretório com 4 arquivos copiados de `Modelos/`.
+- **A criar:** `scripts/gerar_pptx_apresentacao.py` — gerador Python.
+- **Saída:** `Modelos/Apresentacao_Video_Encontro_GEI.pptx`.
+- **Read-only nesta etapa:** `assets/logo-fundo-branco.png`, `assets/logos/{uff.svg,abar.png,labdge.png,gigs-unicamp.jpg}`, `index.html` (apenas como referência de cores).
 
 ## Verificação
 
-1. **Templates:** abrir `index.html` localmente (live server ou Vercel preview), clicar em "Modelo Word" em cada card → arquivo baixa com nome correto. Verificar que o link "Regras (PDF)" continua funcionando.
-2. **PDFs regenerados:** abrir cada um dos 4 PDFs em `assets/regras/` e confirmar:
-   - Não há lista de nomes em "Comissão científica".
-   - Cada modalidade contém "Autores: até 4".
-3. **Site:** verificar que a lista "Orientação aos Autores" mostra o item "Autores · até 4 por trabalho".
-4. **Even3:** revisar visualmente cada modalidade após edição via Chrome DevTools MCP (screenshots).
-5. **Responsividade:** redimensionar viewport para 360px e confirmar que os dois CTAs nos cards não quebram layout.
-
-## Fora de escopo
-
-- Alterar o texto "Avaliação por comissão científica" no site (linha 954) e o e-mail de contato (linha 1122) — preservados conforme decisão do usuário.
-- Modificar templates `.docx`/`.pptx` em si — apenas disponibilizá-los como estão.
+1. Rodar `python scripts/gerar_pptx_apresentacao.py` e confirmar que o arquivo foi gerado sem erros.
+2. Abrir `Modelos/Apresentacao_Video_Encontro_GEI.pptx` no PowerPoint/LibreOffice e validar:
+   - Capa com logo + paleta de fundo navy correta.
+   - 8 slides na ordem certa.
+   - Logos das 4 realizadoras presentes nos slides 1 e 8.
+   - Texto-placeholder legível e em fonte Calibri.
+3. **Aguardar aprovação do usuário** antes de mover para `assets/modelos/` e expor no site.
