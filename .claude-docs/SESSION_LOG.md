@@ -1,7 +1,7 @@
 # Session Log — Site 1° Encontro GEI
 
-> **Última atualização:** 2026-05-06
-> **Status global:** Site no ar (`encontrogeig.org`), Even3 configurada, 4 PDFs de regras publicados, e-mails Google Workspace ativos. Pausando aqui — pronto para retomar com ajustes incrementais.
+> **Última atualização:** 2026-05-25
+> **Status global:** Site no ar (`encontrogeig.org`), Even3 configurada, 4 PDFs de regras publicados, e-mails Google Workspace ativos. **Fase 1 prorrogada para 16/06/2026** e vídeo agora entregue via link público (não upload).
 
 ## Visão geral do projeto
 
@@ -9,6 +9,49 @@
 **Datas:** 08, 09 e 10 de julho de 2026
 **Locais:** Rio de Janeiro (Dias 1 e 2) + Niterói/UFF Gragoatá (Dia 3)
 **Realização:** UFF · ABAR · PPGEP/UFF · GIGS/UNICAMP (Escola de Regulação ocultada em 06/05 — preservada em comentários; GIGS adicionado em 06/05 — segundo bloco)
+
+**Cronograma atual da chamada de trabalhos:**
+
+| # | Fase | Data |
+|---|---|---|
+| 1 | Fase 1 · Resumo + vídeo | até **16/06/2026** 23h59 |
+| 2 | Resultado · Aprovação | até **22/06/2026** |
+| 3 | Programa Definitivo | 25/06/2026 |
+| 4 | Fase 2 · Apresentação | 10/07/2026 · NAB UFF |
+| 5 | Artigo · Versão final | até 30/09/2026 |
+| 6 | Livro · Anais ISBN | dezembro/2026 |
+
+**Fluxo do vídeo (Fase 1):** Even3 não aceita upload de arquivo de vídeo. Autor hospeda em link público (Google Drive, OneDrive ou YouTube unlisted) e cola a URL no **corpo do documento** (resumo expandido). Há também campo opcional "URL do vídeo de apresentação" no formulário da Even3 para reforço.
+
+---
+
+## Sessão 25/05/2026 — prorrogação Fase 1 + URL do vídeo
+
+Commits: `db99b9b` (mudanças) e `b0cd143` (doc operacional Even3) — push para `main`.
+
+**Motivação:** A Even3 não permite upload de arquivo de vídeo no fluxo de submissão. Como o prazo Fase 1 atual (01/06) estava a 7 dias e os autores ficariam sem como entregar o vídeo, foi necessário (a) prorrogar Fase 1 e Resultado em 2 semanas e (b) trocar a entrega do vídeo para link público.
+
+**Mudanças no site (`db99b9b`):**
+
+1. **`index.html`** — datas atualizadas: nav deadline `Submissão até 16/06`, hero pill `16.06 · 23h59 BRT`, timeline (Fase 1 `até 16/06/2026`, Resultado `até 22/06/2026`), card `dl-date` "16 de junho · 23h59", embed Even3 (intro/rodapé com 16/06 e resultado 22/06), JS countdown para `2026-06-16T23:59:00-03:00`. Item Vídeo nas normas: "upload de arquivo" → "link público no documento". Passo 3 do embed orienta colar o link no corpo do texto e no campo URL da Even3.
+2. **`scripts/gerar_regras_pdf.py`** — cronograma e caixa amarela atualizados; seção "Vídeo de apresentação" do Resumo Expandido reescrita para link público (Google Drive/OneDrive/YouTube unlisted) colado no corpo do documento.
+3. **4 PDFs em `assets/regras/`** regerados via script.
+4. **`README.md`, `docs/CONTENT.md`, `docs/EVEN3_OPERATIONS.md`, `docs/LANDING_GUIDE.md`, `.claude-docs/constitution.md`** sincronizados com as novas datas e o novo fluxo do vídeo.
+
+**Mudanças na Even3 (via Chrome MCP, evento 722003):**
+
+1. **Cronograma de submissão:** fim mudado para `16/06/2026` (`Submissões > Configurações`).
+2. **Cronograma de avaliação:** `02/06 → 17/06` substituído por `17/06 → 22/06` (`Avaliação > Configurações`).
+3. **Campo novo no formulário:** "URL do vídeo de apresentação (Fase 1 — Resumo Expandido)", tipo Resposta curta, opcional, com instruções detalhadas para o participante, visível ao avaliador (`Submissões > Recebimento > Formulário de submissão`).
+4. **4 PDFs de regras re-anexados** (URLs novas em `static.even3.com/geral/`: `artigo-completo.6a32616c…`, `poster.2fcde367…`, `relatorio-a3.3a2981b5…`, `resumo-expandido.e7ddf078…`).
+
+**Doc operacional atualizado (`b0cd143`):**
+
+- `docs/EVEN3_OPERATIONS.md` ganhou seção "Adicionar pergunta personalizada ao formulário de submissão" e nota sobre propagação da CDN ao trocar PDF (linha pode mostrar "Defina regras de submissão" momentaneamente, recarregar confirma o hash novo).
+
+**Pendências geradas:**
+
+- Nenhuma. Próximas decisões dependem de input externo (avaliação dos trabalhos durante 17–22/06).
 
 ---
 

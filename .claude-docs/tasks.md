@@ -16,6 +16,17 @@
 - [ ] TASK-1095: Adicionar foto/avatar real da Magda Chambriard quando confirmar
 - [ ] TASK-1103: Confirmar URL oficial do GIGS · UNICAMP e converter o `<div class="ptc">` em `<a href>` (card atual em `index.html` ~linha 973, sem href)
 
+## Completadas (sessão 25/05/2026 — prorrogação Fase 1 + URL do vídeo)
+
+- [x] TASK-1110: Trocar datas de submissão — Fase 1 `01/06 → 16/06/2026`, Resultado `17/06 → 22/06/2026` (`index.html`, `scripts/gerar_regras_pdf.py`, `README.md`, `docs/CONTENT.md`, `docs/EVEN3_OPERATIONS.md`, `docs/LANDING_GUIDE.md`, `.claude-docs/constitution.md`) — commit `db99b9b`
+- [x] TASK-1111: Substituir "upload de arquivo de vídeo" por "link público no documento" em todo o site e no PDF do Resumo Expandido (Google Drive, OneDrive ou YouTube unlisted) — commit `db99b9b`
+- [x] TASK-1112: Regerar 4 PDFs em `assets/regras/` via `python scripts/gerar_regras_pdf.py` — commit `db99b9b`
+- [x] TASK-1113: Even3 — mover cronograma de submissão para encerrar em 16/06/2026 (`Submissões > Configurações`)
+- [x] TASK-1114: Even3 — mover cronograma de avaliação para 17/06–22/06/2026 (`Avaliação > Configurações`)
+- [x] TASK-1115: Even3 — criar campo "URL do vídeo de apresentação (Fase 1 — Resumo Expandido)" no formulário de submissão, tipo Resposta curta, opcional, visível ao avaliador, com instruções de preenchimento
+- [x] TASK-1116: Even3 — re-anexar os 4 PDFs novos às modalidades (Artigo, Pôster, Relatório A3, Resumo) — hashes confirmados em `static.even3.com/geral/`
+- [x] TASK-1117: Documentar fluxo de pergunta personalizada na Even3 + nota de propagação CDN em `docs/EVEN3_OPERATIONS.md` — commit `b0cd143`
+
 ## Completadas (sessão 07/05/2026)
 
 - [x] TASK-1105: Criar seção FAQ com 15 perguntas em acordeão (`<details>/<summary>`), agrupadas em 5 blocos (Participação, Visitas, Submissão, Certificação, Apoio); inserida após `#inscricao` antes do `#apoio`; novo link "FAQ" no menu superior e "Dúvidas frequentes" no footer; CSS dedicado com tema claro/escuro
