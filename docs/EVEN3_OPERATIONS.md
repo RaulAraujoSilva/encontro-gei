@@ -199,6 +199,23 @@ curl -s https://encontrogeig.org/api/inscritos
 4. Upload do novo PDF
 5. **Aguardar 5+ segundos** antes de clicar **Salvar Modalidade**
 
+> Após salvar, a linha da modalidade na grade pode aparecer momentaneamente como "Defina regras de submissão" enquanto a CDN propaga — recarregar a aba confirma o novo PDF (URL muda para `static.even3.com/geral/<slug>.<hash>.pdf` com hash novo).
+
+### Adicionar pergunta personalizada ao formulário de submissão
+
+Confirmado: a Even3 permite campos customizados no formulário de submissão (ex.: URL do vídeo, links externos).
+
+1. `/organizador/trabalhocientifico/submissaogeral?tab=Formulário%20de%20submissão`
+2. Clicar **"+ Adicionar pergunta"**
+3. Escolher tipo "Submissão" (não "Autor") e formato adequado — para URL use **Resposta curta**
+4. Preencher título da pergunta
+5. Recomendado marcar:
+   - **Exibir resposta da pergunta para o avaliador** (para o avaliador acessar o link)
+   - **Incluir instruções de preenchimento ao participante** (orientações sobre formato/visibilidade do link)
+6. **Pergunta válida para todas as modalidades** já vem marcada por padrão
+7. Deixar **sem obrigatoriedade** se o campo só faz sentido em algumas modalidades (ex.: vídeo só é exigido na Fase 1 / Resumo Expandido)
+8. Clicar **Salvar pergunta**
+
 ### Cadastrar novo avaliador
 
 1. `/organizador/trabalhocientifico/avaliacaogeral?tab=Avaliadores`
