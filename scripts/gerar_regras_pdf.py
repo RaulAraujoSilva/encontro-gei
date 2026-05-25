@@ -149,7 +149,7 @@ def gerar_pdf(slug, titulo, intro, especificas, prazo_extra=""):
     story.append(Paragraph(f"Normas de Submissão — {titulo}", H_TITLE))
     story.append(Paragraph("Chamada de trabalhos · Realização: UFF · ABAR · PPGEP/UFF", H_SUB))
     story.append(deadline_box(
-        f"Prazo Fase 1 — Resumo + Vídeo · até <font color='#9A7D14'>1 de junho de 2026</font> · 23h59 (Brasília)"
+        f"Prazo Fase 1 — Resumo + Vídeo · até <font color='#9A7D14'>16 de junho de 2026</font> · 23h59 (Brasília)"
         + (f"<br/><font size='9' color='#5C6781'>{prazo_extra}</font>" if prazo_extra else "")
     ))
     story.append(Spacer(1, 12))
@@ -174,8 +174,8 @@ def gerar_pdf(slug, titulo, intro, especificas, prazo_extra=""):
 
     story.append(Paragraph("Cronograma da chamada de trabalhos", H1))
     cron = [
-        ("Fase 1 · Resumo + vídeo", "até 01/06/2026 · 23h59 (Brasília)"),
-        ("Resultado da Fase 1", "até 17/06/2026"),
+        ("Fase 1 · Resumo + vídeo", "até 16/06/2026 · 23h59 (Brasília)"),
+        ("Resultado da Fase 1", "até 22/06/2026"),
         ("Programa definitivo", "publicado em 25/06/2026"),
         ("Fase 2 · Apresentação presencial", "10/07/2026 · NAB UFF · Niterói"),
         ("Versão final do artigo", "até 30/09/2026"),
@@ -240,7 +240,9 @@ def main():
             ]},
             {"h": "Vídeo de apresentação", "items": [
                 "Duração máxima: 10 minutos",
-                "Arquivo de vídeo enviado pela plataforma Even3 no momento da submissão",
+                "Hospedar o vídeo em <b>link público</b> acessível (Google Drive, OneDrive, YouTube unlisted ou similar)",
+                "Colar a URL no <b>corpo do documento</b> (final do resumo, antes das referências)",
+                "Se a plataforma Even3 disponibilizar campo dedicado de URL na submissão, preencher também — o link no documento é a garantia mínima",
                 "Formatos aceitos: MP4 (recomendado), MOV ou WebM"
             ]}
         ]

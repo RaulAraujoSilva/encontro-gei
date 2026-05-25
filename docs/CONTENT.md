@@ -147,9 +147,9 @@ Todas **gratuitas**. Pré-inscrição prioritária (~15 dias) para UFF, ABAR, PP
 | Etapa | Data |
 |---|---|
 | Início submissão | 04/05/2026 |
-| **Fim Fase 1 (resumo + vídeo)** | **01/06/2026 23h59** |
-| Início avaliação | 02/06/2026 |
-| **Resultado Fase 1** | **17/06/2026** |
+| **Fim Fase 1 (resumo + vídeo)** | **16/06/2026 23h59** |
+| Início avaliação | 17/06/2026 |
+| **Resultado Fase 1** | **22/06/2026** |
 | Programa definitivo publicado | 25/06/2026 |
 | Apresentação presencial (Fase 2) | 10/07/2026 (Dia 3 · NAB UFF) |
 | **Versão final do artigo** | **30/09/2026** |
@@ -181,7 +181,7 @@ Todas **gratuitas**. Pré-inscrição prioritária (~15 dias) para UFF, ABAR, PP
 | Margens | 2,5 cm em todos os lados |
 | Páginas Fase 1 | 2 a 4 (resumo estendido) |
 | Páginas Fase 2 | 8 a 15 (artigo completo) |
-| Vídeo | até 5 min · URL YouTube/Vimeo |
+| Vídeo | até 10 min · link público (Drive/OneDrive/YouTube unlisted) no corpo do documento |
 | Citações | conformidade ABNT (NBR 10520 e 6023) |
 
 PDFs detalhados por modalidade: `assets/regras/{resumo-expandido,poster,relatorio-a3,artigo-completo}.pdf` (gerados por `scripts/gerar_regras_pdf.py`).
@@ -193,7 +193,7 @@ PDFs detalhados por modalidade: `assets/regras/{resumo-expandido,poster,relatori
 - **Responsável:** Profa. Silvia Cristina Rufino · `comissao.cientifica@encontrogeig.org`
 - **Membros:** Ana, Flavia, Gabriella, Jucileia, Kelly, Pompilio, Silvia Cristina Rufino
 - **Avaliação:** por critérios · 2 avaliadores por trabalho (double-blind)
-- **Cronograma de avaliação:** 16/05 → 17/06/2026
+- **Cronograma de avaliação:** 17/06 → 22/06/2026
 
 ---
 
