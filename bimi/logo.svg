@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 512 512">
+  <title>1o Encontro GEI</title>
+  <rect width="512" height="512" fill="#ffffff"/>
+  <g transform="translate(256 256)">
+    <ellipse cx="0" cy="0" rx="210" ry="70" fill="#1F8FD6" transform="rotate(-15)"/>
+    <ellipse cx="0" cy="0" rx="195" ry="55" fill="#7CC042" transform="rotate(30)"/>
+    <ellipse cx="0" cy="0" rx="195" ry="55" fill="#F2B800" transform="rotate(75)"/>
+    <ellipse cx="0" cy="0" rx="195" ry="55" fill="#E84C3D" transform="rotate(120)"/>
+    <circle cx="0" cy="0" r="48" fill="#ffffff"/>
+    <circle cx="0" cy="0" r="32" fill="#1F8FD6"/>
+  </g>
+</svg>
