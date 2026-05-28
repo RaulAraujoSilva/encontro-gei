@@ -29,7 +29,11 @@
   "endDate": "2026-07-10T20:00:00-03:00",
   "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
-  "location": [{"@type":"Place","name":"Rio de Janeiro / Niterói — RJ","address":"Rio de Janeiro, RJ, Brasil"}],
+  "location": [
+    {"@type":"Place","name":"Auditório do DER/RJ","address":{"@type":"PostalAddress","streetAddress":"Av. Presidente Vargas, 1100 — 14º andar, Centro","addressLocality":"Rio de Janeiro","addressRegion":"RJ","postalCode":"20071-002","addressCountry":"BR"}},
+    {"@type":"Place","name":"NAB UFF — Campus da Praia Vermelha","address":{"@type":"PostalAddress","streetAddress":"Rua Edmundo March, s/n — Campus da Praia Vermelha","addressLocality":"Niterói","addressRegion":"RJ","postalCode":"24210-310","addressCountry":"BR"}},
+    {"@type":"VirtualLocation","name":"Transmissão ao vivo (Modalidade Remoto / Online)"}
+  ],
   "organizer": [
     {"@type":"Organization","name":"UFF — Universidade Federal Fluminense"},
     {"@type":"Organization","name":"ABAR — Associação Brasileira das Agências de Regulação"},
@@ -391,6 +395,28 @@ nav.scrolled .nav-logo img{height:32px;}
 .embed-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:780px;background:#fff;color:var(--bg);text-align:center;padding:24px;}
 .embed-loading .spinner{width:32px;height:32px;border:2.5px solid rgba(9,17,54,.14);border-top-color:var(--bg);border-radius:50%;animation:spin .8s linear infinite;margin-bottom:14px;}
 
+/* === LOCAIS / MAPAS === */
+.local-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:38px;}
+@media(max-width:880px){.local-grid{grid-template-columns:1fr;}}
+.venue{border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.022);overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s;}
+.venue:hover{border-color:var(--line-2);}
+.venue-head{padding:22px 24px 18px;}
+.venue-day{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);}
+.venue-name{font-family:'Manrope',sans-serif;font-size:19px;font-weight:700;color:var(--white);margin:8px 0 6px;line-height:1.25;}
+.venue-addr{font-size:13.5px;color:var(--muted);line-height:1.5;}
+.venue-map{width:100%;height:300px;border:0;display:block;background:#0b1230;}
+.venue-foot{padding:16px 24px;border-top:1px solid var(--line);}
+.venue-link{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--cyan);text-decoration:none;transition:color .2s;}
+.venue-link:hover{color:var(--blue-soft);}
+.venue-note{margin-top:30px;padding:16px 20px;border:1px dashed var(--line-2);border-radius:10px;font-size:13px;color:var(--muted);line-height:1.55;}
+.venue-note strong{color:var(--white);}
+html[data-theme="light"] .venue{background:#FFFFFF;border-color:var(--line);box-shadow:0 1px 2px rgba(9,17,54,.04);}
+html[data-theme="light"] .venue-name{color:#091136;}
+html[data-theme="light"] .venue-addr{color:#5C6781;}
+html[data-theme="light"] .venue-day{color:#2479B8;}
+html[data-theme="light"] .venue-link{color:#2479B8;}
+html[data-theme="light"] .venue-note strong{color:#091136;}
+
 /* === PARTNERS === */
 .partners{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);}
 .pt-tier{margin-top:30px;}
@@ -632,6 +658,7 @@ html[data-theme="light"] .logo-dark{display:none;}
     <li><a href="#programacao">Programa</a></li>
     <li><a href="#eventos">Eventos</a></li>
     <li><a href="#visitas">Visitas</a></li>
+    <li><a href="#local">Local</a></li>
     <li><a href="#trabalhos">Submeter</a></li>
     <li><a href="#parceiros">Apoio</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -715,7 +742,7 @@ html[data-theme="light"] .logo-dark{display:none;}
     </div>
     <div class="kn-date" aria-hidden="true">
       <div class="kd-n">08</div>
-      <div class="kd-i">julho 2026<br>Local em definição<br>Rio de Janeiro</div>
+      <div class="kd-i">julho 2026<br>Auditório do DER<br>Centro · Rio de Janeiro</div>
     </div>
   </div>
 </section>
@@ -737,19 +764,20 @@ html[data-theme="light"] .logo-dark{display:none;}
     <p class="sec-lbl fi">Programação</p>
     <span class="prog-date fi">08–10 julho 2026</span>
     <h2 class="sec-title fi" id="prog-title">Três dias de <em>alto nível</em></h2>
-    <p class="sec-desc fi">Cada dia tem identidade própria — da abertura estratégica à imersão técnica em campo, encerrando com síntese acadêmica e propositiva no <strong style="color:var(--white)">NAB UFF, Campus Gragoatá, Niterói</strong>.</p>
+    <p class="sec-desc fi">Cada dia tem identidade própria — da abertura estratégica à imersão técnica em campo, encerrando com síntese acadêmica e propositiva no <strong style="color:var(--white)">NAB UFF, Campus da Praia Vermelha, Niterói</strong>.</p>
     <div class="days-grid">
       <article class="dc fi">
         <div class="dn" aria-hidden="true">01</div>
         <div class="dd">Quarta · 08 de julho</div>
         <h3 class="dt">Abertura Institucional</h3>
-        <div class="dl">Local em definição · Rio de Janeiro</div>
+        <div class="dl">Auditório do DER · Av. Pres. Vargas, 1100 · Centro · Rio de Janeiro</div>
         <ul class="di">
           <li><strong>13h30</strong> — Credenciamento digital e recepção</li>
-          <li><strong>14h15</strong> — Mesa de abertura institucional</li>
+          <li><strong>14h30</strong> — Mesa de abertura institucional</li>
           <li><strong>15h30</strong> — Painel de apresentação do evento</li>
-          <li><strong>16h10</strong> — Conferência magna de abertura</li>
-          <li><strong>17h00</strong> — Coquetel de networking institucional</li>
+          <li><strong>16h30</strong> — Coffee-break</li>
+          <li><strong>17h00</strong> — Conferência Magna de abertura</li>
+          <li><strong>18h00</strong> — Coquetel de networking institucional</li>
         </ul>
       </article>
       <article class="dc fi d1">
@@ -758,7 +786,7 @@ html[data-theme="light"] .logo-dark{display:none;}
         <h3 class="dt">Visitas Técnicas</h3>
         <div class="dl">8 jornadas paralelas · Região metropolitana</div>
         <ul class="di">
-          <li><strong>06h30</strong> — Concentração e café da manhã no hub</li>
+          <li><strong>06h30</strong> — Concentração e distribuição de kits no hub</li>
           <li><strong>07h00</strong> — Primeira janela de partida</li>
           <li><strong>07h30 · 08h00 · 08h30</strong> — Partidas escalonadas</li>
           <li><strong>09h–17h</strong> — Realização das visitas</li>
@@ -769,12 +797,15 @@ html[data-theme="light"] .logo-dark{display:none;}
         <div class="dn" aria-hidden="true">03</div>
         <div class="dd">Sexta · 10 de julho</div>
         <h3 class="dt">Trilhas, Sessões e Encerramento</h3>
-        <div class="dl">NAB UFF · Campus Gragoatá · Niterói</div>
+        <div class="dl">NAB UFF · Campus da Praia Vermelha · Niterói</div>
         <ul class="di">
           <li><strong>09h00</strong> — Plenária + Painel "IA e soberania"<br><span style="font-size:11px;color:var(--muted-2)">tema central proposto por Prof. Li Li Min</span></li>
-          <li><strong>10h30</strong> — Trilhas A, B, C e D simultâneas</li>
-          <li><strong>14h00</strong> — Sessões técnicas e acadêmicas</li>
-          <li><strong>16h30</strong> — Premiação dos trabalhos, coquetel e encerramento institucional</li>
+          <li><strong>10h00</strong> — Coffee-break</li>
+          <li><strong>10h30</strong> — Trilhas A, B, C e D simultâneas (4 salas) + Painel 1 · Saneamento</li>
+          <li><strong>12h30–14h00</strong> — Intervalo para almoço</li>
+          <li><strong>14h00</strong> — Painel 2 · Energia + Sessões de pôsteres</li>
+          <li><strong>16h00</strong> — 2º Coffee-break</li>
+          <li><strong>16h30</strong> — Premiação dos trabalhos e encerramento institucional</li>
         </ul>
       </article>
     </div>
@@ -815,19 +846,51 @@ html[data-theme="light"] .logo-dark{display:none;}
   </div>
 </section>
 
+<!-- LOCAIS / MAPAS -->
+<section class="sec" id="local" aria-labelledby="local-title">
+  <div class="sec-in">
+    <p class="sec-lbl fi">Onde acontece</p>
+    <h2 class="sec-title fi" id="local-title">Locais do <em>evento</em></h2>
+    <p class="sec-desc fi">A abertura institucional (Dia 1) ocorre no <strong style="color:var(--white)">Auditório do DER</strong>, no Centro do Rio. As trilhas, sessões e o encerramento (Dia 3) acontecem no <strong style="color:var(--white)">NAB UFF</strong>, Campus da Praia Vermelha, em Niterói.</p>
+    <div class="local-grid">
+      <article class="venue fi">
+        <div class="venue-head">
+          <div class="venue-day">Dia 1 · 08 de julho</div>
+          <h3 class="venue-name">Auditório do DER/RJ</h3>
+          <p class="venue-addr">Av. Presidente Vargas, 1100 — 14º andar · Centro · Rio de Janeiro — RJ · CEP 20071-002</p>
+        </div>
+        <iframe class="venue-map" title="Mapa do Auditório do DER/RJ — Av. Presidente Vargas, 1100, Centro, Rio de Janeiro" src="https://www.google.com/maps?q=Departamento%20de%20Estradas%20de%20Rodagem%2C%20Av.%20Presidente%20Vargas%2C%201100%2C%20Centro%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020071-002&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="venue-foot">
+          <a class="venue-link" href="https://share.google/PJFWe9XyKWYAz5c6j" target="_blank" rel="noopener">Abrir no Google Maps <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="venue fi d1">
+        <div class="venue-head">
+          <div class="venue-day">Dia 3 · 10 de julho</div>
+          <h3 class="venue-name">NAB UFF · Campus da Praia Vermelha</h3>
+          <p class="venue-addr">Rua Edmundo March, s/n — Campus da Praia Vermelha · Niterói — RJ · CEP 24210-310</p>
+        </div>
+        <iframe class="venue-map" title="Mapa do NAB UFF — Rua Edmundo March, Campus da Praia Vermelha, Niterói" src="https://www.google.com/maps?q=NAB%20UFF%2C%20Rua%20Edmundo%20March%2C%20Praia%20Vermelha%2C%20Niter%C3%B3i%20-%20RJ%2C%2024210-310&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="venue-foot">
+          <a class="venue-link" href="https://share.google/QjBLrQ0LQiNhCIWRu" target="_blank" rel="noopener">Abrir no Google Maps <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+    <p class="venue-note fi"><strong>Dia 2 · 09 de julho — Visitas técnicas:</strong> as 8 jornadas paralelas partem de um hub de concentração na Região Metropolitana, com partidas escalonadas. Os pontos de embarque e os destinos serão informados aos inscritos confirmados por jornada.</p>
+  </div>
+</section>
+
 <!-- MODALIDADES -->
 <section class="modal" id="modalidades" aria-labelledby="md-title">
   <div class="sec-in">
     <p class="sec-lbl fi">Modalidades de participação</p>
-    <h2 class="sec-title fi" id="md-title">Três formas de <em>participar</em></h2>
+    <h2 class="sec-title fi" id="md-title">Quatro formas de <em>participar</em></h2>
     <p class="sec-desc fi">Todas gratuitas, mediante inscrição prévia obrigatória. <strong style="color:var(--white)">Pré-inscrição prioritária</strong> para UFF, ABAR, PPGEP - LabDGE/UFF, GIGS/UNICAMP e instituições parceiras (janela de ~15 dias antes da abertura geral). Vagas limitadas por modalidade.</p>
     <div class="modal-grid">
       <article class="mod-card fi"><div class="mod-tag">Modalidade 1</div><h3 class="mod-t">Presencial Completo</h3><p class="mod-d">Os 3 dias completos, incluindo conferência magna, visita técnica e trilhas/sessões.</p><div class="mod-vagas">400 vagas</div></article>
       <article class="mod-card fi d1"><div class="mod-tag">Modalidade 2</div><h3 class="mod-t">Presencial Dias 1 e 3</h3><p class="mod-d">Abertura institucional + trilhas e encerramento. Sem visita técnica do Dia 2.</p><div class="mod-vagas">200 vagas</div></article>
-      <!-- MOD-3 OCULTA (reativar se transmissão online for contratada)
       <article class="mod-card fi d2"><div class="mod-tag">Modalidade 3</div><h3 class="mod-t">Remoto / Online</h3><p class="mod-d">Acompanhamento das plenárias e painéis pela transmissão ao vivo. Acesso a anais.</p><div class="mod-vagas">Ilimitado</div></article>
-      -->
-      <article class="mod-card fi d3"><div class="mod-tag">Modalidade 3</div><h3 class="mod-t">Visitante Técnico — Dia 2</h3><p class="mod-d">Apenas a visita técnica, escolhendo uma das 8 jornadas paralelas em campo.</p><div class="mod-vagas">200 vagas (~25/jornada)</div></article>
+      <article class="mod-card fi d3"><div class="mod-tag">Modalidade 4</div><h3 class="mod-t">Visitante Técnico — Dia 2</h3><p class="mod-d">Apenas a visita técnica, escolhendo uma das 8 jornadas paralelas em campo.</p><div class="mod-vagas">200 vagas (~25/jornada)</div></article>
     </div>
   </div>
 </section>
