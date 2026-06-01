@@ -118,16 +118,15 @@ Tema: **"Governança, Regulação e Inovação Governamental no Estado contempor
 
 ---
 
-## 4 Modalidades de inscrição
+## 3 Modalidades de inscrição
 
 | Modalidade | Vagas | Validade |
 |---|---|---|
-| Presencial Completo (3 dias) | 350 | até 07/07/2026 |
-| Presencial Dias 1 e 3 | 300 | até 07/07/2026 |
+| Presencial — Dias 1 e 3 | 350 | até 07/07/2026 |
+| Visita Técnica — Dia 2 (inscrição independente) | 200 (~25/jornada) | até 07/07/2026 |
 | Remoto / Online | Ilimitado | até 09/07/2026 |
-| Visitante Técnico (apenas Dia 2) | 200 | até 07/07/2026 |
 
-Todas **gratuitas**. Pré-inscrição prioritária (~15 dias) para UFF, ABAR, PPGEP/UFF e parceiros.
+Todas **gratuitas**, mediante inscrição prévia obrigatória. A inscrição presencial cobre os Dias 1 e 3 (capacidade do auditório); a visita técnica do Dia 2 tem inscrição própria e independente — as duas podem ser combinadas.
 
 ---
 

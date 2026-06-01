@@ -359,7 +359,7 @@ nav.scrolled .nav-logo img{height:32px;}
 
 /* === MODALIDADES === */
 .modal{background:var(--bg);padding:96px 36px;}
-.modal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px;}
+.modal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px;}
 @media(max-width:880px){.modal-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:520px){.modal-grid{grid-template-columns:1fr;}}
 .mod-card{padding:26px 22px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.022);transition:all .3s;position:relative;}
@@ -832,7 +832,7 @@ html[data-theme="light"] .logo-dark{display:none;}
   <div class="sec-in">
     <p class="sec-lbl fi">Dia 2 · 09 de julho</p>
     <h2 class="sec-title fi" id="vs-title">Oito jornadas técnicas <em>exclusivas</em></h2>
-    <p class="sec-desc fi">Acesso a empresas líderes do setor regulado e da indústria consumidora de gás no Rio de Janeiro. Três jornadas são integradas, combinando dois locais em uma mesma saída. <strong style="color:var(--white)">Inscrição prévia obrigatória — vagas limitadas por ônibus.</strong></p>
+    <p class="sec-desc fi">Acesso a empresas líderes do setor regulado e da indústria consumidora de gás no Rio de Janeiro. Três jornadas são integradas, combinando dois locais em uma mesma saída. <strong style="color:var(--white)">Inscrição própria e obrigatória, independente da inscrição presencial — vagas limitadas por jornada.</strong></p>
     <div class="vis-grid">
       <article class="vc fi" data-sector="energia"><span class="vc-sector">Energia</span><div class="vn">Jornada 01</div><h3 class="vcn">A confirmar</h3><p class="vth">Setor de energia e regulação</p><span class="vtg">Energia · Regulação</span></article>
       <article class="vc fi d1" data-sector="saneamento"><span class="vc-sector">Saneamento</span><div class="vn">Jornada 02 <span class="integrated">integrada</span></div><h3 class="vcn">A confirmar</h3><p class="vth">Saneamento, regulação e ESG</p><span class="vtg">Saneamento · ESG</span></article>
@@ -884,13 +884,12 @@ html[data-theme="light"] .logo-dark{display:none;}
 <section class="modal" id="modalidades" aria-labelledby="md-title">
   <div class="sec-in">
     <p class="sec-lbl fi">Modalidades de participação</p>
-    <h2 class="sec-title fi" id="md-title">Quatro formas de <em>participar</em></h2>
-    <p class="sec-desc fi">Todas gratuitas, mediante inscrição prévia obrigatória. <strong style="color:var(--white)">Pré-inscrição prioritária</strong> para UFF, ABAR, PPGEP - LabDGE/UFF, GIGS/UNICAMP e instituições parceiras (janela de ~15 dias antes da abertura geral). Vagas limitadas por modalidade.</p>
+    <h2 class="sec-title fi" id="md-title">Três formas de <em>participar</em></h2>
+    <p class="sec-desc fi">Todas gratuitas, mediante inscrição prévia obrigatória. A <strong style="color:var(--white)">inscrição presencial</strong> dá acesso aos Dias 1 e 3; a <strong style="color:var(--white)">visita técnica</strong> do Dia 2 tem inscrição própria e independente — as duas podem ser combinadas. Vagas limitadas por modalidade.</p>
     <div class="modal-grid">
-      <article class="mod-card fi"><div class="mod-tag">Modalidade 1</div><h3 class="mod-t">Presencial Completo</h3><p class="mod-d">Os 3 dias completos, incluindo conferência magna, visita técnica e trilhas/sessões.</p><div class="mod-vagas">350 vagas</div></article>
-      <article class="mod-card fi d1"><div class="mod-tag">Modalidade 2</div><h3 class="mod-t">Presencial Dias 1 e 3</h3><p class="mod-d">Abertura institucional + trilhas e encerramento. Sem visita técnica do Dia 2.</p><div class="mod-vagas">200 vagas</div></article>
-      <article class="mod-card fi d2"><div class="mod-tag">Modalidade 3</div><h3 class="mod-t">Remoto / Online</h3><p class="mod-d">Acompanhamento das plenárias e painéis pela transmissão ao vivo. Acesso a anais.</p><div class="mod-vagas">Ilimitado</div></article>
-      <article class="mod-card fi d3"><div class="mod-tag">Modalidade 4</div><h3 class="mod-t">Visitante Técnico — Dia 2</h3><p class="mod-d">Apenas a visita técnica, escolhendo uma das 8 jornadas paralelas em campo.</p><div class="mod-vagas">200 vagas (~25/jornada)</div></article>
+      <article class="mod-card fi"><div class="mod-tag">Modalidade 1</div><h3 class="mod-t">Presencial — Dias 1 e 3</h3><p class="mod-d">Abertura institucional e conferência magna no Auditório do DER (Dia 1) + trilhas, sessões de trabalhos e encerramento no NAB UFF (Dia 3).</p><div class="mod-vagas">350 vagas</div></article>
+      <article class="mod-card fi d1"><div class="mod-tag">Modalidade 2</div><h3 class="mod-t">Visita Técnica — Dia 2</h3><p class="mod-d">Uma das 8 jornadas paralelas em campo. Inscrição independente da presencial, com vagas limitadas por jornada.</p><div class="mod-vagas">200 vagas (~25/jornada)</div></article>
+      <article class="mod-card fi d2"><div class="mod-tag">Modalidade 3</div><h3 class="mod-t">Remoto / Online</h3><p class="mod-d">Acompanhamento das plenárias e painéis pela transmissão ao vivo. Acesso aos anais.</p><div class="mod-vagas">Ilimitado</div></article>
     </div>
   </div>
 </section>
@@ -1045,7 +1044,7 @@ html[data-theme="light"] .logo-dark{display:none;}
   <div class="sec-in" style="text-align:center;">
     <p class="sec-lbl fi" style="margin-left:auto;margin-right:auto;">Inscrições abertas</p>
     <h2 class="sec-title fi" id="ins-title" style="margin-left:auto;margin-right:auto;">Garanta sua <em>vaga</em></h2>
-    <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Evento <strong style="color:var(--white)">gratuito</strong> mediante inscrição prévia obrigatória, com vagas limitadas. Pré-inscrição prioritária (~15 dias) para UFF, ABAR, PPGEP - LabDGE/UFF, GIGS/UNICAMP e instituições parceiras.</p>
+    <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Evento <strong style="color:var(--white)">gratuito</strong> mediante inscrição prévia obrigatória, com vagas limitadas por modalidade. A visita técnica do Dia 2 tem inscrição independente da inscrição presencial.</p>
   </div>
   <div class="sec-in" style="max-width:920px;margin-top:20px;">
     <div class="embed-wrap fi">
@@ -1124,7 +1123,7 @@ html[data-theme="light"] .logo-dark{display:none;}
 <section class="cta-final" aria-labelledby="cta-title">
   <p class="sec-lbl fi" style="display:inline-flex;">Faltam poucos dias</p>
   <h2 class="fi" id="cta-title">Esteja entre os <em>primeiros</em><br>a participar.</h2>
-  <p class="fi">Pré-inscrições prioritárias estão abertas. Vagas limitadas para visitas técnicas e auditório do Dia 1.</p>
+  <p class="fi">Inscrições estão abertas. Vagas limitadas para o presencial (Dias 1 e 3) e para as visitas técnicas do Dia 2.</p>
   <div class="h-cta fi" style="justify-content:center;">
     <a href="#inscricao" class="btn-p">Quero me inscrever <span class="arrow" aria-hidden="true">→</span></a>
     <a href="#trabalhos" class="btn-s">Enviar seu trabalho</a>
@@ -1146,15 +1145,15 @@ html[data-theme="light"] .logo-dark{display:none;}
         <h3>Participação e inscrição</h3>
         <details class="faq-item"><summary><span class="faq-num">01</span><span>O evento é gratuito?</span></summary><div class="faq-a">Sim. A participação no evento é gratuita, conforme as condições e modalidades divulgadas pela organização. Ainda assim, a inscrição é obrigatória e está sujeita à disponibilidade de vagas.</div></details>
         <details class="faq-item"><summary><span class="faq-num">02</span><span>A inscrição é obrigatória?</span></summary><div class="faq-a">Sim. Mesmo sendo gratuito, o evento exige inscrição prévia. A inscrição permite à organização controlar a capacidade dos espaços, organizar as atividades e administrar as modalidades de participação.</div></details>
-        <details class="faq-item"><summary><span class="faq-num">03</span><span>Quais são as modalidades de participação?</span></summary><div class="faq-a">As modalidades de participação seguem aquelas informadas oficialmente no site e na plataforma de inscrição. Recomenda-se que o participante verifique atentamente a modalidade escolhida antes de concluir a inscrição, especialmente quando houver interesse em visitas técnicas ou atividades específicas.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">03</span><span>Quais são as modalidades de participação?</span></summary><div class="faq-a">São três as formas de participação: Presencial (Dias 1 e 3), Visita Técnica (Dia 2, com inscrição própria) e Remoto/Online (transmissão ao vivo). Todas são gratuitas e exigem inscrição prévia. Recomenda-se que o participante verifique atentamente a modalidade escolhida antes de concluir a inscrição.</div></details>
         <details class="faq-item"><summary><span class="faq-num">04</span><span>A inscrição garante participação em todas as atividades?</span></summary><div class="faq-a">Não necessariamente. Algumas atividades podem ter vagas limitadas, critérios específicos de seleção ou necessidade de confirmação posterior pela organização. O participante deve observar as regras indicadas para cada modalidade e atividade.</div></details>
       </div>
 
       <div class="faq-group fi">
         <h3>Visitas técnicas</h3>
-        <details class="faq-item"><summary><span class="faq-num">05</span><span>Posso participar apenas das visitas técnicas?</span></summary><div class="faq-a">A possibilidade de participação em visitas técnicas depende da modalidade de inscrição e das regras definidas pela organização. Como as visitas possuem vagas limitadas, recomenda-se verificar as condições específicas antes de se inscrever.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">05</span><span>Posso participar apenas das visitas técnicas?</span></summary><div class="faq-a">Sim. A visita técnica do Dia 2 possui inscrição própria e independente da inscrição presencial dos Dias 1 e 3 — é possível participar apenas dela, apenas do presencial, ou combinar as duas. Como as vagas são limitadas por jornada, recomenda-se realizar a inscrição com antecedência.</div></details>
         <details class="faq-item"><summary><span class="faq-num">06</span><span>Como serão escolhidas as vagas para as visitas técnicas?</span></summary><div class="faq-a">As vagas para visitas técnicas poderão observar critérios definidos pela organização, como ordem de inscrição, modalidade selecionada, disponibilidade de vagas e eventuais prioridades institucionais. O critério final será confirmado nos canais oficiais do evento.</div></details>
-        <details class="faq-item"><summary><span class="faq-num">07</span><span>A inscrição em uma modalidade garante vaga em visita técnica?</span></summary><div class="faq-a">Não necessariamente. A inscrição pode manifestar interesse ou habilitar o participante a concorrer à vaga, mas a confirmação dependerá das regras de capacidade e validação da organização.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">07</span><span>A inscrição presencial garante vaga em visita técnica?</span></summary><div class="faq-a">Não. A inscrição presencial (Dias 1 e 3) e a inscrição em visita técnica (Dia 2) são independentes. Para participar de uma visita, é necessário inscrever-se especificamente na jornada desejada, sujeito à disponibilidade de vagas e à confirmação pela organização.</div></details>
       </div>
 
       <div class="faq-group fi">
