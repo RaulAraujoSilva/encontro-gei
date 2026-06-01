@@ -122,7 +122,7 @@ Tema: **"Governança, Regulação e Inovação Governamental no Estado contempor
 
 | Modalidade | Vagas | Validade |
 |---|---|---|
-| Presencial Completo (3 dias) | 300 | até 07/07/2026 |
+| Presencial Completo (3 dias) | 350 | até 07/07/2026 |
 | Presencial Dias 1 e 3 | 300 | até 07/07/2026 |
 | Remoto / Online | Ilimitado | até 09/07/2026 |
 | Visitante Técnico (apenas Dia 2) | 200 | até 07/07/2026 |
