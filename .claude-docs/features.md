@@ -18,3 +18,4 @@
 | copy-pos-reuniao | ✅ Completa (06/05) | Nav-date, hero badge, "trabalho" em vez de "submissão", "modalidades" em vez de "moedas" |
 | ocultacoes-reativaveis | 🟡 Em standby | Mod Remoto, Escola Regulação, Parceiros, Apoio inline — preservados em comentários HTML |
 | ajustes-pos-revisao-2 | ✅ Completa (06/05) | Modalidade 4→3, premiação+coquetel+encerramento unificados às 16h30 D3, GIGS/UNICAMP como 4ª realização, card PPGEP convertido em logo TEP/PPGEP com link tpp-uff.com.br |
+| reorganizacao-modalidades | 🟡 Parcial (01/06) | Site ok: 3 modalidades (Presencial D1+D3 · 350, Visita Técnica D2 · 200 independente, Remoto · ilimitado), pré-inscrição prioritária removida. Pendente: refletir na Even3 (TASK-1123) |

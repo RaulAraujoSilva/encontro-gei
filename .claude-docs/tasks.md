@@ -8,13 +8,19 @@
 - [ ] TASK-1090: Confirmar Magda Chambriard (Petrobras) na conferência magna Dia 1
 - [ ] TASK-1091: Definir local Dia 1 (atualmente "Local em definição" no `index.html:674`)
 - [ ] TASK-1092: Liberar logos parceiros conforme confirmações — descomentar dentro de `<!-- PARCEIROS-OCULTOS -->` (`index.html:967`) e `<!-- APOIO-OCULTO -->` (`index.html:648`)
+- [ ] TASK-1123: Even3 — atualizar entradas para a nova estrutura de 3 modalidades (Presencial Dias 1 e 3 · 350, Visita Técnica Dia 2 · 200, Remoto · ilimitado) em `Inscrições > Entradas e valores`; hoje a plataforma ainda tem as 4 modalidades antigas (300/300/ilimitado/200) — divergente do site desde commit `034e10e`
 
 ## Pendentes — Decisões futuras (parar aqui, retomar quando solicitado)
-
-- [ ] TASK-1093: Reativar Modalidade Remoto/Online se transmissão for contratada — descomentar `<!-- MOD-3 OCULTA -->` (`index.html:783`); ATENÇÃO: o slot 3 visual hoje é ocupado pelo Visitante Técnico (TASK-1100). Renumerar para Modalidade 4 ao reativar.
 - [ ] TASK-1094: Reativar Escola de Regulação se solicitado — descomentar `<!-- ESCOLA DE REGULACAO OCULTA -->` (`index.html:963`)
 - [ ] TASK-1095: Adicionar foto/avatar real da Magda Chambriard quando confirmar
 - [ ] TASK-1103: Confirmar URL oficial do GIGS · UNICAMP e converter o `<div class="ptc">` em `<a href>` (card atual em `index.html` ~linha 973, sem href)
+
+## Completadas (sessão 01/06/2026 — capacidade Dia 1 + reorganização das modalidades)
+
+- [x] TASK-1120: Reduzir capacidade do presencial de 400 → 350 vagas (`index.html`, `docs/CONTENT.md`) — commit `e73bda6`, deploy verificado em produção
+- [x] TASK-1121: Reorganizar modalidades de 4 → 3 formas de participar — unifica Presencial Completo + Dias 1 e 3 (350 vagas, base) e torna a Visita Técnica (Dia 2) inscrição independente (200 vagas, ~25/jornada); grid CSS 4→3 colunas; FAQ 03/05/07 e seção de visitas atualizados — commit `034e10e`, deploy verificado
+- [x] TASK-1122: Remover menções à pré-inscrição prioritária (janela já encerrada) das seções Modalidades, Inscrição e CTA final — commit `034e10e`
+- [x] TASK-1093: Modalidade Remoto/Online reativada (transmissão ao vivo contratada) — feito no commit `71f3ba0`, marcada aqui como concluída pois a lista estava desatualizada
 
 ## Completadas (sessão 25/05/2026 — prorrogação Fase 1 + URL do vídeo)
 
