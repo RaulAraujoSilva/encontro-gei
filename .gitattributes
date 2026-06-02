@@ -1,0 +1,21 @@
+# Arquivos binários — nunca aplicar conversão de fim de linha (CRLF/LF)
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.docx binary
+*.pptx binary
+*.xlsx binary
+*.zip  binary
+
+# Arquivos de texto — normalizar para LF no repositório
+*.html text
+*.css  text
+*.js   text
+*.json text
+*.md   text
+*.py   text
+*.svg  text
