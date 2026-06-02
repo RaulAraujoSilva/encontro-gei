@@ -15,20 +15,21 @@ Toda informação verificável usada no site e na configuração da Even3, com f
 | **Sigla** | GEI |
 | **Datas** | 08, 09 e 10 de julho de 2026 |
 | **Carga horária** | 24h certificadas |
-| **Locais** | Rio de Janeiro (Dias 1 e 2) · Niterói — NAB UFF Campus Gragoatá (Dia 3) |
+| **Locais** | Rio de Janeiro (Dias 1 e 2) · Niterói — NAB UFF Campus da Praia Vermelha (Dia 3) |
 | **Modalidade** | Presencial + transmissão online |
 | **Público esperado** | 400+ participantes · meta de 80+ submissões |
 | **Tagline** | "A primeira plataforma nacional que integra academia, regulação, gestão pública, engenharia de produção e setor produtivo" |
 
 ---
 
-## Realizadores (3)
+## Realizadores (4)
 
 | Sigla | Nome completo | Tipo |
 |---|---|---|
 | UFF | Universidade Federal Fluminense | Universidade pública federal |
-| ABAR | Associação Brasileira das Agências de Regulação | Associação nacional |
-| PPGEP/UFF | Programa de Pós-Graduação em Engenharia de Produção · UFF | Programa stricto sensu |
+| ABAR | Associação Brasileira de Agências Reguladoras | Associação nacional |
+| PPGEP - LabDGE/UFF | Programa de Pós-Graduação em Engenharia de Produção · UFF | Programa stricto sensu |
+| GIGS/UNICAMP | Grupo de Inovação e Gestão na Saúde · UNICAMP | Grupo de pesquisa |
 
 ## Parceiros institucionais e de apoio (8)
 
@@ -232,7 +233,7 @@ Detalhes em `patrocinadores/index.html`.
 
 ## Certificações
 
-Emitidas por **UFF · ABAR · PPGEP/UFF** · válidas para o Currículo Lattes (CNPq) e como horas complementares.
+Emitidas por **UFF · ABAR · PPGEP - LabDGE/UFF · GIGS/UNICAMP** · válidas para o Currículo Lattes (CNPq) e como horas complementares.
 
 | Tipo | Atribuição automática |
 |---|---|
