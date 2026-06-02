@@ -4,6 +4,7 @@ Toda informação verificável usada no site e na configuração da Even3, com f
 
 > **Fonte primária:** `_referencia/PROJETO_EXECUTIVO_UNIFICADO_21-04_v2 Calado (1).docx`
 > **Fonte visual:** `_referencia/Esboço da arte.pdf` + `_referencia/WhatsApp Image 2026-05-01 at 14.35.27.jpeg`
+> **Última sincronização com o site publicado:** 02/06/2026 — em caso de divergência, vale o `index.html` em produção (encontrogeig.org).
 
 ---
 
@@ -15,10 +16,10 @@ Toda informação verificável usada no site e na configuração da Even3, com f
 | **Sigla** | GEI |
 | **Datas** | 08, 09 e 10 de julho de 2026 |
 | **Carga horária** | 24h certificadas |
-| **Locais** | Rio de Janeiro (Dias 1 e 2) · Niterói — NAB UFF Campus da Praia Vermelha (Dia 3) |
-| **Modalidade** | Presencial + transmissão online |
-| **Público esperado** | 400+ participantes · meta de 80+ submissões |
-| **Tagline** | "A primeira plataforma nacional que integra academia, regulação, gestão pública, engenharia de produção e setor produtivo" |
+| **Locais** | Rio de Janeiro — Auditório do DER/RJ (Dia 1) · Região Metropolitana — visitas técnicas (Dia 2) · Niterói — NAB UFF Campus da Praia Vermelha (Dia 3) |
+| **Modalidade** | Presencial (Dias 1 e 3) + Visita Técnica (Dia 2) + Remoto/Online (transmissão ao vivo) |
+| **Público esperado** | 350 vagas presenciais + 200 em visitas técnicas + online ilimitado · meta de 80+ submissões |
+| **Tagline** | "A primeira plataforma nacional que integra governança pública, regulação, engenharia de produção e inteligência governamental" |
 
 ---
 
@@ -32,6 +33,8 @@ Toda informação verificável usada no site e na configuração da Even3, com f
 | GIGS/UNICAMP | Grupo de Inovação e Gestão na Saúde · UNICAMP | Grupo de pesquisa |
 
 ## Parceiros institucionais e de apoio (8)
+
+> ⚠️ **Ocultos no site** (bloco comentado em `index.html`) — logos serão reativados individualmente conforme confirmação de cada parceria.
 
 | Sigla | Nome completo | Categoria |
 |---|---|---|
@@ -61,46 +64,55 @@ URLs dos logos atuais: ver `assets/logos/` (12 arquivos).
 
 ## 8 Jornadas técnicas (Dia 2 · 09/07/2026)
 
-| # | Local | Tema | Tag | Vagas |
-|---|---|---|---|---|
-| 01 | Petrobras | Regulação de energia + transformação digital em E&P | Energia · Regulação | 25 |
-| 02 *(integrada)* | Águas do Rio (CCO) + ETE/Biogás | Saneamento + sustentabilidade | Saneamento · ESG | 25 |
-| 03 | Guandu / Lameirão | Infraestrutura hídrica + governança ambiental | Infra Hídrica | 25 |
-| 04 | Ternium · Santa Cruz | Indústria consumidora de gás + ESG + Lean | Indústria · Lean | 25 |
-| 05 | Gerdau · Santa Cruz | Indústria + transformação digital + ESG | Indústria · Digital | 25 |
-| 06 *(integrada)* | Eneva + TAG | Regulação energia + GovTech + transporte gás | Energia · GovTech | 25 |
-| 07 *(integrada)* | IRM + AGENERSA | Inteligência governamental + saneamento + sandbox | Inteligência · Sandbox | 25 |
-| 08 | CSN | Indústria + ESG + Lean | Indústria · Lean | 25 |
+> ⚠️ **No site público, todos os locais constam como "A confirmar".** Os nomes de empresas abaixo são planejamento interno — não divulgar até confirmação formal de cada anfitrião.
 
-**Logística:** concentração 06h30 no hub · partidas escalonadas 07h00–08h30 · realização 09h–17h · retorno 18h.
+| # | Setor (site) | Local *(interno · não publicado)* | Tema (site) | Tag (site) | Vagas |
+|---|---|---|---|---|---|
+| 01 | Energia | Petrobras | Setor de energia e regulação | Energia · Regulação | 25 |
+| 02 *(integrada)* | Saneamento | Águas do Rio (CCO) + ETE/Biogás | Saneamento, regulação e ESG | Saneamento · ESG | 25 |
+| 03 | Saneamento | Guandu / Lameirão | Infraestrutura hídrica e governança ambiental | Infraestrutura Hídrica | 25 |
+| 04 | Indústria | Ternium · Santa Cruz | Indústria consumidora de gás, ESG e Lean | Indústria · Lean | 25 |
+| 05 | Indústria | Gerdau · Santa Cruz | Indústria consumidora de gás e transformação digital | Indústria · Digital | 25 |
+| 06 *(integrada)* | Energia | Eneva + TAG | Energia, GovTech e transporte de gás natural | Energia · GovTech | 25 |
+| 07 *(integrada)* | Inteligência | IRM + AGENERSA | Inteligência governamental e sandbox regulatório | Inteligência · Sandbox | 25 |
+| 08 | Indústria | CSN | Indústria consumidora de gás, ESG e Lean | Indústria · Lean | 25 |
+
+**Logística (conforme site):** concentração e distribuição de kits 06h30 no hub · primeira partida 07h00 · partidas escalonadas 07h30/08h00/08h30 · realização das visitas 09h–17h. Inscrição própria e obrigatória, independente da inscrição presencial — vagas limitadas por jornada.
 
 ---
 
-## Programação completa (22 atividades)
+## Programação completa
 
-### Dia 1 · 08/07/2026 (Quarta) · Abertura Institucional
+### Dia 1 · 08/07/2026 (Quarta) · Abertura Institucional · Auditório do DER/RJ
 | Hora | Atividade |
 |---|---|
 | 13h30 | Credenciamento digital e recepção |
-| 14h15 | Mesa de abertura institucional |
+| 14h30 | Mesa de abertura institucional |
 | 15h30 | Painel de apresentação do evento |
-| 16h10 | **Conferência magna** — Magda Chambriard (Petrobras) |
-| 17h00 | Coquetel de networking institucional |
+| 16h30 | Coffee-break |
+| 17h00 | **Conferência Magna de abertura** — Magda Chambriard (Petrobras, a confirmar) |
+| 18h00 | Coquetel de networking institucional |
 
 ### Dia 2 · 09/07/2026 (Quinta) · 8 Jornadas Técnicas (paralelas, ver acima)
-
-### Dia 3 · 10/07/2026 (Sexta) · Trilhas e Encerramento (NAB UFF Niterói)
 | Hora | Atividade |
 |---|---|
-| 09h00 | Plenária + Painel "IA e soberania nacional" *(tema proposto pelo Prof. Li Li Min)* |
-| 10h30 | Trilha A — Lean Six Sigma Congress (13ª) |
-| 10h30 | Trilha B — Seminário SSEP (4ª) |
-| 10h30 | Trilha C — Seminário de Regulação (2ª) |
-| 10h30 | Trilha D — Seminário de Inteligência Governamental (1ª) |
-| 14h00 | Sessões técnicas e acadêmicas (apresentação de trabalhos) |
-| 16h30 | Premiação dos melhores trabalhos |
-| 18h00 | Encerramento institucional |
-| 19h00 | Coquetel de encerramento |
+| 06h30 | Concentração e distribuição de kits no hub |
+| 07h00 | Primeira janela de partida |
+| 07h30 · 08h00 · 08h30 | Partidas escalonadas |
+| 09h–17h | Realização das visitas |
+
+Produto: **Relato de Visita Técnica** (2–3 pp.) para o livro.
+
+### Dia 3 · 10/07/2026 (Sexta) · Trilhas, Sessões e Encerramento · NAB UFF Niterói
+| Hora | Atividade |
+|---|---|
+| 09h00 | Plenária + Painel "IA e soberania" *(tema central proposto pelo Prof. Li Li Min)* |
+| 10h00 | Coffee-break |
+| 10h30 | Trilhas A, B, C e D simultâneas (4 salas) + Painel 1 · Saneamento |
+| 12h30–14h00 | Intervalo para almoço |
+| 14h00 | Painel 2 · Energia + Sessões de pôsteres |
+| 16h00 | 2º Coffee-break |
+| 16h30 | Premiação dos trabalhos e encerramento institucional |
 
 ---
 
@@ -115,7 +127,7 @@ URLs dos logos atuais: ver `assets/logos/` (12 arquivos).
 | Raul Araújo | Painelista |
 | Vladimir | Painelista |
 
-Tema: **"Governança, Regulação e Inovação Governamental no Estado contemporâneo"** · Dia 1, 16h10.
+Tema: **"Governança, Regulação e Inovação Governamental no Estado contemporâneo"** · Dia 1, 17h00.
 
 ---
 
@@ -137,7 +149,7 @@ Todas **gratuitas**, mediante inscrição prévia obrigatória. A inscrição pr
 
 | Modalidade | Páginas | Particularidades |
 |---|---|---|
-| Resumo Expandido (Fase 1) | 2-4 pp. | Parágrafo único · 700 palavras · 4 subtítulos · + vídeo 5min |
+| Resumo Expandido (Fase 1) | 2-4 pp. | Parágrafo único · até 700 palavras · 5 subtítulos · + vídeo de até 10 min |
 | Pôster A3 | A3 visual | Mesma estrutura científica do resumo |
 | Relatório A3 | 1 pp. A3 | Modelo DMAIC (D/M/A esquerda, I/C direita) |
 | Artigo Completo (Fase 2) | 8-15 pp. | 2 arquivos (com/sem ID) · ABNT · 8000 palavras max |
@@ -251,6 +263,7 @@ Emissão em até 15 dias úteis após o evento. Anais com ISBN em dezembro/2026.
 ## Contatos
 
 - **Secretaria do Encontro:** `contato@encontrogeig.org`
+- **Submissões:** `submissoes@encontrogeig.org`
 - **Comissão Científica:** `comissao.cientifica@encontrogeig.org`
 - **Página oficial Even3:** https://www.even3.com.br/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003
 - **Site oficial:** https://encontrogeig.org
