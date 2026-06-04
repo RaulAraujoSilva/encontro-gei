@@ -11,9 +11,18 @@
 - [ ] TASK-1123: Even3 — atualizar entradas para a nova estrutura de 3 modalidades (Presencial Dias 1 e 3 · 350, Visita Técnica Dia 2 · 200, Remoto · ilimitado) em `Inscrições > Entradas e valores`; hoje a plataforma ainda tem as 4 modalidades antigas (300/300/ilimitado/200) — divergente do site desde commit `034e10e`
 
 ## Pendentes — Decisões futuras (parar aqui, retomar quando solicitado)
+- [ ] TASK-1130: Reincluir Raul Araujo Silva na Comissão do Seminário (`organizadores/index.html`) quando houver autorização — removido em 04/06 (commit `7e15dcd`); definir nome/cargo/afiliação ao reincluir
 - [ ] TASK-1094: Reativar Escola de Regulação se solicitado — descomentar `<!-- ESCOLA DE REGULACAO OCULTA -->` (`index.html:963`)
 - [ ] TASK-1095: Adicionar foto/avatar real da Magda Chambriard quando confirmar
 - [ ] TASK-1103: Confirmar URL oficial do GIGS · UNICAMP e converter o `<div class="ptc">` em `<a href>` (card atual em `index.html` ~linha 973, sem href)
+
+## Completadas (sessão 04/06/2026 — visita ETE Camboinhas + página PPGEP + contador)
+
+- [x] TASK-1125: Confirmar Jornada 03 = ETE Camboinhas (biogás, Niterói) com pop-up de detalhes (data 09/07, encontro DER, saída 9h, capacidade 27, link bioproj); modal genérico acessível `.vtmodal` — commit `6249982`, deploy verificado ao vivo
+- [x] TASK-1126: Criar página `/organizadores/` (Organização acadêmica PPGEP/UFF) com texto verbatim do `.docx`, links PPGEP + DTS nº 16/2026, Comissão do Seminário e corpo docente (21+5); bloco "Organização acadêmica" + botão em `#parceiros` e link no footer — commit `6249982`
+- [x] TASK-1127: Corrigir colisão de classe CSS — `.modal` do pop-up colidia com `<section class="modal" id="modalidades">` e cobria a página; renomeado para `.vtmodal*` — commit `fc47f7f`, deploy verificado
+- [x] TASK-1128: Remover Raul da Comissão do Seminário (aguardando autorização) — commit `7e15dcd` (ver TASK-1130 para reinclusão)
+- [x] TASK-1129: Reativar contador de inscritos no hero (Even3 `/api/inscritos` retornando 270); descomentado HTML `#counter` + IIFE de fetch — commit `996f82c`, deploy verificado ao vivo
 
 ## Completadas (sessão 01/06/2026 — capacidade Dia 1 + reorganização das modalidades)
 

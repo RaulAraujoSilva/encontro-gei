@@ -1,7 +1,7 @@
 # Session Log — Site 1° Encontro GEI
 
-> **Última atualização:** 2026-05-25
-> **Status global:** Site no ar (`encontrogeig.org`), Even3 configurada, 4 PDFs de regras publicados, e-mails Google Workspace ativos. **Fase 1 prorrogada para 16/06/2026** e vídeo agora entregue via link público (não upload).
+> **Última atualização:** 2026-06-04
+> **Status global:** Site no ar (`encontrogeig.org`), Even3 configurada, 4 PDFs de regras publicados, e-mails Google Workspace ativos. **Fase 1 prorrogada para 16/06/2026** e vídeo agora entregue via link público (não upload). **Contador de inscritos reativado (270) e visita técnica da ETE Camboinhas confirmada (Jornada 03 + página /organizadores/).**
 
 ## Visão geral do projeto
 
@@ -22,6 +22,31 @@
 | 6 | Livro · Anais ISBN | dezembro/2026 |
 
 **Fluxo do vídeo (Fase 1):** Even3 não aceita upload de arquivo de vídeo. Autor hospeda em link público (Google Drive, OneDrive ou YouTube unlisted) e cola a URL no **corpo do documento** (resumo expandido). Há também campo opcional "URL do vídeo de apresentação" no formulário da Even3 para reforço.
+
+---
+
+## Sessão 04/06/2026 — visita ETE Camboinhas + página PPGEP + contador reativado
+
+Commits: `6249982` (visita + página), `fc47f7f` (fix colisão CSS), `7e15dcd` (remove Raul da comissão), `996f82c` (contador). Todos push para `main`; deploys verificados ao vivo via Playwright headless (o chrome-devtools MCP falhou porque o perfil do Chrome do usuário estava aberto).
+
+**1. Visita técnica confirmada — Jornada 03 → ETE Camboinhas (`6249982`)**
+- Card da Jornada 03 (antes "A confirmar") virou **"ETE Camboinhas · Biogás"** (Estação de Tratamento de Esgoto + planta de biogás, Niterói), com selo *confirmada* e link "Ver detalhes →".
+- Card clicável (mouse + teclado `Enter`/`Espaço`; `role="button"`, `aria-haspopup`) abre um **pop-up/modal** com: Data **09/07/2026 · Dia 2**, Ponto de encontro **Prédio do DER — Av. Presidente Vargas, 1100 · Centro · RJ**, Saída **09h**, Capacidade **27 visitantes**, link oficial `bioproj.com.br/_ete/ete-camboinhas`.
+- Modal genérico e acessível (fecha por `×`/backdrop/`Esc`, trava scroll, devolve foco), reaproveitável via `data-modal="<key>"` → `#modal-<key>`.
+
+**2. Nova página `/organizadores/` — Organização acadêmica PPGEP/UFF (`6249982`)**
+- Bloco **"Organização acadêmica · PPGEP/UFF"** na seção `#parceiros` ("Uma rede institucional de alto nível") com botão **"Ver participantes e comissão →"**.
+- Página `organizadores/index.html` autocontida (identidade navy/Manrope do site principal), com: texto institucional verbatim do `.docx` (`Atualização/ppgep - texto para o site evento 1o encontro GEIG.docx`), hyperlinks para o **PPGEP** (`tpp-uff.com.br`) e a **DTS nº 16/2026** (`.../comissoes-determinacao-de-servico-dts-2/`), card da **Comissão do Seminário** e **corpo docente** (21 permanentes + 5 colaboradores).
+- Link "Organização acadêmica" adicionado ao rodapé.
+
+**3. Bug fix — colisão de classe CSS `.modal` (`fc47f7f`)**
+- A seção `#modalidades` já usa `class="modal"`; o pop-up novo (também `.modal`) aplicou `position:fixed;z-index:1000` na seção de modalidades e cobriu a página inteira (sintoma relatado: "só sobrou as três formas de participar"). Componente renomeado para o namespace **`.vtmodal*`** (CSS + HTML + JS). Lição: validar **renderizando** (Playwright headless), não só checando presença do HTML via fetch/grep.
+
+**4. Comissão — Raul removido (`7e15dcd`)**
+- A pedido, removido o nome do Raul Araujo Silva da Comissão do Seminário na página `/organizadores/` (aguarda autorização para reincluir). Restaram os 4 professores designados pela DTS nº 16/2026, idêntico ao texto verbatim.
+
+**5. Contador de inscritos reativado (`996f82c`)**
+- A API `/api/inscritos` (proxy Even3 com cache de 5 min) já estava configurada e respondendo (**count=270**, eventId 722003). Descomentados o bloco HTML `#counter` no hero e o IIFE de `fetch`. Exibe "270 profissionais já inscritos" (degrada com segurança: se count=0 ou erro, fica oculto). Confirmado ao vivo.
 
 ---
 
@@ -203,6 +228,7 @@ Todos os blocos abaixo estão preservados como comentários HTML — basta desco
 - **Magda Chambriard:** confirmar presença na conferência magna do Dia 1
 - **Local Dia 1:** definir e atualizar (`index.html:674` ainda diz "Local em definição")
 - **Confirmações de parceiros institucionais:** liberar logos um a um descomentando dentro do `<!-- PARCEIROS-OCULTOS -->`
+- **Comissão do Seminário (`/organizadores/`):** reincluir Raul Araujo Silva quando houver autorização (removido em 04/06)
 
 ### Possíveis ajustes futuros
 - Ativar Modalidade Remoto/Online se transmissão for contratada (descomentar)

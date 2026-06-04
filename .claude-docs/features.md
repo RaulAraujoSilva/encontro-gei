@@ -6,6 +6,9 @@
 | landing-principal | ✅ Completa | `index.html` ~1700 linhas, single-file, hero-card lateral 2/3+1/3 |
 | sub-paginas | ✅ Completa | `patrocinadores/index.html` ("Quatro Modalidades") |
 | serverless-api | ✅ Completa | `api/inscritos.js` proxy Even3 com cache 5 min |
+| contador-inscritos | ✅ Ativo (04/06) | Reativado no hero (`#counter`); `/api/inscritos` retornando 270 (eventId 722003); oculta-se sozinho se count=0 ou erro |
+| visita-ete-camboinhas | ✅ Completa (04/06) | Jornada 03 confirmada (ETE Camboinhas/biogás, Niterói) com pop-up de detalhes; modal genérico `.vtmodal` reaproveitável (`data-modal`) |
+| pagina-organizadores | ✅ Completa (04/06) | `/organizadores/` (texto PPGEP verbatim, Comissão do Seminário, corpo docente); bloco+botão em `#parceiros` + link no footer; Raul removido da comissão p/ autorização |
 | seo-analytics | 🟡 Parcial | Open Graph + JSON-LD ok; GA4/Meta Pixel pendente (aguarda IDs) |
 | deploy | ✅ Completa | Vercel auto-deploy via `main`, domínio `encontrogeig.org` |
 | validacao-e2e | ✅ Completa | Smoke test inicial + visualização live |
