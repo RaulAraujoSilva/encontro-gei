@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organização acadêmica · PPGEP/UFF — 1° Encontro GEI</title>
+<meta name="description" content="O Programa de Pós-Graduação em Engenharia de Produção da UFF (PPGEP/UFF) na organização do 1° Encontro de Governança, Estratégia e Inovação Governamental: comissão do Seminário e corpo docente.">
+<meta name="theme-color" content="#091136">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#091136;--bg-2:#0E1A4A;--bg-3:#142469;--ink:#06091F;--white:#FFFFFF;
+  --green:#7AC74F;--blue:#4DA8E0;--cyan:#5BC6E5;--yellow:#F5C842;
+  --line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.16);
+  --muted:rgba(255,255,255,.62);--muted-2:rgba(255,255,255,.45);
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',system-ui,sans-serif;color:var(--white);background:var(--bg);line-height:1.6;}
+::selection{background:var(--cyan);color:var(--ink);}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+
+nav{position:sticky;top:0;background:rgba(9,17,54,.92);backdrop-filter:blur(14px);padding:14px 36px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);z-index:50;}
+.nav-logo{display:flex;align-items:center;gap:11px;font-weight:700;font-size:14px;}
+.nav-logo img{height:34px;width:auto;}
+.nav-back{font-size:13px;color:var(--muted);font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:color .15s;}
+.nav-back:hover{color:var(--white);}
+
+.hero{padding:128px 36px 70px;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse 60% 50% at 50% 28%,rgba(122,199,79,.10) 0%,transparent 62%),linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);}
+.h-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(122,199,79,.1);border:1px solid rgba(122,199,79,.32);color:var(--green);font-size:11px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;padding:9px 22px;border-radius:100px;margin-bottom:28px;}
+.h-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);}
+h1{font-family:'Manrope',sans-serif;font-size:clamp(32px,5vw,58px);font-weight:800;line-height:1.06;letter-spacing:-.025em;max-width:860px;margin:0 auto 20px;}
+h1 em{font-style:normal;background:linear-gradient(120deg,var(--green) 25%,var(--cyan) 75%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.lead{font-size:clamp(15px,1.6vw,18px);color:var(--muted);max-width:680px;margin:0 auto;line-height:1.65;}
+
+.intro{padding:68px 36px;border-top:1px solid var(--line);}
+.intro-in{max-width:880px;margin:0 auto;}
+.intro p{font-size:16.5px;color:rgba(255,255,255,.80);line-height:1.8;margin-bottom:20px;}
+.intro p a{color:var(--cyan);border-bottom:1px solid rgba(91,198,229,.35);transition:border-color .2s;}
+.intro p a:hover{border-color:var(--cyan);}
+.intro-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
+.ilink{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--cyan);border:1px solid rgba(91,198,229,.32);border-radius:100px;padding:10px 20px;transition:all .2s;}
+.ilink:hover{background:rgba(91,198,229,.10);}
+
+.commission{padding:18px 36px 78px;background:linear-gradient(180deg,var(--bg-2) 0%,var(--bg) 100%);}
+.commission-in{max-width:880px;margin:0 auto;}
+.sec-lbl{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:14px;display:inline-flex;align-items:center;gap:10px;}
+.sec-lbl::before{content:'';width:24px;height:1.5px;background:var(--green);}
+.sec-title{font-family:'Manrope',sans-serif;font-size:clamp(24px,3.4vw,38px);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:26px;}
+.comm-card{padding:34px 34px 30px;border:1px solid rgba(122,199,79,.28);border-radius:14px;background:linear-gradient(135deg,rgba(122,199,79,.07) 0%,rgba(91,198,229,.03) 100%);}
+.comm-list{list-style:none;display:grid;gap:0;}
+.comm-list li{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;padding:14px 0;border-bottom:1px solid var(--line);}
+.comm-list li:last-child{border-bottom:none;}
+.comm-name{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;letter-spacing:-.01em;}
+.comm-role{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--green);font-weight:700;background:rgba(122,199,79,.12);padding:2px 10px;border-radius:100px;}
+.comm-note{font-size:12.5px;color:var(--muted-2);margin-top:18px;line-height:1.6;}
+.comm-note a{color:var(--cyan);border-bottom:1px solid rgba(91,198,229,.35);}
+
+.faculty{padding:0 36px 96px;background:var(--bg);}
+.faculty-in{max-width:880px;margin:0 auto;}
+.fac-group{margin-top:44px;}
+.fac-group-lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:14px;}
+.fac-group-lbl::after{content:'';flex:1;height:1px;background:var(--line);}
+.fac-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+@media(max-width:780px){.fac-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.fac-grid{grid-template-columns:1fr;}}
+.fac{padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.02);font-size:13.5px;color:rgba(255,255,255,.82);line-height:1.4;transition:border-color .2s,background .2s;}
+.fac:hover{border-color:rgba(91,198,229,.3);background:rgba(91,198,229,.04);}
+
+footer{background:var(--ink);padding:48px 36px;color:var(--muted-2);text-align:center;font-size:12.5px;line-height:1.7;border-top:1px solid var(--line);}
+footer a{color:var(--cyan);}
+.foot-back{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-weight:600;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo" aria-label="Voltar à página inicial">
+    <img src="/assets/logo-nav.png?v=4" alt="1° Encontro de Governança, Estratégia e Inovação Governamental">
+  </a>
+  <a href="/" class="nav-back">← Voltar à página principal</a>
+</nav>
+
+<section class="hero">
+  <div class="h-badge"><span class="dot" aria-hidden="true"></span>Organização acadêmica</div>
+  <h1>PPGEP/UFF no <em>1º Encontro</em></h1>
+  <p class="lead">A base acadêmica e metodológica do Encontro, conduzida pelo Programa de Pós-Graduação em Engenharia de Produção da Universidade Federal Fluminense.</p>
+</section>
+
+<section class="intro">
+  <div class="intro-in">
+    <p>O 1º Encontro de Governança, Estratégia e Inovação Governamental conta com a organização institucional do <a href="https://tpp-uff.com.br/" target="_blank" rel="noopener">Programa de Pós-Graduação em Engenharia de Produção da Universidade Federal Fluminense (PPGEP/UFF)</a>, em articulação com as demais instituições realizadoras e parceiras do evento.</p>
+    <p>A participação do PPGEP/UFF confere ao Encontro uma base acadêmica e metodológica diretamente vinculada à Engenharia de Produção, especialmente nos temas de governança, estratégia, inovação, gestão pública, modelagem de apoio à decisão, sistemas inteligentes, analytics, ergonomia, logística, melhoria de processos e excelência operacional.</p>
+    <p>Essa vinculação institucional também se expressa no Seminário em Sistemas de Engenharia de Produção do PPGEP, um dos eventos integrados à programação do Encontro. O Seminário foi formalmente constituído no âmbito do Programa por meio da <a href="https://tpp-uff.com.br/comissoes-determinacao-de-servico-dts-2/" target="_blank" rel="noopener">Determinação de Serviço PPGEP (TPP)/UFF nº 16, de 02 de março de 2026</a>, que designou a Comissão do Seminário de Sistemas de Engenharia do PPGEP.</p>
+    <p>Nos termos da <a href="https://tpp-uff.com.br/comissoes-determinacao-de-servico-dts-2/" target="_blank" rel="noopener">DTS nº 16/2026</a>, a Comissão é composta pelos professores Robisom Damasceno Calado, Fernando Toledo Ferraz, Priscilla Cristina Cabral Ribeiro e Carlos Francisco Simões Gomes, sob a presidência do Prof. Robisom Damasceno Calado, Coordenador do PPGEP/UFF.</p>
+    <p>O Encontro reconhece e agradece o apoio acadêmico e institucional do corpo docente do PPGEP/UFF, incluindo seus docentes permanentes e colaboradores, cuja atuação fortalece a produção científica, a formação de pesquisadores e a aproximação entre universidade, governo, agências reguladoras, setor produtivo e sociedade.</p>
+    <div class="intro-links">
+      <a class="ilink" href="https://tpp-uff.com.br/" target="_blank" rel="noopener">Site do PPGEP ↗</a>
+      <a class="ilink" href="https://tpp-uff.com.br/comissoes-determinacao-de-servico-dts-2/" target="_blank" rel="noopener">Comissões e DTS ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="commission">
+  <div class="commission-in">
+    <p class="sec-lbl">Seminário de Sistemas de Engenharia</p>
+    <h2 class="sec-title">Comissão do Seminário</h2>
+    <div class="comm-card">
+      <ul class="comm-list">
+        <li><span class="comm-name">Robisom Damasceno Calado</span><span class="comm-role">Presidente · Coordenador PPGEP/UFF</span></li>
+        <li><span class="comm-name">Fernando Toledo Ferraz</span></li>
+        <li><span class="comm-name">Priscilla Cristina Cabral Ribeiro</span></li>
+        <li><span class="comm-name">Carlos Francisco Simões Gomes</span></li>
+        <li><span class="comm-name">Raul Araujo Silva</span><span class="comm-role">Organização do Encontro</span></li>
+      </ul>
+      <p class="comm-note">Comissão instituída no âmbito do PPGEP/UFF — referência: <a href="https://tpp-uff.com.br/comissoes-determinacao-de-servico-dts-2/" target="_blank" rel="noopener">DTS PPGEP (TPP)/UFF nº 16/2026</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faculty">
+  <div class="faculty-in">
+    <p class="sec-lbl">Corpo docente do PPGEP/UFF</p>
+    <h2 class="sec-title">Participantes na Engenharia de Produção</h2>
+
+    <div class="fac-group">
+      <p class="fac-group-lbl">Docentes permanentes</p>
+      <div class="fac-grid">
+        <div class="fac">Alexandre Beraldi Santos</div>
+        <div class="fac">Annibal José Roris Rodriguez Scavarda do Carmo</div>
+        <div class="fac">Artur Alves Pessoa</div>
+        <div class="fac">Carlos Francisco Simões Gomes</div>
+        <div class="fac">Diogo Ferreira de Lima Silva</div>
+        <div class="fac">Eduardo Uchoa Barboza</div>
+        <div class="fac">Fernando Toledo Ferraz</div>
+        <div class="fac">Gilson Brito Alves Lima</div>
+        <div class="fac">Helder Gomes Costa</div>
+        <div class="fac">José Rodrigues de Farias Filho</div>
+        <div class="fac">Lidia Angulo Meza</div>
+        <div class="fac">Marcos Costa Roboredo</div>
+        <div class="fac">Marcos dos Santos</div>
+        <div class="fac">Níssia Carvalho Rosa Bergiante</div>
+        <div class="fac">Osvaldo Luiz Gonçalves Quelhas</div>
+        <div class="fac">Pauli Adriano de Almada Garcia</div>
+        <div class="fac">Priscilla Cristina Cabral Ribeiro</div>
+        <div class="fac">Renata Raposo Del Vecchio</div>
+        <div class="fac">Ricardo Luiz Fernandes Bella</div>
+        <div class="fac">Robisom Damasceno Calado</div>
+        <div class="fac">Rodrigo Arcuri Marques Pereira</div>
+      </div>
+    </div>
+
+    <div class="fac-group">
+      <p class="fac-group-lbl">Docentes colaboradores</p>
+      <div class="fac-grid">
+        <div class="fac">Alessandro Jatobá</div>
+        <div class="fac">Elaine Aparecida Araujo</div>
+        <div class="fac">Júlio César Bispo Neves</div>
+        <div class="fac">Ricardo Bordeaux Rego</div>
+        <div class="fac">Ruben Huamanchumo Gutierrez</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  1° Encontro de Governança, Estratégia e Inovação Governamental — 08, 09 e 10 de julho de 2026, Rio de Janeiro / Niterói, RJ.<br>
+  Realização: UFF · ABAR · PPGEP - LabDGE/UFF · GIGS/UNICAMP.
+  <br><a class="foot-back" href="/">← Voltar à página principal</a>
+</footer>
+
+</body>
+</html>
