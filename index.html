@@ -731,12 +731,10 @@ html[data-theme="light"] .logo-dark{display:none;}
         <span class="hc-isbn-tag">ISBN</span>
         <span class="hc-isbn-txt"><strong>Anais publicados</strong><br>em dezembro de 2026</span>
       </div>
-      <!-- COUNTER-OCULTO (reativar removendo este comentário)
       <div class="hc-counter" id="counter" hidden>
         <span class="pulse" aria-hidden="true"></span>
         <span><strong id="counter-num">0</strong> profissionais já inscritos</span>
       </div>
-      -->
 
     </aside>
   </div>
@@ -1343,7 +1341,6 @@ menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   toggle?.setAttribute('aria-expanded', 'false');
 }));
 
-/* COUNTER-OCULTO (reativar removendo este comentário)
 (async () => {
   try {
     const r = await fetch('/api/inscritos', { cache: 'no-store' });
@@ -1355,7 +1352,6 @@ menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     }
   } catch {}
 })();
-*/
 
 // Modal genérico (data-modal="key" -> #modal-key) — acessível por clique e teclado
 (function(){
