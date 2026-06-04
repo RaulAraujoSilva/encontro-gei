@@ -288,26 +288,26 @@ nav.scrolled .nav-logo img{height:32px;}
 .vc-more{display:block;margin-top:12px;font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--sector-color);}
 .vc-clickable:hover .vc-more{text-decoration:underline;}
 
-/* === MODAL (genérico, reaproveitável) === */
-body.modal-open{overflow:hidden;}
-.modal{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;}
-.modal[hidden]{display:none;}
-.modal-backdrop{position:absolute;inset:0;background:rgba(4,7,18,.72);backdrop-filter:blur(6px);}
-.modal-card{position:relative;z-index:1;width:100%;max-width:560px;max-height:88vh;overflow-y:auto;background:var(--bg-2);border:1px solid var(--line-2);border-top:3px solid var(--sector-saneamento);border-radius:14px;padding:34px 32px 30px;box-shadow:0 24px 70px rgba(0,0,0,.5);animation:modalIn .22s ease;}
-@keyframes modalIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
-.modal-close{position:absolute;top:14px;right:16px;width:34px;height:34px;border:1px solid var(--line-2);border-radius:50%;background:transparent;color:var(--muted);font-size:20px;line-height:1;cursor:pointer;transition:all .2s;}
-.modal-close:hover{color:var(--white);background:rgba(255,255,255,.06);}
-.modal-sector{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--sector-saneamento);}
-.modal-title{font-family:'Manrope',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin:8px 0 12px;}
-.modal-lead{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:22px;}
-.modal-facts{list-style:none;display:grid;gap:0;margin:0 0 24px;}
-.modal-facts li{display:grid;grid-template-columns:132px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);}
-.modal-facts li:last-child{border-bottom:none;}
-.modal-facts li span{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted-2);font-weight:700;padding-top:2px;}
-.modal-facts li strong{font-size:13.5px;color:var(--white);font-weight:600;line-height:1.45;}
-.modal-link{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--sector-saneamento);border:1px solid color-mix(in srgb,var(--sector-saneamento) 40%,transparent);border-radius:100px;padding:10px 20px;transition:all .2s;}
-.modal-link:hover{background:color-mix(in srgb,var(--sector-saneamento) 12%,transparent);}
-@media(max-width:520px){.modal-card{padding:30px 22px 26px;}.modal-facts li{grid-template-columns:1fr;gap:3px;}}
+/* === MODAL visita técnica (namespaced p/ não colidir com .modal de #modalidades) === */
+body.vtmodal-open{overflow:hidden;}
+.vtmodal{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;}
+.vtmodal[hidden]{display:none;}
+.vtmodal-backdrop{position:absolute;inset:0;background:rgba(4,7,18,.72);backdrop-filter:blur(6px);}
+.vtmodal-card{position:relative;z-index:1;width:100%;max-width:560px;max-height:88vh;overflow-y:auto;background:var(--bg-2);border:1px solid var(--line-2);border-top:3px solid var(--sector-saneamento);border-radius:14px;padding:34px 32px 30px;box-shadow:0 24px 70px rgba(0,0,0,.5);animation:vtmodalIn .22s ease;}
+@keyframes vtmodalIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
+.vtmodal-close{position:absolute;top:14px;right:16px;width:34px;height:34px;border:1px solid var(--line-2);border-radius:50%;background:transparent;color:var(--muted);font-size:20px;line-height:1;cursor:pointer;transition:all .2s;}
+.vtmodal-close:hover{color:var(--white);background:rgba(255,255,255,.06);}
+.vtmodal-sector{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--sector-saneamento);}
+.vtmodal-title{font-family:'Manrope',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin:8px 0 12px;}
+.vtmodal-lead{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:22px;}
+.vtmodal-facts{list-style:none;display:grid;gap:0;margin:0 0 24px;}
+.vtmodal-facts li{display:grid;grid-template-columns:132px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);}
+.vtmodal-facts li:last-child{border-bottom:none;}
+.vtmodal-facts li span{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted-2);font-weight:700;padding-top:2px;}
+.vtmodal-facts li strong{font-size:13.5px;color:var(--white);font-weight:600;line-height:1.45;}
+.vtmodal-link{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--sector-saneamento);border:1px solid color-mix(in srgb,var(--sector-saneamento) 40%,transparent);border-radius:100px;padding:10px 20px;transition:all .2s;}
+.vtmodal-link:hover{background:color-mix(in srgb,var(--sector-saneamento) 12%,transparent);}
+@media(max-width:520px){.vtmodal-card{padding:30px 22px 26px;}.vtmodal-facts li{grid-template-columns:1fr;gap:3px;}}
 
 /* === SUBMISSION === */
 .sub{background:var(--bg);position:relative;}
@@ -1258,20 +1258,20 @@ html[data-theme="light"] .logo-dark{display:none;}
 </footer>
 
 <!-- MODAL — Jornada 03 · ETE Camboinhas -->
-<div class="modal" id="modal-jornada3" hidden role="dialog" aria-modal="true" aria-labelledby="mj3-title">
-  <div class="modal-backdrop" data-close></div>
-  <div class="modal-card" role="document">
-    <button type="button" class="modal-close" data-close aria-label="Fechar">×</button>
-    <span class="modal-sector">Jornada 03 · Saneamento</span>
-    <h3 class="modal-title" id="mj3-title">ETE Camboinhas — Biogás</h3>
-    <p class="modal-lead">Visita técnica à Estação de Tratamento de Esgoto de Camboinhas, em Niterói, com planta de aproveitamento energético de biogás.</p>
-    <ul class="modal-facts">
+<div class="vtmodal" id="modal-jornada3" hidden role="dialog" aria-modal="true" aria-labelledby="mj3-title">
+  <div class="vtmodal-backdrop" data-close></div>
+  <div class="vtmodal-card" role="document">
+    <button type="button" class="vtmodal-close" data-close aria-label="Fechar">×</button>
+    <span class="vtmodal-sector">Jornada 03 · Saneamento</span>
+    <h3 class="vtmodal-title" id="mj3-title">ETE Camboinhas — Biogás</h3>
+    <p class="vtmodal-lead">Visita técnica à Estação de Tratamento de Esgoto de Camboinhas, em Niterói, com planta de aproveitamento energético de biogás.</p>
+    <ul class="vtmodal-facts">
       <li><span>Data</span><strong>09 de julho de 2026 · Dia 2</strong></li>
       <li><span>Ponto de encontro</span><strong>Prédio do DER — Av. Presidente Vargas, 1100 · Centro · Rio de Janeiro</strong></li>
       <li><span>Saída estimada</span><strong>09h</strong></li>
       <li><span>Capacidade</span><strong>27 visitantes</strong></li>
     </ul>
-    <a class="modal-link" href="https://www.bioproj.com.br/_ete/ete-camboinhas?lang=pt" target="_blank" rel="noopener">Sobre a ETE Camboinhas ↗</a>
+    <a class="vtmodal-link" href="https://www.bioproj.com.br/_ete/ete-camboinhas?lang=pt" target="_blank" rel="noopener">Sobre a ETE Camboinhas ↗</a>
   </div>
 </div>
 
@@ -1365,14 +1365,14 @@ menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     if (!m) return;
     lastTrigger = trigger;
     m.hidden = false;
-    document.body.classList.add('modal-open');
-    m.querySelector('.modal-close')?.focus();
+    document.body.classList.add('vtmodal-open');
+    m.querySelector('.vtmodal-close')?.focus();
   };
   const closeAll = () => {
-    const anyOpen = document.querySelector('.modal:not([hidden])');
+    const anyOpen = document.querySelector('.vtmodal:not([hidden])');
     if (!anyOpen) return;
-    document.querySelectorAll('.modal:not([hidden])').forEach(m => { m.hidden = true; });
-    document.body.classList.remove('modal-open');
+    document.querySelectorAll('.vtmodal:not([hidden])').forEach(m => { m.hidden = true; });
+    document.body.classList.remove('vtmodal-open');
     lastTrigger?.focus();
     lastTrigger = null;
   };
@@ -1382,7 +1382,7 @@ menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(t.getAttribute('data-modal'), t); }
     });
   });
-  document.querySelectorAll('.modal [data-close]').forEach(el => el.addEventListener('click', closeAll));
+  document.querySelectorAll('.vtmodal [data-close]').forEach(el => el.addEventListener('click', closeAll));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAll(); });
 })();
 </script>
