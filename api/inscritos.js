@@ -1,5 +1,7 @@
 // Serverless function — proxy para API Even3 com cache de 5 minutos
-// GET /api/inscritos → { count, presencial, online, updatedAt }
+// GET /api/inscritos → { count, presencial, online, total, updatedAt }
+// count/presencial/online consideram apenas inscrições confirmadas (mesmo critério
+// do limite de vagas da Even3); total inclui cadastros sem inscrição concluída.
 // Vars de ambiente: EVEN3_API_TOKEN, EVEN3_EVENT_ID
 
 let cache = { value: null, expires: 0 };
@@ -31,11 +33,13 @@ export default async function handler(req, res) {
     if (!r.ok) throw new Error(`even3 ${r.status}`);
     const json = await r.json();
     const arr = Array.isArray(json?.data) ? json.data : (Array.isArray(json) ? json : []);
+    // Apenas confirmados contam como inscritos (não confirmados têm categoria vazia)
+    const confirmados = arr.filter(a => a?.confirmed === true);
     // Categoria "Participação Online" → online; demais (Presencial Completo etc.) → presencial
     const isOnline = (a) => String(a?.registration_category || '')
       .normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().includes('online');
-    const online = arr.filter(isOnline).length;
-    const payload = { count: arr.length, presencial: arr.length - online, online, eventId, updatedAt: new Date().toISOString() };
+    const online = confirmados.filter(isOnline).length;
+    const payload = { count: confirmados.length, presencial: confirmados.length - online, online, total: arr.length, eventId, updatedAt: new Date().toISOString() };
     cache = { value: payload, expires: now + 300_000 };
     return res.status(200).json(payload);
   } catch (e) {
