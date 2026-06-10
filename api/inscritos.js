@@ -1,5 +1,5 @@
 // Serverless function — proxy para API Even3 com cache de 5 minutos
-// GET /api/inscritos → { count, updatedAt }
+// GET /api/inscritos → { count, presencial, online, updatedAt }
 // Vars de ambiente: EVEN3_API_TOKEN, EVEN3_EVENT_ID
 
 let cache = { value: null, expires: 0 };
@@ -21,7 +21,7 @@ export default async function handler(req, res) {
   const eventId = process.env.EVEN3_EVENT_ID;
 
   if (!token || !eventId) {
-    return res.status(200).json({ count: 0, updatedAt: new Date().toISOString(), note: 'token_not_configured' });
+    return res.status(200).json({ count: 0, presencial: 0, online: 0, updatedAt: new Date().toISOString(), note: 'token_not_configured' });
   }
 
   try {
@@ -31,10 +31,14 @@ export default async function handler(req, res) {
     if (!r.ok) throw new Error(`even3 ${r.status}`);
     const json = await r.json();
     const arr = Array.isArray(json?.data) ? json.data : (Array.isArray(json) ? json : []);
-    const payload = { count: arr.length, eventId, updatedAt: new Date().toISOString() };
+    // Categoria "Participação Online" → online; demais (Presencial Completo etc.) → presencial
+    const isOnline = (a) => String(a?.registration_category || '')
+      .normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().includes('online');
+    const online = arr.filter(isOnline).length;
+    const payload = { count: arr.length, presencial: arr.length - online, online, eventId, updatedAt: new Date().toISOString() };
     cache = { value: payload, expires: now + 300_000 };
     return res.status(200).json(payload);
   } catch (e) {
-    return res.status(200).json({ count: 0, updatedAt: new Date().toISOString(), error: String(e.message || e) });
+    return res.status(200).json({ count: 0, presencial: 0, online: 0, updatedAt: new Date().toISOString(), error: String(e.message || e) });
   }
 }

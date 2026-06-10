@@ -398,6 +398,20 @@ body.vtmodal-open{overflow:hidden;}
 .mod-t{font-family:'Manrope',sans-serif;font-size:18px;font-weight:700;line-height:1.2;letter-spacing:-.01em;margin-bottom:8px;}
 .mod-d{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:14px;min-height:62px;}
 .mod-vagas{font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:.4px;}
+/* Mini-cards de tipo de inscrição (seção #inscricao) */
+.ins-modes{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:920px;margin-top:26px;text-align:left;}
+.ins-mode{padding:20px 22px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.022);position:relative;transition:all .3s;}
+.ins-mode:nth-child(1){--accent:rgba(245,200,66,.4);}
+.ins-mode:nth-child(2){--accent:rgba(91,198,229,.4);}
+.ins-mode:hover{border-color:var(--accent);background:rgba(255,255,255,.04);}
+.ins-mode-t{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;line-height:1.2;letter-spacing:-.01em;margin-bottom:6px;}
+.ins-mode-d{font-size:12.5px;color:var(--muted);line-height:1.55;margin-bottom:12px;}
+.ins-mode-d strong{color:var(--white);font-weight:600;}
+@media(max-width:720px){.ins-modes{grid-template-columns:1fr;}}
+html[data-theme="light"] .ins-mode{background:#FFFFFF;border-color:var(--line);box-shadow:0 1px 2px rgba(9,17,54,.04);}
+html[data-theme="light"] .ins-mode:hover{box-shadow:0 12px 28px rgba(9,17,54,.10);}
+html[data-theme="light"] .ins-mode-d{color:rgba(9,17,54,.78);}
+html[data-theme="light"] .ins-mode-d strong{color:#091136;}
 
 /* === EVEN3 IFRAME EMBED === */
 .embed-wrap{background:var(--white);border-radius:12px;position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45);}
@@ -733,7 +747,7 @@ html[data-theme="light"] .logo-dark{display:none;}
       </div>
       <div class="hc-counter" id="counter" hidden>
         <span class="pulse" aria-hidden="true"></span>
-        <span><strong id="counter-num">0</strong> profissionais já inscritos</span>
+        <span id="counter-txt"><strong>0</strong> profissionais já inscritos</span>
       </div>
 
     </aside>
@@ -917,9 +931,9 @@ html[data-theme="light"] .logo-dark{display:none;}
   <div class="sec-in">
     <p class="sec-lbl fi">Modalidades de participação</p>
     <h2 class="sec-title fi" id="md-title">Três formas de <em>participar</em></h2>
-    <p class="sec-desc fi">Todas gratuitas, mediante inscrição prévia obrigatória. A <strong style="color:var(--white)">inscrição presencial</strong> dá acesso aos Dias 1 e 3; a <strong style="color:var(--white)">visita técnica</strong> do Dia 2 tem inscrição própria e independente — as duas podem ser combinadas. Vagas limitadas por modalidade.</p>
+    <p class="sec-desc fi">Todas gratuitas, mediante inscrição prévia obrigatória. A <strong style="color:var(--white)">inscrição presencial</strong> dá acesso aos Dias 1 e 3; a <strong style="color:var(--white)">visita técnica</strong> do Dia 2 tem inscrição própria e independente — as duas podem ser combinadas. Vagas limitadas nas modalidades presenciais; a participação online tem vagas ilimitadas.</p>
     <div class="modal-grid">
-      <article class="mod-card fi"><div class="mod-tag">Modalidade 1</div><h3 class="mod-t">Presencial — Dias 1 e 3</h3><p class="mod-d">Abertura institucional e conferência magna no Auditório do DER (Dia 1) + trilhas, sessões de trabalhos e encerramento no NAB UFF (Dia 3).</p><div class="mod-vagas">350 vagas</div></article>
+      <article class="mod-card fi"><div class="mod-tag">Modalidade 1</div><h3 class="mod-t">Presencial — Dias 1 e 3</h3><p class="mod-d">Abertura institucional e conferência magna no Auditório do DER (Dia 1) + trilhas, sessões de trabalhos e encerramento no NAB UFF (Dia 3).</p><div class="mod-vagas">400 vagas</div></article>
       <article class="mod-card fi d1"><div class="mod-tag">Modalidade 2</div><h3 class="mod-t">Visita Técnica — Dia 2</h3><p class="mod-d">Uma das 8 jornadas paralelas em campo. Inscrição independente da presencial, com vagas limitadas por jornada.</p><div class="mod-vagas">200 vagas (~25/jornada)</div></article>
       <article class="mod-card fi d2"><div class="mod-tag">Modalidade 3</div><h3 class="mod-t">Remoto / Online</h3><p class="mod-d">Acompanhamento das plenárias e painéis pela transmissão ao vivo. Acesso aos anais.</p><div class="mod-vagas">Ilimitado</div></article>
     </div>
@@ -1076,7 +1090,21 @@ html[data-theme="light"] .logo-dark{display:none;}
   <div class="sec-in" style="text-align:center;">
     <p class="sec-lbl fi" style="margin-left:auto;margin-right:auto;">Inscrições abertas</p>
     <h2 class="sec-title fi" id="ins-title" style="margin-left:auto;margin-right:auto;">Garanta sua <em>vaga</em></h2>
-    <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Evento <strong style="color:var(--white)">gratuito</strong> mediante inscrição prévia obrigatória, com vagas limitadas por modalidade. A visita técnica do Dia 2 tem inscrição independente da inscrição presencial.</p>
+    <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Evento <strong style="color:var(--white)">gratuito</strong> mediante inscrição prévia obrigatória. Participe <strong style="color:var(--white)">presencialmente</strong> (vagas limitadas) ou <strong style="color:var(--white)">online</strong> (vagas ilimitadas) — escolha a entrada correspondente no formulário abaixo. A visita técnica do Dia 2 tem inscrição independente da inscrição presencial.</p>
+  </div>
+  <div class="sec-in ins-modes" aria-label="Tipos de inscrição">
+    <article class="ins-mode fi">
+      <div class="mod-tag">Entrada 1 · Presencial</div>
+      <h3 class="ins-mode-t">Presencial Completo</h3>
+      <p class="ins-mode-d">Dias 1 e 3 no auditório — abertura institucional, conferência magna, trilhas e sessões de trabalhos. Selecione a entrada <strong>"Presencial Completo"</strong> no formulário.</p>
+      <div class="mod-vagas">Vagas limitadas</div>
+    </article>
+    <article class="ins-mode fi d1">
+      <div class="mod-tag">Entrada 2 · Online</div>
+      <h3 class="ins-mode-t">Participação Online</h3>
+      <p class="ins-mode-d">Transmissão ao vivo das plenárias e painéis, com acesso aos anais. Selecione a entrada <strong>"Participação Online"</strong> no formulário.</p>
+      <div class="mod-vagas">Vagas ilimitadas · gratuito</div>
+    </article>
   </div>
   <div class="sec-in" style="max-width:920px;margin-top:20px;">
     <div class="embed-wrap fi">
@@ -1184,7 +1212,7 @@ html[data-theme="light"] .logo-dark{display:none;}
 
       <div class="faq-group fi">
         <h3>Participação e inscrição</h3>
-        <details class="faq-item"><summary><span class="faq-num">01</span><span>O evento é gratuito?</span></summary><div class="faq-a">Sim. A participação no evento é gratuita, conforme as condições e modalidades divulgadas pela organização. Ainda assim, a inscrição é obrigatória e está sujeita à disponibilidade de vagas.</div></details>
+        <details class="faq-item"><summary><span class="faq-num">01</span><span>O evento é gratuito?</span></summary><div class="faq-a">Sim. A participação no evento é gratuita, conforme as condições e modalidades divulgadas pela organização. Ainda assim, a inscrição é obrigatória e, nas modalidades presenciais, está sujeita à disponibilidade de vagas. A participação online (transmissão ao vivo) tem vagas ilimitadas.</div></details>
         <details class="faq-item"><summary><span class="faq-num">02</span><span>A inscrição é obrigatória?</span></summary><div class="faq-a">Sim. Mesmo sendo gratuito, o evento exige inscrição prévia. A inscrição permite à organização controlar a capacidade dos espaços, organizar as atividades e administrar as modalidades de participação.</div></details>
         <details class="faq-item"><summary><span class="faq-num">03</span><span>Quais são as modalidades de participação?</span></summary><div class="faq-a">São três as formas de participação: Presencial (Dias 1 e 3), Visita Técnica (Dia 2, com inscrição própria) e Remoto/Online (transmissão ao vivo). Todas são gratuitas e exigem inscrição prévia. Recomenda-se que o participante verifique atentamente a modalidade escolhida antes de concluir a inscrição.</div></details>
         <details class="faq-item"><summary><span class="faq-num">04</span><span>A inscrição garante participação em todas as atividades?</span></summary><div class="faq-a">Não necessariamente. Algumas atividades podem ter vagas limitadas, critérios específicos de seleção ou necessidade de confirmação posterior pela organização. O participante deve observar as regras indicadas para cada modalidade e atividade.</div></details>
@@ -1346,10 +1374,15 @@ menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     const r = await fetch('/api/inscritos', { cache: 'no-store' });
     if (!r.ok) return;
     const d = await r.json();
-    if (typeof d.count === 'number' && d.count > 0) {
-      document.getElementById('counter-num').textContent = d.count.toLocaleString('pt-BR');
-      document.getElementById('counter').hidden = false;
+    if (typeof d.count !== 'number' || d.count <= 0) return;
+    const fmt = n => n.toLocaleString('pt-BR');
+    const txt = document.getElementById('counter-txt');
+    if (typeof d.online === 'number' && d.online > 0) {
+      txt.innerHTML = '<strong>' + fmt(d.presencial) + '</strong> presenciais · <strong>' + fmt(d.online) + '</strong> online já inscritos';
+    } else {
+      txt.innerHTML = '<strong>' + fmt(d.count) + '</strong> profissionais já inscritos';
     }
+    document.getElementById('counter').hidden = false;
   } catch {}
 })();
 
