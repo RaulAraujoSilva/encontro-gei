@@ -26,8 +26,10 @@
 - [x] TASK-1145: LGPD — todos os placeholders removidos dos 3 docs e da página (QR code real embutido no cartaz; seções acordo/lista retiradas — ver TASK-1141); verificação automatizada = 0 marcadores
 
 ## Pendentes (novas, 12/06)
-- [ ] TASK-1146: Even3 — replicar a arte do certificado nos outros 5 modelos ("Copiar modelo de" no editor)
 - [ ] TASK-1147: Even3 — publicar o questionário de avaliação próximo ao evento (hoje em rascunho)
+- [ ] TASK-1148: Even3 — se decidido, elevar limite de autores 4 → 5 após o pico de 16/06 (Recebimento > Configurações > Restrições)
+- [x] TASK-1146: Even3 — arte aplicada nos 6 certificados (12/06): Participação, Atividade, Convidado, Submissão, Apresentação, Avaliador (task painel 8.2.4 ✅)
+- [x] TASK-1149: Even3 — confirmado limite global de 4 autores por submissão (4 modalidades) + site/PDFs informam "até 4" (task painel 8.2.6 ✅)
 
 ## Completadas (sessão 12/06/2026 — modalidades "em breve" + pacote LGPD)
 

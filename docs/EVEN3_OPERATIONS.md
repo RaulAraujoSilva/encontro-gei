@@ -287,7 +287,11 @@ estendida do checkbox com controladoras, prazo de 5 anos e DPO):
   Envio automático aos participantes ao final do evento. **Publicar próximo ao evento.**
 - [x] Certificado de Participação com arte personalizada (fundo 1754×1240 gerado por
   `scripts/gerar_fundo_certificado.py`, em `assets/certificado/`) — aplicado e salvo em 12/06
-- [ ] Replicar a arte nos outros 5 certificados (usar "Copiar modelo de" no editor de cada um)
+- [x] Arte replicada nos 6 certificados em 12/06 (Participação, Atividade, Convidado, Submissão,
+  Apresentação, Avaliador) — upload do mesmo fundo via "Imagem de Fundo > Anexar imagem" em cada editor
+- [x] Restrição de autores confirmada em 12/06: máx. **4 autores por submissão** (global, vale p/ as
+  4 modalidades) + "todos os autores inscritos" (Recebimento > Configurações > Restrições).
+  Estratégia +1 após o pico: elevar para 5 nesse mesmo campo após 16/06, se decidido
 
 **Pendências jurídicas:** acordo entre controladoras conjuntas (minuta) e lista nominal de acessos
 ao painel Even3. Já preenchidos em 12/06: CNPJ/endereço AGENERSA (07.694.194/0001-11) e UFF
