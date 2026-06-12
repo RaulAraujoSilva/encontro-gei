@@ -1,7 +1,7 @@
 # Session Log — Site 1° Encontro GEI
 
-> **Última atualização:** 2026-06-04
-> **Status global:** Site no ar (`encontrogeig.org`), Even3 configurada, 4 PDFs de regras publicados, e-mails Google Workspace ativos. **Fase 1 prorrogada para 16/06/2026** e vídeo agora entregue via link público (não upload). **Contador de inscritos reativado (270) e visita técnica da ETE Camboinhas confirmada (Jornada 03 + página /organizadores/).**
+> **Última atualização:** 2026-06-12
+> **Status global:** Site no ar (`encontrogeig.org`) com página **`/privacidade/` publicada**. Even3 operacional completa: 2 entradas (Presencial 400 · Online ilimitada, 318+9 inscritos), checkbox LGPD revisado aplicado, questionário de avaliação configurado (rascunho), **6 certificados com arte personalizada**, limite de 4 autores confirmado. **Todas as tasks S2 do painel (8.2.1–8.2.7 e 9.5.1–9.5.4) concluídas.** Fase 1 encerra 16/06.
 
 ## Visão geral do projeto
 
@@ -22,6 +22,30 @@
 | 6 | Livro · Anais ISBN | dezembro/2026 |
 
 **Fluxo do vídeo (Fase 1):** Even3 não aceita upload de arquivo de vídeo. Autor hospeda em link público (Google Drive, OneDrive ou YouTube unlisted) e cola a URL no **corpo do documento** (resumo expandido). Há também campo opcional "URL do vídeo de apresentação" no formulário da Even3 para reforço.
+
+---
+
+## Sessão 12/06/2026 — pacote LGPD + Even3 operacional completa (tasks S2 fechadas)
+
+Commits: `e15bb07` (pacote LGPD + modalidades "em breve"), `8f08bd7` (CNPJs), `c4e7549` (DPO + prazos), `64d0fe7` (checkbox aplicado), `aa1000f` (arte certificado + QR + placeholders), `ba32057` (fechamento). Todos em produção.
+
+**1. Pacote LGPD (tasks painel 9.5.1–9.5.4 ✅)**
+- Página pública **`/privacidade/`** (13 seções; AGENERSA + UFF controladoras conjuntas com CNPJs; DPO **Prof. Alexandre Beraldi Santos** — alexandreberaldisantos@id.uff.br; prazos: inscrição/presença 5 anos, e-mails 2 anos; Even3 operadora art. 39; Res. CD/ANPD 15/2024). Link nos 3 footers + nota na seção de inscrição.
+- 3 docs Word em `docs/lgpd/` (gerados por `scripts/gerar_docs_lgpd.py`; `*.docx` no gitignore — o script regenera): termo de imagem/voz (com checkbox e texto de balcão em anexo), **aviso de gravação/transmissão A4 com QR code embutido**, política de guarda e retenção. **Zero placeholders** (a pedido do Raul, seções do acordo entre controladoras e lista de acessos foram retiradas — reintroduzir quando o jurídico definir). Cópias no Drive: pasta `11 — Jurídico › LGPD` (`1Rss9F71eKwUQyJL9e7JfafMjAb1eUix8`).
+- **Checkbox LGPD revisado aplicado na Even3** (substituiu termo antigo que citava Escola de Regulação e e-mail desativado contato@encontrogei.com.br).
+
+**2. Even3 operacional (tasks painel 8.2.1–8.2.7 ✅)**
+- Entradas: descrição presencial corrigida ("três dias" → **Dias 1 e 3**) e vagas **500 → 400** (alinhado ao site).
+- **Ficha de avaliação de reação** = complemento gratuito "Questionário de avaliação do evento": instalado e configurado com 21 perguntas (padrão + visitas técnicas, modalidade de participação, transmissão online, recomendação; duplicata corrigida). **Rascunho — publicar perto do evento** (envio automático ao final).
+- **6 certificados com arte personalizada** (fundo 1754×1240 por `scripts/gerar_fundo_certificado.py`: logo do evento + faixa das 6 realizadoras; TEP/PPGEP invertido p/ fundo claro). Atividade cobre visitas técnicas; Submissão/Apresentação cobrem as 4 modalidades via tags.
+- **4 autores confirmado**: restrição global (Recebimento > Configurações > Restrições) + site + 4 PDFs. Estratégia +1: elevar p/ 5 após 16/06, se decidido.
+
+**3. Site**
+- Card Visita Técnica → "Inscrições em breve" (#modalidades, #inscricao, FAQ 03/05/07); orientação do vídeo reforçada (drive aberto "qualquer pessoa com o link" + teste em janela anônima).
+
+**4. Planilha de acompanhamento** — todas as linhas 8.2.x/9.5.x com status, data de conclusão, links de evidência (site ao vivo, API de inscritos, Drive, painel Even3) e observações.
+
+**Próxima semana (S3 · 15–19/06):** publicar questionário (perto do evento); criar entrada Visita Técnica D2 quando jornadas confirmadas; decidir +1 autor após 16/06; jurídico (acordo entre controladoras + lista de acessos); fechamento da Fase 1 (16/06) e avaliação (17–22/06).
 
 ---
 
