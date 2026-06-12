@@ -9,7 +9,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="1° Encontro de Governança, Estratégia e Inovação Governamental">
-<meta property="og:description" content="08, 09 e 10 de julho de 2026 · Rio de Janeiro · 4 eventos integrados · 8 visitas técnicas · Anais com ISBN">
+<meta property="og:description" content="08, 09 e 10 de julho de 2026 · Rio de Janeiro · 4 eventos integrados · 8 visitas técnicas · Anais com ISBN e DOI">
 <meta property="og:image" content="/assets/og-image.png">
 <meta property="og:url" content="https://encontrogeig.org/">
 <meta property="og:locale" content="pt_BR">
@@ -163,6 +163,8 @@ nav.scrolled .nav-logo img{height:32px;}
 .hc-isbn-tag{font-family:'Manrope',sans-serif;font-size:13px;font-weight:800;letter-spacing:.06em;color:var(--bg);background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 100%);padding:5px 12px;border-radius:6px;}
 .hc-isbn-txt{font-size:12.5px;color:rgba(255,255,255,.7);line-height:1.4;}
 .hc-isbn-txt strong{color:var(--white);}
+.hc-doi{border-top:0;padding-top:8px;margin-top:0;}
+.hc-doi .hc-isbn-tag{background:linear-gradient(135deg,var(--cyan) 0%,var(--blue) 100%);color:#091136;}
 .hc-counter{display:flex;align-items:center;gap:10px;margin-top:18px;padding-top:18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);}
 .hc-counter .pulse{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(122,199,79,.6);animation:pulse 2s infinite;}
 .hc-counter[hidden]{display:none;}
@@ -313,6 +315,17 @@ body.vtmodal-open{overflow:hidden;}
 .sub{background:var(--bg);position:relative;}
 .sub .sec-in{max-width:1180px;margin:0 auto;}
 .sub-head{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:end;margin-bottom:48px;}
+.pub-badges{display:flex;align-items:center;gap:10px;margin-top:16px;padding:12px 16px;border:1px solid var(--line-2);border-radius:10px;background:rgba(255,255,255,.03);width:fit-content;max-width:100%;flex-wrap:wrap;}
+.pub-tag{font-family:'Manrope',sans-serif;font-size:12.5px;font-weight:800;letter-spacing:.06em;padding:4px 11px;border-radius:6px;}
+.pub-isbn{color:#091136;background:linear-gradient(135deg,var(--yellow) 0%,var(--green) 100%);}
+.pub-doi{color:#091136;background:linear-gradient(135deg,var(--cyan) 0%,var(--blue) 100%);}
+.pub-plus{color:rgba(255,255,255,.55);font-weight:700;font-size:14px;}
+.pub-txt{font-size:13px;color:rgba(255,255,255,.72);line-height:1.4;}
+.pub-txt strong{color:var(--white);}
+html[data-theme="light"] .pub-badges{background:rgba(9,17,54,.04);border-color:rgba(9,17,54,.14);}
+html[data-theme="light"] .pub-plus{color:rgba(9,17,54,.5);}
+html[data-theme="light"] .pub-txt{color:rgba(9,17,54,.72);}
+html[data-theme="light"] .pub-txt strong{color:#091136;}
 @media(max-width:880px){.sub-head{grid-template-columns:1fr;gap:24px;}}
 .dl-box{background:linear-gradient(135deg,rgba(245,200,66,.12) 0%,rgba(122,199,79,.04) 100%);border:1px solid rgba(245,200,66,.34);border-radius:12px;padding:22px 26px;display:flex;align-items:center;gap:24px;}
 .dl-box-l{flex:1;}
@@ -745,6 +758,10 @@ html[data-theme="light"] .logo-dark{display:none;}
         <span class="hc-isbn-tag">ISBN</span>
         <span class="hc-isbn-txt"><strong>Anais publicados</strong><br>em dezembro de 2026</span>
       </div>
+      <div class="hc-isbn hc-doi">
+        <span class="hc-isbn-tag">DOI</span>
+        <span class="hc-isbn-txt"><strong>Cada publicação</strong><br>com DOI individual</span>
+      </div>
       <div class="hc-counter" id="counter" hidden>
         <span class="pulse" aria-hidden="true"></span>
         <span id="counter-txt"><strong>0</strong> profissionais já inscritos</span>
@@ -948,6 +965,7 @@ html[data-theme="light"] .logo-dark{display:none;}
         <p class="sec-lbl fi">Chamada de trabalhos</p>
         <h2 class="sec-title fi" id="sub-title" style="margin-bottom:14px;">Envie seu <em>trabalho</em></h2>
         <p class="sec-desc fi" style="margin-bottom:0;font-size:15.5px;">Modelo faseado: <strong style="color:var(--white)">Fase 1</strong> · resumo estendido (2–4 pp.) + vídeo de 10 min. <strong style="color:var(--white)">Fase 2</strong> · apresentação presencial Dia 3. <strong style="color:var(--white)">Artigo final</strong> publicado em livro com ISBN em dezembro/2026.</p>
+        <p class="pub-badges fi"><span class="pub-tag pub-isbn">ISBN</span><span class="pub-plus" aria-hidden="true">+</span><span class="pub-tag pub-doi">DOI</span><span class="pub-txt">Os anais terão <strong>ISBN</strong> e cada publicação receberá <strong>DOI</strong> individual</span></p>
       </div>
       <div class="dl-box fi">
         <div class="dl-box-l">
@@ -964,7 +982,7 @@ html[data-theme="light"] .logo-dark{display:none;}
       <li class="tl-step"><div class="tl-dot">3</div><div class="tl-when">Programa</div><div class="tl-what">Definitivo</div><div class="tl-when2">25/06/2026</div></li>
       <li class="tl-step"><div class="tl-dot">4</div><div class="tl-when">Fase 2</div><div class="tl-what">Apresentação</div><div class="tl-when2">10/07 · NAB UFF</div></li>
       <li class="tl-step"><div class="tl-dot">5</div><div class="tl-when">Artigo</div><div class="tl-what">Versão final</div><div class="tl-when2">até 30/09/2026</div></li>
-      <li class="tl-step"><div class="tl-dot">6</div><div class="tl-when">Livro</div><div class="tl-what">Anais ISBN</div><div class="tl-when2">dezembro/2026</div></li>
+      <li class="tl-step"><div class="tl-dot">6</div><div class="tl-when">Livro</div><div class="tl-what">Anais ISBN + DOI</div><div class="tl-when2">dezembro/2026</div></li>
     </ul>
 
     <div class="eixos-head">
@@ -1025,7 +1043,7 @@ html[data-theme="light"] .logo-dark{display:none;}
       <div class="regra-card fi d3">
         <div class="regra-icon">AC</div>
         <div class="regra-t">Artigo Completo</div>
-        <div class="regra-d">Fase 2 · 8-15 páginas · ABNT · publicado nos anais ISBN</div>
+        <div class="regra-d">Fase 2 · 8-15 páginas · ABNT · publicado nos anais ISBN com DOI individual</div>
         <div class="regra-ctas">
           <a class="regra-cta" href="/assets/regras/artigo-completo.pdf" download target="_blank" rel="noopener">Regras (PDF)</a>
           <a class="regra-cta-alt" href="/assets/modelos/artigo-completo.docx" download>Modelo Word</a>
@@ -1042,7 +1060,7 @@ html[data-theme="light"] .logo-dark{display:none;}
     <div>
       <p class="sec-lbl fi">Normas técnicas</p>
       <h2 class="sec-title fi" id="nm-title" style="font-size:clamp(24px,3.4vw,38px);">Orientação aos <em>Autores</em></h2>
-      <p class="sec-desc fi" style="margin-bottom:0;font-size:16px;">Padronização técnica para garantir consistência editorial nos anais com ISBN.</p>
+      <p class="sec-desc fi" style="margin-bottom:0;font-size:16px;">Padronização técnica para garantir consistência editorial nos anais com ISBN e DOI.</p>
     </div>
     <ul class="normas-list">
       <li class="fi"><div><strong>Formato</strong><span>.docx ou .pdf</span></div></li>
