@@ -8,8 +8,8 @@
 - [ ] TASK-1090: Confirmar Magda Chambriard (Petrobras) na conferência magna Dia 1
 - [ ] TASK-1091: Definir local Dia 1 (atualmente "Local em definição" no `index.html:674`)
 - [ ] TASK-1092: Liberar logos parceiros conforme confirmações — descomentar dentro de `<!-- PARCEIROS-OCULTOS -->` (`index.html:967`) e `<!-- APOIO-OCULTO -->` (`index.html:648`)
-- [ ] TASK-1123: Even3 — concluir estrutura de entradas: criar a entrada Visita Técnica D2 quando as jornadas forem confirmadas (site mostra "Inscrições em breve" desde 12/06) e corrigir descrição da entrada "Presencial Completo" ("três dias" → Dias 1 e 3). Confirmado via API em 12/06: 2 entradas ativas (Presencial 400 · 317 confirmados, Online ilimitada · 8 confirmados)
-- [ ] TASK-1140: Even3 — aplicar texto revisado do checkbox LGPD no formulário de inscrição (texto em `docs/EVEN3_OPERATIONS.md`, seção LGPD) — somente APÓS deploy da página `/privacidade/`
+- [ ] TASK-1123: Even3 — criar a entrada Visita Técnica D2 quando as jornadas forem confirmadas (site mostra "Inscrições em breve" desde 12/06). Descrição da entrada presencial corrigida em 12/06 ("três dias" → Dias 1 e 3). ⚠️ Alinhar vagas: painel = 500, site = 400
+- [x] TASK-1140: Even3 — checkbox LGPD revisado aplicado no formulário de inscrição em 12/06 (substituiu termo antigo que citava Escola de Regulação e e-mail desativado contato@encontrogei.com.br)
 - [ ] TASK-1141: LGPD — validação jurídica final: acordo entre controladoras conjuntas (minuta) + lista nominal de acessos. Preenchidos em 12/06: CNPJs/endereços, DPO (Prof. Alexandre Beraldi Santos) e prazos de retenção (5/2 anos)
 
 ## Pendentes — Decisões futuras (parar aqui, retomar quando solicitado)

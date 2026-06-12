@@ -35,7 +35,7 @@ Documentação operacional completa do evento `722003` na Even3. Cobre acesso, m
 
 | Aba | URL | Status |
 |---|---|---|
-| **Inscrições > Entradas e valores** | `/organizador/registration/` | ✅ 2 entradas ativas desde 10/06 (Presencial Completo · 400, Participação Online · ilimitada). Visita Técnica D2: entrada ainda não criada ("em breve" no site). ⚠️ Descrição da entrada presencial diz "acesso aos três dias" — corrigir para Dias 1 e 3 (visita técnica é inscrição própria) |
+| **Inscrições > Entradas e valores** | `/organizador/registration/` | ✅ 2 entradas ativas (Presencial Completo "Dias 1 e 3" — descrição corrigida 12/06 via Chrome MCP; Participação Online · ilimitada). Visita Técnica D2: entrada ainda não criada ("em breve" no site). ⚠️ Entrada presencial está com **500 vagas** no painel; site anuncia 400 — alinhar (decisão do organizador) |
 | **Inscrições > Formulário de inscrição** | `?tab=Formulário%20de%20inscrição` | ✅ Nome + e-mail + instituição + telefone celular + Termo LGPD (obrigatório) |
 | **Inscrições > Configurações** | `?tab=Configurações` | Default · não há cobrança |
 | **Página do Evento (hotsite)** | `/organizador/hotsite/` | ✅ CSS custom aplicado (paleta navy/yellow/green/blue + Manrope/Outfit) |
@@ -261,19 +261,27 @@ Pacote LGPD criado em 12/06: página pública `/privacidade/` no site + 3 docume
 (termo de imagem/voz, aviso de gravação/transmissão A4, política de guarda e retenção). Gerados por
 `scripts/gerar_docs_lgpd.py`.
 
-**Texto revisado do checkbox LGPD** (aplicar manualmente em Inscrições > Formulário de inscrição,
-substituindo o termo atual — somente APÓS a página `/privacidade/` estar no ar):
+**Texto do checkbox LGPD — ✅ APLICADO em 12/06/2026** (campo "Consentimento LGPD e cessão de
+imagem", obrigatório, válido para todas as entradas; substituiu o termo antigo que ainda citava a
+Escola de Regulação e o e-mail desativado contato@encontrogei.com.br). Texto aplicado (versão
+estendida do checkbox com controladoras, prazo de 5 anos e DPO):
 
 > Li e concordo com a Política de Privacidade do Encontro GEI (encontrogeig.org/privacidade).
 > Estou ciente de que o evento será gravado, fotografado e transmitido ao vivo, e autorizo,
 > gratuitamente, o uso da minha imagem, voz e nome nos registros e materiais institucionais e
 > científicos do evento, sem finalidade comercial, nos termos da Lei nº 13.709/2018 (LGPD) e do
-> art. 20 do Código Civil.
+> art. 20 do Código Civil. Meus dados de inscrição serão tratados pela organização (AGENERSA e
+> UFF, controladoras conjuntas) e pela Even3 (operadora) exclusivamente para gestão da minha
+> participação, emissão de certificados e publicação dos anais, pelo prazo de 5 anos. Posso
+> exercer meus direitos (acesso, correção, eliminação, portabilidade e revogação) pelo e-mail
+> contato@encontrogeig.org — encarregado (DPO): Prof. Alexandre Beraldi Santos
+> (alexandreberaldisantos@id.uff.br).
 
 **Pendências Even3:**
-- [ ] Aplicar o checkbox revisado no formulário de inscrição (após deploy da página de privacidade)
-- [ ] Corrigir descrição da entrada "Presencial Completo" ("três dias" → Dias 1 e 3)
+- [x] Aplicar o checkbox revisado no formulário de inscrição — feito 12/06 (página /privacidade/ no ar)
+- [x] Corrigir descrição da entrada "Presencial Completo" ("três dias" → Dias 1 e 3) — feito 12/06
 - [ ] Criar a entrada da Visita Técnica D2 quando as jornadas forem confirmadas (site já diz "em breve")
+- [ ] Alinhar limite de vagas presencial: painel Even3 = 500, site = 400
 
 **Pendências jurídicas:** acordo entre controladoras conjuntas (minuta) e lista nominal de acessos
 ao painel Even3. Já preenchidos em 12/06: CNPJ/endereço AGENERSA (07.694.194/0001-11) e UFF
