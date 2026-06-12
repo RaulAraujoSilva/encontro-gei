@@ -36,6 +36,7 @@ UFF_ID = ("UFF — autarquia federal, CNPJ 28.523.215/0001-06, Rua Miguel de Fri
           "Niterói/RJ, CEP 24220-900")
 EMAIL = "contato@encontrogeig.org"
 URL_POLITICA = "encontrogeig.org/privacidade"
+DPO = "Prof. Alexandre Beraldi Santos (PPGEP/UFF) — alexandreberaldisantos@id.uff.br"
 
 CHECKBOX_EVEN3 = (
     "Li e concordo com a Política de Privacidade do Encontro GEI (encontrogeig.org/privacidade). "
@@ -345,7 +346,7 @@ def doc_retencao():
     p(doc, "Operadora: Even3 S.A. — plataforma de inscrição, submissão e certificação, que trata dados em nome "
            "da organização (art. 39 da LGPD), conforme seus termos de uso e política de privacidade.")
     p(doc, "Plataformas com tratamento próprio: YouTube/Google (transmissão e acervo público).")
-    p(doc, "Encarregado (DPO) do Evento: [NOME DO ENCARREGADO — A VALIDAR].")
+    p(doc, f"Encarregado (DPO) do Evento: {DPO}.")
     p(doc, "Pessoas com acesso ao painel da Even3 e às caixas de e-mail oficiais: [LISTA NOMINAL — A PREENCHER]. "
            "O acesso deve ser limitado ao mínimo necessário e revisto ao final do Evento.")
 
@@ -354,11 +355,11 @@ def doc_retencao():
         doc,
         ["Categoria", "Origem", "Finalidade", "Base legal", "Onde fica", "Quem acessa", "Prazo", "Descarte"],
         [
-            ["Inscrição (nome, e-mail, instituição, telefone)", "Formulário Even3", "Inscrição, credenciamento, comunicação operacional", "Art. 7º, V", "Even3", "Organização (painel)", "[5 anos — A VALIDAR]", "Eliminação na Even3 + cópias locais"],
-            ["Presença (QR Code)", "Credenciamento", "Apuração de 75% p/ certificado", "Art. 7º, V e IX", "Even3", "Organização", "[5 anos — A VALIDAR]", "Junto com a inscrição"],
+            ["Inscrição (nome, e-mail, instituição, telefone)", "Formulário Even3", "Inscrição, credenciamento, comunicação operacional", "Art. 7º, V", "Even3", "Organização (painel)", "5 anos", "Eliminação na Even3 + cópias locais"],
+            ["Presença (QR Code)", "Credenciamento", "Apuração de 75% p/ certificado", "Art. 7º, V e IX", "Even3", "Organização", "5 anos", "Junto com a inscrição"],
             ["Submissões (trabalhos, autoria, URL de vídeo)", "Formulário Even3", "Avaliação, programa, anais com ISBN", "Art. 7º, V", "Even3 / anais", "Comissão científica", "Permanente (publicação)", "Não se aplica (acervo)"],
             ["Imagem, voz e nome (registros do evento)", "Captação no evento", "Registro institucional, transmissão, divulgação científica", "Art. 7º, IX e I; CC art. 20", "YouTube, site, redes", "Organização / público", "Permanente (acervo)", "Não se aplica (acervo)"],
-            ["E-mails operacionais", "Caixas @encontrogeig.org", "Atendimento e histórico", "Art. 7º, V e IX", "E-mail institucional", "Organização", "[2 anos — A VALIDAR]", "Exclusão das caixas"],
+            ["E-mails operacionais", "Caixas @encontrogeig.org", "Atendimento e histórico", "Art. 7º, V e IX", "E-mail institucional", "Organização", "2 anos", "Exclusão das caixas"],
             ["Acessibilidade (se informada)", "Participante", "Atendimento da necessidade", "Art. 7º, I / art. 11, II, a", "Even3 / e-mail", "Logística (restrito)", "Até o fim do evento", "Exclusão imediata"],
         ],
         font_size=8,
@@ -368,8 +369,9 @@ def doc_retencao():
     p(doc, "Os prazos da tabela acima contam-se do encerramento do Evento. Hipóteses de conservação após o "
            "término do tratamento fundamentam-se no art. 16 da LGPD: inciso I (cumprimento de obrigação legal "
            "ou regulatória — comprovação de certificação e prestação de contas) e inciso II (estudo por órgão "
-           "de pesquisa — anais e acervo científico). Prazos marcados como [A VALIDAR] devem ser confirmados "
-           "com as assessorias jurídicas da AGENERSA e da UFF.")
+           "de pesquisa — anais e acervo científico). Prazos definidos em 12/06/2026 (inscrição/presença: "
+           "5 anos; e-mails operacionais: 2 anos); ajustar caso as assessorias jurídicas da AGENERSA e da UFF "
+           "orientem de forma diversa na revisão.")
 
     heading(doc, "5. Procedimentos de descarte")
     p(doc, "• Ao término do prazo de retenção: exportar da Even3 apenas o necessário à prestação de contas, "
@@ -379,7 +381,7 @@ def doc_retencao():
     p(doc, "• Dados de acessibilidade: excluir imediatamente após o encerramento do Evento.")
 
     heading(doc, "6. Atendimento aos direitos dos titulares (arts. 18 e 19)")
-    p(doc, f"Canal único: {EMAIL}. Responsável pelo fluxo: [RESPONSÁVEL — A PREENCHER]. Registrar cada "
+    p(doc, f"Canal único: {EMAIL}. Responsável pelo fluxo: o encarregado ({DPO}). Registrar cada "
            "solicitação (data, titular, pedido, resposta). Responder em prazo razoável, observando o art. 19 "
            "da LGPD (declaração simplificada imediata ou declaração completa em até 15 dias, no caso de "
            "confirmação de tratamento e acesso). Solicitações que envolvam a Even3 devem ser encaminhadas à "

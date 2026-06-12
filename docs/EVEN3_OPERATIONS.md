@@ -275,8 +275,10 @@ substituindo o termo atual — somente APÓS a página `/privacidade/` estar no 
 - [ ] Corrigir descrição da entrada "Presencial Completo" ("três dias" → Dias 1 e 3)
 - [ ] Criar a entrada da Visita Técnica D2 quando as jornadas forem confirmadas (site já diz "em breve")
 
-**Pendências jurídicas (placeholders nos documentos):** CNPJ/endereço AGENERSA e UFF, nome do
-encarregado (DPO), prazos de retenção (5 anos/2 anos), acordo entre controladoras conjuntas.
+**Pendências jurídicas:** acordo entre controladoras conjuntas (minuta) e lista nominal de acessos
+ao painel Even3. Já preenchidos em 12/06: CNPJ/endereço AGENERSA (07.694.194/0001-11) e UFF
+(28.523.215/0001-06), encarregado (DPO) = Prof. Alexandre Beraldi Santos
+(alexandreberaldisantos@id.uff.br), prazos de retenção (inscrição/presença 5 anos; e-mails 2 anos).
 
 ---
 
