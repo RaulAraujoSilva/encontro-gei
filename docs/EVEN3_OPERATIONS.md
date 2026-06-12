@@ -35,7 +35,7 @@ Documentação operacional completa do evento `722003` na Even3. Cobre acesso, m
 
 | Aba | URL | Status |
 |---|---|---|
-| **Inscrições > Entradas e valores** | `/organizador/registration/` | ✅ 4 modalidades (Presencial Completo · 300, Presencial 1+3 · 300, Remoto · ilimitado, Visitante D2 · 200) |
+| **Inscrições > Entradas e valores** | `/organizador/registration/` | ✅ 2 entradas ativas desde 10/06 (Presencial Completo · 400, Participação Online · ilimitada). Visita Técnica D2: entrada ainda não criada ("em breve" no site). ⚠️ Descrição da entrada presencial diz "acesso aos três dias" — corrigir para Dias 1 e 3 (visita técnica é inscrição própria) |
 | **Inscrições > Formulário de inscrição** | `?tab=Formulário%20de%20inscrição` | ✅ Nome + e-mail + instituição + telefone celular + Termo LGPD (obrigatório) |
 | **Inscrições > Configurações** | `?tab=Configurações` | Default · não há cobrança |
 | **Página do Evento (hotsite)** | `/organizador/hotsite/` | ✅ CSS custom aplicado (paleta navy/yellow/green/blue + Manrope/Outfit) |
@@ -252,6 +252,31 @@ Confirmado: a Even3 permite campos customizados no formulário de submissão (ex
 - **CSS custom** no hotsite (paleta navy/yellow/green/blue alinhada ao logo)
 
 Detalhes do conteúdo factual: ver [`CONTENT.md`](CONTENT.md).
+
+---
+
+## LGPD — texto revisado do checkbox e pendências (12/06/2026)
+
+Pacote LGPD criado em 12/06: página pública `/privacidade/` no site + 3 documentos em `docs/lgpd/`
+(termo de imagem/voz, aviso de gravação/transmissão A4, política de guarda e retenção). Gerados por
+`scripts/gerar_docs_lgpd.py`.
+
+**Texto revisado do checkbox LGPD** (aplicar manualmente em Inscrições > Formulário de inscrição,
+substituindo o termo atual — somente APÓS a página `/privacidade/` estar no ar):
+
+> Li e concordo com a Política de Privacidade do Encontro GEI (encontrogeig.org/privacidade).
+> Estou ciente de que o evento será gravado, fotografado e transmitido ao vivo, e autorizo,
+> gratuitamente, o uso da minha imagem, voz e nome nos registros e materiais institucionais e
+> científicos do evento, sem finalidade comercial, nos termos da Lei nº 13.709/2018 (LGPD) e do
+> art. 20 do Código Civil.
+
+**Pendências Even3:**
+- [ ] Aplicar o checkbox revisado no formulário de inscrição (após deploy da página de privacidade)
+- [ ] Corrigir descrição da entrada "Presencial Completo" ("três dias" → Dias 1 e 3)
+- [ ] Criar a entrada da Visita Técnica D2 quando as jornadas forem confirmadas (site já diz "em breve")
+
+**Pendências jurídicas (placeholders nos documentos):** CNPJ/endereço AGENERSA e UFF, nome do
+encarregado (DPO), prazos de retenção (5 anos/2 anos), acordo entre controladoras conjuntas.
 
 ---
 

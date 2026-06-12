@@ -21,4 +21,5 @@
 | copy-pos-reuniao | ✅ Completa (06/05) | Nav-date, hero badge, "trabalho" em vez de "submissão", "modalidades" em vez de "moedas" |
 | ocultacoes-reativaveis | 🟡 Em standby | Mod Remoto, Escola Regulação, Parceiros, Apoio inline — preservados em comentários HTML |
 | ajustes-pos-revisao-2 | ✅ Completa (06/05) | Modalidade 4→3, premiação+coquetel+encerramento unificados às 16h30 D3, GIGS/UNICAMP como 4ª realização, card PPGEP convertido em logo TEP/PPGEP com link tpp-uff.com.br |
-| reorganizacao-modalidades | 🟡 Parcial (01/06) | Site ok: 3 modalidades (Presencial D1+D3 · 350, Visita Técnica D2 · 200 independente, Remoto · ilimitado), pré-inscrição prioritária removida. Pendente: refletir na Even3 (TASK-1123) |
+| reorganizacao-modalidades | 🟡 Parcial (12/06) | Even3 com 2 entradas ativas (Presencial 400 + Online ilimitada, confirmado via API 12/06); site ajustado: Visita Técnica = "Inscrições em breve". Pendente: criar entrada Visita Técnica D2 + corrigir descrição "três dias" (TASK-1123) |
+| pacote-lgpd | 🟡 Parcial (12/06) | Página `/privacidade/` (13 seções) + link nos 3 footers + nota na inscrição + 3 docs Word em `docs/lgpd/` (`scripts/gerar_docs_lgpd.py`). Pendente: validação jurídica dos placeholders (TASK-1141) e checkbox revisado na Even3 (TASK-1140) |

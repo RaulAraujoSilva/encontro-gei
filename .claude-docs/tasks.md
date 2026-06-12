@@ -8,13 +8,23 @@
 - [ ] TASK-1090: Confirmar Magda Chambriard (Petrobras) na conferência magna Dia 1
 - [ ] TASK-1091: Definir local Dia 1 (atualmente "Local em definição" no `index.html:674`)
 - [ ] TASK-1092: Liberar logos parceiros conforme confirmações — descomentar dentro de `<!-- PARCEIROS-OCULTOS -->` (`index.html:967`) e `<!-- APOIO-OCULTO -->` (`index.html:648`)
-- [ ] TASK-1123: Even3 — atualizar entradas para a nova estrutura de 3 modalidades (Presencial Dias 1 e 3 · 350, Visita Técnica Dia 2 · 200, Remoto · ilimitado) em `Inscrições > Entradas e valores`; hoje a plataforma ainda tem as 4 modalidades antigas (300/300/ilimitado/200) — divergente do site desde commit `034e10e`
+- [ ] TASK-1123: Even3 — concluir estrutura de entradas: criar a entrada Visita Técnica D2 quando as jornadas forem confirmadas (site mostra "Inscrições em breve" desde 12/06) e corrigir descrição da entrada "Presencial Completo" ("três dias" → Dias 1 e 3). Confirmado via API em 12/06: 2 entradas ativas (Presencial 400 · 317 confirmados, Online ilimitada · 8 confirmados)
+- [ ] TASK-1140: Even3 — aplicar texto revisado do checkbox LGPD no formulário de inscrição (texto em `docs/EVEN3_OPERATIONS.md`, seção LGPD) — somente APÓS deploy da página `/privacidade/`
+- [ ] TASK-1141: LGPD — validação jurídica dos placeholders `[A VALIDAR]`: CNPJ/endereço AGENERSA e UFF, nome do encarregado (DPO), prazos de retenção, acordo entre controladoras conjuntas (página `/privacidade/` + 3 docs em `docs/lgpd/`)
 
 ## Pendentes — Decisões futuras (parar aqui, retomar quando solicitado)
 - [ ] TASK-1130: Reincluir Raul Araujo Silva na Comissão do Seminário (`organizadores/index.html`) quando houver autorização — removido em 04/06 (commit `7e15dcd`); definir nome/cargo/afiliação ao reincluir
 - [ ] TASK-1094: Reativar Escola de Regulação se solicitado — descomentar `<!-- ESCOLA DE REGULACAO OCULTA -->` (`index.html:963`)
 - [ ] TASK-1095: Adicionar foto/avatar real da Magda Chambriard quando confirmar
 - [ ] TASK-1103: Confirmar URL oficial do GIGS · UNICAMP e converter o `<div class="ptc">` em `<a href>` (card atual em `index.html` ~linha 973, sem href)
+
+## Completadas (sessão 12/06/2026 — modalidades "em breve" + pacote LGPD)
+
+- [x] TASK-1135: Site — card Visita Técnica com "Inscrições em breve"; textos de #modalidades, #inscricao e FAQ 03/05/07 ajustados para refletir as 2 entradas abertas (Presencial + Online)
+- [x] TASK-1136: Site — orientação do vídeo reforçada: hospedar em drive aberto ("qualquer pessoa com o link pode ver") ou YouTube não listado, testar em janela anônima; norma "Vídeo" e passo 3 da submissão
+- [x] TASK-1137: Criar página pública `/privacidade/` (Política de Privacidade LGPD, 13 seções, controladoras AGENERSA + UFF, placeholders destacados) + link nos footers do index, organizadores e patrocinadores + nota LGPD abaixo do iframe de inscrição (tasks painel 9.5.1–9.5.3)
+- [x] TASK-1138: Gerar 3 docs Word em `docs/lgpd/` via `scripts/gerar_docs_lgpd.py`: termo de imagem/voz (com anexo de textos curtos), aviso de gravação/transmissão A4 (cartaz + textos YouTube/MC) e política de guarda e retenção (task painel 9.5.4)
+- [x] TASK-1139: Documentar checkbox LGPD revisado e pendências Even3 em `docs/EVEN3_OPERATIONS.md`; corrigida linha desatualizada das entradas (4 antigas → 2 ativas)
 
 ## Completadas (sessão 04/06/2026 — visita ETE Camboinhas + página PPGEP + contador)
 

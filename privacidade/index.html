@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — 1° Encontro GEI</title>
+<meta name="description" content="Política de Privacidade e Proteção de Dados Pessoais do 1° Encontro de Governança, Estratégia e Inovação Governamental: como tratamos seus dados de inscrição, imagem e voz, nos termos da LGPD (Lei nº 13.709/2018).">
+<meta name="theme-color" content="#091136">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#091136;--bg-2:#0E1A4A;--bg-3:#142469;--ink:#06091F;--white:#FFFFFF;
+  --green:#7AC74F;--blue:#4DA8E0;--cyan:#5BC6E5;--yellow:#F5C842;
+  --line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.16);
+  --muted:rgba(255,255,255,.62);--muted-2:rgba(255,255,255,.45);
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',system-ui,sans-serif;color:var(--white);background:var(--bg);line-height:1.6;}
+::selection{background:var(--cyan);color:var(--ink);}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+
+nav{position:sticky;top:0;background:rgba(9,17,54,.92);backdrop-filter:blur(14px);padding:14px 36px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);z-index:50;}
+.nav-logo{display:flex;align-items:center;gap:11px;font-weight:700;font-size:14px;}
+.nav-logo img{height:34px;width:auto;}
+.nav-back{font-size:13px;color:var(--muted);font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:color .15s;}
+.nav-back:hover{color:var(--white);}
+
+.hero{padding:128px 36px 70px;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse 60% 50% at 50% 28%,rgba(122,199,79,.10) 0%,transparent 62%),linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);}
+.h-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(122,199,79,.1);border:1px solid rgba(122,199,79,.32);color:var(--green);font-size:11px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;padding:9px 22px;border-radius:100px;margin-bottom:28px;}
+.h-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);}
+h1{font-family:'Manrope',sans-serif;font-size:clamp(32px,5vw,58px);font-weight:800;line-height:1.06;letter-spacing:-.025em;max-width:860px;margin:0 auto 20px;}
+h1 em{font-style:normal;background:linear-gradient(120deg,var(--green) 25%,var(--cyan) 75%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.lead{font-size:clamp(15px,1.6vw,18px);color:var(--muted);max-width:680px;margin:0 auto;line-height:1.65;}
+.hero-meta{margin-top:26px;font-family:var(--mono);font-size:12px;color:var(--muted-2);letter-spacing:.5px;}
+
+.policy{padding:68px 36px 96px;border-top:1px solid var(--line);}
+.policy-in{max-width:880px;margin:0 auto;}
+.pol-sec{margin-bottom:54px;}
+.sec-lbl{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:12px;display:inline-flex;align-items:center;gap:10px;}
+.sec-lbl::before{content:'';width:24px;height:1.5px;background:var(--green);}
+h2{font-family:'Manrope',sans-serif;font-size:clamp(20px,2.8vw,28px);font-weight:800;line-height:1.15;letter-spacing:-.02em;margin-bottom:18px;}
+.policy p{font-size:16px;color:rgba(255,255,255,.80);line-height:1.8;margin-bottom:16px;}
+.policy p a,.policy li a{color:var(--cyan);border-bottom:1px solid rgba(91,198,229,.35);transition:border-color .2s;}
+.policy p a:hover,.policy li a:hover{border-color:var(--cyan);}
+.policy ul{list-style:none;margin:0 0 16px;display:grid;gap:9px;}
+.policy ul li{font-size:15.5px;color:rgba(255,255,255,.80);line-height:1.7;padding-left:22px;position:relative;}
+.policy ul li::before{content:'';position:absolute;left:4px;top:11px;width:7px;height:7px;border-radius:2px;background:var(--green);}
+.note-card{padding:22px 26px;border:1px solid rgba(245,200,66,.35);border-radius:12px;background:rgba(245,200,66,.06);margin:18px 0;}
+.note-card p{margin-bottom:0;font-size:14.5px;color:rgba(255,255,255,.85);}
+mark.val{background:rgba(245,200,66,.22);color:var(--yellow);border:1px dashed rgba(245,200,66,.5);border-radius:4px;padding:1px 7px;font-family:var(--mono);font-size:.86em;white-space:nowrap;}
+.tbl-wrap{overflow-x:auto;margin:18px 0;border:1px solid var(--line-2);border-radius:12px;}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px;}
+th{font-family:'Manrope',sans-serif;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--green);font-weight:700;text-align:left;padding:13px 16px;background:rgba(122,199,79,.07);border-bottom:1px solid var(--line-2);}
+td{padding:13px 16px;border-bottom:1px solid var(--line);color:rgba(255,255,255,.78);line-height:1.6;vertical-align:top;}
+tr:last-child td{border-bottom:none;}
+.lawref{font-family:var(--mono);font-size:11.5px;color:var(--cyan);white-space:nowrap;}
+
+footer{background:var(--ink);padding:48px 36px;color:var(--muted-2);text-align:center;font-size:12.5px;line-height:1.7;border-top:1px solid var(--line);}
+footer a{color:var(--cyan);}
+.foot-back{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-weight:600;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo" aria-label="Voltar à página inicial">
+    <img src="/assets/logo-nav.png?v=4" alt="1° Encontro de Governança, Estratégia e Inovação Governamental">
+  </a>
+  <a href="/" class="nav-back">← Voltar à página principal</a>
+</nav>
+
+<section class="hero">
+  <div class="h-badge"><span class="dot" aria-hidden="true"></span>Privacidade e proteção de dados</div>
+  <h1>Política de <em>Privacidade</em></h1>
+  <p class="lead">Como o 1° Encontro de Governança, Estratégia e Inovação Governamental coleta, usa, compartilha e protege os seus dados pessoais, nos termos da Lei Geral de Proteção de Dados Pessoais — LGPD (Lei nº 13.709/2018).</p>
+  <p class="hero-meta">Versão 1.0 · Publicada em 12 de junho de 2026</p>
+</section>
+
+<section class="policy">
+  <div class="policy-in">
+
+    <div class="pol-sec" id="quem-somos">
+      <p class="sec-lbl">Seção 01</p>
+      <h2>Quem somos e a quem esta política se aplica</h2>
+      <p>O 1° Encontro de Governança, Estratégia e Inovação Governamental ("Encontro GEI" ou "Evento") é um evento gratuito, de natureza institucional, acadêmica e científica, realizado nos dias 08, 09 e 10 de julho de 2026, no Rio de Janeiro e em Niterói/RJ, em formato híbrido (presencial e online, com transmissão ao vivo).</p>
+      <p>Para fins da LGPD, atuam como <strong>controladoras conjuntas</strong> dos dados pessoais tratados no âmbito do Evento:</p>
+      <ul>
+        <li><strong>Agência Reguladora de Energia e Saneamento Básico do Estado do Rio de Janeiro — AGENERSA</strong>, <mark class="val">[CNPJ e endereço — A VALIDAR]</mark>;</li>
+        <li><strong>Universidade Federal Fluminense — UFF</strong>, por meio do Programa de Pós-Graduação em Engenharia de Produção (PPGEP/UFF), <mark class="val">[CNPJ e endereço — A VALIDAR]</mark>.</li>
+      </ul>
+      <p>Esta política aplica-se a todos os dados pessoais tratados em razão do Evento: a navegação neste site (encontrogeig.org), a inscrição e o credenciamento, a submissão e avaliação de trabalhos científicos, a participação presencial e online, a emissão de certificados e os registros audiovisuais (fotografia, gravação e transmissão ao vivo).</p>
+    </div>
+
+    <div class="pol-sec" id="dados-coletados">
+      <p class="sec-lbl">Seção 02</p>
+      <h2>Quais dados pessoais coletamos</h2>
+      <ul>
+        <li><strong>Dados de inscrição</strong> — nome completo, e-mail, instituição, telefone celular e demais campos do formulário, coletados pela plataforma <strong>Even3</strong>, que atua como operadora de dados;</li>
+        <li><strong>Dados de submissão de trabalhos</strong> — nome e e-mail dos autores, instituição, conteúdo do trabalho e o link público do vídeo de apresentação informado pelo autor;</li>
+        <li><strong>Dados de presença e certificação</strong> — registro de presença via QR Code no credenciamento, utilizado para apuração dos 75% de presença exigidos para certificação;</li>
+        <li><strong>Imagem, voz e nome</strong> — captados durante o Evento em fotografias, gravações e na transmissão ao vivo (ver Seção 04);</li>
+        <li><strong>Dados de contato espontâneo</strong> — mensagens enviadas aos e-mails oficiais do Evento (contato@, submissoes@, comissao.cientifica@encontrogeig.org);</li>
+        <li><strong>Dados de navegação</strong> — este site não utiliza, atualmente, cookies de medição ou publicidade (ver Seção 09).</li>
+      </ul>
+      <p>O Evento <strong>não coleta dados pessoais sensíveis</strong> (art. 5º, II, da LGPD). Caso o participante informe espontaneamente alguma necessidade de acessibilidade ou restrição, essa informação será usada exclusivamente para o atendimento solicitado, com acesso restrito, e descartada após o Evento.</p>
+    </div>
+
+    <div class="pol-sec" id="bases-legais">
+      <p class="sec-lbl">Seção 03</p>
+      <h2>Finalidades e bases legais</h2>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Finalidade</th><th>Dados</th><th>Base legal (LGPD)</th></tr></thead>
+        <tbody>
+          <tr><td>Inscrição, credenciamento, organização e operação do Evento</td><td>Dados de inscrição</td><td><span class="lawref">art. 7º, V</span> — execução de contrato e procedimentos preliminares, a pedido do titular</td></tr>
+          <tr><td>Controle de presença, segurança dos ambientes e emissão de certificados</td><td>Dados de inscrição e presença (QR Code)</td><td><span class="lawref">art. 7º, V e IX</span> — execução de contrato e legítimo interesse</td></tr>
+          <tr><td>Submissão, avaliação e publicação de trabalhos científicos (anais com ISBN)</td><td>Dados de submissão</td><td><span class="lawref">art. 7º, V</span> — execução de contrato; <span class="lawref">art. 7º, IX</span></td></tr>
+          <tr><td>Registro institucional, gravação e transmissão ao vivo do Evento</td><td>Imagem, voz e nome de participantes em geral</td><td><span class="lawref">art. 7º, IX</span> — legítimo interesse, c/c art. 20 do Código Civil, com aviso ostensivo e canal de oposição</td></tr>
+          <tr><td>Divulgação individualizada de palestrantes, painelistas e autores que apresentam trabalhos (incl. vídeos de apresentação)</td><td>Imagem, voz, nome e vínculo institucional</td><td><span class="lawref">art. 7º, I</span> — consentimento, por termo de autorização específico</td></tr>
+          <tr><td>Comunicações sobre edições futuras do Encontro</td><td>Nome e e-mail</td><td><span class="lawref">art. 7º, I</span> — consentimento (opt-in), revogável a qualquer tempo</td></tr>
+          <tr><td>Resposta a mensagens e atendimento a solicitações</td><td>Dados de contato espontâneo</td><td><span class="lawref">art. 7º, V e IX</span></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="pol-sec" id="gravacao">
+      <p class="sec-lbl">Seção 04</p>
+      <h2>Gravação, fotografia e transmissão ao vivo</h2>
+      <p>O Evento é <strong>integralmente fotografado, gravado e transmitido ao vivo</strong> pelo YouTube. As imagens e os áudios captados destinam-se ao registro institucional, à divulgação científica e ao acervo permanente do Encontro, <strong>sem qualquer finalidade comercial</strong>.</p>
+      <p>Por se tratar de evento aberto ao público, a captação de imagem da plateia é incidental e ocorre com aviso ostensivo: no formulário de inscrição, na sinalização dos ambientes e no anúncio de abertura de cada dia. Ao permanecer nos ambientes do Evento, o participante declara ciência da captação.</p>
+      <p>Quem não desejar aparecer de forma identificável nos registros pode procurar a equipe de credenciamento ou escrever para <a href="mailto:contato@encontrogeig.org">contato@encontrogeig.org</a>. Faremos o possível para atender à solicitação — observando que a transmissão ao vivo, por sua natureza, não permite remoção retroativa do que já foi transmitido, e que registros panorâmicos de plateia podem não ser tecnicamente editáveis.</p>
+      <p>Palestrantes, painelistas e autores que apresentam trabalhos têm exposição individualizada e permanente (vídeos no YouTube, anais, materiais institucionais) e, por isso, assinam <strong>termo específico de autorização de uso de imagem, voz e nome</strong>.</p>
+    </div>
+
+    <div class="pol-sec" id="compartilhamento">
+      <p class="sec-lbl">Seção 05</p>
+      <h2>Com quem compartilhamos os dados</h2>
+      <ul>
+        <li><strong>Even3</strong> (Even3 S.A.) — plataforma de gestão de eventos que opera a inscrição, a submissão de trabalhos e a emissão de certificados, na condição de <strong>operadora</strong> (art. 39 da LGPD), tratando os dados conforme as instruções da organização e a sua própria <a href="https://www.even3.com.br/politica-de-privacidade/" target="_blank" rel="noopener">política de privacidade</a>;</li>
+        <li><strong>YouTube / Google</strong> — plataforma de transmissão e hospedagem das gravações públicas do Evento, que realiza tratamento próprio de dados de quem assiste, conforme suas políticas;</li>
+        <li><strong>Instituições certificadoras e realizadoras</strong> — UFF, ABAR, PPGEP - LabDGE/UFF e GIGS/UNICAMP, para fins de certificação, registro acadêmico e publicação dos anais;</li>
+        <li><strong>Prestadores de serviço do Evento</strong> — equipes de credenciamento, audiovisual e transmissão, limitados ao necessário para a execução de suas atividades.</li>
+      </ul>
+      <p>Os dados pessoais dos participantes <strong>não são vendidos nem compartilhados para fins comerciais ou publicitários</strong>.</p>
+    </div>
+
+    <div class="pol-sec" id="transferencia">
+      <p class="sec-lbl">Seção 06</p>
+      <h2>Transferência internacional</h2>
+      <p>Os serviços da Even3 e do Google/YouTube podem armazenar ou processar dados em servidores localizados fora do Brasil. Nessas hipóteses, a transferência internacional ocorre nos termos do art. 33 da LGPD e das salvaguardas adotadas por essas plataformas.</p>
+    </div>
+
+    <div class="pol-sec" id="retencao">
+      <p class="sec-lbl">Seção 07</p>
+      <h2>Por quanto tempo guardamos os dados</h2>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Categoria</th><th>Prazo de retenção</th><th>Fundamento</th></tr></thead>
+        <tbody>
+          <tr><td>Dados de inscrição, presença e certificação</td><td><mark class="val">[5 anos — A VALIDAR]</mark> após o Evento</td><td>Comprovação de certificação e prestação de contas (<span class="lawref">art. 16, I</span>)</td></tr>
+          <tr><td>Trabalhos científicos e dados de autoria</td><td>Permanente (anais com ISBN)</td><td>Publicação científica (<span class="lawref">art. 16, II</span>)</td></tr>
+          <tr><td>Gravações e fotografias publicadas</td><td>Permanente, como acervo institucional e de divulgação científica</td><td><span class="lawref">art. 16, I e II</span>, com transparência ao titular</td></tr>
+          <tr><td>E-mails e mensagens operacionais</td><td><mark class="val">[2 anos — A VALIDAR]</mark></td><td>Atendimento e histórico de demandas</td></tr>
+          <tr><td>Informações de acessibilidade informadas espontaneamente</td><td>Até o encerramento do Evento</td><td>Minimização (<span class="lawref">art. 6º, III</span>)</td></tr>
+        </tbody>
+      </table></div>
+      <p>Encerrados os prazos, os dados são eliminados de forma segura, ressalvadas as hipóteses legais de conservação (art. 16 da LGPD).</p>
+    </div>
+
+    <div class="pol-sec" id="direitos">
+      <p class="sec-lbl">Seção 08</p>
+      <h2>Seus direitos como titular</h2>
+      <p>Nos termos do art. 18 da LGPD, você pode solicitar, a qualquer momento: confirmação da existência de tratamento; acesso aos dados; correção de dados incompletos, inexatos ou desatualizados; anonimização, bloqueio ou eliminação de dados desnecessários ou excessivos; portabilidade; informação sobre compartilhamentos; informação sobre a possibilidade de não consentir; revogação do consentimento (art. 8º, § 5º); e oposição a tratamento fundado em legítimo interesse.</p>
+      <p>As solicitações devem ser enviadas para <a href="mailto:contato@encontrogeig.org">contato@encontrogeig.org</a> e serão respondidas nos prazos do art. 19 da LGPD. Caso entenda que seus direitos não foram atendidos, você pode peticionar à <a href="https://www.gov.br/anpd/pt-br" target="_blank" rel="noopener">Autoridade Nacional de Proteção de Dados (ANPD)</a>.</p>
+    </div>
+
+    <div class="pol-sec" id="cookies">
+      <p class="sec-lbl">Seção 09</p>
+      <h2>Cookies e ferramentas de medição</h2>
+      <p>Atualmente, este site <strong>não utiliza cookies de medição, publicidade ou rastreamento</strong>. São carregados apenas recursos técnicos essenciais (como as fontes tipográficas) e o formulário incorporado da Even3, que pode utilizar cookies próprios regidos pela política daquela plataforma.</p>
+      <p>Caso ferramentas de medição de audiência (como o Google Analytics) venham a ser ativadas, esta política será atualizada e será exibido um aviso de consentimento, em linha com o Guia Orientativo de Cookies e Proteção de Dados Pessoais da ANPD (2022).</p>
+    </div>
+
+    <div class="pol-sec" id="menores">
+      <p class="sec-lbl">Seção 10</p>
+      <h2>Menores de idade</h2>
+      <p>O Evento é de natureza profissional e acadêmica, destinado a maiores de 18 anos. O tratamento de dados realizado não é direcionado a crianças ou adolescentes. Em caso de captação incidental de imagem de menores acompanhantes, a organização adotará o melhor esforço para evitar a sua individualização nos materiais publicados.</p>
+    </div>
+
+    <div class="pol-sec" id="seguranca">
+      <p class="sec-lbl">Seção 11</p>
+      <h2>Segurança da informação</h2>
+      <p>Adotamos medidas técnicas e administrativas aptas a proteger os dados pessoais de acessos não autorizados e de situações acidentais ou ilícitas (arts. 46 a 49 da LGPD): acesso restrito ao painel da plataforma de inscrições, uso de canais oficiais de e-mail, minimização da coleta e descarte seguro ao fim dos prazos de retenção.</p>
+      <p>Em caso de incidente de segurança que possa acarretar risco ou dano relevante aos titulares, a organização comunicará a ANPD e os titulares afetados nos termos do art. 48 da LGPD e da Resolução CD/ANPD nº 15/2024.</p>
+    </div>
+
+    <div class="pol-sec" id="encarregado">
+      <p class="sec-lbl">Seção 12</p>
+      <h2>Encarregado e contato</h2>
+      <p>Encarregado pelo tratamento de dados pessoais (DPO) do Evento: <mark class="val">[NOME DO ENCARREGADO — A VALIDAR]</mark>.</p>
+      <p>Canal para assuntos de privacidade e proteção de dados: <a href="mailto:contato@encontrogeig.org">contato@encontrogeig.org</a>.</p>
+      <div class="note-card"><p><strong>Nota:</strong> esta política nomeia AGENERSA e UFF como controladoras conjuntas e está sujeita a validação jurídica das instituições realizadoras. Os campos destacados serão preenchidos na versão definitiva.</p></div>
+    </div>
+
+    <div class="pol-sec" id="atualizacoes" style="margin-bottom:0;">
+      <p class="sec-lbl">Seção 13</p>
+      <h2>Atualizações desta política</h2>
+      <p>Esta política pode ser atualizada para refletir mudanças na operação do Evento ou na legislação. A versão vigente, com data de publicação, estará sempre disponível nesta página.</p>
+      <p style="font-family:var(--mono);font-size:12.5px;color:var(--muted-2);margin-bottom:0;">Versão 1.0 — 12 de junho de 2026.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  1° Encontro de Governança, Estratégia e Inovação Governamental — 08, 09 e 10 de julho de 2026, Rio de Janeiro / Niterói, RJ.<br>
+  Realização: UFF · ABAR · PPGEP - LabDGE/UFF · GIGS/UNICAMP.
+  <br><a class="foot-back" href="/">← Voltar à página principal</a>
+</footer>
+
+</body>
+</html>
