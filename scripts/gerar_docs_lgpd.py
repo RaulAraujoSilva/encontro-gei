@@ -30,6 +30,10 @@ CONTROLADORES = (
     "Agência Reguladora de Energia e Saneamento Básico do Estado do Rio de Janeiro — AGENERSA "
     "e Universidade Federal Fluminense — UFF (PPGEP/UFF), na condição de controladoras conjuntas"
 )
+AGENERSA_ID = ("AGENERSA — CNPJ 07.694.194/0001-11, Av. Treze de Maio, 23 — Centro, "
+               "Rio de Janeiro/RJ, CEP 20031-902")
+UFF_ID = ("UFF — autarquia federal, CNPJ 28.523.215/0001-06, Rua Miguel de Frias, 9 — Icaraí, "
+          "Niterói/RJ, CEP 24220-900")
 EMAIL = "contato@encontrogeig.org"
 URL_POLITICA = "encontrogeig.org/privacidade"
 
@@ -169,7 +173,7 @@ def doc_termo():
     p(doc, f"Evento: {EVENTO} (“Evento”), realizado nos dias {DATAS}, em formato híbrido "
            "(presencial e online, com transmissão ao vivo).")
     p(doc, f"Organização e controladoras dos dados pessoais: {CONTROLADORES}. "
-           "AGENERSA: [CNPJ e endereço — A VALIDAR]. UFF: [CNPJ e endereço — A VALIDAR].")
+           f"{AGENERSA_ID}. {UFF_ID}.")
 
     heading(doc, "2. Considerandos")
     p(doc, "Considerando que o Evento é gratuito, de natureza institucional, acadêmica e científica; "
@@ -334,7 +338,8 @@ def doc_retencao():
            "operações), 39 (operador), 46 a 49 (segurança) e 48 (incidentes).")
 
     heading(doc, "2. Papéis e responsabilidades")
-    p(doc, f"Controladoras conjuntas: {CONTROLADORES}. Recomenda-se formalizar acordo entre as controladoras "
+    p(doc, f"Controladoras conjuntas: {CONTROLADORES} ({AGENERSA_ID}; {UFF_ID}). "
+           "Recomenda-se formalizar acordo entre as controladoras "
            "definindo responsabilidades (transparência, atendimento a titulares, comunicação de incidentes), "
            "conforme o Guia Orientativo da ANPD sobre agentes de tratamento. [MINUTA DO ACORDO — A VALIDAR]")
     p(doc, "Operadora: Even3 S.A. — plataforma de inscrição, submissão e certificação, que trata dados em nome "
