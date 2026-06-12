@@ -281,12 +281,23 @@ estendida do checkbox com controladoras, prazo de 5 anos e DPO):
 - [x] Aplicar o checkbox revisado no formulário de inscrição — feito 12/06 (página /privacidade/ no ar)
 - [x] Corrigir descrição da entrada "Presencial Completo" ("três dias" → Dias 1 e 3) — feito 12/06
 - [ ] Criar a entrada da Visita Técnica D2 quando as jornadas forem confirmadas (site já diz "em breve")
-- [ ] Alinhar limite de vagas presencial: painel Even3 = 500, site = 400
+- [x] Alinhar limite de vagas presencial — ajustado para 400 no painel em 12/06 (igual ao site)
+- [x] Ficha de avaliação de reação — complemento gratuito "Questionário de avaliação do evento"
+  instalado e configurado em 12/06 (21 perguntas; rascunho em `/organizador/questionnaire/`).
+  Envio automático aos participantes ao final do evento. **Publicar próximo ao evento.**
+- [x] Certificado de Participação com arte personalizada (fundo 1754×1240 gerado por
+  `scripts/gerar_fundo_certificado.py`, em `assets/certificado/`) — aplicado e salvo em 12/06
+- [ ] Replicar a arte nos outros 5 certificados (usar "Copiar modelo de" no editor de cada um)
 
 **Pendências jurídicas:** acordo entre controladoras conjuntas (minuta) e lista nominal de acessos
 ao painel Even3. Já preenchidos em 12/06: CNPJ/endereço AGENERSA (07.694.194/0001-11) e UFF
 (28.523.215/0001-06), encarregado (DPO) = Prof. Alexandre Beraldi Santos
 (alexandreberaldisantos@id.uff.br), prazos de retenção (inscrição/presença 5 anos; e-mails 2 anos).
+
+> Nota 12/06: todos os placeholders `[A VALIDAR]` foram removidos dos documentos a pedido do
+> organizador. As menções à **minuta do acordo entre controladoras** e à **lista nominal de
+> acessos** foram retiradas/suavizadas na política de guarda — **reintroduzir** essas seções quando
+> o jurídico definir os textos. O QR code do cartaz foi gerado e incorporado (página 1 do aviso A4).
 
 ---
 

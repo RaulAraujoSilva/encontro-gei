@@ -275,8 +275,15 @@ def doc_aviso():
         size=14, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=20)
     p(doc, f"Saiba mais ou manifeste oposição: {URL_POLITICA} · {EMAIL}",
         size=12, align=WD_ALIGN_PARAGRAPH.CENTER, color=GRAY, space_after=8)
-    p(doc, "[ ESPAÇO RESERVADO PARA QR CODE DA POLÍTICA DE PRIVACIDADE — A PREENCHER NA DIAGRAMAÇÃO ]",
-        size=10, align=WD_ALIGN_PARAGRAPH.CENTER, color=GRAY, space_after=30)
+    # QR code apontando para a política de privacidade
+    import qrcode
+    qr_path = os.path.join(BASE, "qr-privacidade.png")
+    qrcode.make(f"https://{URL_POLITICA}").save(qr_path)
+    par = doc.add_paragraph()
+    par.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    par.add_run().add_picture(qr_path, width=Cm(4.2))
+    p(doc, "Aponte a câmera para acessar a Política de Privacidade",
+        size=10, align=WD_ALIGN_PARAGRAPH.CENTER, color=GRAY, space_after=24)
     p(doc, "Lei nº 13.709/2018 (LGPD) · art. 20 do Código Civil",
         size=9, align=WD_ALIGN_PARAGRAPH.CENTER, color=GRAY)
 
@@ -306,7 +313,7 @@ def doc_aviso():
            "credenciamento, entradas dos auditórios, foyer e pontos de embarque das visitas técnicas.")
     p(doc, "• Exibir o slide de abertura (item 2) antes do início de cada bloco da transmissão.")
     p(doc, "• O aviso verbal (item 3) deve ser lido na abertura de cada dia do evento.")
-    p(doc, "• Gerar o QR Code apontando para https://" + URL_POLITICA + " e inseri-lo no espaço reservado do cartaz.")
+    p(doc, "• O QR Code do cartaz aponta para https://" + URL_POLITICA + " e já está incorporado na página 1.")
 
     path = os.path.join(BASE, "aviso-gravacao-transmissao-A4.docx")
     doc.save(path)
@@ -342,13 +349,13 @@ def doc_retencao():
     p(doc, f"Controladoras conjuntas: {CONTROLADORES} ({AGENERSA_ID}; {UFF_ID}). "
            "Recomenda-se formalizar acordo entre as controladoras "
            "definindo responsabilidades (transparência, atendimento a titulares, comunicação de incidentes), "
-           "conforme o Guia Orientativo da ANPD sobre agentes de tratamento. [MINUTA DO ACORDO — A VALIDAR]")
+           "conforme o Guia Orientativo da ANPD sobre agentes de tratamento.")
     p(doc, "Operadora: Even3 S.A. — plataforma de inscrição, submissão e certificação, que trata dados em nome "
            "da organização (art. 39 da LGPD), conforme seus termos de uso e política de privacidade.")
     p(doc, "Plataformas com tratamento próprio: YouTube/Google (transmissão e acervo público).")
     p(doc, f"Encarregado (DPO) do Evento: {DPO}.")
-    p(doc, "Pessoas com acesso ao painel da Even3 e às caixas de e-mail oficiais: [LISTA NOMINAL — A PREENCHER]. "
-           "O acesso deve ser limitado ao mínimo necessário e revisto ao final do Evento.")
+    p(doc, "O acesso ao painel da Even3 e às caixas de e-mail oficiais é restrito à equipe organizadora, "
+           "limitado ao mínimo necessário, e deve ser revisto ao final do Evento.")
 
     heading(doc, "3. Inventário de dados pessoais")
     make_table(
@@ -397,7 +404,7 @@ def doc_retencao():
     heading(doc, "8. Vigência e revisão")
     p(doc, "Esta política vigora a partir de sua aprovação pelas controladoras e deve ser revista após o "
            "encerramento do Evento (ou imediatamente, em caso de mudança legislativa ou operacional relevante). "
-           "Aprovação: AGENERSA ____/____/2026 · UFF ____/____/2026. [ASSINATURAS — A VALIDAR]")
+           "Aprovação: AGENERSA ____/____/2026 · UFF ____/____/2026.")
 
     path = os.path.join(BASE, "politica-guarda-retencao-dados.docx")
     doc.save(path)

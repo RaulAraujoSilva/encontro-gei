@@ -18,6 +18,17 @@
 - [ ] TASK-1095: Adicionar foto/avatar real da Magda Chambriard quando confirmar
 - [ ] TASK-1103: Confirmar URL oficial do GIGS · UNICAMP e converter o `<div class="ptc">` em `<a href>` (card atual em `index.html` ~linha 973, sem href)
 
+## Completadas (sessão 12/06/2026 — parte 2: Even3 operacional)
+
+- [x] TASK-1142: Even3 — vagas da entrada presencial ajustadas de 500 → 400 (alinhado ao site)
+- [x] TASK-1143: Even3 — ficha de avaliação de reação: complemento "Questionário de avaliação do evento" instalado e configurado (21 perguntas: padrão + visitas técnicas, modalidade, transmissão online, recomendação; duplicata corrigida). Rascunho — publicar próximo ao evento (task painel 8.2.3 ✅)
+- [x] TASK-1144: Even3 — Certificado de Participação com arte personalizada (fundo gerado por `scripts/gerar_fundo_certificado.py` com logo do evento + 6 logos das realizadoras; TEP/PPGEP invertido p/ fundo claro) — salvo no editor (task painel 8.2.4 iniciada)
+- [x] TASK-1145: LGPD — todos os placeholders removidos dos 3 docs e da página (QR code real embutido no cartaz; seções acordo/lista retiradas — ver TASK-1141); verificação automatizada = 0 marcadores
+
+## Pendentes (novas, 12/06)
+- [ ] TASK-1146: Even3 — replicar a arte do certificado nos outros 5 modelos ("Copiar modelo de" no editor)
+- [ ] TASK-1147: Even3 — publicar o questionário de avaliação próximo ao evento (hoje em rascunho)
+
 ## Completadas (sessão 12/06/2026 — modalidades "em breve" + pacote LGPD)
 
 - [x] TASK-1135: Site — card Visita Técnica com "Inscrições em breve"; textos de #modalidades, #inscricao e FAQ 03/05/07 ajustados para refletir as 2 entradas abertas (Presencial + Online)
