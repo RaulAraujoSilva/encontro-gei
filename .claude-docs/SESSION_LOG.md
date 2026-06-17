@@ -1,27 +1,50 @@
 # Session Log — Site 1° Encontro GEI
 
-> **Última atualização:** 2026-06-12
-> **Status global:** Site no ar (`encontrogeig.org`) com página **`/privacidade/` publicada**. Even3 operacional completa: 2 entradas (Presencial 400 · Online ilimitada, 318+9 inscritos), checkbox LGPD revisado aplicado, questionário de avaliação configurado (rascunho), **6 certificados com arte personalizada**, limite de 4 autores confirmado. **Todas as tasks S2 do painel (8.2.1–8.2.7 e 9.5.1–9.5.4) concluídas.** Fase 1 encerra 16/06.
+> **Última atualização:** 2026-06-17
+> **Status global:** Site no ar (`encontrogeig.org`). **Prorrogação divulgada (17/06):** submissão até **25/06**, resultado **27/06**, programa **28/06** (apresentação 10/07, artigo 30/09, anais dez/26 mantidos). Even3: 5 modalidades — inclui **Artigo Completo** criada (envio de arquivo na **versão cega**, autores no formulário, prazo 30/09, ordem de envio). **Escola de Regulação** incluída como realizadora (site). Ver **Sessão 17/06** e os **pontos abertos da reunião 16h**.
 
 ## Visão geral do projeto
 
 **Evento:** 1° Encontro de Governança, Estratégia e Inovação Governamental
 **Datas:** 08, 09 e 10 de julho de 2026
 **Locais:** Rio de Janeiro (Dias 1 e 2) + Niterói/UFF Gragoatá (Dia 3)
-**Realização:** UFF · ABAR · PPGEP/UFF · GIGS/UNICAMP (Escola de Regulação ocultada em 06/05 — preservada em comentários; GIGS adicionado em 06/05 — segundo bloco)
+**Realização:** UFF · ABAR · PPGEP/UFF · GIGS/UNICAMP · **Escola de Regulação** (reativada em 17/06 com o logo oficial AGETRANSP/AGENERSA)
 
 **Cronograma atual da chamada de trabalhos:**
 
 | # | Fase | Data |
 |---|---|---|
-| 1 | Fase 1 · Resumo + vídeo | até **16/06/2026** 23h59 |
-| 2 | Resultado · Aprovação | até **22/06/2026** |
-| 3 | Programa Definitivo | 25/06/2026 |
+| 1 | Fase 1 · Resumo + vídeo (submissão) | até **25/06/2026** 23h59 |
+| 2 | Resultado · Aprovação | até **27/06/2026** |
+| 3 | Programa Definitivo | **28/06/2026** |
 | 4 | Fase 2 · Apresentação | 10/07/2026 · NAB UFF |
 | 5 | Artigo · Versão final | até 30/09/2026 |
 | 6 | Livro · Anais ISBN | dezembro/2026 |
 
 **Fluxo do vídeo (Fase 1):** Even3 não aceita upload de arquivo de vídeo. Autor hospeda em link público (Google Drive, OneDrive ou YouTube unlisted) e cola a URL no **corpo do documento** (resumo expandido). Há também campo opcional "URL do vídeo de apresentação" no formulário da Even3 para reforço.
+
+---
+
+## Sessão 16–17/06/2026 — prorrogação, programa 10/07, artigo cego e Escola de Regulação
+
+Commits (push em `main` → deploy Vercel): `c5bad92` (modalidade Artigo Completo criada na Even3, 16/06) · `f7591e9` (prorrogação + destaque topo) · `036c617`/`b0ff744`/`caea4ad`/`6f702a0` (programa 10/07) · `cabba87`/`599b5a7` (artigo versão cega) · `c319329`/`b01c8fb` (Escola de Regulação).
+
+**Prorrogação (divulgada 17/06):** submissão **25/06** · resultado **27/06** · programa **28/06** (demais datas mantidas). Atualizado em site (banner "Prazo prorrogado" no topo do hero + nav/pílula/timeline/embed/countdown) e nos **4 PDFs de regras** (re-anexados na Even3). Janela global da Even3 já estava em 25/06. **E-mail de divulgação:** existe o recurso **Pessoas → "Notificar pessoas"**, mas exige **validar o e-mail do organizador** antes do 1º envio; o **texto já está pronto** (assunto + corpo).
+
+**Programa 10/07:** +2 painéis (Painel 3 · Lean e transformação digital 11h30; Painel 5 · Sistemas em Engenharia de Produção 15h00); renomeados (Painel 2 saneamento = "Do marco regulatório à entrega: o desafio da universalização do saneamento"; Painel 4 energia = "Governança do setor energético: regulação, investimento e segurança de suprimento"); **renumerados 1–5** (Painel 1 = plenária "IA e soberania"). Só informações de programa (sem notas operacionais internas).
+
+**Artigo Completo (normas internas UFF — avaliação cega):** envio de **arquivo único na versão cega** (sem autoria no texto nem nas propriedades); autores cadastrados nos **campos nativos de autor do formulário Even3** (nome + e-mail por autor — decidido manter o nativo, sem campo extra); **avaliação cega** por pares; ordem de envio; prazo 30/09. PDF regenerado e re-anexado. Modalidade legada **"Artigo (Resumo)"** (39 subs) mantida como está, por decisão.
+
+**Escola de Regulação** incluída como realizadora no site: card de logo reativado (logo oficial AGETRANSP/AGENERSA, `assets/logos/escola-regulacao.jpg`) + crédito em nav, hero, pills, certificação, rodapé, copyright, JSON-LD e subpáginas (organizadores, patrocinadores, privacidade).
+
+### ⏳ Pontos abertos — DECIDIR na reunião das 16h (17/06)
+1. **Escola de Regulação na certificação** — o site afirma "Certificação emitida por … e Escola de Regulação". Confirmar se é **co-emissora**; se não, remover da linha de certificação.
+2. **Escola de Regulação na política de privacidade** — entrou como "instituição certificadora e realizadora" que **recebe dados** (certificação/anais). Confirmar se trata dados; se não, remover dessa cláusula.
+3. **Crédito de realização nos 4 PDFs de regras (Even3)** — ainda creditam só UFF · ABAR · PPGEP · GIGS/UNICAMP. Decidir se **inclui a Escola de Regulação** (regenerar `gerar_regras_pdf.py` + re-anexar os 4 na Even3).
+
+### 🔜 Pendências operacionais (continuar depois)
+- **Em 25/06:** ocultar na Even3 as modalidades de Fase 1 (Resumo Expandido, Pôster, Relatório A3, "Artigo (Resumo)"), deixando só **Artigo Completo** aberto até 30/09 (Even3 tem janela única; não há prazo por modalidade).
+- **Disparar o e-mail de prorrogação:** validar e-mail do organizador na Even3 → Pessoas → "Notificar pessoas" → segmentar (inscrições confirmadas / autores) → colar texto pronto → enviar.
 
 ---
 
