@@ -322,16 +322,18 @@ def main():
         "Artigo Completo",
         intro=[
             "O Artigo Completo pode ser submetido <b>diretamente</b>, de forma independente: <b>não é exigida a submissão prévia do Resumo Expandido (Fase 1)</b>. Os artigos completos aprovados comporão o livro de anais com ISBN do evento, a ser publicado em dezembro de 2026.",
-            "Submissão pela plataforma Even3 em <b>arquivo único</b> (.pdf ou .docx). O <b>aceite para publicação seguirá a ordem de envio</b> das submissões."
+            "A submissão é feita pela plataforma Even3 em <b>arquivo único</b> (.pdf ou .docx), na <b>versão cega</b> — sem identificação de autoria no arquivo. Os autores são cadastrados nos <b>campos de autor do formulário</b> de submissão. O <b>aceite para publicação seguirá a ordem de envio</b> das submissões."
         ],
         especificas=[
-            {"h": "Arquivo a submeter", "items": [
-                "<b>Arquivo único</b> nos formatos aceitos: <b>.docx</b> ou <b>.pdf</b>",
-                "Submissão direta pela plataforma Even3, na modalidade <b>Artigo Completo</b> — não é necessário enviar o resumo nem uma versão cega separada"
+            {"h": "Arquivo a submeter (versão cega)", "items": [
+                "<b>Arquivo único</b> (.docx ou .pdf) na <b>versão cega</b>: sem nomes, e-mails ou instituições no texto",
+                "Remova a identificação também das <b>propriedades do arquivo</b> (autor, último editor, comentários)",
+                "Cadastre <b>todos os autores</b> (até 4 — nome, e-mail e instituição) nos <b>campos de autor do formulário</b> da Even3; não inclua a autoria no arquivo",
+                "Submissão direta na modalidade <b>Artigo Completo</b>: não é exigida a submissão prévia do resumo"
             ]},
             {"h": "Estrutura do artigo", "items": [
                 "Título: em português e inglês, até 120 caracteres, Arial 12, centralizado, negrito, caixa alta",
-                "Autores: até 4 (nome completo, e-mail e instituição), Arial 12",
+                "<b>Não inclua os autores no arquivo</b> (versão cega) — a autoria vai nos campos do formulário",
                 "Resumo: até 150 palavras, em português e inglês, Arial 10, espaçamento simples",
                 "Palavras-chave: 3 a 5, separadas por ponto e vírgula, Arial 10",
                 "Corpo do texto: Arial 12, espaçamento 1,5, justificado, sem espaço entre parágrafos, recuo de 1,25 cm",
@@ -347,7 +349,7 @@ def main():
                 "Citações no corpo do texto: sistema autor-data"
             ]},
             {"h": "Avaliação", "items": [
-                "Avaliação por pares conduzida pelas instituições realizadoras",
+                "Avaliação <b>cega</b> por pares conduzida pelas instituições realizadoras",
                 "<b>O aceite para publicação seguirá a ordem de envio das submissões</b>",
                 "Critérios: aderência ao eixo temático, originalidade, rigor metodológico, contribuição teórica/prática"
             ]}
