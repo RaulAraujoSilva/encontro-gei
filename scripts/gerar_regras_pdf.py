@@ -135,7 +135,7 @@ def build_header(story):
     story.append(Paragraph("08, 09 e 10 de julho de 2026 · Rio de Janeiro / Niterói · RJ", H_DATE))
 
 
-def gerar_pdf(slug, titulo, intro, especificas, prazo_extra=""):
+def gerar_pdf(slug, titulo, intro, especificas, prazo_extra="", prazo_box=None):
     out = OUT / f"{slug}.pdf"
     doc = SimpleDocTemplate(
         str(out), pagesize=A4,
@@ -148,10 +148,13 @@ def gerar_pdf(slug, titulo, intro, especificas, prazo_extra=""):
     build_header(story)
     story.append(Paragraph(f"Normas de Submissão — {titulo}", H_TITLE))
     story.append(Paragraph("Chamada de trabalhos · Realização: UFF · ABAR · PPGEP - LabDGE/UFF · GIGS/UNICAMP", H_SUB))
-    story.append(deadline_box(
-        f"Prazo Fase 1 — Resumo + Vídeo · até <font color='#9A7D14'>16 de junho de 2026</font> · 23h59 (Brasília)"
-        + (f"<br/><font size='9' color='#5C6781'>{prazo_extra}</font>" if prazo_extra else "")
-    ))
+    if prazo_box:
+        story.append(deadline_box(prazo_box))
+    else:
+        story.append(deadline_box(
+            f"Prazo Fase 1 — Resumo + Vídeo · até <font color='#9A7D14'>16 de junho de 2026</font> · 23h59 (Brasília)"
+            + (f"<br/><font size='9' color='#5C6781'>{prazo_extra}</font>" if prazo_extra else "")
+        ))
     story.append(Spacer(1, 12))
 
     if intro:
@@ -316,16 +319,15 @@ def main():
     # === ARTIGO COMPLETO ===
     gerar_pdf(
         "artigo-completo",
-        "Artigo Completo (Fase 2)",
+        "Artigo Completo",
         intro=[
-            "O Artigo Completo é a forma de submissão da Fase 2 da chamada de trabalhos, destinada aos trabalhos aprovados na Fase 1 (Resumo Expandido + Vídeo). Os artigos completos comporão o livro de anais com ISBN, a ser publicado em dezembro de 2026.",
-            "Submissão pela plataforma Even3 em <b>dois arquivos</b>: um com identificação de autoria e outro sem identificação (para avaliação cega)."
+            "O Artigo Completo pode ser submetido <b>diretamente</b>, de forma independente: <b>não é exigida a submissão prévia do Resumo Expandido (Fase 1)</b>. Os artigos completos aprovados comporão o livro de anais com ISBN do evento, a ser publicado em dezembro de 2026.",
+            "Submissão pela plataforma Even3 em <b>arquivo único</b> (.pdf ou .docx). O <b>aceite para publicação seguirá a ordem de envio</b> das submissões."
         ],
         especificas=[
-            {"h": "Arquivos a submeter", "items": [
-                "<b>Arquivo 1:</b> versão completa com nomes, e-mails e instituições dos autores",
-                "<b>Arquivo 2:</b> versão sem identificação — não deve conter nomes, e-mails ou instituições, nem mesmo nas propriedades do arquivo (autor, último editor, etc.)",
-                "Formatos aceitos: <b>.docx</b> ou <b>.pdf</b>"
+            {"h": "Arquivo a submeter", "items": [
+                "<b>Arquivo único</b> nos formatos aceitos: <b>.docx</b> ou <b>.pdf</b>",
+                "Submissão direta pela plataforma Even3, na modalidade <b>Artigo Completo</b> — não é necessário enviar o resumo nem uma versão cega separada"
             ]},
             {"h": "Estrutura do artigo", "items": [
                 "Título: em português e inglês, até 120 caracteres, Arial 12, centralizado, negrito, caixa alta",
@@ -345,11 +347,13 @@ def main():
                 "Citações no corpo do texto: sistema autor-data"
             ]},
             {"h": "Avaliação", "items": [
-                "Dupla avaliação cega por pares conduzida pelas instituições realizadoras",
+                "Avaliação por pares conduzida pelas instituições realizadoras",
+                "<b>O aceite para publicação seguirá a ordem de envio das submissões</b>",
                 "Critérios: aderência ao eixo temático, originalidade, rigor metodológico, contribuição teórica/prática"
             ]}
         ],
-        prazo_extra="Submissão da versão final do Artigo Completo: até 30/09/2026"
+        prazo_box="Prazo de submissão do <b>Artigo Completo</b> · até "
+                  "<font color='#9A7D14'>30 de setembro de 2026</font> · 23h59 (Brasília)"
     )
 
 
