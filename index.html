@@ -132,6 +132,12 @@ nav.scrolled .nav-logo img{height:32px;}
 .urgency-pill{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);background:rgba(245,143,78,.08);border:1px solid rgba(245,143,78,.32);padding:8px 16px;border-radius:100px;margin-bottom:30px;animation:fd .7s .2s ease both;}
 .urgency-pill .pulse{width:6px;height:6px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(245,143,78,.55);animation:pulse 2s infinite;}
 .urgency-pill[hidden]{display:none;}
+.promo{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;max-width:1280px;margin:0 auto 26px;width:100%;background:linear-gradient(90deg,rgba(245,200,66,.16),rgba(245,143,78,.10));border:1px solid rgba(245,200,66,.45);border-radius:16px;padding:14px 22px;color:var(--white);font-family:'Manrope',sans-serif;font-size:clamp(13.5px,1.5vw,15.5px);font-weight:600;letter-spacing:.01em;animation:fd .7s .1s ease both;box-shadow:0 8px 30px rgba(245,200,66,.08);}
+.promo strong{color:var(--yellow);font-weight:800;white-space:nowrap;}
+.promo .promo-tag{flex:none;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#091136;background:var(--yellow);padding:5px 12px;border-radius:100px;}
+@media(max-width:680px){.promo{justify-content:center;text-align:center;}}
+html[data-theme="light"] .promo{color:#091136;border-color:rgba(36,121,184,.30);background:linear-gradient(90deg,rgba(245,200,66,.22),rgba(36,121,184,.06));}
+html[data-theme="light"] .promo strong{color:#B26A00;}
 .urgency-pill .sep{opacity:.4;margin:0 4px;}
 
 .h1{font-family:'Manrope',sans-serif;font-size:clamp(34px,4.6vw,56px);font-weight:800;color:var(--white);line-height:1.04;letter-spacing:-.025em;margin-bottom:18px;animation:fd .8s .25s ease both;max-width:680px;}
@@ -723,7 +729,7 @@ html[data-theme="light"] .logo-dark{display:none;}
     <li><a href="#trabalhos">Submeter</a></li>
     <li><a href="#parceiros">Apoio</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="#submeter" class="nav-deadline" id="navDeadline" hidden><span class="pulse" aria-hidden="true"></span><span id="navDeadlineText">Submissão até 16/06</span></a></li>
+    <li><a href="#submeter" class="nav-deadline" id="navDeadline" hidden><span class="pulse" aria-hidden="true"></span><span id="navDeadlineText">Submissão até 25/06</span></a></li>
     <li><button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span class="lbl" id="themeLabel">Tema claro</span></button></li>
     <li><a href="#inscricao" class="nav-cta">Inscreva-se →</a></li>
   </ul>
@@ -733,12 +739,16 @@ html[data-theme="light"] .logo-dark{display:none;}
 
 <section class="hero" aria-labelledby="hero-title">
   <h1 id="hero-title" class="sr-only">1° Encontro de Governança, Estratégia e Inovação Governamental</h1>
+  <div class="promo" role="status">
+    <span class="promo-tag">Prazo prorrogado</span>
+    <span>Submissões de trabalhos abertas até <strong>25/06/2026 · 23h59</strong> (Brasília). Resultado em <strong>27/06</strong> · programa definitivo em <strong>28/06</strong>.</span>
+  </div>
   <div class="hero-grid">
     <div class="hero-left">
       <img src="/assets/logo-completo.png?v=4" alt="1° Encontro de Governança, Estratégia e Inovação Governamental" class="hero-logo logo-dark" width="560">
       <img src="/assets/logo-claro.png?v=4" alt="" aria-hidden="true" class="hero-logo logo-light" width="560">
       <div class="h-badge"><span class="dot" aria-hidden="true"></span>08–10 julho 2026 · Rio + Niterói</div>
-      <a href="#submeter" class="urgency-pill" id="urgencyPill" hidden><span class="pulse" aria-hidden="true"></span><span id="urgencyPillText">Fase 1 encerra em — dias</span><span class="sep">·</span><span>16.06 · 23h59 BRT</span></a>
+      <a href="#submeter" class="urgency-pill" id="urgencyPill" hidden><span class="pulse" aria-hidden="true"></span><span id="urgencyPillText">Fase 1 encerra em — dias</span><span class="sep">·</span><span>25.06 · 23h59 BRT</span></a>
       <h2 class="h1">Quatro eventos oficiais.<br><em>Três dias.</em><span class="br"> Uma agenda nacional.</span></h2>
       <p class="h-lede"><strong>13ª Lean Six Sigma Congress · 4º Seminário em Sistemas de Engenharia de Produção · 2º Seminário de Regulação · 1º Seminário de Inteligência Governamental</strong> — UFF, ABAR, PPGEP - LabDGE/UFF e GIGS/UNICAMP.</p>
       <div class="h-cta">
@@ -970,16 +980,16 @@ html[data-theme="light"] .logo-dark{display:none;}
       <div class="dl-box fi">
         <div class="dl-box-l">
           <div class="dl-lbl">Prazo Fase 1</div>
-          <div class="dl-date">16 de junho · 23h59</div>
+          <div class="dl-date">25 de junho · 23h59</div>
         </div>
         <a href="#submeter" class="btn-p dl-cta" style="padding:13px 26px;font-size:13.5px;">Submeter agora <span class="arrow" aria-hidden="true">↓</span></a>
       </div>
     </div>
 
     <ul class="timeline fi" aria-label="Cronograma da chamada de trabalhos">
-      <li class="tl-step"><div class="tl-dot">1</div><div class="tl-when">Fase 1</div><div class="tl-what">Resumo + vídeo</div><div class="tl-when2">até 16/06/2026</div></li>
-      <li class="tl-step"><div class="tl-dot">2</div><div class="tl-when">Resultado</div><div class="tl-what">Aprovação</div><div class="tl-when2">até 22/06/2026</div></li>
-      <li class="tl-step"><div class="tl-dot">3</div><div class="tl-when">Programa</div><div class="tl-what">Definitivo</div><div class="tl-when2">25/06/2026</div></li>
+      <li class="tl-step"><div class="tl-dot">1</div><div class="tl-when">Fase 1</div><div class="tl-what">Resumo + vídeo</div><div class="tl-when2">até 25/06/2026</div></li>
+      <li class="tl-step"><div class="tl-dot">2</div><div class="tl-when">Resultado</div><div class="tl-what">Aprovação</div><div class="tl-when2">até 27/06/2026</div></li>
+      <li class="tl-step"><div class="tl-dot">3</div><div class="tl-when">Programa</div><div class="tl-what">Definitivo</div><div class="tl-when2">28/06/2026</div></li>
       <li class="tl-step"><div class="tl-dot">4</div><div class="tl-when">Fase 2</div><div class="tl-what">Apresentação</div><div class="tl-when2">10/07 · NAB UFF</div></li>
       <li class="tl-step"><div class="tl-dot">5</div><div class="tl-when">Artigo</div><div class="tl-what">Versão final</div><div class="tl-when2">até 30/09/2026</div></li>
       <li class="tl-step"><div class="tl-dot">6</div><div class="tl-when">Livro</div><div class="tl-what">Anais ISBN + DOI</div><div class="tl-when2">dezembro/2026</div></li>
@@ -1081,7 +1091,7 @@ html[data-theme="light"] .logo-dark{display:none;}
   <div class="sec-in" style="text-align:center;">
     <p class="sec-lbl fi" style="margin-left:auto;margin-right:auto;">Formulário de submissão</p>
     <h2 class="sec-title fi" id="sm-title" style="margin-left:auto;margin-right:auto;">Envie seu <em>trabalho</em></h2>
-    <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Submissão direta pelo formulário oficial da Even3 (resumo estendido + link público do vídeo). Prazo Fase 1: <strong style="color:var(--white)">16/06/2026 23h59</strong>. Áreas temáticas e cronograma já configurados.</p>
+    <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Submissão direta pelo formulário oficial da Even3 (resumo estendido + link público do vídeo). Prazo Fase 1: <strong style="color:var(--white)">25/06/2026 23h59</strong>. Áreas temáticas e cronograma já configurados.</p>
   </div>
   <div class="sec-in" style="max-width:920px;margin-top:20px;">
     <div class="embed-wrap fi">
@@ -1096,10 +1106,10 @@ html[data-theme="light"] .logo-dark{display:none;}
           <li><span>4</span>Confirme e acompanhe o status pela mesma área</li>
         </ul>
         <a href="https://www.even3.com.br/evento/login?evento=1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003&ReturnUrl=%2fparticipante%2ftrabalhocientifico%2f" target="_blank" rel="noopener" class="btn-p"><span>Acessar área de envio do trabalho</span><span class="arrow" aria-hidden="true">→</span></a>
-        <p class="embed-meta">Prazo Fase 1: <strong>16/06/2026 · 23h59</strong> · Login Even3 obrigatório</p>
+        <p class="embed-meta">Prazo Fase 1: <strong>25/06/2026 · 23h59</strong> · Login Even3 obrigatório</p>
       </div>
     </div>
-    <p style="text-align:center;margin-top:24px;font-size:12.5px;color:var(--muted-2);line-height:1.7;">Login Even3 obrigatório. Avaliação por comissão científica · resultado até 22/06/2026.</p>
+    <p style="text-align:center;margin-top:24px;font-size:12.5px;color:var(--muted-2);line-height:1.7;">Login Even3 obrigatório. Avaliação por comissão científica · resultado até 27/06/2026.</p>
   </div>
 </section>
 
@@ -1343,9 +1353,9 @@ html[data-theme="light"] .logo-dark{display:none;}
   });
 })();
 
-// Countdown para Fase 1 (16/06/2026 23h59 BRT) — atualiza nav + hero pill
+// Countdown para Fase 1 (25/06/2026 23h59 BRT) — atualiza nav + hero pill
 (function(){
-  const deadline = new Date('2026-06-16T23:59:00-03:00');
+  const deadline = new Date('2026-06-25T23:59:00-03:00');
   const now = new Date();
   const diffMs = deadline - now;
   const diffDays = Math.ceil(diffMs / 86400000);
