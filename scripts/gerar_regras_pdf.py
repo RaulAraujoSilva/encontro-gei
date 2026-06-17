@@ -328,7 +328,7 @@ def main():
             {"h": "Arquivo a submeter (versão cega)", "items": [
                 "<b>Arquivo único</b> (.docx ou .pdf) na <b>versão cega</b>: sem nomes, e-mails ou instituições no texto",
                 "Remova a identificação também das <b>propriedades do arquivo</b> (autor, último editor, comentários)",
-                "Cadastre <b>todos os autores</b> (até 4 — nome, e-mail e instituição) nos <b>campos de autor do formulário</b> da Even3; não inclua a autoria no arquivo",
+                "Cadastre <b>todos os autores</b> (até 4 — nome e e-mail de cada autor) nos <b>campos de autor do formulário</b> da Even3; não inclua a autoria no arquivo",
                 "Submissão direta na modalidade <b>Artigo Completo</b>: não é exigida a submissão prévia do resumo"
             ]},
             {"h": "Estrutura do artigo", "items": [
