@@ -71,7 +71,14 @@ logos = [
     ("assets/logos/logo-eng-768x184.png", 120, True),
     ("assets/logos/labdge.png", 150, False),
     ("assets/logos/gigs-unicamp.jpg", 150, False),
+    ("assets/logos/escola-regulacao.png", 160, False),
 ]
+# IC/UFF entra quando o logo estiver disponível (evita slot vazio até o arquivo chegar)
+_ic = "assets/logos/instituto-computacao-uff.png"
+if os.path.exists(os.path.join(BASE, _ic)):
+    logos.append((_ic, 160, False))
+else:
+    print(f"AVISO: logo do IC/UFF ausente — adicione {_ic} e rode novamente para incluí-lo.")
 slot_w = (W - 360) / len(logos)
 cy = FOOT_TOP + 210
 for i, (path, max_h, inv) in enumerate(logos):

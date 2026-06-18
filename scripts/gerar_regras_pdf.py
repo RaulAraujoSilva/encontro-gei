@@ -57,17 +57,20 @@ def header_footer(canv: canvas.Canvas, doc):
     # Footer
     w, _ = A4
     canv.setFillColor(NAVY)
-    canv.rect(0, 0, w, 18*mm, fill=1, stroke=0)
+    canv.rect(0, 0, w, 20*mm, fill=1, stroke=0)
     canv.setFont("Helvetica", 8)
     canv.setFillColorRGB(1, 1, 1)
-    canv.drawCentredString(w/2, 11*mm,
+    canv.drawCentredString(w/2, 13.5*mm,
         "1° Encontro de Governança, Estratégia e Inovação Governamental · 08-10/07/2026")
     canv.setFont("Helvetica", 7.5)
     canv.setFillColor(HexColor("#A5B0C8"))
-    canv.drawCentredString(w/2, 6*mm,
-        "encontrogeig.org · contato@encontrogeig.org · submissoes@encontrogeig.org · UFF · ABAR · PPGEP - LabDGE/UFF · GIGS/UNICAMP")
+    canv.drawCentredString(w/2, 8.5*mm,
+        "encontrogeig.org · contato@encontrogeig.org · submissoes@encontrogeig.org")
+    canv.setFont("Helvetica", 7)
+    canv.drawCentredString(w/2, 4*mm,
+        "Realização: UFF · ABAR · PPGEP - LabDGE/UFF · GIGS/UNICAMP · Escola de Regulação · IC/UFF")
     canv.setFont("Helvetica", 7.5)
-    canv.drawString(15*mm, 6*mm, f"Pág. {doc.page}")
+    canv.drawString(15*mm, 8.5*mm, f"Pág. {doc.page}")
     canv.restoreState()
 
 
@@ -147,7 +150,7 @@ def gerar_pdf(slug, titulo, intro, especificas, prazo_extra="", prazo_box=None):
     story = []
     build_header(story)
     story.append(Paragraph(f"Normas de Submissão — {titulo}", H_TITLE))
-    story.append(Paragraph("Chamada de trabalhos · Realização: UFF · ABAR · PPGEP - LabDGE/UFF · GIGS/UNICAMP", H_SUB))
+    story.append(Paragraph("Chamada de trabalhos · Realização: UFF · ABAR · PPGEP - LabDGE/UFF · GIGS/UNICAMP · Escola de Regulação · Instituto de Computação/UFF", H_SUB))
     if prazo_box:
         story.append(deadline_box(prazo_box))
     else:
@@ -198,7 +201,7 @@ def gerar_pdf(slug, titulo, intro, especificas, prazo_extra="", prazo_box=None):
     story.append(Paragraph("Comissão científica", H1))
     story.append(Paragraph(
         "A avaliação científica é conduzida em conjunto pelas instituições realizadoras "
-        "(UFF, ABAR, PPGEP - LabDGE/UFF e GIGS/UNICAMP), em regime de avaliação por pares.", P))
+        "do evento, em regime de avaliação por pares.", P))
 
     story.append(Paragraph("Submissão e contato", H1))
     story.append(Paragraph(
