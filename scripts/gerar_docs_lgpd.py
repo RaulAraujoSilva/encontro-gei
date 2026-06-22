@@ -30,8 +30,9 @@ CONTROLADORES = (
     "Agência Reguladora de Energia e Saneamento Básico do Estado do Rio de Janeiro — AGENERSA "
     "e Universidade Federal Fluminense — UFF (PPGEP/UFF), na condição de controladoras conjuntas"
 )
-AGENERSA_ID = ("AGENERSA — CNPJ 07.694.194/0001-11, Av. Treze de Maio, 23 — Centro, "
-               "Rio de Janeiro/RJ, CEP 20031-902")
+AGENERSA_ID = ("AGENERSA — CNPJ 07.694.194/0001-11, Av. Presidente Wilson, 231 — "
+               "Edifício Palácio Austregésilo de Athayde, 11º andar — Centro, "
+               "Rio de Janeiro/RJ, CEP 20030-905")
 UFF_ID = ("UFF — autarquia federal, CNPJ 28.523.215/0001-06, Rua Miguel de Frias, 9 — Icaraí, "
           "Niterói/RJ, CEP 24220-900")
 EMAIL = "contato@encontrogeig.org"
