@@ -90,8 +90,8 @@ URLs dos logos atuais: ver `assets/logos/` (12 arquivos).
 | 14h30 | Mesa de abertura institucional |
 | 15h30 | Painel de apresentação do evento |
 | 16h30 | Coffee-break |
-| 17h00 | **Conferência Magna de abertura** — Magda Chambriard (Petrobras, a confirmar) |
-| 18h00 | Coquetel de networking institucional |
+| 17h00 | **Palestra "Governança"** — Rafael Rolim de Minto (Procurador do Estado do RJ · Prof. da ESAP/PGE-RJ) |
+| 18h00 | **Palestra "Energia"** — Heloisa Borges Bastos Esteves (Diretora de Estudos de Petróleo, Gás e Biocombustíveis · EPE) |
 
 ### Dia 2 · 09/07/2026 (Quinta) · 8 Jornadas Técnicas (paralelas, ver acima)
 | Hora | Atividade |
@@ -116,18 +116,19 @@ Produto: **Relato de Visita Técnica** (2–3 pp.) para o livro.
 
 ---
 
-## Conferência magna · painelistas
+## Palestras de abertura · painel do evento
 
 | Nome | Papel |
 |---|---|
-| Magda Chambriard | Presidente da Petrobras *(a confirmar)* — palestra magna |
+| Rafael Rolim de Minto | Procurador do Estado do RJ · Prof. da ESAP/PGE-RJ — palestra "Governança" (17h) |
+| Heloisa Borges Bastos Esteves | Diretora de Estudos de Petróleo, Gás e Biocombustíveis da EPE — palestra "Energia" (18h) |
 | Miguel | CREA-RJ — moderação |
 | Prof. Calado | Painelista |
 | Prof. Li Li Min | Painelista — propositor do tema "IA e soberania" |
 | Raul Araújo | Painelista |
 | Vladimir | Painelista |
 
-Tema: **"Governança, Regulação e Inovação Governamental no Estado contemporâneo"** · Dia 1, 17h00.
+Tema geral: **"Governança, Regulação e Inovação Governamental no Estado contemporâneo"** · Dia 1, palestras às 17h e 18h.
 
 ---
 

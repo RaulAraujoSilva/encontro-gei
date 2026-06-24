@@ -191,7 +191,7 @@ def build(publicacao=True):
             "plataforma Even3. Há três modalidades de participação, com inscrições independentes "
             "que podem ser combinadas:")
     grid_table(s, ["Modalidade", "Abrangência", "Vagas"], [
-        ["Presencial — Dias 1 e 3", "Abertura institucional e conferência magna (DER) + trilhas, sessões e encerramento (NAB UFF)", "500 vagas"],
+        ["Presencial — Dias 1 e 3", "Abertura institucional e palestras (DER) + trilhas, sessões e encerramento (NAB UFF)", "500 vagas"],
         ["Visita Técnica — Dia 2", "Uma das 8 jornadas paralelas em campo · inscrição independente da presencial", "Por jornada · inscrições em breve"],
         ["Remoto / Online", "Transmissão ao vivo (YouTube) das plenárias e painéis + acesso aos anais", "Ilimitado"],
     ], [4.0 * cm, 9.0 * cm, 3.0 * cm])
@@ -211,8 +211,8 @@ def build(publicacao=True):
         ("14h30", "Mesa de abertura institucional"),
         ("15h30", "Painel de apresentação do evento"),
         ("16h30", "Coffee-break"),
-        ("17h00", "Conferência Magna de abertura — “Governança, Regulação e Inovação Governamental no Estado contemporâneo”"),
-        ("18h00", "Coquetel de networking institucional"),
+        ("17h00", "Palestra “Governança” — Rafael Rolim de Minto (Procurador do Estado do RJ · Prof. da ESAP/PGE-RJ)"),
+        ("18h00", "Palestra “Energia” — Heloisa Borges Bastos Esteves (Diretora de Estudos de Petróleo, Gás e Biocombustíveis · EPE)"),
     ], c1=2.6 * cm, c2=13.4 * cm)
     sub(s, "Dia 2 · 09/07/2026 (Quinta) — 8 Jornadas Técnicas paralelas")
     kv_table(s, [
@@ -317,9 +317,6 @@ def build(publicacao=True):
              "Confirmar: (a) é <b>co-emissora</b> da certificação? (b) <b>recebe dados pessoais</b> (cláusula "
              "LGPD)? (c) incluir crédito no <b>rodapé dos PDFs</b> de regras? Hoje consta como 5ª realizadora "
              "e na linha de certificação do site."),
-            ("Conferência Magna — confirmação",
-             "Palestra magna atribuída a <b>Magda Chambriard (Petrobras)</b> consta como “a confirmar”; "
-             "confirmar palestrante e composição do painel."),
             ("Dia 2 — visitas técnicas",
              "Empresas/jornadas e hub de concentração ainda “a confirmar” no site; a entrada “Visita Técnica” "
              "na Even3 ainda não foi aberta (consta “inscrições em breve”)."),
