@@ -18,7 +18,7 @@ Toda informação verificável usada no site e na configuração da Even3, com f
 | **Carga horária** | 24h certificadas |
 | **Locais** | Rio de Janeiro — Auditório do DER/RJ (Dia 1) · Região Metropolitana — visitas técnicas (Dia 2) · Niterói — NAB UFF Campus da Praia Vermelha (Dia 3) |
 | **Modalidade** | Presencial (Dias 1 e 3) + Visita Técnica (Dia 2) + Remoto/Online (transmissão ao vivo) |
-| **Público esperado** | 350 vagas presenciais + 200 em visitas técnicas + online ilimitado · meta de 80+ submissões |
+| **Público esperado** | 500 vagas presenciais + 200 em visitas técnicas + online ilimitado · meta de 80+ submissões |
 | **Tagline** | "A primeira plataforma nacional que integra governança pública, regulação, engenharia de produção e inteligência governamental" |
 
 ---
@@ -135,7 +135,7 @@ Tema: **"Governança, Regulação e Inovação Governamental no Estado contempor
 
 | Modalidade | Vagas | Validade |
 |---|---|---|
-| Presencial — Dias 1 e 3 | 350 | até 07/07/2026 |
+| Presencial — Dias 1 e 3 | 500 | até 07/07/2026 |
 | Visita Técnica — Dia 2 (inscrição independente) | 200 (~25/jornada) | até 07/07/2026 |
 | Remoto / Online | Ilimitado | até 09/07/2026 |
 

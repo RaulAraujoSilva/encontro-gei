@@ -177,7 +177,7 @@ def build(publicacao=True):
     ], [2.0 * cm, 11.0 * cm, 3.0 * cm])
     s.append(Spacer(1, 6))
     para(s, "<b>Números do evento:</b> 4 eventos integrados · 8 visitas técnicas · 13 eixos "
-            "temáticos indexados aos ODS · 24h de carga horária certificada · 400 vagas "
+            "temáticos indexados aos ODS · 24h de carga horária certificada · 500 vagas "
             "presenciais + participação online ilimitada · anais com ISBN e DOI individual por trabalho.")
 
     # 3. Eixos temáticos
@@ -191,7 +191,7 @@ def build(publicacao=True):
             "plataforma Even3. Há três modalidades de participação, com inscrições independentes "
             "que podem ser combinadas:")
     grid_table(s, ["Modalidade", "Abrangência", "Vagas"], [
-        ["Presencial — Dias 1 e 3", "Abertura institucional e conferência magna (DER) + trilhas, sessões e encerramento (NAB UFF)", "400 vagas"],
+        ["Presencial — Dias 1 e 3", "Abertura institucional e conferência magna (DER) + trilhas, sessões e encerramento (NAB UFF)", "500 vagas"],
         ["Visita Técnica — Dia 2", "Uma das 8 jornadas paralelas em campo · inscrição independente da presencial", "Por jornada · inscrições em breve"],
         ["Remoto / Online", "Transmissão ao vivo (YouTube) das plenárias e painéis + acesso aos anais", "Ilimitado"],
     ], [4.0 * cm, 9.0 * cm, 3.0 * cm])
@@ -317,9 +317,6 @@ def build(publicacao=True):
              "Confirmar: (a) é <b>co-emissora</b> da certificação? (b) <b>recebe dados pessoais</b> (cláusula "
              "LGPD)? (c) incluir crédito no <b>rodapé dos PDFs</b> de regras? Hoje consta como 5ª realizadora "
              "e na linha de certificação do site."),
-            ("Vagas presenciais — número oficial",
-             "O site indica <b>400</b> vagas; o painel da Even3 indica <b>500</b>. Definir o número oficial e "
-             "alinhar site, plataforma e este edital."),
             ("Conferência Magna — confirmação",
              "Palestra magna atribuída a <b>Magda Chambriard (Petrobras)</b> consta como “a confirmar”; "
              "confirmar palestrante e composição do painel."),

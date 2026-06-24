@@ -35,7 +35,7 @@ Documentação operacional completa do evento `722003` na Even3. Cobre acesso, m
 
 | Aba | URL | Status |
 |---|---|---|
-| **Inscrições > Entradas e valores** | `/organizador/registration/` | ✅ 2 entradas ativas (Presencial Completo "Dias 1 e 3" — descrição corrigida 12/06 via Chrome MCP; Participação Online · ilimitada). Visita Técnica D2: entrada ainda não criada ("em breve" no site). ⚠️ Entrada presencial está com **500 vagas** no painel; site anuncia 400 — alinhar (decisão do organizador) |
+| **Inscrições > Entradas e valores** | `/organizador/registration/` | ✅ 2 entradas ativas (Presencial Completo "Dias 1 e 3" — descrição corrigida 12/06 via Chrome MCP; Participação Online · ilimitada). Visita Técnica D2: entrada ainda não criada ("em breve" no site). Entrada presencial = **500 vagas** (elevada de 400→500 em 24/06 via Chrome MCP, alinhada ao site) |
 | **Inscrições > Formulário de inscrição** | `?tab=Formulário%20de%20inscrição` | ✅ Nome + e-mail + instituição + telefone celular + Termo LGPD (obrigatório) |
 | **Inscrições > Configurações** | `?tab=Configurações` | Default · não há cobrança |
 | **Página do Evento (hotsite)** | `/organizador/hotsite/` | ✅ CSS custom aplicado (paleta navy/yellow/green/blue + Manrope/Outfit) |
@@ -282,6 +282,8 @@ estendida do checkbox com controladoras, prazo de 5 anos e DPO):
 - [x] Corrigir descrição da entrada "Presencial Completo" ("três dias" → Dias 1 e 3) — feito 12/06
 - [ ] Criar a entrada da Visita Técnica D2 quando as jornadas forem confirmadas (site já diz "em breve")
 - [x] Alinhar limite de vagas presencial — ajustado para 400 no painel em 12/06 (igual ao site)
+- [x] Capacidade presencial ampliada de **400 → 500** vagas em 24/06 via Chrome MCP (a entrada havia
+  esgotado em 400/400 inscritos). Site, edital e CONTENT.md atualizados para 500 no mesmo dia.
 - [x] Ficha de avaliação de reação — complemento gratuito "Questionário de avaliação do evento"
   instalado e configurado em 12/06 (21 perguntas; rascunho em `/organizador/questionnaire/`).
   Envio automático aos participantes ao final do evento. **Publicar próximo ao evento.**
