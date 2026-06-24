@@ -420,10 +420,12 @@ html[data-theme="light"] .pub-txt strong{color:#091136;}
 .mod-d{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:14px;min-height:62px;}
 .mod-vagas{font-size:11px;color:var(--cyan);font-weight:600;letter-spacing:.4px;}
 /* Mini-cards de tipo de inscrição (seção #inscricao) */
-.ins-modes{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:920px;margin-top:26px;text-align:left;}
+.ins-modes{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:920px;margin-top:26px;text-align:left;}
 .ins-mode{padding:20px 22px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.022);position:relative;transition:all .3s;}
 .ins-mode:nth-child(1){--accent:rgba(245,200,66,.4);}
 .ins-mode:nth-child(2){--accent:rgba(91,198,229,.4);}
+.ins-mode:nth-child(3){--accent:rgba(124,196,127,.4);}
+@media(min-width:721px) and (max-width:860px){.ins-modes{grid-template-columns:1fr 1fr;}}
 .ins-mode:hover{border-color:var(--accent);background:rgba(255,255,255,.04);}
 .ins-mode-t{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;line-height:1.2;letter-spacing:-.01em;margin-bottom:6px;}
 .ins-mode-d{font-size:12.5px;color:var(--muted);line-height:1.55;margin-bottom:12px;}
@@ -967,7 +969,7 @@ html[data-theme="light"] .logo-dark{display:none;}
     <p class="sec-desc fi">Todas gratuitas, mediante inscrição prévia obrigatória. No momento estão abertas <strong style="color:var(--white)">duas entradas</strong>: a <strong style="color:var(--white)">inscrição presencial</strong>, que dá acesso aos Dias 1 e 3 (vagas limitadas), e a <strong style="color:var(--white)">participação online</strong> (vagas ilimitadas). A inscrição para a <strong style="color:var(--white)">visita técnica</strong> do Dia 2 será aberta em breve — independente da presencial, e as duas poderão ser combinadas.</p>
     <div class="modal-grid">
       <article class="mod-card fi"><div class="mod-tag">Modalidade 1</div><h3 class="mod-t">Presencial — Dias 1 e 3</h3><p class="mod-d">Abertura institucional e conferência magna no Auditório do DER (Dia 1) + trilhas, sessões de trabalhos e encerramento no NAB UFF (Dia 3).</p><div class="mod-vagas">500 vagas</div></article>
-      <article class="mod-card fi d1"><div class="mod-tag">Modalidade 2</div><h3 class="mod-t">Visita Técnica — Dia 2</h3><p class="mod-d">Uma das 8 jornadas paralelas em campo. Inscrição independente da presencial, com vagas limitadas por jornada.</p><div class="mod-vagas">Inscrições em breve</div></article>
+      <article class="mod-card fi d1"><div class="mod-tag">Modalidade 2</div><h3 class="mod-t">Visita Técnica — Dia 2</h3><p class="mod-d">Uma das 8 jornadas paralelas em campo. Inscrição independente da presencial, com vagas limitadas por jornada.</p><div class="mod-vagas">Inscrições abertas</div></article>
       <article class="mod-card fi d2"><div class="mod-tag">Modalidade 3</div><h3 class="mod-t">Remoto / Online</h3><p class="mod-d">Acompanhamento das plenárias e painéis pela transmissão ao vivo. Acesso aos anais.</p><div class="mod-vagas">Ilimitado</div></article>
     </div>
   </div>
@@ -1124,7 +1126,7 @@ html[data-theme="light"] .logo-dark{display:none;}
   <div class="sec-in" style="text-align:center;">
     <p class="sec-lbl fi" style="margin-left:auto;margin-right:auto;">Inscrições abertas</p>
     <h2 class="sec-title fi" id="ins-title" style="margin-left:auto;margin-right:auto;">Garanta sua <em>vaga</em></h2>
-    <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Evento <strong style="color:var(--white)">gratuito</strong> mediante inscrição prévia obrigatória. Participe <strong style="color:var(--white)">presencialmente</strong> (vagas limitadas) ou <strong style="color:var(--white)">online</strong> (vagas ilimitadas) — escolha a entrada correspondente no formulário abaixo. A visita técnica do Dia 2 terá inscrição independente, aberta em breve.</p>
+    <p class="sec-desc fi" style="margin-left:auto;margin-right:auto;">Evento <strong style="color:var(--white)">gratuito</strong> mediante inscrição prévia obrigatória. Participe <strong style="color:var(--white)">presencialmente</strong> (vagas limitadas) ou <strong style="color:var(--white)">online</strong> (vagas ilimitadas) — escolha a entrada correspondente no formulário abaixo. A visita técnica do Dia 2 tem inscrição independente, já aberta — selecione a jornada desejada (J01–J04) no formulário.</p>
   </div>
   <div class="sec-in ins-modes" aria-label="Tipos de inscrição">
     <article class="ins-mode fi">
@@ -1138,6 +1140,12 @@ html[data-theme="light"] .logo-dark{display:none;}
       <h3 class="ins-mode-t">Participação Online</h3>
       <p class="ins-mode-d">Transmissão ao vivo das plenárias e painéis, com acesso aos anais. Selecione a entrada <strong>"Participação Online"</strong> no formulário.</p>
       <div class="mod-vagas">Vagas ilimitadas · gratuito</div>
+    </article>
+    <article class="ins-mode fi d2">
+      <div class="mod-tag">Entrada 3 · Visita Técnica</div>
+      <h3 class="ins-mode-t">Visita Técnica — Dia 2</h3>
+      <p class="ins-mode-d">Quatro jornadas confirmadas (J01–J04). Selecione a entrada <strong>"Visita Técnica"</strong> da jornada desejada no formulário — inscrição independente da presencial, vagas limitadas por jornada.</p>
+      <div class="mod-vagas">Inscrições abertas · gratuito</div>
     </article>
   </div>
   <div class="sec-in" style="max-width:920px;margin-top:20px;">
@@ -1344,6 +1352,7 @@ html[data-theme="light"] .logo-dark{display:none;}
       <li><span>Capacidade</span><strong>40 visitantes</strong></li>
       <li><span>Inclui</span><strong>Coffee break e transporte · almoço não incluído (restaurante próximo)</strong></li>
     </ul>
+    <a class="vtmodal-link" href="https://www.even3.com.br/tickets/get/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003?even3_orig=get_tickets" target="_blank" rel="noopener">Inscrever-se nesta jornada ↗</a>
   </div>
 </div>
 
@@ -1362,7 +1371,8 @@ html[data-theme="light"] .logo-dark{display:none;}
       <li><span>Retorno previsto</span><strong>17h30</strong></li>
       <li><span>Capacidade</span><strong>27 visitantes (microônibus)</strong></li>
     </ul>
-    <a class="vtmodal-link" href="https://www.bioproj.com.br/_ete/ete-camboinhas?lang=pt" target="_blank" rel="noopener">Sobre a ETE Camboinhas ↗</a>
+    <a class="vtmodal-link" href="https://www.even3.com.br/tickets/get/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003?even3_orig=get_tickets" target="_blank" rel="noopener">Inscrever-se nesta jornada ↗</a>
+    <a class="vtmodal-link" href="https://www.bioproj.com.br/_ete/ete-camboinhas?lang=pt" target="_blank" rel="noopener" style="margin-left:8px;">Sobre a ETE Camboinhas ↗</a>
   </div>
 </div>
 
@@ -1383,6 +1393,7 @@ html[data-theme="light"] .logo-dark{display:none;}
       <li><span>Transporte</span><strong>Custeado pelo evento — ida e volta à AGENERSA</strong></li>
       <li><span>Requisitos</span><strong>Envio do CPF dos visitantes até 05/07</strong></li>
     </ul>
+    <a class="vtmodal-link" href="https://www.even3.com.br/tickets/get/1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003?even3_orig=get_tickets" target="_blank" rel="noopener">Inscrever-se nesta jornada ↗</a>
   </div>
 </div>
 
@@ -1482,11 +1493,13 @@ menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     if (typeof d.count !== 'number' || d.count <= 0) return;
     const fmt = n => n.toLocaleString('pt-BR');
     const txt = document.getElementById('counter-txt');
-    if (typeof d.online === 'number' && d.online > 0) {
-      txt.innerHTML = '<strong>' + fmt(d.presencial) + '</strong> presenciais · <strong>' + fmt(d.online) + '</strong> online já inscritos';
-    } else {
-      txt.innerHTML = '<strong>' + fmt(d.count) + '</strong> profissionais já inscritos';
-    }
+    const partes = [];
+    if (typeof d.presencial === 'number' && d.presencial > 0) partes.push('<strong>' + fmt(d.presencial) + '</strong> presenciais');
+    if (typeof d.online === 'number' && d.online > 0) partes.push('<strong>' + fmt(d.online) + '</strong> online');
+    if (typeof d.visita === 'number' && d.visita > 0) partes.push('<strong>' + fmt(d.visita) + '</strong> em visitas técnicas');
+    txt.innerHTML = partes.length > 1
+      ? partes.join(' · ') + ' já inscritos'
+      : '<strong>' + fmt(d.count) + '</strong> profissionais já inscritos';
     document.getElementById('counter').hidden = false;
   } catch {}
 })();
