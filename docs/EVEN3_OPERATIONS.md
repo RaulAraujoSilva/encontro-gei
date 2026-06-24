@@ -35,7 +35,7 @@ Documentação operacional completa do evento `722003` na Even3. Cobre acesso, m
 
 | Aba | URL | Status |
 |---|---|---|
-| **Inscrições > Entradas e valores** | `/organizador/registration/` | ✅ 2 entradas ativas (Presencial Completo "Dias 1 e 3" — descrição corrigida 12/06 via Chrome MCP; Participação Online · ilimitada). Visita Técnica D2: entrada ainda não criada ("em breve" no site). Entrada presencial = **500 vagas** (elevada de 400→500 em 24/06 via Chrome MCP, alinhada ao site) |
+| **Inscrições > Entradas e valores** | `/organizador/registration/` | ✅ **6 entradas ativas**: Presencial Completo ("Dias 1 e 3") = **500 vagas** (elevada 400→500 em 24/06); Participação Online · ilimitada; e **4 Visitas Técnicas D2** criadas em 24/06 via Chrome MCP — `Visita Técnica — J01 · Petrobras UTE TermoRio` (44), `J02 · ETA Guandú + EE Lameirão (CEDAE)` (40), `J03 · ETE Icaraí + Camboinhas` (27), `J04 · Braskem` (40), todas Gratuitas, válidas 24/06→**01/07/2026**. Coleta de CPF/tamanhos é offline (não no formulário). J05–J08 ainda "a confirmar". O contador do site (`api/inscritos.js`) segmenta `visita` por `includes('visita')` (e por jornada j01–j04) para não inflar o presencial. |
 | **Inscrições > Formulário de inscrição** | `?tab=Formulário%20de%20inscrição` | ✅ Nome + e-mail + instituição + telefone celular + Termo LGPD (obrigatório) |
 | **Inscrições > Configurações** | `?tab=Configurações` | Default · não há cobrança |
 | **Página do Evento (hotsite)** | `/organizador/hotsite/` | ✅ CSS custom aplicado (paleta navy/yellow/green/blue + Manrope/Outfit) |
@@ -280,7 +280,8 @@ estendida do checkbox com controladoras, prazo de 5 anos e DPO):
 **Pendências Even3:**
 - [x] Aplicar o checkbox revisado no formulário de inscrição — feito 12/06 (página /privacidade/ no ar)
 - [x] Corrigir descrição da entrada "Presencial Completo" ("três dias" → Dias 1 e 3) — feito 12/06
-- [ ] Criar a entrada da Visita Técnica D2 quando as jornadas forem confirmadas (site já diz "em breve")
+- [x] Criar a entrada da Visita Técnica D2 — feito 24/06: 4 entradas (J01–J04), 44/40/27/40 vagas,
+  Gratuitas, válidas 24/06→01/07/2026. Site atualizado (card "Inscrições abertas" + CTA por jornada).
 - [x] Alinhar limite de vagas presencial — ajustado para 400 no painel em 12/06 (igual ao site)
 - [x] Capacidade presencial ampliada de **400 → 500** vagas em 24/06 via Chrome MCP (a entrada havia
   esgotado em 400/400 inscritos). Site, edital e CONTENT.md atualizados para 500 no mesmo dia.
