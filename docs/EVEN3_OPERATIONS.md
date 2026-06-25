@@ -35,13 +35,13 @@ Documentação operacional completa do evento `722003` na Even3. Cobre acesso, m
 
 | Aba | URL | Status |
 |---|---|---|
-| **Inscrições > Entradas e valores** | `/organizador/registration/` | ✅ **6 entradas ativas**: Presencial Completo ("Dias 1 e 3") = **500 vagas** (elevada 400→500 em 24/06); Participação Online · ilimitada; e **4 Visitas Técnicas D2** criadas em 24/06 via Chrome MCP — `Visita Técnica — J01 · Petrobras UTE TermoRio` (44), `J02 · ETA Guandú + EE Lameirão (CEDAE)` (40), `J03 · ETE Icaraí + Camboinhas` (27), `J04 · Braskem` (40), todas Gratuitas, válidas 24/06→**01/07/2026**. Coleta de CPF/tamanhos é offline (não no formulário). J05–J08 ainda "a confirmar". O contador do site (`api/inscritos.js`) segmenta `visita` por `includes('visita')` (e por jornada j01–j04) para não inflar o presencial. |
+| **Inscrições > Entradas e valores** | `/organizador/registration/` | ✅ **2 entradas ativas**: Presencial Completo ("Dias 1 e 3") = **500 vagas** (elevada 400→500 em 24/06); Participação Online · ilimitada. ⚠️ **As 4 entradas de Visita Técnica criadas mais cedo em 24/06 foram EXCLUÍDAS no mesmo dia** — a Even3 só permite **1 inscrição por pessoa por evento**, então uma 2ª inscrição (visita) dava "Participante já está inscrito". As visitas viraram **Atividades** (inscrição em atividades) — ver §6 "Publicar nova jornada" e a linha **Programação > Atividades**. Como não há mais categoria "visita", o `api/inscritos.js` retorna `visita: 0` (inerte; presencial = count − online segue correto). |
 | **Inscrições > Formulário de inscrição** | `?tab=Formulário%20de%20inscrição` | ✅ Nome + e-mail + instituição + telefone celular + Termo LGPD (obrigatório) |
 | **Inscrições > Configurações** | `?tab=Configurações` | Default · não há cobrança |
 | **Página do Evento (hotsite)** | `/organizador/hotsite/` | ✅ CSS custom aplicado (paleta navy/yellow/green/blue + Manrope/Outfit) |
-| **Programação > Atividades** | `/organizador/programacao/` | ✅ 22 atividades (5 Dia 1 · 8 jornadas Dia 2 · 9 Dia 3) |
+| **Programação > Atividades** | `/organizador/programacao/` | ✅ As **4 visitas confirmadas** são Atividades tipo **"Visita Técnica"** com **Inscrição Gratuita + Limite de vagas** (é isso que faz a visita aparecer na tela de inscrição do participante): J01 · TermoRio (**43** vagas, +12 já inscritos), J02 · Guandú+Lameirão/CEDAE (**39**), J03 · Icaraí+Camboinhas (**26**), J04 · Braskem (**38**) — todas 09/07. As jornadas sem detalhamento (Gerdau/Eneva/IRM/CSN) e os placeholders antigos foram **excluídos** em 24/06. As atividades do Dia 1/Dia 3 ("Não requer inscrição") foram **mantidas** (não aparecem na tela de inscrição). **▶ Para publicar as próximas jornadas, ver §6 "Publicar nova jornada (visita técnica)".** |
 | **Programação > Convidados** | `?tab=convidados` | ✅ 6 palestrantes (Magda, Miguel, Calado, Li Li Min, Raul, Vladimir) |
-| **Programação > Configurações** | `?tab=configuracao` | ✅ Cronograma 04/05–07/07 para visitas técnicas |
+| **Programação > Configurações** | `?tab=configuracao` | ✅ **Inscrição em atividades**: cronograma 04/05→**01/07/2026** · **Cortesias e limitações = máx. 1 atividade/pessoa** (cada participante escolhe só 1 visita) · **Restrição = precisa estar inscrito no evento** (presencial OU online escolhem sem 2ª inscrição). Config global — vale para todas as jornadas, não refazer por atividade. |
 | **Submissões > Recebimento > Modalidades** | `/organizador/trabalhocientifico/submissaogeral?tab=Modalidades` | ✅ 4 modalidades (Artigo, Pôster, Relatório A3, Resumo) com PDFs anexados |
 | **Submissões > Áreas Temáticas** | `?tab=Áreas%20Temáticas` | ✅ 13 eixos alinhados ao projeto executivo |
 | **Submissões > Configurações** | `?tab=Configurações` | ✅ Cronograma 04/05–16/06 · Comissão: Profa. Silvia Cristina Rufino |
@@ -178,6 +178,69 @@ curl -s https://encontrogeig.org/api/inscritos
 
 ## 6. Operações comuns
 
+### ▶ Publicar nova jornada (visita técnica) como Atividade com inscrição
+
+> **Modelo adotado em 24/06:** cada visita é uma **Atividade** (Programação), tipo **"Visita Técnica"**,
+> com **Inscrição Gratuita + Limite de vagas**. É isso — e **NÃO uma entrada** — que coloca a visita na
+> tela de escolha do participante (`/participante/sessions/`). Criar a visita como *entrada* está
+> ERRADO: a Even3 só permite **1 inscrição por pessoa por evento**, então uma 2ª inscrição dá
+> "Participante já está inscrito". As 4 visitas confirmadas (J01–J04) já estão nesse modelo; use o
+> passo a passo abaixo para publicar **J05+ quando confirmadas**.
+
+**Onde:** `/organizador/programacao/` (aba **Atividades**) → **+ Adicionar atividade** (ou clicar numa
+atividade existente para editar).
+
+No modal **"Atividade"** / **"Editar Atividade"**:
+
+1. **Título:** `Jornada 0X · <Empresa/Local>` (ex.: `Jornada 05 · Gerdau · Santa Cruz`).
+2. **Descrição (Resumo):** é o texto exibido em **"Mais informações"** na tela de inscrição — **espelhar
+   o card do site** (modais `#vt-jNN` em `index.html`; ver lista resumida na §9). Manter vagas/horário
+   coerentes com a atividade.
+3. **Tipo:** `Visita Técnica`. ← obrigatório para entrar no filtro da tela de inscrição.
+4. **Inscrição:** `Gratuita`. ← "Não requer inscrição" = **NÃO** aparece para escolher.
+5. **Duração:** `Um dia` → isso **revela** os campos **Data / Início / Fim**.
+6. **Data / Início / Fim:** usar o truque **setVal** (§3) — campos com máscara `dd/mm/aaaa` e `__:__`
+   (ex.: `09/07/2026`, `08:00`, `13:00`). `fill_form` simples corrompe a máscara.
+7. Expandir **"Adicione local, carga horária, limite de vagas, tags…"** e preencher **Limite de vagas**
+   (input com placeholder `"Ilimitado"`). **Nunca deixar ilimitado** nas visitas.
+8. **Salvar atividade** (deixar "Notificar participantes" desmarcado).
+
+**Conferir:** a linha aparece com tipo "Visita Técnica" + "X vagas" e a atividade surge em
+`/participante/sessions/` (filtro Visita Técnica). A **config global já cobre** a nova jornada
+(máx. 1 atividade/pessoa · janela até 01/07 · restrito a inscritos — Programação > Configurações);
+**não** reconfigurar por jornada.
+
+**Excluir uma jornada:** abrir a atividade → botão **Excluir** (exclui **direto**, toast "Sucesso",
+sem diálogo de confirmação extra).
+
+**Atalhos via Chrome MCP** — as comboboxes Tipo/Inscrição/Duração **não são `<select>` nativo**
+(`querySelectorAll('select')` não acha): use `fill_form` pelos uids do modal, ou clique a combobox + a
+opção. Padrão usado em 24/06:
+```js
+// 1) Título/Tipo/Inscrição/Duração via fill_form (pegar uids no snapshot do modal)
+fill_form([{uid:'..',value:'Jornada 0X · ...'},{uid:'..tipo',value:'Visita Técnica'},
+           {uid:'..insc',value:'Gratuita'},{uid:'..dur',value:'Um dia'}])
+// 2) Data + horas via evaluate_script (setVal da §3)
+const dlg = document.querySelector('div[role="dialog"]');
+setVal(dlg.querySelector('input[placeholder="dd/mm/aaaa"]'), '09/07/2026');
+const t = dlg.querySelectorAll('input[placeholder="__:__"]'); setVal(t[0],'08:00'); setVal(t[1],'13:00');
+// 3) Expandir vagas e preencher
+Array.from(dlg.querySelectorAll('*')).find(e=>e.children.length===0 && /limite de vagas/i.test(e.textContent))?.click();
+setVal(Array.from(dlg.querySelectorAll('input')).find(i=>i.placeholder==='Ilimitado'), '40');
+// 4) Salvar
+Array.from(dlg.querySelectorAll('button')).find(b=>/Salvar atividade/i.test(b.textContent))?.click();
+```
+
+**Link direto p/ o participante escolher** (faz login → cai **direto** na lista só das 4 visitas, cada
+uma com "Realizar inscrição"; já usado nos CTAs do site — modais J01–J04 + card de inscrição,
+commit `ca9c538`):
+```
+https://www.even3.com.br/evento/login?evento=1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003&ReturnUrl=%2fparticipante%2fsessions%2f&lang=pt
+```
+> A tela `/participante/sessions/` já **filtra só "Visita Técnica"** — por isso **não** é preciso
+> limpar/ocultar as atividades do Dia 1/Dia 3 (decisão 24/06: manter, p/ não afetar a Programação
+> pública do hotsite e os certificados de atividade).
+
 ### Reabrir submissões / mover datas
 
 1. `/organizador/trabalhocientifico/submissaogeral?tab=Configurações`
@@ -280,8 +343,11 @@ estendida do checkbox com controladoras, prazo de 5 anos e DPO):
 **Pendências Even3:**
 - [x] Aplicar o checkbox revisado no formulário de inscrição — feito 12/06 (página /privacidade/ no ar)
 - [x] Corrigir descrição da entrada "Presencial Completo" ("três dias" → Dias 1 e 3) — feito 12/06
-- [x] Criar a entrada da Visita Técnica D2 — feito 24/06: 4 entradas (J01–J04), 44/40/27/40 vagas,
-  Gratuitas, válidas 24/06→01/07/2026. Site atualizado (card "Inscrições abertas" + CTA por jornada).
+- [x] Publicar a inscrição das Visitas Técnicas D2 — feito 24/06. **Modelo corrigido no mesmo dia:** as
+  4 entradas de visita foram **substituídas por Atividades** (inscrição em atividades), pois entrada
+  duplicada dava "Participante já está inscrito" (Even3 = 1 inscrição/pessoa). 4 visitas como Atividade
+  "Visita Técnica" Gratuita + vagas 43/39/26/38, máx. 1/pessoa, janela até 01/07, restrito a inscritos.
+  Site aponta para o link direto `/participante/sessions/` (commit ca9c538). Ver §6 e §9.
 - [x] Alinhar limite de vagas presencial — ajustado para 400 no painel em 12/06 (igual ao site)
 - [x] Capacidade presencial ampliada de **400 → 500** vagas em 24/06 via Chrome MCP (a entrada havia
   esgotado em 400/400 inscritos). Site, edital e CONTENT.md atualizados para 500 no mesmo dia.
@@ -305,6 +371,50 @@ ao painel Even3. Já preenchidos em 12/06: CNPJ/endereço AGENERSA (07.694.194/0
 > organizador. As menções à **minuta do acordo entre controladoras** e à **lista nominal de
 > acessos** foram retiradas/suavizadas na política de guarda — **reintroduzir** essas seções quando
 > o jurídico definir os textos. O QR code do cartaz foi gerado e incorporado (página 1 do aviso A4).
+
+---
+
+## 9. Descrições canônicas das jornadas (espelho do site)
+
+> **Regra:** o **Resumo/Descrição** da Atividade na Even3 (texto de "Mais informações") deve ter **as
+> mesmas informações do site** (modais `#modal-jornadaN` em `index.html`). Ao mudar o site, atualizar
+> aqui e na Even3. Vagas/horários devem bater com a configuração da atividade. Atualizado 24/06.
+
+**J01 · Petrobras UTE TermoRio** — 09/07 · 43 vagas
+> Dia 2 · Visita técnica à Usina Termelétrica TermoRio, no Complexo Petroquímico de Duque de Caxias,
+> operada pela Petrobras. Programação: café de boas-vindas, briefing de segurança e recepção do gerente
+> da planta, apresentação da usina no auditório e visita à área industrial.
+> Ponto de encontro: AGENERSA — Av. Presidente Wilson, 231 (Ed. Palácio Austregésilo de Athayde),
+> Centro, Rio de Janeiro. Saída estimada: 07h30 · Retorno previsto: ~13h30. Capacidade: 43 visitantes
+> (ônibus).
+
+**J02 · ETA Guandú + EE Lameirão (CEDAE)** — 09/07 · 39 vagas
+> Dia 2 · Visita técnica integrada operada pela CEDAE: palestra institucional no auditório, Estação de
+> Tratamento de Água do Guandú, macromedidores e pontos de entrega, e a Estação Elevatória do Lameirão.
+> Ponto de encontro: CEDAE — Av. Presidente Vargas, 2655, Centro, Rio de Janeiro. Saída estimada: 08h ·
+> Retorno previsto: 18h. Capacidade: 39 visitantes. Inclui coffee break e transporte; almoço não
+> incluído (restaurante próximo).
+
+**J03 · ETE Icaraí + Camboinhas (Águas de Niterói)** — 09/07 · 26 vagas
+> Dia 2 · Visita técnica integrada às Estações de Tratamento de Esgoto Icaraí e Camboinhas, operadas
+> pela Águas de Niterói. Inclui apresentação institucional, Centro de Controle Operacional, almoço e a
+> planta de pirólise.
+> Ponto de encontro: AGENERSA — Av. Presidente Wilson, 231 (Ed. Palácio Austregésilo de Athayde),
+> Centro, Rio de Janeiro. Saída estimada: 09h · Retorno previsto: 17h30. Capacidade: 26 visitantes
+> (microônibus). EPI: informe tamanho de jaleco e numeração de bota no campo de observações da
+> inscrição, se aplicável.
+
+**J04 · Braskem** — 09/07 · 38 vagas
+> Dia 2 · Visita técnica às unidades industriais da Braskem no Polo Petroquímico de Campos Elíseos —
+> Duque de Caxias/RJ. A Braskem é uma companhia petroquímica global, com portfólio completo de resinas
+> plásticas e produtos químicos para diversos segmentos (embalagens, construção civil, automotivo,
+> agronegócio, saúde e higiene, entre outros), com unidades no Brasil, EUA, México e Alemanha e
+> exportação para mais de 71 países. Inclui apresentação institucional e tour pela planta industrial.
+> Ponto de encontro: AGENERSA — Av. Presidente Wilson, 231 (Ed. Palácio Austregésilo de Athayde),
+> Centro, Rio de Janeiro. Saída estimada: 08h · Retorno previsto: ~12h. Capacidade: 38 visitantes
+> (ônibus). EPI obrigatório: jaleco e bota de segurança. Requisitos: a Braskem exige nome, cargo,
+> instituição, CPF e tamanhos de jaleco e bota — nome, instituição e CPF já constam da inscrição;
+> informe cargo, jaleco e bota no campo de observações da inscrição.
 
 ---
 
