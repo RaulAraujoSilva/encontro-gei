@@ -140,6 +140,12 @@ nav.scrolled .nav-logo img{height:32px;}
 @media(max-width:680px){.promo{justify-content:center;text-align:center;}}
 html[data-theme="light"] .promo{color:#091136;border-color:rgba(36,121,184,.30);background:linear-gradient(90deg,rgba(245,200,66,.22),rgba(36,121,184,.06));}
 html[data-theme="light"] .promo strong{color:#B26A00;}
+.promo a{color:var(--yellow);font-weight:800;text-decoration:underline;text-underline-offset:2px;white-space:nowrap;}
+.promo-open{background:linear-gradient(90deg,rgba(74,222,128,.16),rgba(36,121,184,.08));border-color:rgba(74,222,128,.42);box-shadow:0 8px 30px rgba(74,222,128,.08);}
+.promo-open .promo-tag{background:var(--green);color:#06210f;}
+.promo-open a{color:var(--green);}
+html[data-theme="light"] .promo-open{border-color:rgba(34,160,80,.34);background:linear-gradient(90deg,rgba(74,222,128,.20),rgba(36,121,184,.06));}
+html[data-theme="light"] .promo-open a{color:#1B7A3A;}
 .urgency-pill .sep{opacity:.4;margin:0 4px;}
 
 .h1{font-family:'Manrope',sans-serif;font-size:clamp(34px,4.6vw,56px);font-weight:800;color:var(--white);line-height:1.04;letter-spacing:-.025em;margin-bottom:18px;animation:fd .8s .25s ease both;max-width:680px;}
@@ -280,6 +286,11 @@ html[data-theme="light"] .promo strong{color:#B26A00;}
 .vis-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 @media(max-width:1000px){.vis-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.vis-grid{grid-template-columns:1fr;}}
+.vis-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;margin:4px 0 26px;}
+.vis-open-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);padding:8px 15px;border:1px solid rgba(74,222,128,.40);border-radius:100px;background:rgba(74,222,128,.08);}
+.vis-open-badge .pulse{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(74,222,128,.55);animation:pulse 2s infinite;}
+html[data-theme="light"] .vis-open-badge{color:#1B7A3A;border-color:rgba(34,160,80,.34);background:rgba(74,222,128,.12);}
+@media(max-width:560px){.vis-cta .btn-p{width:100%;justify-content:center;}}
 .vc{padding:24px 20px;border:1px solid var(--line);border-radius:10px;transition:all .3s;background:rgba(255,255,255,.02);position:relative;border-top:3px solid var(--sector-color,var(--green));}
 .vc[data-sector="energia"]{--sector-color:var(--sector-energia);}
 .vc[data-sector="saneamento"]{--sector-color:var(--sector-saneamento);}
@@ -744,8 +755,12 @@ html[data-theme="light"] .logo-dark{display:none;}
 <section class="hero" aria-labelledby="hero-title">
   <h1 id="hero-title" class="sr-only">1° Encontro de Governança, Estratégia e Inovação Governamental</h1>
   <div class="promo" role="status">
-    <span class="promo-tag">Prazo prorrogado</span>
-    <span>Submissões de trabalhos abertas até <strong>25/06/2026 · 23h59</strong> (Brasília). Resultado em <strong>27/06</strong> · programa definitivo em <strong>28/06</strong>.</span>
+    <span class="promo-tag">Último dia</span>
+    <span><strong>25/06/2026 · 23h59</strong> (Brasília) é o <strong>último dia</strong> para submissão de trabalhos. Resultado em <strong>27/06</strong> · programa definitivo em <strong>28/06</strong>.</span>
+  </div>
+  <div class="promo promo-open" role="status">
+    <span class="promo-tag">Inscrições abertas</span>
+    <span>As <strong>Visitas Técnicas</strong> do Dia 2 (09/07) já estão com inscrição aberta — até <strong>01/07</strong>. <a href="https://www.even3.com.br/evento/login?evento=1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003&amp;ReturnUrl=%2fparticipante%2fsessions%2f&amp;lang=pt" target="_blank" rel="noopener">Escolha sua jornada ↗</a></span>
   </div>
   <div class="hero-grid">
     <div class="hero-left">
@@ -758,6 +773,7 @@ html[data-theme="light"] .logo-dark{display:none;}
       <div class="h-cta">
         <a href="#inscricao" class="btn-p">Inscreva-se agora <span class="arrow" aria-hidden="true">→</span></a>
         <a href="#programacao" class="btn-s">Ver programa</a>
+        <a href="https://www.even3.com.br/evento/login?evento=1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003&amp;ReturnUrl=%2fparticipante%2fsessions%2f&amp;lang=pt" class="btn-s" target="_blank" rel="noopener">Inscrição nas Visitas técnicas <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
     <aside class="hero-card" aria-label="Resumo do evento">
@@ -920,6 +936,10 @@ html[data-theme="light"] .logo-dark{display:none;}
     <p class="sec-lbl fi">Dia 2 · 09 de julho</p>
     <h2 class="sec-title fi" id="vs-title">Oito jornadas técnicas <em>exclusivas</em></h2>
     <p class="sec-desc fi">Acesso a empresas líderes do setor regulado e da indústria consumidora de gás no Rio de Janeiro. Quatro jornadas são integradas, combinando dois locais em uma mesma saída. <strong style="color:var(--white)">Após se inscrever no evento (presencial ou online), escolha 1 jornada na sua Área do Participante — vagas limitadas por jornada.</strong></p>
+    <div class="vis-cta fi">
+      <span class="vis-open-badge"><span class="pulse" aria-hidden="true"></span>Inscrições abertas · até 01/07</span>
+      <a href="https://www.even3.com.br/evento/login?evento=1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003&amp;ReturnUrl=%2fparticipante%2fsessions%2f&amp;lang=pt" class="btn-p" target="_blank" rel="noopener">Inscrever-se em uma visita técnica <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
     <div class="vis-grid">
       <article class="vc vc-clickable fi" data-sector="energia" role="button" tabindex="0" aria-haspopup="dialog" data-modal="jornada1" aria-label="Jornada 01 — Petrobras UTE TermoRio, ver detalhes da visita técnica"><span class="vc-sector">Energia</span><div class="vn">Jornada 01</div><h3 class="vcn">Petrobras UTE TermoRio</h3><p class="vth">Usina termelétrica no Complexo Petroquímico de Duque de Caxias — RJ</p><span class="vtg">Energia · Termelétrica</span><span class="vc-more">Ver detalhes →</span></article>
       <article class="vc vc-clickable fi d1" data-sector="saneamento" role="button" tabindex="0" aria-haspopup="dialog" data-modal="jornada2" aria-label="Jornada 02 — ETA Guandú e CEDAE, ver detalhes da visita técnica"><span class="vc-sector">Saneamento</span><div class="vn">Jornada 02 <span class="integrated">integrada</span></div><h3 class="vcn">ETA Guandú · Lameirão · CEDAE</h3><p class="vth">Tratamento de água, macromedidores e Estação Elevatória do Lameirão — CEDAE · Rio de Janeiro</p><span class="vtg">Saneamento · Água</span><span class="vc-more">Ver detalhes →</span></article>
