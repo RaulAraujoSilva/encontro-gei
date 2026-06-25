@@ -1,6 +1,6 @@
 # Session Log — Site 1° Encontro GEI
 
-> **Última atualização:** 2026-06-17
+> **Última atualização:** 2026-06-25
 > **Status global:** Site no ar (`encontrogeig.org`). **Prorrogação divulgada (17/06):** submissão até **25/06**, resultado **27/06**, programa **28/06** (apresentação 10/07, artigo 30/09, anais dez/26 mantidos). Even3: 5 modalidades — inclui **Artigo Completo** criada (envio de arquivo na **versão cega**, autores no formulário, prazo 30/09, ordem de envio). **Escola de Regulação** incluída como realizadora (site). Ver **Sessão 17/06** e os **pontos abertos da reunião 16h**.
 
 ## Visão geral do projeto
@@ -22,6 +22,43 @@
 | 6 | Livro · Anais ISBN | dezembro/2026 |
 
 **Fluxo do vídeo (Fase 1):** Even3 não aceita upload de arquivo de vídeo. Autor hospeda em link público (Google Drive, OneDrive ou YouTube unlisted) e cola a URL no **corpo do documento** (resumo expandido). Há também campo opcional "URL do vídeo de apresentação" no formulário da Even3 para reforço.
+
+---
+
+## Sessão 24–25/06/2026 — Visitas viram Atividades (corrige "já inscrito"), link direto e destaques de abertura
+
+Commits (push em `main` → deploy Vercel): `e715f02` (visita = atividade, CTAs → Área do Participante) · `ca9c538` (CTAs → link direto `/participante/sessions/`) · `2ebd084` (docs Even3 §6/§9) · `587a485` (remove selo "confirmada" dos cards) · `c7cd7de` (destaques de abertura) · `a217a8c` (banners lado a lado + botão verde) · `9e36fe4` (remove moderação/painelistas) · `61da612` (reduz fonte dos banners). Mudanças de plataforma Even3 são manuais (sem commit).
+
+**Correção estrutural — "Participante já está inscrito" (Even3):** a Even3 só permite **1 inscrição por pessoa por evento**. As 4 entradas de Visita Técnica criadas em 24/06 eram duplicata (as visitas já existiam como **Atividades**, com a Jornada 01/TermoRio já tendo 12 inscritos). Solução: **modelo = inscrição em atividades**. Feito via Chrome MCP:
+- **4 visitas confirmadas como Atividade** "Visita Técnica" + Inscrição **Gratuita** + **Limite de vagas**: J01 TermoRio **43** (12 inscritos preservados), J02 Guandú+Lameirão/CEDAE **39**, J03 Icaraí+Camboinhas **26**, J04 Braskem **38** — todas 09/07.
+- **Excluídas** as jornadas sem detalhamento (Gerdau/Eneva/IRM/CSN) e os placeholders antigos; **excluídas as 4 entradas de visita** (restam só Presencial 500 + Online).
+- **Programação > Configurações:** máx. **1 atividade/pessoa** · janela até **01/07** · **restrito a inscritos** (presencial OU online escolhem sem 2ª inscrição).
+- **Descrições (Resumo) das 4 atividades enriquecidas = espelho do site** (corrigido "~25 vagas" da J01 → 43; horário J01 alinhado 07:30–13:30). Fonte canônica em `docs/EVEN3_OPERATIONS.md` §9.
+
+**Link direto p/ o participante** (nativo Even3, faz login → cai direto na lista só das 4 visitas com "Realizar inscrição"): `https://www.even3.com.br/evento/login?evento=<slug>&ReturnUrl=%2fparticipante%2fsessions%2f&lang=pt`. Como essa tela já filtra só "Visita Técnica", **não** foi preciso limpar as atividades do Dia 1/Dia 3 (mantidas; decisão do organizador, p/ preservar Programação pública do hotsite + certificados).
+
+**Site (`index.html`):**
+- CTAs das visitas (4 modais J01–J04 + card de inscrição) apontam para o **link direto**; framing mudou de "entrada/selecione a Visita Técnica" → "escolha 1 jornada na Área do Participante".
+- **Destaques de abertura:** 2 banners **lado a lado** no topo — 🟡 "Último dia" (25/06 submissão) e 🟢 "Inscrições abertas" (visitas, link direto); fonte do corpo reduzida (15,5→13px). Hero ganhou 3º botão **"Inscrição nas Visitas técnicas"** (verde). Seção de visitas ganhou badge "Inscrições abertas · até 01/07" + botão "Inscrever-se em uma visita técnica" (fora dos modais).
+- Removido o selo "confirmada" dos cards (redundante) e o bloco **Moderação/Painelistas** (Miguel/Calado/Li Li Min/Raul/Vladimir) das Palestras de abertura.
+
+**Docs/memória:** `docs/EVEN3_OPERATIONS.md` atualizado — entradas 6→2, modelo atividades, **§6 "Publicar nova jornada (visita técnica)"** (runbook p/ J05+), **§9 descrições canônicas**. Memórias atualizadas (visita=atividade, link direto).
+
+**Pendência aberta (p/ próxima sessão):** incluir o link direto também no card **#modalidades "Visita Técnica — Dia 2"** (único sem link). Registrada em `memory/project_pendencia_link_modalidades.md`.
+
+---
+
+## Sessão 17–18/06/2026 — Edital consolidado, decisões dos pontos abertos e Instituto de Computação/UFF
+
+Commit (push em `main` → deploy Vercel): `757de5a` (IC/UFF + Escola de Regulação como organizadores plenos em todo o site + edital com anexos). Deploy confirmado ao ar (encontrogeig.org já mostra o IC/UFF na Realização).
+
+**Edital consolidado (novo):** criado um documento único com todas as informações do evento, no layout dos PDFs de regras. Script `scripts/gerar_edital_consolidado.py` (`build(publicacao=True/False)`; importa `gerar_regras_pdf` para reaproveitar cores/estilos/header/footer). Saídas em `docs/edital/` (gitignored): `edital-1o-encontro-gei.pdf` (publicação, 5 págs.), `edital-consolidado-...pdf` (snapshot de validação com apêndice) e **`edital-1o-encontro-gei-com-anexos.pdf`** (16 págs. — edital + as 4 normas de submissão como Anexos I–IV, com bookmarks; montado por `scripts/montar_edital_com_anexos.py` via pypdf, com capa "Anexos").
+
+**Decisões dos 6 pontos abertos (fecham a reunião 16h de 17/06):** (1) **Escola de Regulação = organizador pleno** → certificação + LGPD + **rodapé dos PDFs de regras**; (2) vagas presenciais = **400** (site; alinhar Even3); (3) keynote da Magna **genérico** no edital (sem nomear); (4) privacidade no edital com **referência limpa** (sem "sujeita a validação jurídica"); (5) visitas Dia 2 = manter "inscrições em breve"; (6) **"Artigo (resumo)" = 5ª modalidade** (texto no formulário, até 700 palavras) mantida.
+
+**Novo organizador — Instituto de Computação/UFF (IC/UFF):** co-realizadora plena. Logo enviado pelo usuário salvo em `assets/logos/ICU.png` e copiado p/ o nome canônico `assets/logos/instituto-computacao-uff.png`. Incluído (junto com a Escola de Regulação) em **todas as peças**: edital + 4 PDFs de regras (rodapé reestruturado em 3 linhas, faixa navy 20mm, p/ caber as 6 instituições); site (`index.html` 8 pontos incl. card de logo; `organizadores`, `patrocinadores`, `privacidade`); fundo do certificado (`gerar_fundo_certificado.py` → 8 logos, com guarda p/ logo ausente). Docx LGPD usa "instituições realizadoras" genérico (não enumera). Arquivos `_referencia/*.html` são snapshots antigos — não tocados.
+
+**Pendências operacionais (continuam):** Even3 — alinhar presencial p/ **400** (painel mostra 500), abrir entrada "Visita Técnica" do Dia 2, e em **25/06** ocultar as modalidades de Fase 1 deixando só Artigo Completo até 30/09; **e-mail de prorrogação** ainda a disparar (texto pronto, falta validar e-mail do organizador).
 
 ---
 
