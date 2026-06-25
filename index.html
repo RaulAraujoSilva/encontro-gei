@@ -146,6 +146,14 @@ html[data-theme="light"] .promo strong{color:#B26A00;}
 .promo-open a{color:var(--green);}
 html[data-theme="light"] .promo-open{border-color:rgba(34,160,80,.34);background:linear-gradient(90deg,rgba(74,222,128,.20),rgba(36,121,184,.06));}
 html[data-theme="light"] .promo-open a{color:#1B7A3A;}
+.promo-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:1280px;margin:0 auto 26px;width:100%;}
+.promo-row .promo{margin:0;max-width:none;}
+@media(max-width:860px){.promo-row{grid-template-columns:1fr;}}
+.btn-visit{background:rgba(122,199,79,.12);color:var(--green);border:1px solid rgba(122,199,79,.55);font-weight:700;}
+.btn-visit:hover{background:rgba(122,199,79,.20);border-color:var(--green);transform:translateY(-2px);}
+.btn-visit .arrow{display:inline-block;transition:transform .2s;}
+.btn-visit:hover .arrow{transform:translateX(3px);}
+html[data-theme="light"] .btn-visit{color:#1B7A3A;border-color:rgba(34,160,80,.5);background:rgba(122,199,79,.16);}
 .urgency-pill .sep{opacity:.4;margin:0 4px;}
 
 .h1{font-family:'Manrope',sans-serif;font-size:clamp(34px,4.6vw,56px);font-weight:800;color:var(--white);line-height:1.04;letter-spacing:-.025em;margin-bottom:18px;animation:fd .8s .25s ease both;max-width:680px;}
@@ -754,6 +762,7 @@ html[data-theme="light"] .logo-dark{display:none;}
 
 <section class="hero" aria-labelledby="hero-title">
   <h1 id="hero-title" class="sr-only">1° Encontro de Governança, Estratégia e Inovação Governamental</h1>
+  <div class="promo-row">
   <div class="promo" role="status">
     <span class="promo-tag">Último dia</span>
     <span><strong>25/06/2026 · 23h59</strong> (Brasília) é o <strong>último dia</strong> para submissão de trabalhos. Resultado em <strong>27/06</strong> · programa definitivo em <strong>28/06</strong>.</span>
@@ -761,6 +770,7 @@ html[data-theme="light"] .logo-dark{display:none;}
   <div class="promo promo-open" role="status">
     <span class="promo-tag">Inscrições abertas</span>
     <span>As <strong>Visitas Técnicas</strong> do Dia 2 (09/07) já estão com inscrição aberta — até <strong>01/07</strong>. <a href="https://www.even3.com.br/evento/login?evento=1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003&amp;ReturnUrl=%2fparticipante%2fsessions%2f&amp;lang=pt" target="_blank" rel="noopener">Escolha sua jornada ↗</a></span>
+  </div>
   </div>
   <div class="hero-grid">
     <div class="hero-left">
@@ -773,7 +783,7 @@ html[data-theme="light"] .logo-dark{display:none;}
       <div class="h-cta">
         <a href="#inscricao" class="btn-p">Inscreva-se agora <span class="arrow" aria-hidden="true">→</span></a>
         <a href="#programacao" class="btn-s">Ver programa</a>
-        <a href="https://www.even3.com.br/evento/login?evento=1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003&amp;ReturnUrl=%2fparticipante%2fsessions%2f&amp;lang=pt" class="btn-s" target="_blank" rel="noopener">Inscrição nas Visitas técnicas <span class="arrow" aria-hidden="true">→</span></a>
+        <a href="https://www.even3.com.br/evento/login?evento=1-encontro-de-governanca-estrategia-e-inovacao-governamental-722003&amp;ReturnUrl=%2fparticipante%2fsessions%2f&amp;lang=pt" class="btn-s btn-visit" target="_blank" rel="noopener">Inscrição nas Visitas técnicas <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
     <aside class="hero-card" aria-label="Resumo do evento">
