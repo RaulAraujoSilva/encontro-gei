@@ -1,6 +1,6 @@
 # Session Log — Site 1° Encontro GEI
 
-> **Última atualização:** 2026-06-25
+> **Última atualização:** 2026-06-26
 > **Status global:** Site no ar (`encontrogeig.org`). **Prorrogação divulgada (17/06):** submissão até **25/06**, resultado **27/06**, programa **28/06** (apresentação 10/07, artigo 30/09, anais dez/26 mantidos). Even3: 5 modalidades — inclui **Artigo Completo** criada (envio de arquivo na **versão cega**, autores no formulário, prazo 30/09, ordem de envio). **Escola de Regulação** incluída como realizadora (site). Ver **Sessão 17/06** e os **pontos abertos da reunião 16h**.
 
 ## Visão geral do projeto
@@ -22,6 +22,72 @@
 | 6 | Livro · Anais ISBN | dezembro/2026 |
 
 **Fluxo do vídeo (Fase 1):** Even3 não aceita upload de arquivo de vídeo. Autor hospeda em link público (Google Drive, OneDrive ou YouTube unlisted) e cola a URL no **corpo do documento** (resumo expandido). Há também campo opcional "URL do vídeo de apresentação" no formulário da Even3 para reforço.
+
+---
+
+## Sessão 26/06/2026 — Ofício (Carta de Aceite nativa Even3): período + "ACEITO PARA PUBLICAÇÃO" + assinatura Li Li Min
+
+Trabalho **na plataforma Even3** (via Chrome MCP), sem deploy do site. Editado o **modelo único**
+da Carta de Aceite nativa em `/organizador/trabalhocientifico/modelocartadeaceite/`:
+
+1. **Período do evento** acrescentado ao corpo (antes só havia `{data.aceite}`): "…no {evento.titulo}
+   — evento científico de abrangência nacional, realizado em Niterói/RJ, **de 08 a 10 de julho de 2026**."
+2. **Frase de aprovação** trocada de "ACEITO, conforme o edital da respectiva modalidade" para
+   "**ACEITO PARA PUBLICAÇÃO** nos Anais do evento, com ISBN e DOI individual, conforme o edital da
+   respectiva modalidade ({trabalho.modalidade})" — alinhada ao Edital UFF, e segura para todas as
+   modalidades (a frase forte "artigo completo" segue só na Carta PDF custom Modelo A).
+3. **Assinatura nominal:** acrescentada a linha **"Prof. Li Li Min"** acima de "Comissão Científica"
+   (instituições + `comissao.cientifica@encontrogeig.org` mantidos). O usuário **removeu** a linha
+   "Professor Titular" (o "Prof." já é o tratamento). *(Reverte parcialmente a assinatura genérica de
+   17–25/06.)*
+
+Verificado por "Visualizar Resultado" (tags resolvem: título, autores, modalidade, data; 1 página) e
+por recarga do modelo. Detalhes/mecânica de salvar documentados em `docs/EVEN3_OPERATIONS.md` (§ Entrega
+do ofício, nota 26/06 v3). Plano: `.claude-docs/plans/vamos-fazer-uma-modifica-o-virtual-nest.md`.
+
+---
+
+## Sessão 25/06/2026 — Carta/e-mail de aceite na Even3 alinhada ao Edital UFF (PPGEP)
+
+Trabalho **na plataforma Even3** (via Chrome MCP) + scripts/docs no repo. Sem deploy do site.
+
+**Objetivo:** configurar a resposta de aceite dos trabalhos de forma que o aceite do **Artigo Completo**
+sirva como produção científica válida no **Edital PPGEP/UFF nº 01/2026** (Tabela 3, item 2: "artigo
+completo publicado ou aceito em evento científico nacional"; comprova-se por e-mail de aceite / 1ª
+página, produção 2022+). Resumo/pôster/relatório **não** são "artigo completo".
+
+**Política definida (3 grupos):** Artigo Completo → carta UFF-válida; "Artigo (resumo)" → aprovado +
+submeter artigo completo até 30/09; Resumo Expandido/Pôster A3/Relatório A3 → **ACEITE definitivo**
+(anais ISBN+DOI). Reprovados → recusa.
+
+**Descobertas Even3:** (1) o e-mail de resultado é **template ÚNICO/global por status** (`/organizador/
+emailtemplate/index/1` aprovação, `/2` reprovação) — **não** há texto por modalidade; disparo via
+**Resultado → "Divulgar Resultados"** (ou "Divulgar resultado" por linha). (2) Aprovar **não exige
+avaliador**: Avaliação → "Finalizar avaliação" (gavel) → **Parecer Aprovado**. (3) **Não anexa PDF**
+ao e-mail. (4) O **ofício** é a **Carta de Aceite nativa**, que o autor baixa em **Área do Participante
+› Submissões › "Carta de Aceite"**.
+
+**Configurado na Even3:** e-mail de aprovação (texto Artigo Completo + "como acessar" a carta) e de
+reprovação reescritos, assinatura genérica "Comissão Científica". **Carta de Aceite nativa** reescrita
+(`/organizador/trabalhocientifico/modelocartadeaceite/`): **logo horizontal** grande
+(`encontrogeig.org/assets/logo-fundo-branco.png`), título "CARTA DE ACEITE", texto genérico *"foi
+ACEITO, conforme o edital da respectiva modalidade ({modalidade})"*, assinatura formatada, **1 página**
+(corrigida a quebra em 2 páginas). **Logo do evento** subido em Configuração › Organizador.
+
+**Teste real (com submissões do Raul):** 4 Artigo Completo aprovados (parecer direto) e **divulgados**
+(e-mails enviados a todos os autores) — **1648163, 1648166, 1648190** (autor) + **1644279** (coautor).
+E-mails e cartas conferidos.
+
+**Repo:** `scripts/gerar_cartas_aceite.py` (gera Carta PDF nos 3 tipos, com assinatura eletrônica +
+hash SHA-256; saída `assets/cartas-aceite/`, gitignored — **alternativa**, não a entrega primária);
+`docs/CARTAS_ACEITE_EVEN3.md` (textos A/B/C/E); `docs/EVEN3_OPERATIONS.md` §6 (mecânica + carta nativa);
+plano `.claude-docs/plans/precisamos-configurar-no-even3-async-ripple.md`.
+
+**PENDÊNCIAS (parada de hoje):** (1) **reverter status** dos 4 testes (Aprovado/Divulgado sem avaliação
+real) antes da avaliação oficial; (2) template index/1 está em **Modelo A (Artigo Completo)** — reverter
+ao neutro / trocar por grupo antes de divulgar Resumo/Pôster/Relatório; (3) avaliações oficiais não
+feitas (96 subs, 0 avaliações em 25/06); (4) confirmar datas; (5) ⚠️ cabeçalho/rodapé no PDF é do
+navegador — desmarcar "Cabeçalhos e rodapés" ao salvar.
 
 ---
 

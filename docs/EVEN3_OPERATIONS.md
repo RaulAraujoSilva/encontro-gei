@@ -241,6 +241,96 @@ https://www.even3.com.br/evento/login?evento=1-encontro-de-governanca-estrategia
 > limpar/ocultar as atividades do Dia 1/Dia 3 (decisão 24/06: manter, p/ não afetar a Programação
 > pública do hotsite e os certificados de atividade).
 
+### Comunicar resultado / carta de aceite (por modalidade)
+
+> **Política (25/06, v2) — 3 grupos:** **Artigo Completo** → Modelo **A** (carta UFF-válida: "artigo
+> completo aceito em evento científico nacional", item 2 da Tabela 3 do Edital PPGEP/UFF nº 01/2026).
+> **Artigo (resumo)** → Modelo **B** (APROVADO p/ apresentação + submeter artigo completo até 30/09).
+> **Resumo Expandido / Pôster A3 / Relatório A3** → Modelo **C** (ACEITE definitivo, anais ISBN+DOI;
+> sem fase posterior). Reprovados → Modelo **E**. Entrega = **e-mail Even3 + Carta PDF assinada**.
+> **Textos prontos e mapa modalidade→modelo em [`CARTAS_ACEITE_EVEN3.md`](CARTAS_ACEITE_EVEN3.md).**
+> Carta PDF (3 tipos) gerada por `scripts/gerar_cartas_aceite.py` (saída `assets/cartas-aceite/`, gitignored).
+
+> **⚠️ Realidade do painel (verificada 25/06 via Chrome MCP):** os e-mails de resultado são
+> **templates ÚNICOS/GLOBAIS por status** — **não** há texto por modalidade. Editor TinyMCE em:
+> - **Aprovação:** `/organizador/emailtemplate/index/1`
+> - **Reprovação:** `/organizador/emailtemplate/index/2`
+> - (demais: aprovação com ressalva, desclassificação, comprovante — ids subsequentes)
+>
+> **Tags disponíveis:** `{submissao.titulo}` · `{submissao.id}` · `{submissao.data.insercao}` ·
+> `{submissao.modalidade}` · `{submissao.areatematica}` · `{submissao.autores}` · `{evento.titulo}` ·
+> `{evento.responsavelcomissao.nome}` · `{evento.responsavelcomissao.email}` · `{{evento.urlCliente}}`.
+> Disparo via **Resultado → Divulgar Resultados** (`/organizador/trabalhocientifico/resultado/`);
+> filtro por **status** (Aprovado/Não Aprovado/Divulgado/…), **não** por modalidade.
+
+**Abordagem adotada (decisão 25/06):** **e-mail global neutro** (usa `{submissao.modalidade}`) +
+**diferenciação na Carta PDF** por modalidade (gerada por `scripts/gerar_cartas_aceite.py`).
+
+**Status (staged em 25/06):**
+- ✅ **Template de aprovação (index/1)** reescrito: texto neutro (aprovação para qualquer modalidade,
+  menção à carta de aceite, anais ISBN+DOI, caminho opcional do artigo completo até 30/09),
+  **assinatura genérica** ("Comissão Científica" — removido `{...responsavelcomissao.nome}`).
+- ✅ **Template de reprovação (index/2)** reescrito (Modelo E), mantendo o link "ACESSAR MEUS
+  TRABALHOS" (`{{evento.urlCliente}}participante/trabalhocientifico`), assinatura genérica.
+- ⏳ **Envio pendente:** avaliações **não finalizadas** (em 25/06: **96 submissões, 0 avaliações**).
+  A divulgação/envio só ocorre após o fechamento dos resultados.
+
+**No disparo (após avaliação):**
+1. **Resultado → Divulgar Resultados**: o template global de aprovação vai a todos os Aprovados; o de
+   reprovação aos Não Aprovados. Para **texto distinto por grupo** (se desejado), usar **lotes**:
+   editar o template, divulgar um grupo, repetir (quem já é "Divulgado" não recebe de novo).
+2. **Carta PDF (A/B/C):** gerar com o script e entregar por **link** no corpo do e-mail (ou envio
+   individual pela comissão) — o envio em massa não anexa PDF único por autor.
+3. **Teste antes do lote:** botão **"Enviar exemplo"** no editor de cada template.
+
+**Mecânica confirmada (teste 25/06):** aprovar/definir resultado **sem avaliador externo** é possível —
+na aba **Avaliação** (lista de trabalhos), botão **"Finalizar avaliação"** (gavel) → modal **"Parecer
+final"** → SELECT (Aprovado/Não Aprovado/Desclassificado) + Justificativa → **Finalizar**. O trabalho
+passa a aparecer em **Resultado** (`/organizador/trabalhocientifico/resultado/`). Lá, cada linha tem
+**"Divulgar resultado"** (`divulgarResultadoIndividual`) que **divulga só aquele trabalho e envia o
+e-mail** aos autores (status vai de "Não divulgado" → **"Divulgado"**); o e-mail usa o **template
+global** vigente (`/emailtemplate/index/1`). Há também **"Divulgar Resultados"** (todos) e **"Notificar
+autores"** (e-mail avulso por trabalho). A lista de Avaliação é paginada/ordenada por número e **cega**
+(sem autores) — usar o campo **Buscar** pelo número; os autores aparecem em `editarsubmissao/{nº}` e na
+aba Resultado. **A divulgação notifica TODOS os autores** do trabalho, não só o submissor.
+> **Teste (25/06):** 4 Artigo Completo do organizador — **1648163, 1648166, 1648190** (Raul autor) e
+> **1644279** (Raul coautor; autor principal Samuel) — todos com **parecer Aprovado** (direto) +
+> **divulgados** com o template **Modelo A** (versão b). E-mail vai a **todos os autores** de cada
+> trabalho. Template index/1 ficou em **Modelo A** (reverter ao neutro ao concluir os testes de artigo
+> completo). Cartas PDF em `assets/cartas-aceite/carta-aceite-<nº>.pdf`. ⚠️ Esses 4 ficaram
+> Aprovado/Divulgado sem avaliação real — reabrir/ajustar status depois, se necessário.
+
+**Entrega do ofício (Carta de Aceite):** a Even3 **não anexa PDF** ao e-mail nem o "Notificar autores"
+tem campo de anexo. O ofício oficial é a **Carta de Aceite nativa**: após a divulgação, o autor
+**baixa na Área do Participante › Submissões**, botão **"Carta de Aceite"** (coluna Documentos) —
+URL `…/participante/impressao/_impressaocartadeaceite?code=<nº>`. O **modelo** dessa carta se edita em
+`/organizador/trabalhocientifico/modelocartadeaceite/` ("Documentos › Editar carta de aceite"): é
+**template único** (tags `{trabalho.titulo}`, `{DADOS_AUTORES}`, `{trabalho.modalidade}`,
+`{data.aceite}`, `{assinatura.comissao}`, `{evento.*}`; botão **Anexar Assinatura**). **Modelo
+reescrito em 25/06** (layout 1 página): logo **horizontal** via `<img src="https://encontrogeig.org/
+assets/logo-fundo-branco.png" width=440>` (substitui o `{evento.logo}`, que era quadrado/pequeno);
+título **"CARTA DE ACEITE"**; corpo *"…foi **ACEITO, conforme o edital da respectiva modalidade**
+({trabalho.modalidade}), no {evento.titulo}."*; linha de local/data "Rio de Janeiro / Niterói – RJ,
+{data.aceite}."; assinatura formatada (**Comissão Científica** + instituições + e-mail). Logo do
+evento (quadrado) também foi subido em Configuração › Organizador (resolve `{evento.logo}` em outros
+docs). **Espaçamento enxuto** corrigiu a quebra em 2 páginas. ⚠️ O **cabeçalho/rodapé do navegador**
+(data/URL/nº de página) ao "Imprimir/Salvar PDF" é do navegador — desmarcar "Cabeçalhos e rodapés"
+na caixa de impressão; não é controlável pela Even3.
+> **Atualizado em 26/06 (v3):** corpo passou a *"…foi **ACEITO PARA PUBLICAÇÃO** nos Anais do evento,
+> com ISBN e DOI individual, conforme o edital da respectiva modalidade ({trabalho.modalidade}), no
+> {evento.titulo} — evento científico de abrangência nacional, realizado em Niterói/RJ, **de 08 a 10
+> de julho de 2026**."* (inclui a frase "aceito para publicação" alinhada ao Edital UFF e o período do
+> evento, antes ausentes). A **assinatura** ganhou linha nominal **"Prof. Li Li Min"** acima de
+> **"Comissão Científica"** (instituições + `comissao.cientifica@encontrogeig.org` mantidos; sem cargo
+> "Professor Titular" — o "Prof." já é o tratamento). Confirmado via "Visualizar Resultado" (tags
+> resolvem; 1 página). ⚠️ **Mecânica de salvar:** o editor é **inline (TinyMCE)** — alterar via JS
+> `setContent` e **clicar "Salvar modelo"** (o POST redireciona p/ `…?tab=settings&config=communication`,
+> sinal de sucesso). Se **não** redirecionar, o save **não** efetivou — repetir o clique e reconferir
+> recarregando o modelo.
+O **e-mail de aprovação (index/1)** foi atualizado (25/06) com o parágrafo **"Carta de aceite (ofício)"**
+explicando como acessar (link `{{evento.urlCliente}}participante/trabalhocientifico`). As cartas PDF
+custom (com hash) em `assets/cartas-aceite/` ficam como alternativa/registro, não como entrega primária.
+
 ### Reabrir submissões / mover datas
 
 1. `/organizador/trabalhocientifico/submissaogeral?tab=Configurações`
