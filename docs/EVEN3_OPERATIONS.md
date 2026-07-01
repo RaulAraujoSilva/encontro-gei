@@ -331,6 +331,66 @@ O **e-mail de aprovação (index/1)** foi atualizado (25/06) com o parágrafo **
 explicando como acessar (link `{{evento.urlCliente}}participante/trabalhocientifico`). As cartas PDF
 custom (com hash) em `assets/cartas-aceite/` ficam como alternativa/registro, não como entrega primária.
 
+### Aceite + divulgação em massa das demais modalidades (26/06 — v4)
+
+> **Contexto:** os 12 **Artigo Completo** já foram tratados à parte (cartas assinadas Li Li Min enviadas
+> por e-mail). Para **aprovar e notificar todas as demais submissões** (Resumo Expandido, Pôster,
+> Relatório A3, Artigo (Resumo)), revertemos o modelo ao **genérico** e disparamos o aceite em massa.
+
+**1. Carta de Aceite nativa → revertida ao genérico + data fixa + espaçamento**
+(`/organizador/trabalhocientifico/modelocartadeaceite/`, editor inline TinyMCE id `editor`):
+- corpo voltou a *"…foi **ACEITO, conforme o edital da respectiva modalidade** ({trabalho.modalidade}),
+  no {evento.titulo}, **realizado de 08 a 10 de julho de 2026**."* (removidos "ACEITO PARA PUBLICAÇÃO",
+  ISBN/DOI/abrangência nacional do corpo);
+- assinatura: removida a linha **"Prof. Li Li Min"** (ficou só "Comissão Científica" + instituições + e-mail);
+- espaçamento: `margin: 50px 0 30px` no título "CARTA DE ACEITE", `margin-top: 42px` na data, `52px` na assinatura;
+- salvar = JS `setContent` + clicar **"Salvar modelo"** (redireciona p/ `…?tab=settings&config=communication`).
+
+**2. E-mail de aprovação (index/1) → reescrito para NEUTRO por modalidade**
+(`/organizador/emailtemplate/index/1`, editor TinyMCE id `mce_0`):
+- trocado *"…ACEITE do seu **ARTIGO COMPLETO**… **ACEITO PARA PUBLICAÇÃO**…"* por
+  *"…ACEITE do seu trabalho "{submissao.titulo}", na modalidade **{submissao.modalidade}**… aceito
+  conforme o edital da respectiva modalidade… Anais (ISBN), dezembro de 2026, com DOI individual…"*;
+- mantém a tag de link `{{evento.urlCliente}}participante/trabalhocientifico` (⚠️ o snapshot mostra o href
+  resolvido absoluto, mas o conteúdo salvo guarda o placeholder relativo — está OK);
+- salvar = **"Salvar modelo"** (botão fica "Carregando…" e persiste; reabrir p/ conferir).
+
+**3. Aprovação em massa (101 pendentes) — sem enviar e-mail**
+A Even3 **não tem aprovação em lote** (cada trabalho = modal "Parecer final", gavel `<i class="fa fa-gavel">`,
+`ng-click="abrirModalProcesso(row.idProcesso,'mostraEmitirParecer')"`, botão Finalizar = `salvarParecer()`).
+O painel é **AngularJS** com `.scope()` bloqueado. O "Finalizar" dispara:
+- **`POST /organizador/trabalhocientifico/alterarstatusprocesso`** · `Content-Type: application/json`
+- corpo: `{"idProcesso": <nº>, "idStatusProcesso": 3, "motivoParecer": "<texto>"}` (`3` = Aprovado;
+  `idProcesso` == o **número** da submissão) · usa cookies da sessão, **sem token no corpo** ·
+  resposta `{"IsValid": true, ...}`.
+- Lista de pendentes coletada na aba **Avaliação** (`/avaliacaogeral/`, 2ª tabela, situação "Disponível
+  para avaliação", paginação numerada); **101** trabalhos com gavel. Aprovados via `fetch` em lote (101/101).
+- ⚠️ **`alterarstatusprocesso` NÃO envia e-mail** — só define o parecer (reversível). O e-mail só sai no "Divulgar".
+
+**4. Divulgação (notificação)**
+`/organizador/trabalhocientifico/resultado/` → botão **"Divulgar Resultados"** → modal "**104 Resultados
+disponíveis para divulgar**" → confirmar. Envia o **template global de aprovação** (index/1, já neutro) a
+**todos os autores** de cada trabalho. Quem já estava **"Divulgado"** (os 17 da leva anterior) **não** recebe
+de novo. Resultado final: **121 Aprovado · 121 Divulgado · 0 pendente**.
+
+> **Estado em 26/06:** 121 submissões aceitas e divulgadas (104 nesta leva + 17 anteriores). Modelo de carta
+> e e-mail neutros valem para todas as modalidades; os 12 Artigo Completo seguem com entrega própria (PDF assinado).
+
+### Aprovação + divulgação de submissão tardia (29/06)
+
+Submissão **1652518** chegou em **28/06** (após a leva de 26/06): *"DA ESTAÇÃO DE TRATAMENTO À TORNEIRA:
+DINÂMICA DO CLORO RESIDUAL NA REDE DE DISTRIBUIÇÃO E O PAPEL DA ATUAÇÃO DA AGÊNCIA REGULADORA…"*, modalidade
+**Resumo Expandido**, área *Regulação de infraestrutura, energia e saneamento*; autores Carlos Alberto da
+Silva Paulo (AGENERSA, principal) e Luis Perez Zotes (UFF). Era o **único** trabalho "Disponível para
+avaliação" (gavel) na aba Avaliação. Fluxo aplicado (Chrome DevTools MCP, mesma mecânica da §"Aceite em massa"):
+1. **Aprovado** via `POST /organizador/trabalhocientifico/alterarstatusprocesso` ·
+   `{idProcesso:1652518, idStatusProcesso:3, motivoParecer:"…"}` → `IsValid:true` (não envia e-mail).
+2. **Divulgado** em Resultado → **"Divulgar Resultados"** (modal "1 Resultado disponível") → e-mail de
+   aprovação (template global neutro index/1) enviado a **todos os autores**; os 121 já "Divulgado" não
+   receberam de novo.
+
+> **Estado em 29/06:** **122 Aprovado · 122 Divulgado · 0 pendente**.
+
 ### Reabrir submissões / mover datas
 
 1. `/organizador/trabalhocientifico/submissaogeral?tab=Configurações`
@@ -505,6 +565,38 @@ ao painel Even3. Já preenchidos em 12/06: CNPJ/endereço AGENERSA (07.694.194/0
 > (ônibus). EPI obrigatório: jaleco e bota de segurança. Requisitos: a Braskem exige nome, cargo,
 > instituição, CPF e tamanhos de jaleco e bota — nome, instituição e CPF já constam da inscrição;
 > informe cargo, jaleco e bota no campo de observações da inscrição.
+
+---
+
+## 10. Comunicado/e-mail em massa aos inscritos ("Notificar pessoas")
+
+> **Correção:** a Even3 **TEM** disparo de e-mail a todos os inscritos (não só comunicados de
+> submissão). Fica em **Pessoas → "Notificar pessoas"** (`/organizador/people/`). Descoberto e usado
+> em 01/07/2026 para a divulgação das Visitas Técnicas.
+
+**Fluxo (painel do organizador, evento 722003):**
+1. **Pessoas → "Notificar pessoas"**. Na 1ª vez pede **validar o e-mail** da conta (código enviado a
+   `raularaujo@crie.ufrj.br`; o código chega em segundos).
+2. Abre o compositor **"Envio de e-mail"** com: **Conteúdo** (Criar do zero / templates prontos),
+   **Situação** (público) + **Categoria**, **Tipo de envio** (texto / imagem), **Assunto** e **Mensagem**.
+3. **Público:** `Situação = Inscritos` + `Categoria = Todas as categorias` = **todos os confirmados**
+   (presencial + online). Outras opções úteis: "Inscrito no evento e sem atividades" (quem ainda não
+   escolheu jornada/atividade), "Autores", etc.
+4. **Mensagem:** o editor é **Summernote** (WYSIWYG) e **aceita HTML** — dá para colar HTML com estilos
+   inline (títulos coloridos, blocos, botões-link). A Even3 embrulha com **logo do evento (topo)** e
+   **rodapé com contato + descadastro (LGPD)** automaticamente, então a peça foca no conteúdo.
+5. **"Pré-visualizar"** abre o render final; **"Envio de exemplo"** manda 1 amostra ao e-mail da conta
+   organizadora (`raularaujo@crie.ufrj.br`) — usar para validar antes; **"Enviar Mensagem"** dispara ao
+   grupo (confirmação: *"Estamos notificando o grupo... você será notificado por e-mail ao finalizar"*).
+6. Remetente: **`message@organizer.even3.com`** (infra aquecida da Even3 → baixo risco de spam; entrega
+   na caixa de entrada confirmada no teste). Sem necessidade de manusear e-mails/PII fora da plataforma.
+
+**Campanha de divulgação das Visitas Técnicas (01/07/2026):**
+- Público: **Inscritos → Todas as categorias** (≈ **513 confirmados**; 428 presencial + 84 online).
+- Assunto: `Visitas Técnicas (09/07) do 1º Encontro GEI — inscrições até 07/07`.
+- Peça HTML (4 jornadas J01–J04 + link único de inscrição): `docs/email/divulgacao-visitas-tecnicas.html`
+  (+ `.txt` e `README.md`). Motivo: em 01/07 havia **0 inscrições nas visitas** e 146 vagas abertas.
+- Teste (envio de exemplo) validado na caixa de entrada; disparo geral confirmado no painel.
 
 ---
 
